@@ -49,7 +49,7 @@ class SurveilansController extends Controller
         $data->tgl_input = $request->input('tgl_input');
         $data->save();
 
-        return redirect('/')->with('success', 'Data berhasil disimpan!');
+        return redirect('/surveilans')->with('success', 'Data berhasil disimpan!');
     }
 
     public function update(Request $request, $id)
@@ -58,7 +58,7 @@ class SurveilansController extends Controller
         $input = $request->all();
         $surveilans->fill($input)->save();
 
-        return redirect('/');
+        return redirect('/surveilans');
     }
 
     public function destroy($id)
@@ -66,7 +66,7 @@ class SurveilansController extends Controller
         $surveilans = Surveilans::find($id);
         $surveilans->delete();
 
-        return redirect('/');
+        return redirect('/surveilans');
     }
 
     public function inputRekap(Request $request)
@@ -80,7 +80,7 @@ class SurveilansController extends Controller
         $data->tindak_lanjut = $request->input('tindak_lanjut');
         $data->save();
 
-        return redirect('/rekap')->with('success', 'Data berhasil disimpan!');
+        return redirect('/rekapSurveilans')->with('success', 'Data berhasil disimpan!');
     }
 
     public function updateRekap(Request $request, $id)
@@ -89,7 +89,7 @@ class SurveilansController extends Controller
         $input = $request->all();
         $rekap->fill($input)->save();
 
-        return redirect('/rekap');
+        return redirect('/rekapSurveilans');
     }
 
     public function rekap(Request $request)
@@ -213,7 +213,7 @@ class SurveilansController extends Controller
             $vk_terpajan = $vk->sum('terpajan');
             $vk_tirah_baring = $vk->sum('tirah_baring');
 
-            return view('surveilansPPI.index', compact(
+            return view('rekapSurveilans.index', compact(
                 'tabel',
                 'rekap',
                 'analisa',

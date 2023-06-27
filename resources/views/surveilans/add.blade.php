@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {!! Form::open(['url' => 'save']) !!}
+                {!! Form::open(['url' => 'surveilans/save']) !!}
                 {!! Form::hidden('id') !!}
 
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -27,7 +27,7 @@
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <div class="col-sm-4 mb-3 form-floating">
                         {!! Form::number('usia', '', ['style' => 'height: auto', 'class' => 'form-control', 'id' =>
-                        'usia', 'placeholder' => 'Usia', 'required']) !!}
+                        'usia', 'placeholder' => 'Usia', 'step'=>'any', 'required']) !!}
                         {!! Form::label('usia', 'Usia') !!}
                     </div>
 

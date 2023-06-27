@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="input-group">
-                    <input type="file" class="form-control" name="dokumen" value="dokumen/{{$isi->dokumen}}" required />
+                    <input type="file" class="form-control" name="dokumen" required />
                 </div>
             </div>
             <div class="modal-footer">

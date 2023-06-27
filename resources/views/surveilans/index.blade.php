@@ -171,7 +171,7 @@
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "delete/"+id+""
+                window.location.href = "surveilans/delete/"+id+""
                 swalWithBootstrapButtons.fire(
                     'Terhapus!',
                     'Data berhasil dihapus',

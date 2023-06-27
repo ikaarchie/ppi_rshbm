@@ -3,7 +3,7 @@
 @section('content')
 <div class="header-waves">
   <div class="container pt-3">
-    <h1 class="text-center"><b>SURVEILANS</b></h1>
+    <h1 class="text-center"><b>REKAP SURVEILANS</b></h1>
     <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
   </div>
 
@@ -22,7 +22,7 @@
 </div>
 
 <div class="container justify-content-center mt-1">
-  <form action="{{ route('rekap') }}" method="GET">
+  <form action="{{ route('rekapSurveilans') }}" method="GET">
     <div class="d-grid gap-1 d-sm-flex justify-content-sm-center align-self-center">
       <div class="col-sm-2 text-center">
         <input type="date" name="dari" id="dari" value="{{ request()->get('dari') ?? date('Y-m-d')}}"
@@ -35,9 +35,9 @@
       </div>
       <div class="col-sm-3 text-center">
         <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-        <button formaction="{{ route('excel') }}" class="btn btn-success" type="submit">
+        <button formaction="{{ route('excelSurveilans') }}" class="btn btn-success" type="submit">
           <i class="fa-solid fa-table"></i> Excel</button>
-        <button formaction="{{ route('pdf') }}" class="btn btn-danger" type="submit">
+        <button formaction="{{ route('pdfSurveilans') }}" class="btn btn-danger" type="submit">
           <i class="fa-solid fa-file-pdf"></i> PDF</button>
       </div>
     </div>
@@ -239,7 +239,7 @@
             class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i>
             <b> Ubah Analisa dan Tindak Lanjut</b>
           </button>
-          @include('surveilansPPI.edit')
+          @include('rekapSurveilans.edit')
           @empty
           <button type="button" data-bs-toggle="modal" data-bs-target="#tambahRekap" class="btn btn-sm btn-primary">
             <i class="fa-solid fa-plus"></i><b> Tambah Analisa dan Tindak Lanjut</b>

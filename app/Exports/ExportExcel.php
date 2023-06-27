@@ -165,7 +165,7 @@ class ExportExcel implements FromView, ShouldAutoSize, WithEvents
 
     public function view(): View
     {
-        return view('surveilansPPI.excel', [
+        return view('rekapSurveilans.excel', [
             'tabel' => $this->tabel,
             'rekap' => $this->rekap,
             'tanggal' => $this->tanggal,
@@ -304,11 +304,11 @@ class ExportExcel implements FromView, ShouldAutoSize, WithEvents
                     ],
                 ]);
 
-                // $event->sheet->getStyle('A26:H26')->applyFromArray([
-                //     'font' => [
-                //         'bold'      =>  true,
-                //     ],
-                // ]);
+                $event->sheet->getStyle('A6:A10')->applyFromArray([
+                    'font' => [
+                        'bold'      =>  true,
+                    ],
+                ]);
 
                 $event->sheet->getStyle('A4:N10')->applyFromArray([
                     'borders' => [
@@ -331,8 +331,7 @@ class ExportExcel implements FromView, ShouldAutoSize, WithEvents
                 $event->sheet->getDelegate()->getPageSetup()
                     ->setPaperSize(\PhpOffice\PhpSpreadsheet\Worksheet\PageSetup::PAPERSIZE_A4);
 
-                $event->sheet->getDelegate()->getStyle('A1:N32')
-                    ->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+                $event->sheet->getDelegate()->getPageSetup()->setOrientation(PageSetup::ORIENTATION_LANDSCAPE);
             },
         ];
     }

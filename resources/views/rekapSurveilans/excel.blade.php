@@ -189,7 +189,7 @@
     </tbody>
 </table>
 
-<table>
+<table class="table">
     <tr>
         <td colspan="10"></td>
         <td colspan="4">Mengetahui,</td>

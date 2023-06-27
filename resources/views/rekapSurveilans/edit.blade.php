@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {!! Form::model($rekaps, [ 'method' => 'patch','route' => ['updateRekap', $rekaps->id] ]) !!}
+                {!! Form::model($rekaps, [ 'method' => 'patch','route' => ['updateRekapSurveilans', $rekaps->id] ]) !!}
 
                 <div class="col-sm-12 mb-3 form-floating">
                     {!! Form::textarea('analisa', $rekaps->analisa, ['style' => 'height: auto', 'class' =>

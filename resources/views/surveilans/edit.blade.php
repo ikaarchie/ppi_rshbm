@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {!! Form::model($isi, [ 'method' => 'patch','route' => ['update', $isi->id] ]) !!}
+                {!! Form::model($isi, [ 'method' => 'patch','route' => ['updateSurveilans', $isi->id] ]) !!}
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <div class="col-sm-4 mb-3 form-floating">
                         {!! Form::number('mrn', $isi->mrn, ['style' => 'height: auto', 'class' => 'form-control', 'id'
@@ -27,7 +27,7 @@
                     <div class="col-sm-4 mb-3 form-floating">
                         {!! Form::number('usia', $isi->usia, ['style' => 'height: auto', 'class' => 'form-control',
                         'id' =>
-                        'usia', 'placeholder' => 'Usia', 'required']) !!}
+                        'usia', 'placeholder' => 'Usia', 'step'=>'any', 'required']) !!}
                         {!! Form::label('usia', 'Usia') !!}
                     </div>
 

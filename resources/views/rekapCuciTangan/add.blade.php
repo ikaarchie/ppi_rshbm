@@ -1,13 +1,13 @@
-<div class="modal fade" id="tambahRekap" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalTambahRekap"
-    aria-hidden="true">
+<div class="modal fade" id="tambahRekapCuciTangan" tabindex="-1" data-bs-backdrop="static"
+    aria-labelledby="modalTambahRekapCuciTangan" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalTambahRekap">Tambah Data</h5>
+                <h5 class="modal-title" id="modalTambahRekapCuciTangan">Cuci Tangan</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {!! Form::open(['url' => 'inputRekap']) !!}
+                {!! Form::open(['url' => 'inputRekapCuciTangan']) !!}
                 {!! Form::hidden('dari', request()->get('dari') ) !!}
                 {!! Form::hidden('sampai', request()->get('sampai') ) !!}
 

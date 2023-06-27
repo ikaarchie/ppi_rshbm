@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.AuditCuciTangan')
 
-@section('content')
-<div class="header-waves">
+@section('auditContent')
+{{-- <div class="header-waves">
     <div class="container pt-3">
-        <h1 class="text-center"><b>FEEDBACK PPI</b></h1>
+        <h1 class="text-center"><b>CUCI TANGAN</b></h1>
         <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
     </div>
 
@@ -19,12 +19,12 @@
             <use xlink:href="#gentle-wave" x="48" y="3" fill="#fff" />
         </g>
     </svg>
-</div>
+</div> --}}
 
-<div class="container justify-content-center bg-white">
+<div class="container-fluid justify-content-center bg-white">
     <div class="d-md-flex justify-content-between">
         <div class="gap-1 d-md-flex justify-content-md-start mt-2">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#tambahFeedback" class="btn"
+            <button type="button" data-bs-toggle="modal" data-bs-target="#cuciTangan" class="btn"
                 style="background-color: #FFAB00;">
                 <i class="fa-solid fa-plus"></i><b> Tambah Data</b>
             </button>
@@ -34,7 +34,7 @@
             <div class="form-group w-10">
                 <div class="input-group">
                     <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
-                        id="myInput" onkeyup="cari()" placeholder="Cari Judul">
+                        id="myInput" onkeyup="cari()" placeholder="Cari Nama Pasien">
                     <span class="input-group-text"
                         style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -48,46 +48,65 @@
         <table class="table table-bordered border-dark align-middle w-100" id="myTable">
             <thead class="sticky text-dark text-center align-middle">
                 <tr>
-                    <th class="col">No</th>
-                    <th class="col-2">Bagian</th>
-                    <th class="col-1">Tanggal</th>
-                    <th class="col-6">Judul</th>
-                    <th class="col-3">Aksi</th>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Unit</th>
+                    <th>Tanggal</th>
+                    <th>Sebelum kontak pasien</th>
+                    <th>Sebelum tindakan aseptik</th>
+                    <th>Sebelum kontak cairan</th>
+                    <th>Setelah kontak pasien</th>
+                    <th>Setelah kontak lingkungan pasien</th>
+                    <th>HR</th>
+                    <th>HW</th>
+                    <th>Gagal</th>
+                    <th>ST</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody style="background-color: #FFECB3">
                 @php $no = 1; @endphp
-                @forelse($feedback as $key => $isi)
+                @forelse($cuci_tangan as $key => $isi)
                 <tr>
-                    <td>{{ $feedback->firstItem() + $key }}</td>
-                    <td>{{ $isi->bagian }}</td>
+                    <td>{{ $cuci_tangan->firstItem() + $key }}</td>
+                    <td>{{ $isi->nama }}</td>
+                    <td>{{ $isi->unit }}</td>
                     <td>{{ date("d/m/Y", strtotime($isi->tgl_input)) }}</td>
-                    <td>{{ $isi->judul }}</td>
+                    <td>{{ ($isi->sbl_kon_psn == 1) ? 'Ya' : (($isi->sbl_kon_psn == 0) ? 'Tidak' : 'Tidak dilakukan') }}
+                    </td>
+                    <td>{{ ($isi->sbl_tin_aseptik == 1) ? 'Ya' : (($isi->sbl_tin_aseptik == 0) ? 'Tidak' : 'Tidak
+                        dilakukan') }}</td>
+                    <td>{{ ($isi->stl_kon_cairan == 1) ? 'Ya' : (($isi->stl_kon_cairan == 0) ? 'Tidak' : 'Tidak
+                        dilakukan') }}</td>
+                    <td>{{ ($isi->stl_kon_psn == 1) ? 'Ya' : (($isi->stl_kon_psn == 0) ? 'Tidak' : 'Tidak dilakukan') }}
+                    </td>
+                    <td>{{ ($isi->stl_kon_ling_psn == 1) ? 'Ya' : (($isi->stl_kon_ling_psn == 0) ? 'Tidak' : 'Tidak
+                        dilakukan') }}</td>
+                    <td>{{ ($isi->hr == 1) ? 'Ya' : (($isi->hr == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
+                    <td>{{ ($isi->hw == 1) ? 'Ya' : (($isi->hw == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
+                    <td>{{ ($isi->gagal == 1) ? 'Ya' : (($isi->gagal == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
+                    <td>{{ ($isi->st == 1) ? 'Ya' : (($isi->st == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
                     <td>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <a href="#preview{{ $isi->id }}" data-bs-toggle="modal" class="btn btn-sm btn-primary"><i
-                                    class="fa-regular fa-eye"></i> Preview</a>
-                            <a href="#editFeedback{{ $isi->id }}" data-bs-toggle="modal"
+                            <a href="#editCuciTangan{{ $isi->id }}" data-bs-toggle="modal"
                                 class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
                             <a href="#" class="btn btn-sm btn-danger deleteSwal" data-id="{{ $isi->id }}"
-                                data-nama="{{ $isi->judul }}"><i class="fa-solid fa-trash"></i> Hapus</a>
-                            @include('feedbackPPI.edit')
-                            @include('feedbackPPI.preview')
+                                data-nama="{{ $isi->nama }}"><i class="fa-solid fa-trash"></i> Delete</a>
+                            @include('cuciTangan.edit')
                         </div>
                     </td>
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="5" class="text-center"><b>Tidak ada data</b></td>
+                    <td colspan="14" class="text-center"><b>Tidak ada data</b></td>
                 </tr>
-                {{ $sisi->dokumen }}
                 @endforelse
             </tbody>
         </table>
 
         <div class="btn-toolbar justify-content-between">
             <div>
-                {{ $feedback->links() }}
+                {{ $cuci_tangan->links() }}
             </div>
         </div>
     </div>
@@ -103,7 +122,7 @@
         tr = table.getElementsByTagName("tr");
 
         for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[3];
+            td = tr[i].getElementsByTagName("td")[2];
             if (td) {
                 txtValue = td.textContent || td.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -120,7 +139,7 @@
 <script>
     $('.deleteSwal').click(function(){  
         var id = $(this).attr('data-id');
-        var judul = $(this).attr('data-nama');
+        var nama = $(this).attr('data-nama');
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
                 confirmButton: 'btn btn-success me-md-2',
@@ -131,7 +150,7 @@
         
         swalWithBootstrapButtons.fire({
             title: "Yakin?",
-            text: "Data "+judul+" akan dihapus",
+            text: "Data "+nama+" akan dihapus",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonText: 'Hapus',
@@ -139,7 +158,7 @@
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "feedback/delete/"+id+""
+                window.location.href = "cuciTangan/delete/"+id+""
                 swalWithBootstrapButtons.fire(
                     'Terhapus!',
                     'Data berhasil dihapus',
