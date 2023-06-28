@@ -34,7 +34,7 @@
             <div class="form-group w-10">
                 <div class="input-group">
                     <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
-                        id="myInput" onkeyup="cari()" placeholder="Cari Nama Pasien">
+                        id="myInput" onkeyup="cari()" placeholder="Cari Nama">
                     <span class="input-group-text"
                         style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -122,7 +122,7 @@
         tr = table.getElementsByTagName("tr");
 
         for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[2];
+            td = tr[i].getElementsByTagName("td")[1];
             if (td) {
                 txtValue = td.textContent || td.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
