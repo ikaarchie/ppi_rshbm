@@ -41,6 +41,11 @@
           <i class="fa-solid fa-file-pdf"></i> PDF</button>
       </div>
     </div>
+    @if($errors->any())
+    <div class="alert alert-danger align-items-center text-center" role="alert">
+      <strong>{{$errors->first()}}</strong>
+    </div>
+    @endif
   </form>
 </div>
 {{-- {{ dd($no_cssu_sbl_tin_aseptik) }}; --}}
@@ -1256,5 +1261,15 @@
     document.getElementById('barTIDAK'),
     config
     );
+</script>
+
+<script>
+  $(document).ready(function() {
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove();
+            });
+        }, 3000);
+    });    
 </script>
 @endsection
