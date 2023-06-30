@@ -493,6 +493,8 @@
           }
         }
       },
+      categoryPercentage: 0.8,
+      barPercentage: 0.8,
       scales: {
         y: {
           beginAtZero: true
