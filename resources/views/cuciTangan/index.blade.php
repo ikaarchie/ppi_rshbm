@@ -54,7 +54,7 @@
                     <th>Tanggal</th>
                     <th>Sebelum kontak pasien</th>
                     <th>Sebelum tindakan aseptik</th>
-                    <th>Sebelum kontak cairan</th>
+                    <th>Setelah kontak cairan tubuh pasien</th>
                     <th>Setelah kontak pasien</th>
                     <th>Setelah kontak lingkungan pasien</th>
                     <th>HR</th>

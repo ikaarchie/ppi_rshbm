@@ -57,7 +57,7 @@
           <th></th>
           <th>Sebelum kontak pasien</th>
           <th>Sebelum tindakan aseptik</th>
-          <th>Sebelum kontak cairan</th>
+          <th>Setelah kontak cairan tubuh pasien</th>
           <th>Setelah kontak pasien</th>
           <th>Setelah kontak lingkungan pasien</th>
           <th>HR</th>
@@ -335,7 +335,7 @@
           <th>Tanggal</th>
           <th>Sebelum kontak pasien</th>
           <th>Sebelum tindakan aseptik</th>
-          <th>Sebelum kontak cairan</th>
+          <th>Setelah kontak cairan tubuh pasien</th>
           <th>Setelah kontak pasien</th>
           <th>Setelah kontak lingkungan pasien</th>
           <th>HR</th>
@@ -770,7 +770,7 @@
     labels: [
       ['Sebelum', 'Kontak Pasien'],
       ['Sebelum', 'Tindakan Aseptik'],
-      ['Sebelum', 'Kontak Cairan'],
+      ['Setelah Kontak', 'Cairan Tubuh Pasien'],
       ['Setelah', 'Kontak Pasien'],
       ['Setelah Kontak', 'Lingkungan Pasien'],
       // ['HR'],
@@ -1197,7 +1197,7 @@
     labels: [
       ['Sebelum', 'Kontak Pasien'],
       ['Sebelum', 'Tindakan Aseptik'],
-      ['Sebelum', 'Kontak Cairan'],
+      ['Setelah Kontak', 'Cairan Tubuh Pasien'],
       ['Setelah', 'Kontak Pasien'],
       ['Setelah Kontak', 'Lingkungan Pasien'],
       // ['HR'],

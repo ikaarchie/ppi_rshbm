@@ -24,6 +24,7 @@
                         'Farmasi' => 'Farmasi',
                         'IGD' => 'IGD',
                         'Intensif' => 'Intensif',
+                        'Kebersihan' => 'Kebersihan',
                         'KBBL' => 'KBBL',
                         'Laboratorium' => 'Laboratorium',
                         'Laundry' => 'Laundry',
@@ -91,7 +92,7 @@
 
                         <div class="d-sm-flex justify-content-sm-center mb-2">
                             <div class="col-sm-6">
-                                {!! Form::label('stl_kon_cairan', 'Sebelum kontak cairan') !!}
+                                {!! Form::label('stl_kon_cairan', 'Setelah kontak cairan tubuh pasien') !!}
                             </div>
                             <div class="col-sm-6 text-end">
                                 {!! Form::radio('stl_kon_cairan', '1', '', ['class' => 'form-check-input'], 'required')

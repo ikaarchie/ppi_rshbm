@@ -59,7 +59,7 @@
                     <th colspan="7">HAIs</th>
                     <th rowspan="2">Terpajan</th>
                     <th rowspan="2">Tanggal</th>
-                    <th rowspan="2">Aksi</th>
+                    <th rowspan="2" style="width:8%">Aksi</th>
                 </tr>
                 <tr>
                     <th>IVL</th>
@@ -75,7 +75,7 @@
                     <th>IDO</th>
                 </tr>
             </thead>
-            <tbody style="background-color: #FFECB3">
+            <tbody style=" background-color: #FFECB3">
                 @php $no = 1; @endphp
                 @forelse($surveilans as $key => $isi)
                 <tr>
