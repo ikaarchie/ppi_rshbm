@@ -32,11 +32,11 @@
     </footer>
 
     {{-- @include('layouts.navbar') --}}
-    @include('surveilans.add')
-    @include('rekapSurveilans.add')
-    @include('feedbackPPI.add')
-    @include('rekapCuciTangan.add')
-    @include('cuciTangan.add')
+    {{-- @include('surveilans.add') --}}
+    {{-- @include('rekapSurveilans.add') --}}
+    {{-- @include('feedbackPPI.add') --}}
+    {{-- @include('rekapCuciTangan.add') --}}
+    {{-- @include('cuciTangan.add') --}}
 </body>
 
 </html>

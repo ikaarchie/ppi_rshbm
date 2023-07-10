@@ -1,9 +1,9 @@
-@extends('layouts.AuditCuciTangan')
+@extends('layouts.app')
 
-@section('auditContent')
-{{-- <div class="header-waves">
+@section('content')
+<div class="header-waves">
     <div class="container pt-3">
-        <h1 class="text-center"><b>CUCI TANGAN</b></h1>
+        <h1 class="text-center"><b>BUNDLE PPI</b></h1>
         <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
     </div>
 
@@ -19,12 +19,12 @@
             <use xlink:href="#gentle-wave" x="48" y="3" fill="#fff" />
         </g>
     </svg>
-</div> --}}
+</div>
 
 <div class="container-fluid justify-content-center bg-white">
     <div class="d-md-flex justify-content-between">
         <div class="gap-1 d-md-flex justify-content-md-start mt-2">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#cuciTangan" class="btn"
+            <button type="button" data-bs-toggle="modal" data-bs-target="#bundle" class="btn"
                 style="background-color: #FFAB00;">
                 <i class="fa-solid fa-plus"></i><b> Tambah Data</b>
             </button>
@@ -33,12 +33,12 @@
         <div class="gap-1 d-md-flex justify-content-md-end mt-2">
             <div class="form-group w-10">
                 <div class="input-group">
-                    <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
-                        id="myInput" onkeyup="cari()" placeholder="Cari Nama">
+                    {{-- <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
+                        id="myInput" onkeyup="cari()" placeholder="Cari Nama Pasien">
                     <span class="input-group-text"
                         style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
+                    </span> --}}
                 </div>
             </div>
         </div>
@@ -48,70 +48,30 @@
         <table class="table table-bordered border-dark align-middle w-100" id="myTable">
             <thead class="sticky text-dark text-center align-middle">
                 <tr>
-                    <th>No</th>
-                    <th>Nama</th>
+                    <th>MRN</th>
+                    <th>Nama Pasien</th>
                     <th>Unit</th>
+                    <th>Tndakan</th>
                     <th>Tanggal</th>
-                    <th>Sebelum kontak pasien</th>
-                    <th>Sebelum tindakan aseptik</th>
-                    <th>Setelah kontak cairan tubuh pasien</th>
-                    <th>Setelah kontak pasien</th>
-                    <th>Setelah kontak lingkungan pasien</th>
-                    <th>HR</th>
-                    <th>HW</th>
-                    <th>Gagal</th>
-                    <th>ST</th>
-                    <th style="width:8%">Aksi</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
-            <tbody style="background-color: #FFECB3">
-                @php $no = 1; @endphp
-                @forelse($cuci_tangan as $key => $isi)
+            <tbody style=" background-color: #FFECB3">
                 <tr>
-                    <td>{{ $cuci_tangan->firstItem() + $key }}</td>
-                    <td>{{ $isi->nama }}</td>
-                    <td>{{ $isi->unit }}</td>
-                    <td>{{ date("d/m/Y", strtotime($isi->tgl_input)) }}</td>
-                    <td>{{ ($isi->sbl_kon_psn == 1) ? 'Ya' : (($isi->sbl_kon_psn == 0) ? 'Tidak' : 'Tidak dilakukan') }}
-                    </td>
-                    <td>{{ ($isi->sbl_tin_aseptik == 1) ? 'Ya' : (($isi->sbl_tin_aseptik == 0) ? 'Tidak' : 'Tidak
-                        dilakukan') }}</td>
-                    <td>{{ ($isi->stl_kon_cairan == 1) ? 'Ya' : (($isi->stl_kon_cairan == 0) ? 'Tidak' : 'Tidak
-                        dilakukan') }}</td>
-                    <td>{{ ($isi->stl_kon_psn == 1) ? 'Ya' : (($isi->stl_kon_psn == 0) ? 'Tidak' : 'Tidak dilakukan') }}
-                    </td>
-                    <td>{{ ($isi->stl_kon_ling_psn == 1) ? 'Ya' : (($isi->stl_kon_ling_psn == 0) ? 'Tidak' : 'Tidak
-                        dilakukan') }}</td>
-                    <td>{{ ($isi->hr == 1) ? 'Ya' : (($isi->hr == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
-                    <td>{{ ($isi->hw == 1) ? 'Ya' : (($isi->hw == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
-                    <td>{{ ($isi->gagal == 1) ? 'Ya' : (($isi->gagal == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
-                    <td>{{ ($isi->st == 1) ? 'Ya' : (($isi->st == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
-                    <td>
-                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <a href="#editCuciTangan{{ $isi->id }}" data-bs-toggle="modal"
-                                class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger deleteSwal" data-id="{{ $isi->id }}"
-                                data-nama="{{ $isi->nama }}"><i class="fa-solid fa-trash"></i> Delete</a>
-                            @include('cuciTangan.edit')
-                        </div>
-                    </td>
+                    <td colspan="21" class="text-center"><b>Tidak ada data</b></td>
                 </tr>
-                @empty
-                <tr>
-                    <td colspan="14" class="text-center"><b>Tidak ada data</b></td>
-                </tr>
-                @endforelse
             </tbody>
         </table>
 
         <div class="btn-toolbar justify-content-between">
             <div>
-                {{ $cuci_tangan->links() }}
+                {{-- {{ $surveilans->links() }} --}}
             </div>
         </div>
     </div>
 </div>
-@include('cuciTangan.add')
+@include('bundlePpi.add')
+@include('bundlePpi.coba')
 
 {{-- fungsi search --}}
 <script>
@@ -123,7 +83,7 @@
         tr = table.getElementsByTagName("tr");
 
         for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[1];
+            td = tr[i].getElementsByTagName("td")[2];
             if (td) {
                 txtValue = td.textContent || td.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -159,7 +119,7 @@
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "cuciTangan/delete/"+id+""
+                window.location.href = "surveilans/delete/"+id+""
                 swalWithBootstrapButtons.fire(
                     'Terhapus!',
                     'Data berhasil dihapus',

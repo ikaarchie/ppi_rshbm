@@ -317,6 +317,7 @@
             class="btn btn-sm btn-primary">
             <i class="fa-solid fa-plus"></i><b> Tambah Analisa dan Tindak Lanjut</b>
           </button>
+          @include('rekapCuciTangan.add')
           @endforelse
         </div>
       </div>

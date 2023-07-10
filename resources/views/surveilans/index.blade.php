@@ -124,6 +124,7 @@
         </div>
     </div>
 </div>
+@include('surveilans.add')
 
 {{-- fungsi search --}}
 <script>

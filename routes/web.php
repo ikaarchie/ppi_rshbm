@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\BundleIADController;
 use App\Http\Controllers\CuciTanganController;
 use App\Http\Controllers\SurveilansController;
+use App\Http\Controllers\MstKodeBundleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +47,19 @@ Route::get('/rekapCuciTangan/excel/', [CuciTanganController::class, 'excel'])->n
 Route::get('/rekapCuciTangan/pdf/', [CuciTanganController::class, 'pdf'])->name('pdfCuciTangan');
 Route::post('/inputRekapCuciTangan', [CuciTanganController::class, 'inputRekap'])->name('inputRekapCuciTangan');
 Route::patch('/updateRekapCuciTangan/{id}', [CuciTanganController::class, 'updateRekap'])->name('updateRekapCuciTangan');
+
+Route::get('/mstKodeBundle', [MstKodeBundleController::class, 'index'])->name('indexMstKodeBundle');
+Route::get('/mstKodeBundle', [MstKodeBundleController::class, 'getData'])->name('getDataMstKodeBundle');
+Route::post('/mstKodeBundle/save', [MstKodeBundleController::class, 'save']);
+Route::patch('/mstKodeBundle/update/{id}', [MstKodeBundleController::class, 'update'])->name('updateMstKodeBundle');
+Route::get('/mstKodeBundle/delete/{id}', [MstKodeBundleController::class, 'destroy'])->name('deleteMstKodeBundle');
+
+Route::get('/bundle', [BundleIADController::class, 'index'])->name('indexBundleIAD');
+
+Route::get('/bundleIdo', [BundleIDOController::class, 'index'])->name('indexBundleIDO');
+
+Route::get('/bundleIsk', [BundleISKController::class, 'index'])->name('indexBundleISK');
+
+Route::get('/bundlePlebitis', [BundlePlebitisController::class, 'index'])->name('indexBundlePlebitis');
+
+Route::get('/bundleVap', [BundleVAPController::class, 'index'])->name('indexBundleVAP');

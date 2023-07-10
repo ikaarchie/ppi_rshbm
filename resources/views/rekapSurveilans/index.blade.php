@@ -249,6 +249,7 @@
           <button type="button" data-bs-toggle="modal" data-bs-target="#tambahRekap" class="btn btn-sm btn-primary">
             <i class="fa-solid fa-plus"></i><b> Tambah Analisa dan Tindak Lanjut</b>
           </button>
+          @include('rekapSurveilans.add')
           @endforelse
         </div>
       </div>
