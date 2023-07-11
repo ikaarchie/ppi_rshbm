@@ -68,33 +68,33 @@
                                 <th>1</th>
                                 <th>Hand hygiene</th>
                                 <td class="text-center">{!! Form::radio('PLB0301', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0301', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Kaji kebutuhan</th>
                                 <td class="text-center">{!! Form::radio('PLB0302', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0302', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Tehnik steril</th>
                                 <td class="text-center">{!! Form::radio('PLB0303', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0303', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Desinfeksi area insersi</th>
                                 <td class="text-center">{!! Form::radio('PLB0304', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0304', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -113,33 +113,33 @@
                                 <th>1</th>
                                 <th>Hand hygiene</th>
                                 <td class="text-center">{!! Form::radio('PLB0201', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0201', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Perawatan area insersi</th>
                                 <td class="text-center">{!! Form::radio('PLB0202', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0202', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Kaji kebutuhan, jika tidak diperlukan segera lepas</th>
                                 <td class="text-center">{!! Form::radio('PLB0203', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0203', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Penggantian administrasi set</th>
                                 <td class="text-center">{!! Form::radio('PLB0204', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0204', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
                     </table>

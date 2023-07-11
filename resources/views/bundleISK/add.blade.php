@@ -66,33 +66,33 @@
                                 <th>1</th>
                                 <th>Kaji kebutuhan / ada indikasi</th>
                                 <td class="text-center">{!! Form::radio('ISK0101', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0101', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Pemasangan oleh petugas yang terlatih</th>
                                 <td class="text-center">{!! Form::radio('ISK0102', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0102', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Kebersihan tangan</th>
                                 <td class="text-center">{!! Form::radio('ISK0103', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0103', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Tehnik steril</th>
                                 <td class="text-center">{!! Form::radio('ISK0104', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0104', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -111,33 +111,33 @@
                                 <th>1</th>
                                 <th>Hand hygiene</th>
                                 <td class="text-center">{!! Form::radio('ISK0201', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0201', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Perawatan cateter perineal setiap hari sesudah BAB</th>
                                 <td class="text-center">{!! Form::radio('ISK0202', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0202', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Urine bag tidak dilantai</th>
                                 <td class="text-center">{!! Form::radio('ISK0203', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0203', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Urine bag lebih rendah dari kandung kemih</th>
                                 <td class="text-center">{!! Form::radio('ISK0204', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0204', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
                     </table>

@@ -66,33 +66,33 @@
                                 <th>1</th>
                                 <th>Hand hygiene</th>
                                 <td class="text-center">{!! Form::radio('VAP0101', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0101', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Tehnik steril</th>
                                 <td class="text-center">{!! Form::radio('VAP0102', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0102', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Pemakaian APD</th>
                                 <td class="text-center">{!! Form::radio('VAP0103', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0103', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Sedasi</th>
                                 <td class="text-center">{!! Form::radio('VAP0104', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0104', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -111,65 +111,65 @@
                                 <th>1</th>
                                 <th>Hand hygiene</th>
                                 <td class="text-center">{!! Form::radio('VAP0201', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0201', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Oral hygiene 4-6x sehari atau jika perlu</th>
                                 <td class="text-center">{!! Form::radio('VAP0202', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0202', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Sikat gigi setiap 12 jam</th>
                                 <td class="text-center">{!! Form::radio('VAP0203', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0203', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Pengkajian sedasi ekstubasi</th>
                                 <td class="text-center">{!! Form::radio('VAP0204', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0204', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>5</th>
                                 <th>Posisi kepala 33-45 derajat</th>
                                 <td class="text-center">{!! Form::radio('VAP0205', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0205', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>6</th>
                                 <th>Manajemen sekresi / suction</th>
                                 <td class="text-center">{!! Form::radio('VAP0206', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0206', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>7</th>
                                 <th>Penggantian selang suction 1x24 jam</th>
                                 <td class="text-center">{!! Form::radio('VAP0207', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0207', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>8</th>
                                 <th>Penggantian cairan yang digunakan untuk suction pershif</th>
                                 <td class="text-center">{!! Form::radio('VAP0208', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0208', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
                     </table>

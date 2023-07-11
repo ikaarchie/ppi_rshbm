@@ -68,33 +68,33 @@
                                 <th>1</th>
                                 <th>Hand hygiene</th>
                                 <td class="text-center">{!! Form::radio('IAD0301', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0301', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Seleksi area</th>
                                 <td class="text-center">{!! Form::radio('IAD0302', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0302', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Antiseptik alkohol based / chlorhexidine</th>
                                 <td class="text-center">{!! Form::radio('IAD0303', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0303', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Maksimal pemakaian APD</th>
                                 <td class="text-center">{!! Form::radio('IAD0304', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0304', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -113,33 +113,33 @@
                                 <th>1</th>
                                 <th>Hand hygiene</th>
                                 <td class="text-center">{!! Form::radio('IAD0201', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0201', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Disinfeksi CVC dengan alkohol 70%</th>
                                 <td class="text-center">{!! Form::radio('IAD0202', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0202', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Ganti dressing jika kotor</th>
                                 <td class="text-center">{!! Form::radio('IAD0203', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0203', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Lepas infus jika tidak perlu</th>
                                 <td class="text-center">{!! Form::radio('IAD0204', '1', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0204', '0', '', ['class' =>
-                                    'form-check-input'], 'required') !!}</td>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
                     </table>
