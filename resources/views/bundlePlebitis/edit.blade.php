@@ -1,4 +1,4 @@
-<div class="modal fade" id="editCuciTangan{{$isi->id}}" tabindex="-1" data-bs-backdrop="static"
+<div class="modal fade" id="editBundlePlebitis{{$isi->id}}" tabindex="-1" data-bs-backdrop="static"
     aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
@@ -7,208 +7,142 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {!! Form::model($isi, [ 'method' => 'patch','route' => ['updateCuciTangan', $isi->id] ]) !!}
+                {!! Form::model($isi, [ 'method' => 'patch','route' => ['updateBundlePlebitis', $isi->id] ]) !!}
 
-                <div class="col-sm mb-3 form-floating">
-                    {!! Form::text('nama', $isi->nama, ['style' => 'height: auto', 'class' => 'form-control', 'id' =>
-                    'nama', 'placeholder' => 'Nama Pasien', 'required']) !!}
-                    {!! Form::label('nama', 'Nama') !!}
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <div class="col-sm-4 mb-3 form-floating">
+                        {!! Form::number('mrn', $isi->mrn, ['style' => 'height: auto', 'class' => 'form-control', 'id'
+                        =>
+                        'mrn', 'placeholder' => 'MRN', 'required']) !!}
+                        {!! Form::label('mrn', 'MRN') !!}
+                    </div>
+
+                    <div class="col-sm-8 mb-3 form-floating">
+                        {!! Form::text('nama_pasien', $isi->nama_pasien, ['style' => 'height: auto', 'class' =>
+                        'form-control', 'id' =>
+                        'nama_pasien', 'placeholder' => 'Nama Pasien', 'required']) !!}
+                        {!! Form::label('nama_pasien', 'Nama Pasien') !!}
+                    </div>
+                </div>
+
+                <div class="col-sm-12 mb-3 form-floating">
+                    {!! Form::text('diagnosa', $isi->diagnosa, ['style' => 'height: auto', 'class' => 'form-control',
+                    'id' =>
+                    'diagnosa', 'placeholder' => 'Diagnosa', 'required']) !!}
+                    {!! Form::label('diagnosa', 'Diagnosa') !!}
                 </div>
 
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <div class="col-sm-6 mb-3 form-floating">
+                    <div class="col-sm-8 mb-3 form-floating">
                         {!! Form::select('unit', [
-                        'CSSU' => 'CSSU',
-                        'Dapur' => 'Dapur',
-                        'DPJP' => 'DPJP',
-                        'Farmasi' => 'Farmasi',
                         'IGD' => 'IGD',
                         'Intensif' => 'Intensif',
-                        'Kebersihan' => 'Kebersihan',
-                        'KBBL' => 'KBBL',
-                        'Laboratorium' => 'Laboratorium',
-                        'Laundry' => 'Laundry',
                         'OK' => 'OK',
                         'Perawatan Eksekutif lt.2' => 'Perawatan Eksekutif lt.2',
                         'Perawatan Reguler lt.4' => 'Perawatan Reguler lt.4',
                         'Perawatan Reguler lt.5' => 'Perawatan Reguler lt.5',
-                        'Poliklinik' => 'Poliklinik',
-                        'Radiologi' => 'Radiologi',
                         'VK' => 'VK'], $isi->unit, ['style' => 'height: auto', 'class' => 'form-select', 'id' =>
                         'unit','placeholder' => '-- Pilih Unit --', 'required']) !!}
                         {!! Form::label('unit', 'Unit') !!}
                     </div>
 
-                    <div class="col-sm-6 mb-3 form-floating">
-                        {!! Form::date('tgl_input', $isi->tgl_input, ['style' => 'height: auto', 'class' =>
-                        'form-control',
-                        'id' => 'tgl_input', 'required']) !!}
-                        {!! Form::label('tgl_input', 'Tanggal') !!}
+                    <div class="col-sm-4 mb-3 form-floating">
+                        {!! Form::date('tgl', $isi->tgl, ['style' => 'height: auto', 'class' =>
+                        'form-control', 'id' => 'tgl', 'required']) !!}
+                        {!! Form::label('tgl', 'Tanggal') !!}
                     </div>
                 </div>
 
-                <div class="card mb-3">
-                    <div class="card-header">
-                        OPP
-                    </div>
-                    <div class="card-body">
-                        <div class="d-sm-flex justify-content-sm-center mb-2">
-                            <div class="col-sm-6">
-                                {!! Form::label('sbl_kon_psn', 'Sebelum kontak pasien') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('sbl_kon_psn', '1', '', ['class' => 'form-check-input'], 'required')
-                                !!}
-                                {!! Form::label('sbl_kon_psn', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('sbl_kon_psn', '0', '', ['class' => 'form-check-input'], 'required')
-                                !!}
-                                {!! Form::label('sbl_kon_psn', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('sbl_kon_psn', 'td', '', ['class' => 'form-check-input'], 'required')
-                                !!}
-                                {!! Form::label('sbl_kon_psn', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
-                            </div>
-                        </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="text-dark text-center align-middle">
+                            <tr>
+                                <th class="col-1">No</th>
+                                <th>Bundle Insersi</th>
+                                <th class="col-1">Ya</th>
+                                <th class="col-1">Tidak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>Hand hygiene</th>
+                                <td class="text-center">{!! Form::radio('PLB0301', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0301', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Kaji kebutuhan</th>
+                                <td class="text-center">{!! Form::radio('PLB0302', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0302', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Tehnik steril</th>
+                                <td class="text-center">{!! Form::radio('PLB0303', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0303', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Desinfeksi area insersi</th>
+                                <td class="text-center">{!! Form::radio('PLB0304', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0304', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                        <div class="d-sm-flex justify-content-sm-center mb-2">
-                            <div class="col-sm-6">
-                                {!! Form::label('sbl_tin_aseptik', 'Sebelum tindakan aseptik') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('sbl_tin_aseptik', '1', '', ['class' => 'form-check-input'],
-                                'required')
-                                !!}
-                                {!! Form::label('sbl_tin_aseptik', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('sbl_tin_aseptik', '0', '', ['class' => 'form-check-input'],
-                                'required')
-                                !!}
-                                {!! Form::label('sbl_tin_aseptik', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('sbl_tin_aseptik', 'td', '', ['class' => 'form-check-input'],
-                                'required')
-                                !!}
-                                {!! Form::label('sbl_tin_aseptik', 'Tidak dilakukan', ['class' => 'form-check-label'])
-                                !!}
-                            </div>
-                        </div>
-
-                        <div class="d-sm-flex justify-content-sm-center mb-2">
-                            <div class="col-sm-6">
-                                {!! Form::label('stl_kon_cairan', 'Setelah kontak cairan tubuh pasien') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('stl_kon_cairan', '1', '', ['class' => 'form-check-input'], 'required')
-                                !!}
-                                {!! Form::label('stl_kon_cairan', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('stl_kon_cairan', '0', '', ['class' => 'form-check-input'],
-                                'required')
-                                !!}
-                                {!! Form::label('stl_kon_cairan', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('stl_kon_cairan', 'td', '', ['class' => 'form-check-input'],
-                                'required')
-                                !!}
-                                {!! Form::label('stl_kon_cairan', 'Tidak dilakukan', ['class' => 'form-check-label'])
-                                !!}
-                            </div>
-                        </div>
-
-                        <div class="d-sm-flex justify-content-sm-center mb-2">
-                            <div class="col-sm-6">
-                                {!! Form::label('stl_kon_psn', 'Setelah kontak pasien') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('stl_kon_psn', '1', '', ['class' => 'form-check-input'], 'required')
-                                !!}
-                                {!! Form::label('stl_kon_psn', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('stl_kon_psn', '0', '', ['class' => 'form-check-input'], 'required')
-                                !!}
-                                {!! Form::label('stl_kon_psn', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('stl_kon_psn', 'td', '', ['class' => 'form-check-input'], 'required')
-                                !!}
-                                {!! Form::label('stl_kon_psn', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
-                            </div>
-                        </div>
-
-                        <div class="d-sm-flex justify-content-sm-center">
-                            <div class="col-sm-6">
-                                {!! Form::label('stl_kon_ling_psn', 'Setelah kontak lingkungan pasien') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('stl_kon_ling_psn', '1', '', ['class' => 'form-check-input'],
-                                'required')
-                                !!}
-                                {!! Form::label('stl_kon_ling_psn', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('stl_kon_ling_psn', '0', '', ['class' => 'form-check-input'],
-                                'required') !!}
-                                {!! Form::label('stl_kon_ling_psn', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('stl_kon_ling_psn', 'td', '', ['class' => 'form-check-input'],
-                                'required') !!}
-                                {!! Form::label('stl_kon_ling_psn', 'Tidak dilakukan', ['class' => 'form-check-label'])
-                                !!}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card mb-3">
-                    <div class="card-header">
-                        HH Action
-                    </div>
-                    <div class="card-body">
-                        <div class="d-sm-flex justify-content-sm-center mb-2">
-                            <div class="col-sm-6">
-                                {!! Form::label('hr', 'HR') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('hr', '1', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('hr', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('hr', '0', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('hr', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('hr', 'td', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('hr', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
-                            </div>
-                        </div>
-
-                        <div class="d-sm-flex justify-content-sm-center mb-2">
-                            <div class="col-sm-6">
-                                {!! Form::label('hw', 'HW') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('hw', '1', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('hw', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('hw', '0', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('hw', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('hw', 'td', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('hw', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
-                            </div>
-                        </div>
-
-                        <div class="d-sm-flex justify-content-sm-center mb-2">
-                            <div class="col-sm-6">
-                                {!! Form::label('gagal', 'Gagal') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('gagal', '1', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('gagal', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('gagal', '0', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('gagal', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('gagal', 'td', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('gagal', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
-                            </div>
-                        </div>
-
-                        <div class="d-sm-flex justify-content-sm-center">
-                            <div class="col-sm-6">
-                                {!! Form::label('st', 'ST') !!}
-                            </div>
-                            <div class="col-sm-6 text-end">
-                                {!! Form::radio('st', '1', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('st', 'Ya', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('st', '0', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('st', 'Tidak', ['class' => 'form-check-label']) !!}
-                                {!! Form::radio('st', 'td', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('st', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
-                            </div>
-                        </div>
-                    </div>
+                    <table class="table table-bordered align-middle">
+                        <thead class="text-dark text-center align-middle">
+                            <tr>
+                                <th class="col-1">No</th>
+                                <th>Bundle Maintenance</th>
+                                <th class="col-1">Ya</th>
+                                <th class="col-1">Tidak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>Hand hygiene</th>
+                                <td class="text-center">{!! Form::radio('PLB0201', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0201', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Perawatan area insersi</th>
+                                <td class="text-center">{!! Form::radio('PLB0202', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0202', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Kaji kebutuhan, jika tidak diperlukan segera lepas</th>
+                                <td class="text-center">{!! Form::radio('PLB0203', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0203', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Penggantian administrasi set</th>
+                                <td class="text-center">{!! Form::radio('PLB0204', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0204', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

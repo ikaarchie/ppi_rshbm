@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.BundlePpi')
 
-@section('content')
-<div class="header-waves">
+@section('bundleContent')
+{{-- <div class="header-waves">
     <div class="container pt-3">
         <h1 class="text-center"><b>BUNDLE PPI</b></h1>
         <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
@@ -19,12 +19,12 @@
             <use xlink:href="#gentle-wave" x="48" y="3" fill="#fff" />
         </g>
     </svg>
-</div>
+</div> --}}
 
 <div class="container-fluid justify-content-center bg-white">
     <div class="d-md-flex justify-content-between">
         <div class="gap-1 d-md-flex justify-content-md-start mt-2">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#bundle" class="btn"
+            <button type="button" data-bs-toggle="modal" data-bs-target="#bundlePlebitis" class="btn"
                 style="background-color: #FFAB00;">
                 <i class="fa-solid fa-plus"></i><b> Tambah Data</b>
             </button>
@@ -33,12 +33,12 @@
         <div class="gap-1 d-md-flex justify-content-md-end mt-2">
             <div class="form-group w-10">
                 <div class="input-group">
-                    {{-- <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
+                    <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
                         id="myInput" onkeyup="cari()" placeholder="Cari Nama Pasien">
                     <span class="input-group-text"
                         style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </span> --}}
+                    </span>
                 </div>
             </div>
         </div>
@@ -48,30 +48,54 @@
         <table class="table table-bordered border-dark align-middle w-100" id="myTable">
             <thead class="sticky text-dark text-center align-middle">
                 <tr>
-                    <th>MRN</th>
+                    <th style="width:1%">No</th>
+                    <th style="width:10%">MRN</th>
                     <th>Nama Pasien</th>
-                    <th>Unit</th>
-                    <th>Tndakan</th>
-                    <th>Tanggal</th>
-                    <th>Aksi</th>
+                    <th>Diagnosa</th>
+                    <th style="width:10%">Unit</th>
+                    <th style="width:5%">Tanggal</th>
+                    <th style="width:15%">Aksi</th>
                 </tr>
             </thead>
             <tbody style=" background-color: #FFECB3">
+                @php $no = 1; @endphp
+                @forelse($bundlePlebitis as $key => $isi)
                 <tr>
-                    <td colspan="21" class="text-center"><b>Tidak ada data</b></td>
+                    <td>{{ $bundlePlebitis->firstItem() + $key }}</td>
+                    <td>{{ $isi->mrn }}</td>
+                    <td>{{ $isi->nama_pasien }}</td>
+                    <td>{{ $isi->diagnosa }}</td>
+                    <td>{{ $isi->unit }}</td>
+                    <td>{{ date("d/m/Y", strtotime($isi->tgl)) }}</td>
+                    <td>
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <a href="#detailBundlePlebitis{{ $isi->id }}" data-bs-toggle="modal"
+                                class="btn btn-sm btn-primary"><i class="fa-regular fa-eye"></i> Detail</a>
+                            <a href="#editBundlePlebitis{{ $isi->id }}" data-bs-toggle="modal"
+                                class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                            <a href="#" class="btn btn-sm btn-danger deleteSwal" data-id="{{ $isi->id }}"
+                                data-nama="{{ $isi->nama_pasien }}"><i class="fa-solid fa-trash"></i> Delete</a>
+                            @include('bundlePlebitis.detail')
+                            @include('bundlePlebitis.edit')
+                        </div>
+                    </td>
                 </tr>
+                @empty
+                <tr>
+                    <td colspan="7" class="text-center"><b>Tidak ada data</b></td>
+                </tr>
+                @endforelse
             </tbody>
         </table>
 
         <div class="btn-toolbar justify-content-between">
             <div>
-                {{-- {{ $surveilans->links() }} --}}
+                {{ $bundlePlebitis->links() }}
             </div>
         </div>
     </div>
 </div>
-@include('bundlePpi.add')
-@include('bundlePpi.coba')
+@include('bundlePlebitis.add')
 
 {{-- fungsi search --}}
 <script>
@@ -119,7 +143,7 @@
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "surveilans/delete/"+id+""
+                window.location.href = "bundlePlebitis/delete/"+id+""
                 swalWithBootstrapButtons.fire(
                     'Terhapus!',
                     'Data berhasil dihapus',

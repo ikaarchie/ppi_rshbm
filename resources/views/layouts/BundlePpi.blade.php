@@ -24,28 +24,28 @@
 <div class="container-fluid wrapper mb-3">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('bundleIAD') ? 'active' : '' }}" aria-current="page"
-                href="{{ route('indexBundleIAD') }}">BUNDLE IAD</a>
+            <a class="nav-link {{ Request::is('bundle') ? 'active' : '' }}" aria-current="page"
+                href="{{ route('getDataBundleIad') }}">BUNDLE IAD</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('bundleIDO') ? 'active' : '' }}"
-                href="{{ route('indexBundleIDO') }}">BUNDLE IDO</a>
+            <a class="nav-link {{ Request::is('bundleIdo') ? 'active' : '' }}"
+                href="{{ route('getDataBundleIdo') }}">BUNDLE IDO</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('bundleISK') ? 'active' : '' }}"
-                href="{{ route('indexBundleISK') }}">BUNDLE ISK</a>
+            <a class="nav-link {{ Request::is('bundleIsk') ? 'active' : '' }}"
+                href="{{ route('getDataBundleIsk') }}">BUNDLE ISK</a>
         </li>
         <li class="nav-item">
             <a class="nav-link {{ Request::is('bundlePlebitis') ? 'active' : '' }}"
-                href="{{ route('indexBundlePlebitis') }}">BUNDLE PLEBITIS</a>
+                href="{{ route('getDataBundlePlebitis') }}">BUNDLE PLEBITIS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('bundleVAP') ? 'active' : '' }}"
-                href="{{ route('indexBundleVAP') }}">BUNDLE VAP</a>
+            <a class="nav-link {{ Request::is('bundleVap') ? 'active' : '' }}"
+                href="{{ route('getDataBundleVap') }}">BUNDLE VAP</a>
         </li>
     </ul>
 </div>
 
-@yield('auditContent')
+@yield('bundleContent')
 
 @endsection

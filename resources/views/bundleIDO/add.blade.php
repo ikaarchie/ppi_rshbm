@@ -1,12 +1,15 @@
-<div class="modal fade" id="bundle" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalBundle"
+<div class="modal fade" id="bundleIDO" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalBundleIDO"
     aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalBundle">Tambah Data</h5>
+                <h5 class="modal-title" id="modalBundleIDO">Tambah Data</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                {!! Form::open(['url' => 'bundleIdo/save']) !!}
+                {!! Form::hidden('id') !!}
+
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <div class="col-sm-4 mb-3 form-floating">
                         {!! Form::number('mrn', '', ['style' => 'height: auto', 'class' => 'form-control', 'id' =>
@@ -21,7 +24,13 @@
                     </div>
                 </div>
 
-                <div class="col-sm mb-3 form-floating">
+                <div class="col-sm-12 mb-3 form-floating">
+                    {!! Form::text('diagnosa', '', ['style' => 'height: auto', 'class' => 'form-control', 'id' =>
+                    'diagnosa', 'placeholder' => 'Diagnosa', 'required']) !!}
+                    {!! Form::label('diagnosa', 'Diagnosa') !!}
+                </div>
+
+                <div class="col-sm-12 mb-3 form-floating">
                     {!! Form::text('tindakan', '', ['style' => 'height: auto', 'class' => 'form-control', 'id' =>
                     'tindakan', 'placeholder' => 'Tindakan', 'required']) !!}
                     {!! Form::label('tindakan', 'Tindakan') !!}
@@ -30,253 +39,287 @@
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <div class="col-sm-8 mb-3 form-floating">
                         {!! Form::select('unit', [
-                        'CSSU' => 'CSSU',
-                        'Dapur' => 'Dapur',
-                        'DPJP' => 'DPJP',
-                        'Farmasi' => 'Farmasi',
                         'IGD' => 'IGD',
                         'Intensif' => 'Intensif',
-                        'Kebersihan' => 'Kebersihan',
-                        'KBBL' => 'KBBL',
-                        'Laboratorium' => 'Laboratorium',
-                        'Laundry' => 'Laundry',
                         'OK' => 'OK',
                         'Perawatan Eksekutif lt.2' => 'Perawatan Eksekutif lt.2',
                         'Perawatan Reguler lt.4' => 'Perawatan Reguler lt.4',
                         'Perawatan Reguler lt.5' => 'Perawatan Reguler lt.5',
-                        'Poliklinik' => 'Poliklinik',
-                        'Radiologi' => 'Radiologi',
                         'VK' => 'VK'], null, ['style' => 'height: auto', 'class' => 'form-select', 'id' =>
                         'unit','placeholder' => '-- Pilih Unit --', 'required']) !!}
                         {!! Form::label('unit', 'Unit') !!}
                     </div>
 
                     <div class="col-sm-4 mb-3 form-floating">
-                        {!! Form::date('tgl_input', '', ['style' => 'height: auto', 'class' => 'form-control',
-                        'id' => 'tgl_input', 'required']) !!}
-                        {!! Form::label('tgl_input', 'Tanggal') !!}
+                        {!! Form::date('tgl', '', ['style' => 'height: auto', 'class' => 'form-control',
+                        'id' => 'tgl', 'required']) !!}
+                        {!! Form::label('tgl', 'Tanggal') !!}
                     </div>
                 </div>
 
-                {{-- <form class="formm"> --}}
-                    {{-- <div class="form1"> --}}
-                        <div class="card mb-2">
-                            <div class="card-header">
-                                Bundle IAD
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered align-middle">
-                                        <thead class="text-dark text-center align-middle">
-                                            <tr>
-                                                <th class="col-1">No</th>
-                                                <th>Bundle Insersi</th>
-                                                <th class="col-1">Ya</th>
-                                                <th class="col-1">Tidak</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <th>Hand hygiene</th>
-                                                <td class="text-center">{!! Form::radio('aa', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('aa', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <th>Seleksi area</th>
-                                                <td class="text-center">{!! Form::radio('bb', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('bbb', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <th>Antiseptik alkohol based / chlorhexidine</th>
-                                                <td class="text-center">{!! Form::radio('cc', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('cc', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>4</th>
-                                                <th>Maksimal pemakaian APD</th>
-                                                <td class="text-center">{!! Form::radio('dd', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('dd', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="text-dark text-center align-middle">
+                            <tr>
+                                <th style="width:1%">No</th>
+                                <th>Bundle Pre Operasi</th>
+                                <th class="col-1">Ya</th>
+                                <th class="col-1">Tidak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>A</th>
+                                <th colspan="3">Pasien</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Mandi dengan antiseptik / sabun mandi cair 2x sebelum tindakan operasi (WP)</th>
+                                <td class="text-center">{!! Form::radio('IDO04A01', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A01', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Pencukuran bila diperlukan dan dengan menggunakan Clipper 1 jam sebelum tindakan
+                                    operasi (BRM)</th>
+                                <td class="text-center">{!! Form::radio('IDO04A02', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A02', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Gula darah <200 Mg / DI / Normal (BRM)</th>
+                                <td class="text-center">{!! Form::radio('IDO04A03', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A03', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Antibiotik 30-60 menit sebelum insisi atau sesuai dengan empirik (BRM)</th>
+                                <td class="text-center">{!! Form::radio('IDO04A04', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A04', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <th>Tidak merokok atau berhenti merokok 30 hari sebelum operasi elektif (WP)</th>
+                                <td class="text-center">{!! Form::radio('IDO04A05', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A05', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <th>Cuci dan bersihkan area pembedahan dan sekitarnya (BRM)</th>
+                                <td class="text-center">{!! Form::radio('IDO04A06', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A06', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <th>Menggunakan antiseptik untuk membersihkan kulit (BRM)</th>
+                                <td class="text-center">{!! Form::radio('IDO04A07', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A07', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <th>Tidak rawat inap > 2x24 jam sebelum tindakan operasi (BRM)</th>
+                                <td class="text-center">{!! Form::radio('IDO04A08', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A08', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
 
-                                    <table class="table table-bordered align-middle">
-                                        <thead class="text-dark text-center align-middle">
-                                            <tr>
-                                                <th class="col-1">No</th>
-                                                <th>Bundle Maintenance</th>
-                                                <th class="col-1">Ya</th>
-                                                <th class="col-1">Tidak</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <th>Hand hygiene</th>
-                                                <td class="text-center">{!! Form::radio('aaa', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('aaa', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <th>Disinfeksi CVC dengan alkohol 70%</th>
-                                                <td class="text-center">{!! Form::radio('bbb', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('bbb', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <th>Ganti dressing jika kotor</th>
-                                                <td class="text-center">{!! Form::radio('ccc', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('ccc', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>4</th>
-                                                <th>Lepas infus jika tidak perlu</th>
-                                                <td class="text-center">{!! Form::radio('ddd', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('ddd', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-sm-flex justify-content-sm-end">
-                            <button type="submit" class="btn btn-outline-primary next">Selanjutnya <i
-                                    class="fa-solid fa-angles-right"></i></button>
-                        </div>
-                        {{--
-                    </div> --}}
+                            <tr>
+                                <th colspan="4"></th>
+                            </tr>
+                            <tr>
+                                <th>B</th>
+                                <th colspan="3">Tim Bedah</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Kuku pendek, tidak menggunakan cat kuku atau kuku palsu (O)</th>
+                                <td class="text-center">{!! Form::radio('IDO04B01', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04B01', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Cuci tangan bedah (surgical scrub) dengan antiseptik standar (O)</th>
+                                <td class="text-center">{!! Form::radio('IDO04B02', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04B02', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Menggunakan APD lengkap (O)</th>
+                                <td class="text-center">{!! Form::radio('IDO04B03', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04B03', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    {{-- <div class="form2"> --}}
-                        <div class="card mb-2">
-                            <div class="card-header">
-                                Bundle IAD
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered align-middle">
-                                        <thead class="text-dark text-center align-middle">
-                                            <tr>
-                                                <th class="col-1">No</th>
-                                                <th>Bundle Insersi</th>
-                                                <th class="col-1">Ya</th>
-                                                <th class="col-1">Tidak</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <th>Hand hygiene</th>
-                                                <td class="text-center">{!! Form::radio('aa', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('aa', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <th>Seleksi area</th>
-                                                <td class="text-center">{!! Form::radio('bb', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('bbb', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <th>Antiseptik alkohol based / chlorhexidine</th>
-                                                <td class="text-center">{!! Form::radio('cc', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('cc', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>4</th>
-                                                <th>Maksimal pemakaian APD</th>
-                                                <td class="text-center">{!! Form::radio('dd', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('dd', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                    <table class="table table-bordered align-middle">
+                        <thead class="text-dark text-center align-middle">
+                            <tr>
+                                <th style="width:1%">No</th>
+                                <th>Bundle Intra Operasi</th>
+                                <th class="col-1">Ya</th>
+                                <th class="col-1">Tidak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>A</th>
+                                <th colspan="3">Tim Bedah</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Gunakan masker bedah untuk menutup mulut dan hidung secara menyeluruh saat memasuki
+                                    kamar bedah, saat operasi akan
+                                    dimulai atau operasi sedang berjalan</th>
+                                <td class="text-center">{!! Form::radio('IDO05A01', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05A01', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Gunakan tutup kepala sampai anak rambut</th>
+                                <td class="text-center">{!! Form::radio('IDO05A02', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05A02', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Tidak boleh menggunakan cover shoes untuk mencegah IDO</th>
+                                <td class="text-center">{!! Form::radio('IDO05A03', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05A03', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Gunakan sarung tangan steril setelah memakai gaun steril</th>
+                                <td class="text-center">{!! Form::radio('IDO05A04', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05A04', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th colspan="4"></th>
+                            </tr>
+                            <tr>
+                                <th>B</th>
+                                <th colspan="3">Ventilasi & peralatan</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Instrumen steril</th>
+                                <td class="text-center">{!! Form::radio('IDO05B01', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05B01', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Menggunakan antiseptik skin preparasi</th>
+                                <td class="text-center">{!! Form::radio('IDO05B02', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05B02', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Suhu / kelembaban udara 19-20 derajat celcius / 40-60%</th>
+                                <td class="text-center">{!! Form::radio('IDO05B03', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05B03', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Pintu kamar bedah selalu tertutup kecuali untuk lewat alat, petugas dan pasien</th>
+                                <td class="text-center">{!! Form::radio('IDO05B04', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05B04', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                                    <table class="table table-bordered align-middle">
-                                        <thead class="text-dark text-center align-middle">
-                                            <tr>
-                                                <th class="col-1">No</th>
-                                                <th>Bundle Maintenance</th>
-                                                <th class="col-1">Ya</th>
-                                                <th class="col-1">Tidak</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <th>Hand hygiene</th>
-                                                <td class="text-center">{!! Form::radio('aaa', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('aaa', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <th>Disinfeksi CVC dengan alkohol 70%</th>
-                                                <td class="text-center">{!! Form::radio('bbb', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('bbb', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <th>Ganti dressing jika kotor</th>
-                                                <td class="text-center">{!! Form::radio('ccc', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('ccc', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>4</th>
-                                                <th>Lepas infus jika tidak perlu</th>
-                                                <td class="text-center">{!! Form::radio('ddd', '1', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                                <td class="text-center">{!! Form::radio('ddd', '0', '', ['class' =>
-                                                    'form-check-input'], 'required') !!}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-sm-flex justify-content-sm-between">
-                            <button type="button" class="btn btn-outline-primary"><i
-                                    class="fa-solid fa-angles-left back"></i>
-                                Sebelumnya</button>
-                            <button type="button" class="btn btn-outline-primary">Selanjutnya <i
-                                    class="fa-solid fa-angles-right next"></i></button>
-                        </div>
-                        {{--
-                    </div> --}}
-                    {{-- </form> --}}
+                    <table class="table table-bordered align-middle">
+                        <thead class="text-dark text-center align-middle">
+                            <tr>
+                                <th style="width:1%">No</th>
+                                <th>Bundle Post Operasi</th>
+                                <th class="col-1">Ya</th>
+                                <th class="col-1">Tidak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>Luka ditutup 2x24 jam / bila terjadi rembesan segera diganti</th>
+                                <td class="text-center">{!! Form::radio('IDO0601', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO0601', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Rawat luka dengan tehnik steril menggunakan cairan NaCl</th>
+                                <td class="text-center">{!! Form::radio('IDO0602', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO0602', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Pankes gizi, kebersihan diri, cara merawat luka dan mobilisasi</th>
+                                <td class="text-center">{!! Form::radio('IDO0603', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO0603', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Menggunakan APD saat merawat luka sesuai kebutuhan</th>
+                                <td class="text-center">{!! Form::radio('IDO0604', '1', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO0604', '0', '', ['class' =>
+                                    'form-check-input'], 'required') !!}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i> Batal</button>
+                <button type="submit" class="btn btn-sm btn-success">
+                    <i class="fa-solid fa-check"></i> Simpan</button>
+                {!! Form::close() !!}
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 
 <script>
