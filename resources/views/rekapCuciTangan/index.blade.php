@@ -42,7 +42,7 @@
       </div>
     </div>
     @if($errors->any())
-    <div class="alert alert-danger align-items-center text-center" role="alert">
+    <div class="alert alert-danger align-items-center text-center" role="33alert">
       <strong>{{$errors->first()}}</strong>
     </div>
     @endif
@@ -1278,3 +1278,5 @@
     });    
 </script>
 @endsection
+
+@extends('layouts.footer')

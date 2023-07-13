@@ -23,10 +23,6 @@
                                 <td>{{ $isi->diagnosa }}</td>
                             </tr>
                             <tr>
-                                <th class="col-2">Tindakan</th>
-                                <td>{{ $isi->tindakan }}</td>
-                            </tr>
-                            <tr>
                                 <th class="col-2">Unit</th>
                                 <td>{{ $isi->unit }}</td>
                             </tr>

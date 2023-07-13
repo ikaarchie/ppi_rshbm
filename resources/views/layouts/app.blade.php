@@ -27,9 +27,9 @@
 
 <body>
     @yield('content')
-    <footer>
+    {{-- <footer>
         &copy; 2023 IT Support, RSHBM.
-    </footer>
+    </footer> --}}
 
     {{-- @include('layouts.navbar') --}}
     {{-- @include('surveilans.add') --}}

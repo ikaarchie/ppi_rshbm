@@ -152,6 +152,18 @@ footer {
     }
 }
 
+.footer-login {
+    height: 3vh;
+    width: 100%;
+    background: transparent;
+    background-size: 400% 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0px;
+}
 
 /* STICKY HEADER */
 .tbl-fixed {
@@ -191,3 +203,258 @@ body {
 .tbl-fixed {
     -ms-overflow-style: none;
 }
+
+/* CARD */
+.kotak {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background: linear-gradient(-45deg, #f0772f, #f8a902, #ff952e, #ff8347, #fe745c, #f3696e); */
+    background: linear-gradient(-45deg, #ffb300, #ff9c00, #fd8503, #fa6c12, #f4511e);
+    animation: gradient 7s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.kotak form {
+    flex: 0 1;
+    min-height: 40vh;
+    min-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 10px;
+    padding: 1rem;
+    cursor: pointer;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    box-shadow: 0 4px 30px rgba(221, 44, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.kotak form .t-input {
+    position: relative;
+    width: 100%;
+}
+
+.kotak form .t-input input {
+    width: 100%;
+    min-height: 1vh;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: lighter;
+    position: relative;
+    white-space: 0.5;
+    caret-color: #DD2C00;
+}
+
+.kotak form .t-input input::placeholder {
+    opacity: 0;
+}
+
+.kotak form .t-input .b-line {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 35%;
+    background: linear-gradient(90deg, #DD2C00 0%,
+            transparent 100%);
+    bottom: 0;
+    left: 0;
+    transition-duration: 300ms;
+}
+
+.kotak form .t-input input:not(:placeholder-shown)~.b-line,
+.kotak form .t-input:hover .b-line,
+.kotak form .t-input:focus-within .b-line {
+    background: linear-gradient(90deg, #DD2C00 0%,
+            transparent 100%);
+    width: 100%;
+}
+
+.kotak form .t-input label {
+    outline: none;
+}
+
+.kotak form .t-input:hover label {
+    color: #DD2C00;
+}
+
+.kotak form .t-input input+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    color: white;
+    transition-duration: 150ms;
+}
+
+.kotak form .t-input input:not(:placeholder-shown)+label,
+.kotak form .t-input input:focus+label {
+    font-size: 0.75rem;
+    transform: translateY(-180%);
+    -webkit-transform: translateY(-180%);
+    -moz-transform: translateY(-180%);
+    -ms-transform: translateY(-180%);
+    -o-transform: translateY(-180%);
+    color: #DD2C00;
+}
+
+.kotak form .check {
+    align-self: flex-start;
+    height: 30px;
+    position: relative;
+
+}
+
+.kotak form .check input {
+    appearance: none;
+
+}
+
+.kotak form .check input+label {
+    color: white;
+    font-size: 0.75rem;
+    padding-left: 1.5rem;
+    transition-duration: 100ms;
+    cursor: pointer;
+}
+
+.kotak form .check input:focus+label,
+.kotak form .check input:checked+label {
+    color: #DD2C00;
+}
+
+.kotak form .check input:focus+label::before {
+    border-color: #DD2C00;
+}
+
+.kotak form .check input+label::before {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid white;
+    top: 50%;
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+    -moz-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    -o-transform: translateY(-60%);
+    transition-duration: 100ms;
+    left: 0;
+    outline: none;
+}
+
+.kotak form .check input:checked+label::before {
+    border: 2px solid #DD2C00;
+    width: 6px;
+    height: 0.9rem;
+    transform: translate(75%, -85%) rotate(45deg);
+    -webkit-transform: translate(75%, -85%) rotate(45deg);
+    -moz-transform: translate(75%, -85%) rotate(45deg);
+    -ms-transform: translate(75%, -85%) rotate(45deg);
+    -o-transform: translate(75%, -85%) rotate(45deg);
+    border-color: transparent #DD2C00 #DD2C00 transparent;
+}
+
+.kotak form .check input:checked+label:hover {
+    color: #DD2C00;
+    opacity: 0.5;
+}
+
+.kotak form .check input:checked+label:hover::before {
+    border-color: transparent #DD2C00 #DD2C00 transparent;
+    opacity: 0.5;
+}
+
+.kotak form .check input+label:hover {
+    color: #DD2C00;
+}
+
+/* .kotak form button {
+    align-self: flex-end;
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    position: relative;
+    font-size: 1rem;
+    border: none;
+    transition-duration: 300ms;
+    font-weight: 700;
+    border: 1px solid #DD2C00;
+    color: white;
+    z-index: 1;
+    border-radius: 2rem;
+    animation: neon 2s infinite linear;
+    cursor: pointer;
+} */
+
+/* .kotak form button:focus,
+.kotak form button:hover {
+    background-color: #DD2C00;
+    border: none;
+    outline: 1px solid #DD2C00;
+    color: white;
+    animation: none;
+    box-shadow: 0 0 20px 10px #DD2C00d1;
+}
+
+@keyframes neon {
+    0% {
+        background-color: #DD2C00;
+        box-shadow: 0 0 20px 10px #DD2C00d1;
+    }
+
+    5% {
+        background-color: transparent;
+    }
+
+    10% {
+        background-color: #DD2C00;
+    }
+
+    15% {
+        background-color: transparent;
+    }
+
+    20% {
+        background-color: #DD2C00;
+    }
+
+    25% {
+        background-color: transparent;
+    }
+} */

@@ -87,3 +87,7 @@ Route::get('/bundleVap', [BundleVAPController::class, 'getData'])->name('getData
 Route::post('/bundleVap/save', [BundleVAPController::class, 'save']);
 Route::patch('/bundleVap/update/{id}', [BundleVAPController::class, 'update'])->name('updateBundleVap');
 Route::get('/bundleVap/delete/{id}', [BundleVAPController::class, 'destroy'])->name('deleteBundleVap');
+
+Route::get('/', function () {
+    return view('login.index');
+});
