@@ -89,5 +89,6 @@ Route::patch('/bundleVap/update/{id}', [BundleVAPController::class, 'update'])->
 Route::get('/bundleVap/delete/{id}', [BundleVAPController::class, 'destroy'])->name('deleteBundleVap');
 
 Route::get('/', function () {
+
     return view('login.index');
 });
