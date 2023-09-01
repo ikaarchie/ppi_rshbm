@@ -33,6 +33,11 @@
         <input type="date" name="sampai" id="sampai" value="{{ request()->get('sampai') ?? date('Y-m-d')}}"
           class="form-control input-sm" style="border-color: #ff6d00" required />
       </div>
+      {{-- <div class="col-sm-2 text-center">
+        <input type="month" name="filter_bulan" id="filter_bulan"
+          value="{{ request()->get('filter_bulan') ?? date('Y-m')}}" class="form-control input-sm"
+          style="border-color: #ff6d00" required />
+      </div> --}}
       <div class="col-sm-3 text-center">
         <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
         <button formaction="{{ route('excelCuciTangan') }}" class="btn btn-success" type="submit">
@@ -48,7 +53,13 @@
     @endif
   </form>
 </div>
-{{-- {{ dd($no_cssu_sbl_tin_aseptik) }}; --}}
+{{-- {{ $dpjp_jumlah }};<br> --}}
+{{-- {{ $no_ok_jumlah }};<br> --}}
+{{-- {{ $denominator_dpjp }};<br> --}}
+{{-- {{ 100/$range_tgl }};<br> --}}
+{{-- {{ number_format(($dpjp_jumlah / $denominator_dpjp) * 100, 2) }}; --}}
+{{-- {{ ($dpjp_jumlah != 0 && $denominator_dpjp != 0) ? number_format(($dpjp_jumlah / $denominator_dpjp) * 100, 2) : 0
+}}; --}}
 <div class="container-fluid align-item-center justify-content-center py-3 px-5">
   <div class="table-responsive">
     <table class="table table-bordered border-dark">
@@ -64,6 +75,8 @@
           <th>HW</th>
           <th>Gagal</th>
           <th>ST</th>
+          <th>Jumlah</th>
+          <th>Persentase</th>
         </tr>
       </thead>
       <tbody style="background-color: #FFECB3">
@@ -78,6 +91,9 @@
           <td>{{ $cssu_hw }}</td>
           <td>{{ $cssu_gagal }}</td>
           <td>{{ $cssu_st }}</td>
+          <td>{{ $cssu_jumlah }}</td>
+          <td>{{ ($cssu_jumlah != 0 && $denominator_cssu != 0) ? number_format(($cssu_jumlah / $denominator_cssu) * 100,
+            2) : 0 }} %</td>
         </tr>
         <tr>
           <th>Dapur</th>
@@ -90,6 +106,9 @@
           <td>{{ $dapur_hw }}</td>
           <td>{{ $dapur_gagal }}</td>
           <td>{{ $dapur_st }}</td>
+          <td>{{ $dapur_jumlah }}</td>
+          <td>{{ ($dapur_jumlah != 0 && $denominator_dapur != 0) ? number_format(($dapur_jumlah / $denominator_dapur) *
+            100, 2) : 0 }} %</td>
         </tr>
         <tr>
           <th>DPJP</th>
@@ -102,6 +121,9 @@
           <td>{{ $dpjp_hw }}</td>
           <td>{{ $dpjp_gagal }}</td>
           <td>{{ $dpjp_st }}</td>
+          <td>{{ $dpjp_jumlah }}</td>
+          <td>{{ ($dpjp_jumlah != 0 && $denominator_dpjp != 0) ? number_format(($dpjp_jumlah / $denominator_dpjp) * 100,
+            2) : 0 }} %</td>
         </tr>
         <tr>
           <th>Farmasi</th>
@@ -114,6 +136,9 @@
           <td>{{ $farmasi_hw }}</td>
           <td>{{ $farmasi_gagal }}</td>
           <td>{{ $farmasi_st }}</td>
+          <td>{{ $farmasi_jumlah }}</td>
+          <td>{{ ($farmasi_jumlah != 0 && $denominator_farmasi != 0) ? number_format(($farmasi_jumlah /
+            $denominator_farmasi) * 100, 2) : 0 }} %</td>
         </tr>
         <tr>
           <th>IGD</th>
@@ -126,6 +151,9 @@
           <td>{{ $igd_hw }}</td>
           <td>{{ $igd_gagal }}</td>
           <td>{{ $igd_st }}</td>
+          <td>{{ $igd_jumlah }}</td>
+          <td>{{ ($igd_jumlah != 0 && $denominator_igd != 0) ? number_format(($igd_jumlah / $denominator_igd) * 100, 2)
+            : 0 }} %</td>
         </tr>
         <tr>
           <th>Intensif</th>
@@ -138,6 +166,9 @@
           <td>{{ $int_hw }}</td>
           <td>{{ $int_gagal }}</td>
           <td>{{ $int_st }}</td>
+          <td>{{ $int_jumlah }}</td>
+          <td>{{ ($int_jumlah != 0 && $denominator_int != 0) ? number_format(($int_jumlah / $denominator_int) * 100, 2)
+            : 0 }} %</td>
         </tr>
         <tr>
           <th>KBBL</th>
@@ -150,6 +181,9 @@
           <td>{{ $kbbl_hw }}</td>
           <td>{{ $kbbl_gagal }}</td>
           <td>{{ $kbbl_st }}</td>
+          <td>{{ $kbbl_jumlah }}</td>
+          <td>{{ ($kbbl_jumlah != 0 && $denominator_kbbl != 0) ? number_format(($kbbl_jumlah / $denominator_kbbl) * 100,
+            2) : 0 }} %</td>
         </tr>
         <tr>
           <th>Laboratorium</th>
@@ -162,6 +196,9 @@
           <td>{{ $lab_hw }}</td>
           <td>{{ $lab_gagal }}</td>
           <td>{{ $lab_st }}</td>
+          <td>{{ $lab_jumlah }}</td>
+          <td>{{ ($lab_jumlah != 0 && $denominator_lab != 0) ? number_format(($lab_jumlah / $denominator_lab) * 100, 2)
+            : 0 }} %</td>
         </tr>
         <tr>
           <th>Laundry</th>
@@ -174,6 +211,9 @@
           <td>{{ $laundry_hw }}</td>
           <td>{{ $laundry_gagal }}</td>
           <td>{{ $laundry_st }}</td>
+          <td>{{ $laundry_jumlah }}</td>
+          <td>{{ ($laundry_jumlah != 0 && $denominator_laundry != 0) ? number_format(($laundry_jumlah /
+            $denominator_laundry) * 100, 2) : 0 }} %</td>
         </tr>
         <tr>
           <th>OK</th>
@@ -186,6 +226,9 @@
           <td>{{ $ok_hw }}</td>
           <td>{{ $ok_gagal }}</td>
           <td>{{ $ok_st }}</td>
+          <td>{{ $ok_jumlah }}</td>
+          <td>{{ ($ok_jumlah != 0 && $denominator_ok != 0) ? number_format(($ok_jumlah / $denominator_ok) * 100, 2) : 0
+            }} %</td>
         </tr>
         <tr>
           <th>Perawatan Eksekutif lt.2</th>
@@ -198,6 +241,9 @@
           <td>{{ $lt2_hw }}</td>
           <td>{{ $lt2_gagal }}</td>
           <td>{{ $lt2_st }}</td>
+          <td>{{ $lt2_jumlah }}</td>
+          <td>{{ ($lt2_jumlah != 0 && $denominator_lt2 != 0) ? number_format(($lt2_jumlah / $denominator_lt2) * 100, 2)
+            : 0 }} %</td>
         </tr>
         <tr>
           <th>Perawatan Reguler lt.4</th>
@@ -210,6 +256,9 @@
           <td>{{ $lt4_hw }}</td>
           <td>{{ $lt4_gagal }}</td>
           <td>{{ $lt4_st }}</td>
+          <td>{{ $lt4_jumlah }}</td>
+          <td>{{ ($lt4_jumlah != 0 && $denominator_lt4 != 0) ? number_format(($lt4_jumlah / $denominator_lt4) * 100, 2)
+            : 0 }} %</td>
         </tr>
         <tr>
           <th>Perawatan Reguler lt.5</th>
@@ -222,6 +271,9 @@
           <td>{{ $lt5_hw }}</td>
           <td>{{ $lt5_gagal }}</td>
           <td>{{ $lt5_st }}</td>
+          <td>{{ $lt5_jumlah }}</td>
+          <td>{{ ($lt5_jumlah != 0 && $denominator_lt5 != 0) ? number_format(($lt5_jumlah / $denominator_lt5) * 100, 2)
+            : 0 }} %</td>
         </tr>
         <tr>
           <th>Poliklinik</th>
@@ -234,6 +286,9 @@
           <td>{{ $poli_hw }}</td>
           <td>{{ $poli_gagal }}</td>
           <td>{{ $poli_st }}</td>
+          <td>{{ $poli_jumlah }}</td>
+          <td>{{ ($poli_jumlah != 0 && $denominator_poli != 0) ? number_format(($poli_jumlah / $denominator_poli) * 100,
+            2) : 0 }} %</td>
         </tr>
         <tr>
           <th>Radiologi</th>
@@ -246,6 +301,9 @@
           <td>{{ $rad_hw }}</td>
           <td>{{ $rad_gagal }}</td>
           <td>{{ $rad_st }}</td>
+          <td>{{ $rad_jumlah }}</td>
+          <td>{{ ($rad_jumlah != 0 && $denominator_rad != 0) ? number_format(($rad_jumlah / $denominator_rad) * 100, 2)
+            : 0 }} %</td>
         </tr>
         <tr>
           <th>VK</th>
@@ -258,6 +316,9 @@
           <td>{{ $vk_hw }}</td>
           <td>{{ $vk_gagal }}</td>
           <td>{{ $vk_st }}</td>
+          <td>{{ $vk_jumlah }}</td>
+          <td>{{ ($vk_jumlah != 0 && $denominator_vk != 0) ? number_format(($vk_jumlah / $denominator_vk) * 100, 2) : 0
+            }} %</td>
         </tr>
       </tbody>
     </table>
