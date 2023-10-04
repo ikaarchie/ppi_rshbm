@@ -57,7 +57,7 @@
                     <table class="table table-bordered align-middle">
                         <thead class="text-dark text-center align-middle">
                             <tr>
-                                <th class="col-1">No</th>
+                                <th style="width:1%">No</th>
                                 <th>Bundle Pemasangan</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
@@ -102,7 +102,7 @@
                     <table class="table table-bordered align-middle">
                         <thead class="text-dark text-center align-middle">
                             <tr>
-                                <th class="col-1">No</th>
+                                <th style="width:1%">No</th>
                                 <th>Bundle Maintenance</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
