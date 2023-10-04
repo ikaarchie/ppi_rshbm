@@ -202,7 +202,7 @@ class CuciTanganController extends Controller
             $cssu_hw = $cssu->where('hw', '1')->count();
             $cssu_gagal = $cssu->where('gagal', '1')->count();
             $cssu_st = $cssu->where('st', '1')->count();
-            $cssu_jumlah = $cssu_sbl_kon_psn + $cssu_sbl_tin_aseptik + $cssu_stl_kon_cairan + $cssu_stl_kon_psn + $cssu_stl_kon_ling_psn + $cssu_hr + $cssu_hw + $cssu_gagal + $cssu_st;
+            $cssu_jumlah = $cssu_sbl_kon_psn + $cssu_sbl_tin_aseptik + $cssu_stl_kon_cairan + $cssu_stl_kon_psn + $cssu_stl_kon_ling_psn;
 
             $no_cssu_sbl_kon_psn = $cssu->where('sbl_kon_psn', '0')->count();
             $no_cssu_sbl_tin_aseptik = $cssu->where('sbl_tin_aseptik', '0')->count();
@@ -213,7 +213,7 @@ class CuciTanganController extends Controller
             $no_cssu_hw = $cssu->where('hw', '0')->count();
             $no_cssu_gagal = $cssu->where('gagal', '0')->count();
             $no_cssu_st = $cssu->where('st', '0')->count();
-            $no_cssu_jumlah = $no_cssu_sbl_kon_psn + $no_cssu_sbl_tin_aseptik + $no_cssu_stl_kon_cairan + $no_cssu_stl_kon_psn + $no_cssu_stl_kon_ling_psn + $no_cssu_hr + $no_cssu_hw + $no_cssu_gagal + $no_cssu_st;
+            $no_cssu_jumlah = $no_cssu_sbl_kon_psn + $no_cssu_sbl_tin_aseptik + $no_cssu_stl_kon_cairan + $no_cssu_stl_kon_psn + $no_cssu_stl_kon_ling_psn;
 
             $denominator_cssu = $cssu_jumlah + $no_cssu_jumlah;
 
@@ -226,7 +226,7 @@ class CuciTanganController extends Controller
             $dapur_hw = $dapur->where('hw', '1')->count();
             $dapur_gagal = $dapur->where('gagal', '1')->count();
             $dapur_st = $dapur->where('st', '1')->count();
-            $dapur_jumlah = $dapur_sbl_kon_psn + $dapur_sbl_tin_aseptik + $dapur_stl_kon_cairan + $dapur_stl_kon_psn + $dapur_stl_kon_ling_psn + $dapur_hr + $dapur_hw + $dapur_gagal + $dapur_st;
+            $dapur_jumlah = $dapur_sbl_kon_psn + $dapur_sbl_tin_aseptik + $dapur_stl_kon_cairan + $dapur_stl_kon_psn + $dapur_stl_kon_ling_psn;
 
             $no_dapur_sbl_kon_psn = $dapur->where('sbl_kon_psn', '0')->count();
             $no_dapur_sbl_tin_aseptik = $dapur->where('sbl_tin_aseptik', '0')->count();
@@ -237,7 +237,7 @@ class CuciTanganController extends Controller
             $no_dapur_hw = $dapur->where('hw', '0')->count();
             $no_dapur_gagal = $dapur->where('gagal', '0')->count();
             $no_dapur_st = $dapur->where('st', '0')->count();
-            $no_dapur_jumlah = $no_dapur_sbl_kon_psn + $no_dapur_sbl_tin_aseptik + $no_dapur_stl_kon_cairan + $no_dapur_stl_kon_psn + $no_dapur_stl_kon_ling_psn + $no_dapur_hr + $no_dapur_hw + $no_dapur_gagal + $no_dapur_st;
+            $no_dapur_jumlah = $no_dapur_sbl_kon_psn + $no_dapur_sbl_tin_aseptik + $no_dapur_stl_kon_cairan + $no_dapur_stl_kon_psn + $no_dapur_stl_kon_ling_psn;
 
             $denominator_dapur = $dapur_jumlah + $no_dapur_jumlah;
 
@@ -250,7 +250,7 @@ class CuciTanganController extends Controller
             $dpjp_hw = $dpjp->where('hw', '1')->count();
             $dpjp_gagal = $dpjp->where('gagal', '1')->count();
             $dpjp_st = $dpjp->where('st', '1')->count();
-            $dpjp_jumlah = $dpjp_sbl_kon_psn + $dpjp_sbl_tin_aseptik + $dpjp_stl_kon_cairan + $dpjp_stl_kon_psn + $dpjp_stl_kon_ling_psn + $dpjp_hr + $dpjp_hw + $dpjp_gagal + $dpjp_st;
+            $dpjp_jumlah = $dpjp_sbl_kon_psn + $dpjp_sbl_tin_aseptik + $dpjp_stl_kon_cairan + $dpjp_stl_kon_psn + $dpjp_stl_kon_ling_psn;
 
             $no_dpjp_sbl_kon_psn = $dpjp->where('sbl_kon_psn', '0')->count();
             $no_dpjp_sbl_tin_aseptik = $dpjp->where('sbl_tin_aseptik', '0')->count();
@@ -261,7 +261,7 @@ class CuciTanganController extends Controller
             $no_dpjp_hw = $dpjp->where('hw', '0')->count();
             $no_dpjp_gagal = $dpjp->where('gagal', '0')->count();
             $no_dpjp_st = $dpjp->where('st', '0')->count();
-            $no_dpjp_jumlah = $no_dpjp_sbl_kon_psn + $no_dpjp_sbl_tin_aseptik + $no_dpjp_stl_kon_cairan + $no_dpjp_stl_kon_psn + $no_dpjp_stl_kon_ling_psn + $no_dpjp_hr + $no_dpjp_hw + $no_dpjp_gagal + $no_dpjp_st;
+            $no_dpjp_jumlah = $no_dpjp_sbl_kon_psn + $no_dpjp_sbl_tin_aseptik + $no_dpjp_stl_kon_cairan + $no_dpjp_stl_kon_psn + $no_dpjp_stl_kon_ling_psn;
 
             $denominator_dpjp = $dpjp_jumlah + $no_dpjp_jumlah;
 
@@ -274,7 +274,7 @@ class CuciTanganController extends Controller
             $farmasi_hw = $farmasi->where('hw', '1')->count();
             $farmasi_gagal = $farmasi->where('gagal', '1')->count();
             $farmasi_st = $farmasi->where('st', '1')->count();
-            $farmasi_jumlah = $farmasi_sbl_kon_psn + $farmasi_sbl_tin_aseptik + $farmasi_stl_kon_cairan + $farmasi_stl_kon_psn + $farmasi_stl_kon_ling_psn + $farmasi_hr + $farmasi_hw + $farmasi_gagal + $farmasi_st;
+            $farmasi_jumlah = $farmasi_sbl_kon_psn + $farmasi_sbl_tin_aseptik + $farmasi_stl_kon_cairan + $farmasi_stl_kon_psn + $farmasi_stl_kon_ling_psn;
 
             $no_farmasi_sbl_kon_psn = $farmasi->where('sbl_kon_psn', '0')->count();
             $no_farmasi_sbl_tin_aseptik = $farmasi->where('sbl_tin_aseptik', '0')->count();
@@ -285,7 +285,7 @@ class CuciTanganController extends Controller
             $no_farmasi_hw = $farmasi->where('hw', '0')->count();
             $no_farmasi_gagal = $farmasi->where('gagal', '0')->count();
             $no_farmasi_st = $farmasi->where('st', '0')->count();
-            $no_farmasi_jumlah = $no_farmasi_sbl_kon_psn + $no_farmasi_sbl_tin_aseptik + $no_farmasi_stl_kon_cairan + $no_farmasi_stl_kon_psn + $no_farmasi_stl_kon_ling_psn + $no_farmasi_hr + $no_farmasi_hw + $no_farmasi_gagal + $no_farmasi_st;
+            $no_farmasi_jumlah = $no_farmasi_sbl_kon_psn + $no_farmasi_sbl_tin_aseptik + $no_farmasi_stl_kon_cairan + $no_farmasi_stl_kon_psn + $no_farmasi_stl_kon_ling_psn;
 
             $denominator_farmasi = $farmasi_jumlah + $no_farmasi_jumlah;
 
@@ -298,7 +298,7 @@ class CuciTanganController extends Controller
             $igd_hw = $igd->where('hw', '1')->count();
             $igd_gagal = $igd->where('gagal', '1')->count();
             $igd_st = $igd->where('st', '1')->count();
-            $igd_jumlah = $igd_sbl_kon_psn + $igd_sbl_tin_aseptik + $igd_stl_kon_cairan + $igd_stl_kon_psn + $igd_stl_kon_ling_psn + $igd_hr + $igd_hw + $igd_gagal + $igd_st;
+            $igd_jumlah = $igd_sbl_kon_psn + $igd_sbl_tin_aseptik + $igd_stl_kon_cairan + $igd_stl_kon_psn + $igd_stl_kon_ling_psn;
 
             $no_igd_sbl_kon_psn = $igd->where('sbl_kon_psn', '0')->count();
             $no_igd_sbl_tin_aseptik = $igd->where('sbl_tin_aseptik', '0')->count();
@@ -309,7 +309,7 @@ class CuciTanganController extends Controller
             $no_igd_hw = $igd->where('hw', '0')->count();
             $no_igd_gagal = $igd->where('gagal', '0')->count();
             $no_igd_st = $igd->where('st', '0')->count();
-            $no_igd_jumlah = $no_igd_sbl_kon_psn + $no_igd_sbl_tin_aseptik + $no_igd_stl_kon_cairan + $no_igd_stl_kon_psn + $no_igd_stl_kon_ling_psn + $no_igd_hr + $no_igd_hw + $no_igd_gagal + $no_igd_st;
+            $no_igd_jumlah = $no_igd_sbl_kon_psn + $no_igd_sbl_tin_aseptik + $no_igd_stl_kon_cairan + $no_igd_stl_kon_psn + $no_igd_stl_kon_ling_psn;
 
             $denominator_igd = $igd_jumlah + $no_igd_jumlah;
 
@@ -322,7 +322,7 @@ class CuciTanganController extends Controller
             $int_hw = $int->where('hw', '1')->count();
             $int_gagal = $int->where('gagal', '1')->count();
             $int_st = $int->where('st', '1')->count();
-            $int_jumlah = $int_sbl_kon_psn + $int_sbl_tin_aseptik + $int_stl_kon_cairan + $int_stl_kon_psn + $int_stl_kon_ling_psn + $int_hr + $int_hw + $int_gagal + $int_st;
+            $int_jumlah = $int_sbl_kon_psn + $int_sbl_tin_aseptik + $int_stl_kon_cairan + $int_stl_kon_psn + $int_stl_kon_ling_psn;
 
             $no_int_sbl_kon_psn = $int->where('sbl_kon_psn', '0')->count();
             $no_int_sbl_tin_aseptik = $int->where('sbl_tin_aseptik', '0')->count();
@@ -333,7 +333,7 @@ class CuciTanganController extends Controller
             $no_int_hw = $int->where('hw', '0')->count();
             $no_int_gagal = $int->where('gagal', '0')->count();
             $no_int_st = $int->where('st', '0')->count();
-            $no_int_jumlah = $no_int_sbl_kon_psn + $no_int_sbl_tin_aseptik + $no_int_stl_kon_cairan + $no_int_stl_kon_psn + $no_int_stl_kon_ling_psn + $no_int_hr + $no_int_hw + $no_int_gagal + $no_int_st;
+            $no_int_jumlah = $no_int_sbl_kon_psn + $no_int_sbl_tin_aseptik + $no_int_stl_kon_cairan + $no_int_stl_kon_psn + $no_int_stl_kon_ling_psn;
 
             $denominator_int = $int_jumlah + $no_int_jumlah;
 
@@ -346,7 +346,7 @@ class CuciTanganController extends Controller
             $kbbl_hw = $kbbl->where('hw', '1')->count();
             $kbbl_gagal = $kbbl->where('gagal', '1')->count();
             $kbbl_st = $kbbl->where('st', '1')->count();
-            $kbbl_jumlah = $kbbl_sbl_kon_psn + $kbbl_sbl_tin_aseptik + $kbbl_stl_kon_cairan + $kbbl_stl_kon_psn + $kbbl_stl_kon_ling_psn + $kbbl_hr + $kbbl_hw + $kbbl_gagal + $kbbl_st;
+            $kbbl_jumlah = $kbbl_sbl_kon_psn + $kbbl_sbl_tin_aseptik + $kbbl_stl_kon_cairan + $kbbl_stl_kon_psn + $kbbl_stl_kon_ling_psn;
 
             $no_kbbl_sbl_kon_psn = $kbbl->where('sbl_kon_psn', '0')->count();
             $no_kbbl_sbl_tin_aseptik = $kbbl->where('sbl_tin_aseptik', '0')->count();
@@ -357,7 +357,7 @@ class CuciTanganController extends Controller
             $no_kbbl_hw = $kbbl->where('hw', '0')->count();
             $no_kbbl_gagal = $kbbl->where('gagal', '0')->count();
             $no_kbbl_st = $kbbl->where('st', '0')->count();
-            $no_kbbl_jumlah = $no_kbbl_sbl_kon_psn + $no_kbbl_sbl_tin_aseptik + $no_kbbl_stl_kon_cairan + $no_kbbl_stl_kon_psn + $no_kbbl_stl_kon_ling_psn + $no_kbbl_hr + $no_kbbl_hw + $no_kbbl_gagal + $no_kbbl_st;
+            $no_kbbl_jumlah = $no_kbbl_sbl_kon_psn + $no_kbbl_sbl_tin_aseptik + $no_kbbl_stl_kon_cairan + $no_kbbl_stl_kon_psn + $no_kbbl_stl_kon_ling_psn;
 
             $denominator_kbbl = $kbbl_jumlah + $no_kbbl_jumlah;
 
@@ -370,7 +370,7 @@ class CuciTanganController extends Controller
             $lab_hw = $lab->where('hw', '1')->count();
             $lab_gagal = $lab->where('gagal', '1')->count();
             $lab_st = $lab->where('st', '1')->count();
-            $lab_jumlah = $lab_sbl_kon_psn + $lab_sbl_tin_aseptik + $lab_stl_kon_cairan + $lab_stl_kon_psn + $lab_stl_kon_ling_psn + $lab_hr + $lab_hw + $lab_gagal + $lab_st;
+            $lab_jumlah = $lab_sbl_kon_psn + $lab_sbl_tin_aseptik + $lab_stl_kon_cairan + $lab_stl_kon_psn + $lab_stl_kon_ling_psn;
 
             $no_lab_sbl_kon_psn = $lab->where('sbl_kon_psn', '0')->count();
             $no_lab_sbl_tin_aseptik = $lab->where('sbl_tin_aseptik', '0')->count();
@@ -381,7 +381,7 @@ class CuciTanganController extends Controller
             $no_lab_hw = $lab->where('hw', '0')->count();
             $no_lab_gagal = $lab->where('gagal', '0')->count();
             $no_lab_st = $lab->where('st', '0')->count();
-            $no_lab_jumlah = $no_lab_sbl_kon_psn + $no_lab_sbl_tin_aseptik + $no_lab_stl_kon_cairan + $no_lab_stl_kon_psn + $no_lab_stl_kon_ling_psn + $no_lab_hr + $no_lab_hw + $no_lab_gagal + $no_lab_st;
+            $no_lab_jumlah = $no_lab_sbl_kon_psn + $no_lab_sbl_tin_aseptik + $no_lab_stl_kon_cairan + $no_lab_stl_kon_psn + $no_lab_stl_kon_ling_psn;
 
             $denominator_lab = $lab_jumlah + $no_lab_jumlah;
 
@@ -394,7 +394,7 @@ class CuciTanganController extends Controller
             $laundry_hw = $laundry->where('hw', '1')->count();
             $laundry_gagal = $laundry->where('gagal', '1')->count();
             $laundry_st = $laundry->where('st', '1')->count();
-            $laundry_jumlah = $laundry_sbl_kon_psn + $laundry_sbl_tin_aseptik + $laundry_stl_kon_cairan + $laundry_stl_kon_psn + $laundry_stl_kon_ling_psn + $laundry_hr + $laundry_hw + $laundry_gagal + $laundry_st;
+            $laundry_jumlah = $laundry_sbl_kon_psn + $laundry_sbl_tin_aseptik + $laundry_stl_kon_cairan + $laundry_stl_kon_psn + $laundry_stl_kon_ling_psn;
 
             $no_laundry_sbl_kon_psn = $laundry->where('sbl_kon_psn', '0')->count();
             $no_laundry_sbl_tin_aseptik = $laundry->where('sbl_tin_aseptik', '0')->count();
@@ -405,7 +405,7 @@ class CuciTanganController extends Controller
             $no_laundry_hw = $laundry->where('hw', '0')->count();
             $no_laundry_gagal = $laundry->where('gagal', '0')->count();
             $no_laundry_st = $laundry->where('st', '0')->count();
-            $no_laundry_jumlah = $no_laundry_sbl_kon_psn + $no_laundry_sbl_tin_aseptik + $no_laundry_stl_kon_cairan + $no_laundry_stl_kon_psn + $no_laundry_stl_kon_ling_psn + $no_laundry_hr + $no_laundry_hw + $no_laundry_gagal + $no_laundry_st;
+            $no_laundry_jumlah = $no_laundry_sbl_kon_psn + $no_laundry_sbl_tin_aseptik + $no_laundry_stl_kon_cairan + $no_laundry_stl_kon_psn + $no_laundry_stl_kon_ling_psn;
 
             $denominator_laundry = $laundry_jumlah + $no_laundry_jumlah;
 
@@ -418,7 +418,7 @@ class CuciTanganController extends Controller
             $ok_hw = $ok->where('hw', '1')->count();
             $ok_gagal = $ok->where('gagal', '1')->count();
             $ok_st = $ok->where('st', '1')->count();
-            $ok_jumlah = $ok_sbl_kon_psn + $ok_sbl_tin_aseptik + $ok_stl_kon_cairan + $ok_stl_kon_psn + $ok_stl_kon_ling_psn + $ok_hr + $ok_hw + $ok_gagal + $ok_st;
+            $ok_jumlah = $ok_sbl_kon_psn + $ok_sbl_tin_aseptik + $ok_stl_kon_cairan + $ok_stl_kon_psn + $ok_stl_kon_ling_psn;
 
             $no_ok_sbl_kon_psn = $ok->where('sbl_kon_psn', '0')->count();
             $no_ok_sbl_tin_aseptik = $ok->where('sbl_tin_aseptik', '0')->count();
@@ -429,7 +429,7 @@ class CuciTanganController extends Controller
             $no_ok_hw = $ok->where('hw', '0')->count();
             $no_ok_gagal = $ok->where('gagal', '0')->count();
             $no_ok_st = $ok->where('st', '0')->count();
-            $no_ok_jumlah = $no_ok_sbl_kon_psn + $no_ok_sbl_tin_aseptik + $no_ok_stl_kon_cairan + $no_ok_stl_kon_psn + $no_ok_stl_kon_ling_psn + $no_ok_hr + $no_ok_hw + $no_ok_gagal + $no_ok_st;
+            $no_ok_jumlah = $no_ok_sbl_kon_psn + $no_ok_sbl_tin_aseptik + $no_ok_stl_kon_cairan + $no_ok_stl_kon_psn + $no_ok_stl_kon_ling_psn;
 
             $denominator_ok = $ok_jumlah + $no_ok_jumlah;
 
@@ -442,7 +442,7 @@ class CuciTanganController extends Controller
             $lt2_hw = $lt2->where('hw', '1')->count();
             $lt2_gagal = $lt2->where('gagal', '1')->count();
             $lt2_st = $lt2->where('st', '1')->count();
-            $lt2_jumlah = $lt2_sbl_kon_psn + $lt2_sbl_tin_aseptik + $lt2_stl_kon_cairan + $lt2_stl_kon_psn + $lt2_stl_kon_ling_psn + $lt2_hr + $lt2_hw + $lt2_gagal + $lt2_st;
+            $lt2_jumlah = $lt2_sbl_kon_psn + $lt2_sbl_tin_aseptik + $lt2_stl_kon_cairan + $lt2_stl_kon_psn + $lt2_stl_kon_ling_psn;
 
             $no_lt2_sbl_kon_psn = $lt2->where('sbl_kon_psn', '0')->count();
             $no_lt2_sbl_tin_aseptik = $lt2->where('sbl_tin_aseptik', '0')->count();
@@ -453,7 +453,7 @@ class CuciTanganController extends Controller
             $no_lt2_hw = $lt2->where('hw', '0')->count();
             $no_lt2_gagal = $lt2->where('gagal', '0')->count();
             $no_lt2_st = $lt2->where('st', '0')->count();
-            $no_lt2_jumlah = $no_lt2_sbl_kon_psn + $no_lt2_sbl_tin_aseptik + $no_lt2_stl_kon_cairan + $no_lt2_stl_kon_psn + $no_lt2_stl_kon_ling_psn + $no_lt2_hr + $no_lt2_hw + $no_lt2_gagal + $no_lt2_st;
+            $no_lt2_jumlah = $no_lt2_sbl_kon_psn + $no_lt2_sbl_tin_aseptik + $no_lt2_stl_kon_cairan + $no_lt2_stl_kon_psn + $no_lt2_stl_kon_ling_psn;
 
             $denominator_lt2 = $lt2_jumlah + $no_lt2_jumlah;
 
@@ -466,7 +466,7 @@ class CuciTanganController extends Controller
             $lt4_hw = $lt4->where('hw', '1')->count();
             $lt4_gagal = $lt4->where('gagal', '1')->count();
             $lt4_st = $lt4->where('st', '1')->count();
-            $lt4_jumlah = $lt4_sbl_kon_psn + $lt4_sbl_tin_aseptik + $lt4_stl_kon_cairan + $lt4_stl_kon_psn + $lt4_stl_kon_ling_psn + $lt4_hr + $lt4_hw + $lt4_gagal + $lt4_st;
+            $lt4_jumlah = $lt4_sbl_kon_psn + $lt4_sbl_tin_aseptik + $lt4_stl_kon_cairan + $lt4_stl_kon_psn + $lt4_stl_kon_ling_psn;
 
             $no_lt4_sbl_kon_psn = $lt4->where('sbl_kon_psn', '0')->count();
             $no_lt4_sbl_tin_aseptik = $lt4->where('sbl_tin_aseptik', '0')->count();
@@ -477,7 +477,7 @@ class CuciTanganController extends Controller
             $no_lt4_hw = $lt4->where('hw', '0')->count();
             $no_lt4_gagal = $lt4->where('gagal', '0')->count();
             $no_lt4_st = $lt4->where('st', '0')->count();
-            $no_lt4_jumlah = $no_lt4_sbl_kon_psn + $no_lt4_sbl_tin_aseptik + $no_lt4_stl_kon_cairan + $no_lt4_stl_kon_psn + $no_lt4_stl_kon_ling_psn + $no_lt4_hr + $no_lt4_hw + $no_lt4_gagal + $no_lt4_st;
+            $no_lt4_jumlah = $no_lt4_sbl_kon_psn + $no_lt4_sbl_tin_aseptik + $no_lt4_stl_kon_cairan + $no_lt4_stl_kon_psn + $no_lt4_stl_kon_ling_psn;
 
             $denominator_lt4 = $lt4_jumlah + $no_lt4_jumlah;
 
@@ -490,7 +490,7 @@ class CuciTanganController extends Controller
             $lt5_hw = $lt5->where('hw', '1')->count();
             $lt5_gagal = $lt5->where('gagal', '1')->count();
             $lt5_st = $lt5->where('st', '1')->count();
-            $lt5_jumlah = $lt5_sbl_kon_psn + $lt5_sbl_tin_aseptik + $lt5_stl_kon_cairan + $lt5_stl_kon_psn + $lt5_stl_kon_ling_psn + $lt5_hr + $lt5_hw + $lt5_gagal + $lt5_st;
+            $lt5_jumlah = $lt5_sbl_kon_psn + $lt5_sbl_tin_aseptik + $lt5_stl_kon_cairan + $lt5_stl_kon_psn + $lt5_stl_kon_ling_psn;
 
             $no_lt5_sbl_kon_psn = $lt5->where('sbl_kon_psn', '0')->count();
             $no_lt5_sbl_tin_aseptik = $lt5->where('sbl_tin_aseptik', '0')->count();
@@ -501,7 +501,7 @@ class CuciTanganController extends Controller
             $no_lt5_hw = $lt5->where('hw', '0')->count();
             $no_lt5_gagal = $lt5->where('gagal', '0')->count();
             $no_lt5_st = $lt5->where('st', '0')->count();
-            $no_lt5_jumlah = $no_lt5_sbl_kon_psn + $no_lt5_sbl_tin_aseptik + $no_lt5_stl_kon_cairan + $no_lt5_stl_kon_psn + $no_lt5_stl_kon_ling_psn + $no_lt5_hr + $no_lt5_hw + $no_lt5_gagal + $no_lt5_st;
+            $no_lt5_jumlah = $no_lt5_sbl_kon_psn + $no_lt5_sbl_tin_aseptik + $no_lt5_stl_kon_cairan + $no_lt5_stl_kon_psn + $no_lt5_stl_kon_ling_psn;
 
             $denominator_lt5 = $lt5_jumlah + $no_lt5_jumlah;
 
@@ -514,7 +514,7 @@ class CuciTanganController extends Controller
             $poli_hw = $poli->where('hw', '1')->count();
             $poli_gagal = $poli->where('gagal', '1')->count();
             $poli_st = $poli->where('st', '1')->count();
-            $poli_jumlah = $poli_sbl_kon_psn + $poli_sbl_tin_aseptik + $poli_stl_kon_cairan + $poli_stl_kon_psn + $poli_stl_kon_ling_psn + $poli_hr + $poli_hw + $poli_gagal + $poli_st;
+            $poli_jumlah = $poli_sbl_kon_psn + $poli_sbl_tin_aseptik + $poli_stl_kon_cairan + $poli_stl_kon_psn + $poli_stl_kon_ling_psn;
 
             $no_poli_sbl_kon_psn = $poli->where('sbl_kon_psn', '0')->count();
             $no_poli_sbl_tin_aseptik = $poli->where('sbl_tin_aseptik', '0')->count();
@@ -525,7 +525,7 @@ class CuciTanganController extends Controller
             $no_poli_hw = $poli->where('hw', '0')->count();
             $no_poli_gagal = $poli->where('gagal', '0')->count();
             $no_poli_st = $poli->where('st', '0')->count();
-            $no_poli_jumlah = $no_poli_sbl_kon_psn + $no_poli_sbl_tin_aseptik + $no_poli_stl_kon_cairan + $no_poli_stl_kon_psn + $no_poli_stl_kon_ling_psn + $no_poli_hr + $no_poli_hw + $no_poli_gagal + $no_poli_st;
+            $no_poli_jumlah = $no_poli_sbl_kon_psn + $no_poli_sbl_tin_aseptik + $no_poli_stl_kon_cairan + $no_poli_stl_kon_psn + $no_poli_stl_kon_ling_psn;
 
             $denominator_poli = $poli_jumlah + $no_poli_jumlah;
 
@@ -538,7 +538,7 @@ class CuciTanganController extends Controller
             $rad_hw = $rad->where('hw', '1')->count();
             $rad_gagal = $rad->where('gagal', '1')->count();
             $rad_st = $rad->where('st', '1')->count();
-            $rad_jumlah = $rad_sbl_kon_psn + $rad_sbl_tin_aseptik + $rad_stl_kon_cairan + $rad_stl_kon_psn + $rad_stl_kon_ling_psn + $rad_hr + $rad_hw + $rad_gagal + $rad_st;
+            $rad_jumlah = $rad_sbl_kon_psn + $rad_sbl_tin_aseptik + $rad_stl_kon_cairan + $rad_stl_kon_psn + $rad_stl_kon_ling_psn;
 
             $no_rad_sbl_kon_psn = $rad->where('sbl_kon_psn', '0')->count();
             $no_rad_sbl_tin_aseptik = $rad->where('sbl_tin_aseptik', '0')->count();
@@ -549,7 +549,7 @@ class CuciTanganController extends Controller
             $no_rad_hw = $rad->where('hw', '0')->count();
             $no_rad_gagal = $rad->where('gagal', '0')->count();
             $no_rad_st = $rad->where('st', '0')->count();
-            $no_rad_jumlah = $no_rad_sbl_kon_psn + $no_rad_sbl_tin_aseptik + $no_rad_stl_kon_cairan + $no_rad_stl_kon_psn + $no_rad_stl_kon_ling_psn + $no_rad_hr + $no_rad_hw + $no_rad_gagal + $no_rad_st;
+            $no_rad_jumlah = $no_rad_sbl_kon_psn + $no_rad_sbl_tin_aseptik + $no_rad_stl_kon_cairan + $no_rad_stl_kon_psn + $no_rad_stl_kon_ling_psn;
 
             $denominator_rad = $rad_jumlah + $no_rad_jumlah;
 
@@ -562,7 +562,7 @@ class CuciTanganController extends Controller
             $vk_hw = $vk->where('hw', '1')->count();
             $vk_gagal = $vk->where('gagal', '1')->count();
             $vk_st = $vk->where('st', '1')->count();
-            $vk_jumlah = $vk_sbl_kon_psn + $vk_sbl_tin_aseptik + $vk_stl_kon_cairan + $vk_stl_kon_psn + $vk_stl_kon_ling_psn + $vk_hr + $vk_hw + $vk_gagal + $vk_st;
+            $vk_jumlah = $vk_sbl_kon_psn + $vk_sbl_tin_aseptik + $vk_stl_kon_cairan + $vk_stl_kon_psn + $vk_stl_kon_ling_psn;
 
             $no_vk_sbl_kon_psn = $vk->where('sbl_kon_psn', '0')->count();
             $no_vk_sbl_tin_aseptik = $vk->where('sbl_tin_aseptik', '0')->count();
@@ -573,7 +573,7 @@ class CuciTanganController extends Controller
             $no_vk_hw = $vk->where('hw', '0')->count();
             $no_vk_gagal = $vk->where('gagal', '0')->count();
             $no_vk_st = $vk->where('st', '0')->count();
-            $no_vk_jumlah = $no_vk_sbl_kon_psn + $no_vk_sbl_tin_aseptik + $no_vk_stl_kon_cairan + $no_vk_stl_kon_psn + $no_vk_stl_kon_ling_psn + $no_vk_hr + $no_vk_hw + $no_vk_gagal + $no_vk_st;
+            $no_vk_jumlah = $no_vk_sbl_kon_psn + $no_vk_sbl_tin_aseptik + $no_vk_stl_kon_cairan + $no_vk_stl_kon_psn + $no_vk_stl_kon_ling_psn;
 
             $denominator_vk = $vk_jumlah + $no_vk_jumlah;
 
@@ -1087,7 +1087,7 @@ class CuciTanganController extends Controller
             $cssu_hw = $cssu->where('hw', '1')->count();
             $cssu_gagal = $cssu->where('gagal', '1')->count();
             $cssu_st = $cssu->where('st', '1')->count();
-            $cssu_jumlah = $cssu_sbl_kon_psn + $cssu_sbl_tin_aseptik + $cssu_stl_kon_cairan + $cssu_stl_kon_psn + $cssu_stl_kon_ling_psn + $cssu_hr + $cssu_hw + $cssu_gagal + $cssu_st;
+            $cssu_jumlah = $cssu_sbl_kon_psn + $cssu_sbl_tin_aseptik + $cssu_stl_kon_cairan + $cssu_stl_kon_psn + $cssu_stl_kon_ling_psn;
 
             $no_cssu_sbl_kon_psn = $cssu->where('sbl_kon_psn', '0')->count();
             $no_cssu_sbl_tin_aseptik = $cssu->where('sbl_tin_aseptik', '0')->count();
@@ -1098,7 +1098,7 @@ class CuciTanganController extends Controller
             $no_cssu_hw = $cssu->where('hw', '0')->count();
             $no_cssu_gagal = $cssu->where('gagal', '0')->count();
             $no_cssu_st = $cssu->where('st', '0')->count();
-            $no_cssu_jumlah = $no_cssu_sbl_kon_psn + $no_cssu_sbl_tin_aseptik + $no_cssu_stl_kon_cairan + $no_cssu_stl_kon_psn + $no_cssu_stl_kon_ling_psn + $no_cssu_hr + $no_cssu_hw + $no_cssu_gagal + $no_cssu_st;
+            $no_cssu_jumlah = $no_cssu_sbl_kon_psn + $no_cssu_sbl_tin_aseptik + $no_cssu_stl_kon_cairan + $no_cssu_stl_kon_psn + $no_cssu_stl_kon_ling_psn;
 
             $denominator_cssu = $cssu_jumlah + $no_cssu_jumlah;
 
@@ -1111,7 +1111,7 @@ class CuciTanganController extends Controller
             $dapur_hw = $dapur->where('hw', '1')->count();
             $dapur_gagal = $dapur->where('gagal', '1')->count();
             $dapur_st = $dapur->where('st', '1')->count();
-            $dapur_jumlah = $dapur_sbl_kon_psn + $dapur_sbl_tin_aseptik + $dapur_stl_kon_cairan + $dapur_stl_kon_psn + $dapur_stl_kon_ling_psn + $dapur_hr + $dapur_hw + $dapur_gagal + $dapur_st;
+            $dapur_jumlah = $dapur_sbl_kon_psn + $dapur_sbl_tin_aseptik + $dapur_stl_kon_cairan + $dapur_stl_kon_psn + $dapur_stl_kon_ling_psn;
 
             $no_dapur_sbl_kon_psn = $dapur->where('sbl_kon_psn', '0')->count();
             $no_dapur_sbl_tin_aseptik = $dapur->where('sbl_tin_aseptik', '0')->count();
@@ -1122,7 +1122,7 @@ class CuciTanganController extends Controller
             $no_dapur_hw = $dapur->where('hw', '0')->count();
             $no_dapur_gagal = $dapur->where('gagal', '0')->count();
             $no_dapur_st = $dapur->where('st', '0')->count();
-            $no_dapur_jumlah = $no_dapur_sbl_kon_psn + $no_dapur_sbl_tin_aseptik + $no_dapur_stl_kon_cairan + $no_dapur_stl_kon_psn + $no_dapur_stl_kon_ling_psn + $no_dapur_hr + $no_dapur_hw + $no_dapur_gagal + $no_dapur_st;
+            $no_dapur_jumlah = $no_dapur_sbl_kon_psn + $no_dapur_sbl_tin_aseptik + $no_dapur_stl_kon_cairan + $no_dapur_stl_kon_psn + $no_dapur_stl_kon_ling_psn;
 
             $denominator_dapur = $dapur_jumlah + $no_dapur_jumlah;
 
@@ -1135,7 +1135,7 @@ class CuciTanganController extends Controller
             $dpjp_hw = $dpjp->where('hw', '1')->count();
             $dpjp_gagal = $dpjp->where('gagal', '1')->count();
             $dpjp_st = $dpjp->where('st', '1')->count();
-            $dpjp_jumlah = $dpjp_sbl_kon_psn + $dpjp_sbl_tin_aseptik + $dpjp_stl_kon_cairan + $dpjp_stl_kon_psn + $dpjp_stl_kon_ling_psn + $dpjp_hr + $dpjp_hw + $dpjp_gagal + $dpjp_st;
+            $dpjp_jumlah = $dpjp_sbl_kon_psn + $dpjp_sbl_tin_aseptik + $dpjp_stl_kon_cairan + $dpjp_stl_kon_psn + $dpjp_stl_kon_ling_psn;
 
             $no_dpjp_sbl_kon_psn = $dpjp->where('sbl_kon_psn', '0')->count();
             $no_dpjp_sbl_tin_aseptik = $dpjp->where('sbl_tin_aseptik', '0')->count();
@@ -1146,7 +1146,7 @@ class CuciTanganController extends Controller
             $no_dpjp_hw = $dpjp->where('hw', '0')->count();
             $no_dpjp_gagal = $dpjp->where('gagal', '0')->count();
             $no_dpjp_st = $dpjp->where('st', '0')->count();
-            $no_dpjp_jumlah = $no_dpjp_sbl_kon_psn + $no_dpjp_sbl_tin_aseptik + $no_dpjp_stl_kon_cairan + $no_dpjp_stl_kon_psn + $no_dpjp_stl_kon_ling_psn + $no_dpjp_hr + $no_dpjp_hw + $no_dpjp_gagal + $no_dpjp_st;
+            $no_dpjp_jumlah = $no_dpjp_sbl_kon_psn + $no_dpjp_sbl_tin_aseptik + $no_dpjp_stl_kon_cairan + $no_dpjp_stl_kon_psn + $no_dpjp_stl_kon_ling_psn;
 
             $denominator_dpjp = $dpjp_jumlah + $no_dpjp_jumlah;
 
@@ -1159,7 +1159,7 @@ class CuciTanganController extends Controller
             $farmasi_hw = $farmasi->where('hw', '1')->count();
             $farmasi_gagal = $farmasi->where('gagal', '1')->count();
             $farmasi_st = $farmasi->where('st', '1')->count();
-            $farmasi_jumlah = $farmasi_sbl_kon_psn + $farmasi_sbl_tin_aseptik + $farmasi_stl_kon_cairan + $farmasi_stl_kon_psn + $farmasi_stl_kon_ling_psn + $farmasi_hr + $farmasi_hw + $farmasi_gagal + $farmasi_st;
+            $farmasi_jumlah = $farmasi_sbl_kon_psn + $farmasi_sbl_tin_aseptik + $farmasi_stl_kon_cairan + $farmasi_stl_kon_psn + $farmasi_stl_kon_ling_psn;
 
             $no_farmasi_sbl_kon_psn = $farmasi->where('sbl_kon_psn', '0')->count();
             $no_farmasi_sbl_tin_aseptik = $farmasi->where('sbl_tin_aseptik', '0')->count();
@@ -1170,7 +1170,7 @@ class CuciTanganController extends Controller
             $no_farmasi_hw = $farmasi->where('hw', '0')->count();
             $no_farmasi_gagal = $farmasi->where('gagal', '0')->count();
             $no_farmasi_st = $farmasi->where('st', '0')->count();
-            $no_farmasi_jumlah = $no_farmasi_sbl_kon_psn + $no_farmasi_sbl_tin_aseptik + $no_farmasi_stl_kon_cairan + $no_farmasi_stl_kon_psn + $no_farmasi_stl_kon_ling_psn + $no_farmasi_hr + $no_farmasi_hw + $no_farmasi_gagal + $no_farmasi_st;
+            $no_farmasi_jumlah = $no_farmasi_sbl_kon_psn + $no_farmasi_sbl_tin_aseptik + $no_farmasi_stl_kon_cairan + $no_farmasi_stl_kon_psn + $no_farmasi_stl_kon_ling_psn;
 
             $denominator_farmasi = $farmasi_jumlah + $no_farmasi_jumlah;
 
@@ -1183,7 +1183,7 @@ class CuciTanganController extends Controller
             $igd_hw = $igd->where('hw', '1')->count();
             $igd_gagal = $igd->where('gagal', '1')->count();
             $igd_st = $igd->where('st', '1')->count();
-            $igd_jumlah = $igd_sbl_kon_psn + $igd_sbl_tin_aseptik + $igd_stl_kon_cairan + $igd_stl_kon_psn + $igd_stl_kon_ling_psn + $igd_hr + $igd_hw + $igd_gagal + $igd_st;
+            $igd_jumlah = $igd_sbl_kon_psn + $igd_sbl_tin_aseptik + $igd_stl_kon_cairan + $igd_stl_kon_psn + $igd_stl_kon_ling_psn;
 
             $no_igd_sbl_kon_psn = $igd->where('sbl_kon_psn', '0')->count();
             $no_igd_sbl_tin_aseptik = $igd->where('sbl_tin_aseptik', '0')->count();
@@ -1194,7 +1194,7 @@ class CuciTanganController extends Controller
             $no_igd_hw = $igd->where('hw', '0')->count();
             $no_igd_gagal = $igd->where('gagal', '0')->count();
             $no_igd_st = $igd->where('st', '0')->count();
-            $no_igd_jumlah = $no_igd_sbl_kon_psn + $no_igd_sbl_tin_aseptik + $no_igd_stl_kon_cairan + $no_igd_stl_kon_psn + $no_igd_stl_kon_ling_psn + $no_igd_hr + $no_igd_hw + $no_igd_gagal + $no_igd_st;
+            $no_igd_jumlah = $no_igd_sbl_kon_psn + $no_igd_sbl_tin_aseptik + $no_igd_stl_kon_cairan + $no_igd_stl_kon_psn + $no_igd_stl_kon_ling_psn;
 
             $denominator_igd = $igd_jumlah + $no_igd_jumlah;
 
@@ -1207,7 +1207,7 @@ class CuciTanganController extends Controller
             $int_hw = $int->where('hw', '1')->count();
             $int_gagal = $int->where('gagal', '1')->count();
             $int_st = $int->where('st', '1')->count();
-            $int_jumlah = $int_sbl_kon_psn + $int_sbl_tin_aseptik + $int_stl_kon_cairan + $int_stl_kon_psn + $int_stl_kon_ling_psn + $int_hr + $int_hw + $int_gagal + $int_st;
+            $int_jumlah = $int_sbl_kon_psn + $int_sbl_tin_aseptik + $int_stl_kon_cairan + $int_stl_kon_psn + $int_stl_kon_ling_psn;
 
             $no_int_sbl_kon_psn = $int->where('sbl_kon_psn', '0')->count();
             $no_int_sbl_tin_aseptik = $int->where('sbl_tin_aseptik', '0')->count();
@@ -1218,7 +1218,7 @@ class CuciTanganController extends Controller
             $no_int_hw = $int->where('hw', '0')->count();
             $no_int_gagal = $int->where('gagal', '0')->count();
             $no_int_st = $int->where('st', '0')->count();
-            $no_int_jumlah = $no_int_sbl_kon_psn + $no_int_sbl_tin_aseptik + $no_int_stl_kon_cairan + $no_int_stl_kon_psn + $no_int_stl_kon_ling_psn + $no_int_hr + $no_int_hw + $no_int_gagal + $no_int_st;
+            $no_int_jumlah = $no_int_sbl_kon_psn + $no_int_sbl_tin_aseptik + $no_int_stl_kon_cairan + $no_int_stl_kon_psn + $no_int_stl_kon_ling_psn;
 
             $denominator_int = $int_jumlah + $no_int_jumlah;
 
@@ -1231,7 +1231,7 @@ class CuciTanganController extends Controller
             $kbbl_hw = $kbbl->where('hw', '1')->count();
             $kbbl_gagal = $kbbl->where('gagal', '1')->count();
             $kbbl_st = $kbbl->where('st', '1')->count();
-            $kbbl_jumlah = $kbbl_sbl_kon_psn + $kbbl_sbl_tin_aseptik + $kbbl_stl_kon_cairan + $kbbl_stl_kon_psn + $kbbl_stl_kon_ling_psn + $kbbl_hr + $kbbl_hw + $kbbl_gagal + $kbbl_st;
+            $kbbl_jumlah = $kbbl_sbl_kon_psn + $kbbl_sbl_tin_aseptik + $kbbl_stl_kon_cairan + $kbbl_stl_kon_psn + $kbbl_stl_kon_ling_psn;
 
             $no_kbbl_sbl_kon_psn = $kbbl->where('sbl_kon_psn', '0')->count();
             $no_kbbl_sbl_tin_aseptik = $kbbl->where('sbl_tin_aseptik', '0')->count();
@@ -1242,7 +1242,7 @@ class CuciTanganController extends Controller
             $no_kbbl_hw = $kbbl->where('hw', '0')->count();
             $no_kbbl_gagal = $kbbl->where('gagal', '0')->count();
             $no_kbbl_st = $kbbl->where('st', '0')->count();
-            $no_kbbl_jumlah = $no_kbbl_sbl_kon_psn + $no_kbbl_sbl_tin_aseptik + $no_kbbl_stl_kon_cairan + $no_kbbl_stl_kon_psn + $no_kbbl_stl_kon_ling_psn + $no_kbbl_hr + $no_kbbl_hw + $no_kbbl_gagal + $no_kbbl_st;
+            $no_kbbl_jumlah = $no_kbbl_sbl_kon_psn + $no_kbbl_sbl_tin_aseptik + $no_kbbl_stl_kon_cairan + $no_kbbl_stl_kon_psn + $no_kbbl_stl_kon_ling_psn;
 
             $denominator_kbbl = $kbbl_jumlah + $no_kbbl_jumlah;
 
@@ -1255,7 +1255,7 @@ class CuciTanganController extends Controller
             $lab_hw = $lab->where('hw', '1')->count();
             $lab_gagal = $lab->where('gagal', '1')->count();
             $lab_st = $lab->where('st', '1')->count();
-            $lab_jumlah = $lab_sbl_kon_psn + $lab_sbl_tin_aseptik + $lab_stl_kon_cairan + $lab_stl_kon_psn + $lab_stl_kon_ling_psn + $lab_hr + $lab_hw + $lab_gagal + $lab_st;
+            $lab_jumlah = $lab_sbl_kon_psn + $lab_sbl_tin_aseptik + $lab_stl_kon_cairan + $lab_stl_kon_psn + $lab_stl_kon_ling_psn;
 
             $no_lab_sbl_kon_psn = $lab->where('sbl_kon_psn', '0')->count();
             $no_lab_sbl_tin_aseptik = $lab->where('sbl_tin_aseptik', '0')->count();
@@ -1266,7 +1266,7 @@ class CuciTanganController extends Controller
             $no_lab_hw = $lab->where('hw', '0')->count();
             $no_lab_gagal = $lab->where('gagal', '0')->count();
             $no_lab_st = $lab->where('st', '0')->count();
-            $no_lab_jumlah = $no_lab_sbl_kon_psn + $no_lab_sbl_tin_aseptik + $no_lab_stl_kon_cairan + $no_lab_stl_kon_psn + $no_lab_stl_kon_ling_psn + $no_lab_hr + $no_lab_hw + $no_lab_gagal + $no_lab_st;
+            $no_lab_jumlah = $no_lab_sbl_kon_psn + $no_lab_sbl_tin_aseptik + $no_lab_stl_kon_cairan + $no_lab_stl_kon_psn + $no_lab_stl_kon_ling_psn;
 
             $denominator_lab = $lab_jumlah + $no_lab_jumlah;
 
@@ -1279,7 +1279,7 @@ class CuciTanganController extends Controller
             $laundry_hw = $laundry->where('hw', '1')->count();
             $laundry_gagal = $laundry->where('gagal', '1')->count();
             $laundry_st = $laundry->where('st', '1')->count();
-            $laundry_jumlah = $laundry_sbl_kon_psn + $laundry_sbl_tin_aseptik + $laundry_stl_kon_cairan + $laundry_stl_kon_psn + $laundry_stl_kon_ling_psn + $laundry_hr + $laundry_hw + $laundry_gagal + $laundry_st;
+            $laundry_jumlah = $laundry_sbl_kon_psn + $laundry_sbl_tin_aseptik + $laundry_stl_kon_cairan + $laundry_stl_kon_psn + $laundry_stl_kon_ling_psn;
 
             $no_laundry_sbl_kon_psn = $laundry->where('sbl_kon_psn', '0')->count();
             $no_laundry_sbl_tin_aseptik = $laundry->where('sbl_tin_aseptik', '0')->count();
@@ -1290,7 +1290,7 @@ class CuciTanganController extends Controller
             $no_laundry_hw = $laundry->where('hw', '0')->count();
             $no_laundry_gagal = $laundry->where('gagal', '0')->count();
             $no_laundry_st = $laundry->where('st', '0')->count();
-            $no_laundry_jumlah = $no_laundry_sbl_kon_psn + $no_laundry_sbl_tin_aseptik + $no_laundry_stl_kon_cairan + $no_laundry_stl_kon_psn + $no_laundry_stl_kon_ling_psn + $no_laundry_hr + $no_laundry_hw + $no_laundry_gagal + $no_laundry_st;
+            $no_laundry_jumlah = $no_laundry_sbl_kon_psn + $no_laundry_sbl_tin_aseptik + $no_laundry_stl_kon_cairan + $no_laundry_stl_kon_psn + $no_laundry_stl_kon_ling_psn;
 
             $denominator_laundry = $laundry_jumlah + $no_laundry_jumlah;
 
@@ -1303,7 +1303,7 @@ class CuciTanganController extends Controller
             $ok_hw = $ok->where('hw', '1')->count();
             $ok_gagal = $ok->where('gagal', '1')->count();
             $ok_st = $ok->where('st', '1')->count();
-            $ok_jumlah = $ok_sbl_kon_psn + $ok_sbl_tin_aseptik + $ok_stl_kon_cairan + $ok_stl_kon_psn + $ok_stl_kon_ling_psn + $ok_hr + $ok_hw + $ok_gagal + $ok_st;
+            $ok_jumlah = $ok_sbl_kon_psn + $ok_sbl_tin_aseptik + $ok_stl_kon_cairan + $ok_stl_kon_psn + $ok_stl_kon_ling_psn;
 
             $no_ok_sbl_kon_psn = $ok->where('sbl_kon_psn', '0')->count();
             $no_ok_sbl_tin_aseptik = $ok->where('sbl_tin_aseptik', '0')->count();
@@ -1314,7 +1314,7 @@ class CuciTanganController extends Controller
             $no_ok_hw = $ok->where('hw', '0')->count();
             $no_ok_gagal = $ok->where('gagal', '0')->count();
             $no_ok_st = $ok->where('st', '0')->count();
-            $no_ok_jumlah = $no_ok_sbl_kon_psn + $no_ok_sbl_tin_aseptik + $no_ok_stl_kon_cairan + $no_ok_stl_kon_psn + $no_ok_stl_kon_ling_psn + $no_ok_hr + $no_ok_hw + $no_ok_gagal + $no_ok_st;
+            $no_ok_jumlah = $no_ok_sbl_kon_psn + $no_ok_sbl_tin_aseptik + $no_ok_stl_kon_cairan + $no_ok_stl_kon_psn + $no_ok_stl_kon_ling_psn;
 
             $denominator_ok = $ok_jumlah + $no_ok_jumlah;
 
@@ -1327,7 +1327,7 @@ class CuciTanganController extends Controller
             $lt2_hw = $lt2->where('hw', '1')->count();
             $lt2_gagal = $lt2->where('gagal', '1')->count();
             $lt2_st = $lt2->where('st', '1')->count();
-            $lt2_jumlah = $lt2_sbl_kon_psn + $lt2_sbl_tin_aseptik + $lt2_stl_kon_cairan + $lt2_stl_kon_psn + $lt2_stl_kon_ling_psn + $lt2_hr + $lt2_hw + $lt2_gagal + $lt2_st;
+            $lt2_jumlah = $lt2_sbl_kon_psn + $lt2_sbl_tin_aseptik + $lt2_stl_kon_cairan + $lt2_stl_kon_psn + $lt2_stl_kon_ling_psn;
 
             $no_lt2_sbl_kon_psn = $lt2->where('sbl_kon_psn', '0')->count();
             $no_lt2_sbl_tin_aseptik = $lt2->where('sbl_tin_aseptik', '0')->count();
@@ -1338,7 +1338,7 @@ class CuciTanganController extends Controller
             $no_lt2_hw = $lt2->where('hw', '0')->count();
             $no_lt2_gagal = $lt2->where('gagal', '0')->count();
             $no_lt2_st = $lt2->where('st', '0')->count();
-            $no_lt2_jumlah = $no_lt2_sbl_kon_psn + $no_lt2_sbl_tin_aseptik + $no_lt2_stl_kon_cairan + $no_lt2_stl_kon_psn + $no_lt2_stl_kon_ling_psn + $no_lt2_hr + $no_lt2_hw + $no_lt2_gagal + $no_lt2_st;
+            $no_lt2_jumlah = $no_lt2_sbl_kon_psn + $no_lt2_sbl_tin_aseptik + $no_lt2_stl_kon_cairan + $no_lt2_stl_kon_psn + $no_lt2_stl_kon_ling_psn;
 
             $denominator_lt2 = $lt2_jumlah + $no_lt2_jumlah;
 
@@ -1351,7 +1351,7 @@ class CuciTanganController extends Controller
             $lt4_hw = $lt4->where('hw', '1')->count();
             $lt4_gagal = $lt4->where('gagal', '1')->count();
             $lt4_st = $lt4->where('st', '1')->count();
-            $lt4_jumlah = $lt4_sbl_kon_psn + $lt4_sbl_tin_aseptik + $lt4_stl_kon_cairan + $lt4_stl_kon_psn + $lt4_stl_kon_ling_psn + $lt4_hr + $lt4_hw + $lt4_gagal + $lt4_st;
+            $lt4_jumlah = $lt4_sbl_kon_psn + $lt4_sbl_tin_aseptik + $lt4_stl_kon_cairan + $lt4_stl_kon_psn + $lt4_stl_kon_ling_psn;
 
             $no_lt4_sbl_kon_psn = $lt4->where('sbl_kon_psn', '0')->count();
             $no_lt4_sbl_tin_aseptik = $lt4->where('sbl_tin_aseptik', '0')->count();
@@ -1362,7 +1362,7 @@ class CuciTanganController extends Controller
             $no_lt4_hw = $lt4->where('hw', '0')->count();
             $no_lt4_gagal = $lt4->where('gagal', '0')->count();
             $no_lt4_st = $lt4->where('st', '0')->count();
-            $no_lt4_jumlah = $no_lt4_sbl_kon_psn + $no_lt4_sbl_tin_aseptik + $no_lt4_stl_kon_cairan + $no_lt4_stl_kon_psn + $no_lt4_stl_kon_ling_psn + $no_lt4_hr + $no_lt4_hw + $no_lt4_gagal + $no_lt4_st;
+            $no_lt4_jumlah = $no_lt4_sbl_kon_psn + $no_lt4_sbl_tin_aseptik + $no_lt4_stl_kon_cairan + $no_lt4_stl_kon_psn + $no_lt4_stl_kon_ling_psn;
 
             $denominator_lt4 = $lt4_jumlah + $no_lt4_jumlah;
 
@@ -1375,7 +1375,7 @@ class CuciTanganController extends Controller
             $lt5_hw = $lt5->where('hw', '1')->count();
             $lt5_gagal = $lt5->where('gagal', '1')->count();
             $lt5_st = $lt5->where('st', '1')->count();
-            $lt5_jumlah = $lt5_sbl_kon_psn + $lt5_sbl_tin_aseptik + $lt5_stl_kon_cairan + $lt5_stl_kon_psn + $lt5_stl_kon_ling_psn + $lt5_hr + $lt5_hw + $lt5_gagal + $lt5_st;
+            $lt5_jumlah = $lt5_sbl_kon_psn + $lt5_sbl_tin_aseptik + $lt5_stl_kon_cairan + $lt5_stl_kon_psn + $lt5_stl_kon_ling_psn;
 
             $no_lt5_sbl_kon_psn = $lt5->where('sbl_kon_psn', '0')->count();
             $no_lt5_sbl_tin_aseptik = $lt5->where('sbl_tin_aseptik', '0')->count();
@@ -1386,7 +1386,7 @@ class CuciTanganController extends Controller
             $no_lt5_hw = $lt5->where('hw', '0')->count();
             $no_lt5_gagal = $lt5->where('gagal', '0')->count();
             $no_lt5_st = $lt5->where('st', '0')->count();
-            $no_lt5_jumlah = $no_lt5_sbl_kon_psn + $no_lt5_sbl_tin_aseptik + $no_lt5_stl_kon_cairan + $no_lt5_stl_kon_psn + $no_lt5_stl_kon_ling_psn + $no_lt5_hr + $no_lt5_hw + $no_lt5_gagal + $no_lt5_st;
+            $no_lt5_jumlah = $no_lt5_sbl_kon_psn + $no_lt5_sbl_tin_aseptik + $no_lt5_stl_kon_cairan + $no_lt5_stl_kon_psn + $no_lt5_stl_kon_ling_psn;
 
             $denominator_lt5 = $lt5_jumlah + $no_lt5_jumlah;
 
@@ -1399,7 +1399,7 @@ class CuciTanganController extends Controller
             $poli_hw = $poli->where('hw', '1')->count();
             $poli_gagal = $poli->where('gagal', '1')->count();
             $poli_st = $poli->where('st', '1')->count();
-            $poli_jumlah = $poli_sbl_kon_psn + $poli_sbl_tin_aseptik + $poli_stl_kon_cairan + $poli_stl_kon_psn + $poli_stl_kon_ling_psn + $poli_hr + $poli_hw + $poli_gagal + $poli_st;
+            $poli_jumlah = $poli_sbl_kon_psn + $poli_sbl_tin_aseptik + $poli_stl_kon_cairan + $poli_stl_kon_psn + $poli_stl_kon_ling_psn;
 
             $no_poli_sbl_kon_psn = $poli->where('sbl_kon_psn', '0')->count();
             $no_poli_sbl_tin_aseptik = $poli->where('sbl_tin_aseptik', '0')->count();
@@ -1410,7 +1410,7 @@ class CuciTanganController extends Controller
             $no_poli_hw = $poli->where('hw', '0')->count();
             $no_poli_gagal = $poli->where('gagal', '0')->count();
             $no_poli_st = $poli->where('st', '0')->count();
-            $no_poli_jumlah = $no_poli_sbl_kon_psn + $no_poli_sbl_tin_aseptik + $no_poli_stl_kon_cairan + $no_poli_stl_kon_psn + $no_poli_stl_kon_ling_psn + $no_poli_hr + $no_poli_hw + $no_poli_gagal + $no_poli_st;
+            $no_poli_jumlah = $no_poli_sbl_kon_psn + $no_poli_sbl_tin_aseptik + $no_poli_stl_kon_cairan + $no_poli_stl_kon_psn + $no_poli_stl_kon_ling_psn;
 
             $denominator_poli = $poli_jumlah + $no_poli_jumlah;
 
@@ -1423,7 +1423,7 @@ class CuciTanganController extends Controller
             $rad_hw = $rad->where('hw', '1')->count();
             $rad_gagal = $rad->where('gagal', '1')->count();
             $rad_st = $rad->where('st', '1')->count();
-            $rad_jumlah = $rad_sbl_kon_psn + $rad_sbl_tin_aseptik + $rad_stl_kon_cairan + $rad_stl_kon_psn + $rad_stl_kon_ling_psn + $rad_hr + $rad_hw + $rad_gagal + $rad_st;
+            $rad_jumlah = $rad_sbl_kon_psn + $rad_sbl_tin_aseptik + $rad_stl_kon_cairan + $rad_stl_kon_psn + $rad_stl_kon_ling_psn;
 
             $no_rad_sbl_kon_psn = $rad->where('sbl_kon_psn', '0')->count();
             $no_rad_sbl_tin_aseptik = $rad->where('sbl_tin_aseptik', '0')->count();
@@ -1434,7 +1434,7 @@ class CuciTanganController extends Controller
             $no_rad_hw = $rad->where('hw', '0')->count();
             $no_rad_gagal = $rad->where('gagal', '0')->count();
             $no_rad_st = $rad->where('st', '0')->count();
-            $no_rad_jumlah = $no_rad_sbl_kon_psn + $no_rad_sbl_tin_aseptik + $no_rad_stl_kon_cairan + $no_rad_stl_kon_psn + $no_rad_stl_kon_ling_psn + $no_rad_hr + $no_rad_hw + $no_rad_gagal + $no_rad_st;
+            $no_rad_jumlah = $no_rad_sbl_kon_psn + $no_rad_sbl_tin_aseptik + $no_rad_stl_kon_cairan + $no_rad_stl_kon_psn + $no_rad_stl_kon_ling_psn;
 
             $denominator_rad = $rad_jumlah + $no_rad_jumlah;
 
@@ -1447,7 +1447,7 @@ class CuciTanganController extends Controller
             $vk_hw = $vk->where('hw', '1')->count();
             $vk_gagal = $vk->where('gagal', '1')->count();
             $vk_st = $vk->where('st', '1')->count();
-            $vk_jumlah = $vk_sbl_kon_psn + $vk_sbl_tin_aseptik + $vk_stl_kon_cairan + $vk_stl_kon_psn + $vk_stl_kon_ling_psn + $vk_hr + $vk_hw + $vk_gagal + $vk_st;
+            $vk_jumlah = $vk_sbl_kon_psn + $vk_sbl_tin_aseptik + $vk_stl_kon_cairan + $vk_stl_kon_psn + $vk_stl_kon_ling_psn;
 
             $no_vk_sbl_kon_psn = $vk->where('sbl_kon_psn', '0')->count();
             $no_vk_sbl_tin_aseptik = $vk->where('sbl_tin_aseptik', '0')->count();
@@ -1458,7 +1458,7 @@ class CuciTanganController extends Controller
             $no_vk_hw = $vk->where('hw', '0')->count();
             $no_vk_gagal = $vk->where('gagal', '0')->count();
             $no_vk_st = $vk->where('st', '0')->count();
-            $no_vk_jumlah = $no_vk_sbl_kon_psn + $no_vk_sbl_tin_aseptik + $no_vk_stl_kon_cairan + $no_vk_stl_kon_psn + $no_vk_stl_kon_ling_psn + $no_vk_hr + $no_vk_hw + $no_vk_gagal + $no_vk_st;
+            $no_vk_jumlah = $no_vk_sbl_kon_psn + $no_vk_sbl_tin_aseptik + $no_vk_stl_kon_cairan + $no_vk_stl_kon_psn + $no_vk_stl_kon_ling_psn;
 
             $denominator_vk = $vk_jumlah + $no_vk_jumlah;
 
