@@ -1,11 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\BundleIADController;
 use App\Http\Controllers\BundleIDOController;
 use App\Http\Controllers\BundleISKController;
 use App\Http\Controllers\BundleVAPController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CuciTanganController;
 use App\Http\Controllers\SurveilansController;
 use App\Http\Controllers\MstKodeBundleController;
@@ -88,7 +90,17 @@ Route::post('/bundleVap/save', [BundleVAPController::class, 'save']);
 Route::patch('/bundleVap/update/{id}', [BundleVAPController::class, 'update'])->name('updateBundleVap');
 Route::get('/bundleVap/delete/{id}', [BundleVAPController::class, 'destroy'])->name('deleteBundleVap');
 
-Route::get('/', function () {
+// Route::get('/login', [LoginController::class, 'index']);
 
-    return view('login.index');
-});
+// Auth::routes();
+
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+// Route::get('/', function () {
+//     return redirect('login');
+// });
