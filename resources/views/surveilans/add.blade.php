@@ -26,7 +26,7 @@
 
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <div class="col-sm-4 mb-3 form-floating">
-                        {!! Form::number('usia', '', ['style' => 'height: auto', 'class' => 'form-control', 'id' =>
+                        {!! Form::text('usia', '', ['style' => 'height: auto', 'class' => 'form-control', 'id' =>
                         'usia', 'placeholder' => 'Usia', 'step'=>'any', 'required']) !!}
                         {!! Form::label('usia', 'Usia') !!}
                     </div>
