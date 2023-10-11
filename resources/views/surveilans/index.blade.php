@@ -119,6 +119,13 @@
 
         <div class="btn-toolbar justify-content-between">
             <div>
+                Menampilkan
+                {{ $surveilans->firstItem() }} - {{ $surveilans->lastItem() }}
+                dari
+                {{ $surveilans->total() }}
+                data
+            </div>
+            <div>
                 {{ $surveilans->links() }}
             </div>
         </div>
