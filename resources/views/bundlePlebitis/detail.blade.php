@@ -39,29 +39,33 @@
                                 <tr>
                                     <th style="width:1%">No</th>
                                     <th>Bundle Insersi</th>
-                                    <th style="width:5%">Status</th>
+                                    <th style="width:10%">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th>1</th>
                                     <th>Hand hygiene</th>
-                                    <td>{{ $isi->PLB0301 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                    <td>{{ ($isi->PLB0301 == 1) ? 'Ya' : (($isi->PLB0301 == 0) ? 'Tidak' : 'Tidak
+                                        dilakukan') }}</td>
                                 </tr>
                                 <tr>
                                     <th>2</th>
                                     <th>Kaji kebutuhan</th>
-                                    <td>{{ $isi->PLB0302 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                    <td>{{ ($isi->PLB0302 == 1) ? 'Ya' : (($isi->PLB0302 == 0) ? 'Tidak' : 'Tidak
+                                        dilakukan') }}</td>
                                 </tr>
                                 <tr>
                                     <th>3</th>
                                     <th>Tehnik steril</th>
-                                    <td>{{ $isi->PLB0303 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                    <td>{{ ($isi->PLB0303 == 1) ? 'Ya' : (($isi->PLB0303 == 0) ? 'Tidak' : 'Tidak
+                                        dilakukan') }}</td>
                                 </tr>
                                 <tr>
                                     <th>4</th>
                                     <th>Desinfeksi area insersi</th>
-                                    <td>{{ $isi->PLB0304 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                    <td>{{ ($isi->PLB0304 == 1) ? 'Ya' : (($isi->PLB0304 == 0) ? 'Tidak' : 'Tidak
+                                        dilakukan') }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -78,22 +82,26 @@
                                 <tr>
                                     <th>1</th>
                                     <th>Hand hygiene</th>
-                                    <td>{{ $isi->PLB0201 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                    <td>{{ ($isi->PLB0201 == 1) ? 'Ya' : (($isi->PLB0201 == 0) ? 'Tidak' : 'Tidak
+                                        dilakukan') }}</td>
                                 </tr>
                                 <tr>
                                     <th>2</th>
                                     <th>Perawatan area insersi</th>
-                                    <td>{{ $isi->PLB0202 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                    <td>{{ ($isi->PLB0202 == 1) ? 'Ya' : (($isi->PLB0202 == 0) ? 'Tidak' : 'Tidak
+                                        dilakukan') }}</td>
                                 </tr>
                                 <tr>
                                     <th>3</th>
                                     <th>Kaji kebutuhan, jika tidak diperlukan segera lepas</th>
-                                    <td>{{ $isi->PLB0203 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                    <td>{{ ($isi->PLB0203 == 1) ? 'Ya' : (($isi->PLB0203 == 0) ? 'Tidak' : 'Tidak
+                                        dilakukan') }}</td>
                                 </tr>
                                 <tr>
                                     <th>4</th>
                                     <th>Penggantian administrasi set</th>
-                                    <td>{{ $isi->PLB0204 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                    <td>{{ ($isi->PLB0204 == 1) ? 'Ya' : (($isi->PLB0204 == 0) ? 'Tidak' : 'Tidak
+                                        dilakukan') }}</td>
                                 </tr>
                             </tbody>
                         </table>

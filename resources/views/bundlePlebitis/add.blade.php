@@ -1,6 +1,6 @@
 <div class="modal fade" id="bundlePlebitis" tabindex="-1" data-bs-backdrop="static"
     aria-labelledby="modalBundlePlebitis" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalBundlePlebitis">Tambah Data</h5>
@@ -69,6 +69,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0301', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0301', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -76,6 +78,8 @@
                                 <td class="text-center">{!! Form::radio('PLB0302', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0302', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0302', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -85,6 +89,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0303', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0303', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -92,6 +98,8 @@
                                 <td class="text-center">{!! Form::radio('PLB0304', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0304', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0304', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
@@ -114,6 +122,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0201', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0201', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -121,6 +131,8 @@
                                 <td class="text-center">{!! Form::radio('PLB0202', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0202', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0202', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -130,6 +142,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0203', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0203', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -137,6 +151,8 @@
                                 <td class="text-center">{!! Form::radio('PLB0204', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('PLB0204', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('PLB0204', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>

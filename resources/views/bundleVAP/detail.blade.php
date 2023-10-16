@@ -45,22 +45,26 @@
                             <tr>
                                 <th>1</th>
                                 <th>Hand hygiene</th>
-                                <td>{{ $isi->VAP0101 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0101 == 1) ? 'Ya' : (($isi->VAP0101 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Tehnik steril</th>
-                                <td>{{ $isi->VAP0102 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0102 == 1) ? 'Ya' : (($isi->VAP0102 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Pemakaian APD</th>
-                                <td>{{ $isi->VAP0103 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0103 == 1) ? 'Ya' : (($isi->VAP0103 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Sedasi</th>
-                                <td>{{ $isi->VAP0104 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0104 == 1) ? 'Ya' : (($isi->VAP0104 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -77,42 +81,51 @@
                             <tr>
                                 <th>1</th>
                                 <th>Hand hygiene</th>
-                                <td>{{ $isi->VAP0201 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0201 == 1) ? 'Ya' : (($isi->VAP0201 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Oral hygiene 4-6x sehari atau jika perlu</th>
-                                <td>{{ $isi->VAP0202 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0202 == 1) ? 'Ya' : (($isi->VAP0202 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Sikat gigi setiap 12 jam</th>
                                 <td>{{ $isi->VAP0203 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->IDO04A01 == 1) ? 'Ya' : (($isi->IDO04A01 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Pengkajian sedasi ekstubasi</th>
-                                <td>{{ $isi->VAP0204 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0204 == 1) ? 'Ya' : (($isi->VAP0204 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>5</th>
                                 <th>Posisi kepala 33-45 derajat</th>
-                                <td>{{ $isi->VAP0205 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0205 == 1) ? 'Ya' : (($isi->VAP0205 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>6</th>
                                 <th>Manajemen sekresi / suction</th>
-                                <td>{{ $isi->VAP0206 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0206 == 1) ? 'Ya' : (($isi->VAP0206 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>7</th>
                                 <th>Penggantian selang suction 1x24 jam</th>
-                                <td>{{ $isi->VAP0207 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0207 == 1) ? 'Ya' : (($isi->VAP0207 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>8</th>
                                 <th>Penggantian cairan yang digunakan untuk suction pershif</th>
-                                <td>{{ $isi->VAP0208 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->VAP0208 == 1) ? 'Ya' : (($isi->VAP0208 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                         </tbody>
                     </table>

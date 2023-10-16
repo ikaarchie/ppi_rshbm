@@ -1,6 +1,6 @@
 <div class="modal fade" id="editBundleIAD{{$isi->id}}" tabindex="-1" data-bs-backdrop="static"
     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="myModalLabel">Ubah Data</h5>
@@ -61,6 +61,7 @@
                                 <th>Bundle Insersi</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
+                                <th class="col-1">Tidak Dilakukan</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,6 +72,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0301', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IAD0301', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -78,6 +81,8 @@
                                 <td class="text-center">{!! Form::radio('IAD0302', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0302', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IAD0302', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -87,6 +92,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0303', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IAD0303', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -94,6 +101,8 @@
                                 <td class="text-center">{!! Form::radio('IAD0304', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0304', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IAD0304', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
@@ -106,6 +115,7 @@
                                 <th>Bundle Maintenance</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
+                                <th class="col-1">Tidak Dilakukan</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -116,6 +126,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0201', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IAD0201', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -123,6 +135,8 @@
                                 <td class="text-center">{!! Form::radio('IAD0202', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0202', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IAD0202', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -132,6 +146,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0203', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IAD0203', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -139,6 +155,8 @@
                                 <td class="text-center">{!! Form::radio('IAD0204', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IAD0204', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IAD0204', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>

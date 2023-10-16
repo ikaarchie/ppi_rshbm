@@ -1,6 +1,6 @@
 <div class="modal fade" id="bundleISK" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalBundleISK"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalBundleISK">Tambah Data</h5>
@@ -59,6 +59,7 @@
                                 <th>Bundle Pemasangan</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
+                                <th class="col-1">Tidak Dilakukan</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -69,6 +70,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0101', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('ISK0101', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -76,6 +79,8 @@
                                 <td class="text-center">{!! Form::radio('ISK0102', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0102', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('ISK0102', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -85,6 +90,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0103', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('ISK0103', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -92,6 +99,8 @@
                                 <td class="text-center">{!! Form::radio('ISK0104', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0104', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('ISK0104', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
@@ -104,6 +113,7 @@
                                 <th>Bundle Maintenance</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
+                                <th class="col-1">Tidak Dilakukan</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -114,6 +124,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0201', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('ISK0201', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -121,6 +133,8 @@
                                 <td class="text-center">{!! Form::radio('ISK0202', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0202', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('ISK0202', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -130,6 +144,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0203', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('ISK0203', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -137,6 +153,8 @@
                                 <td class="text-center">{!! Form::radio('ISK0204', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('ISK0204', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('ISK0204', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>

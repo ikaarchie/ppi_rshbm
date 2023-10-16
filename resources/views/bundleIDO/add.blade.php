@@ -1,6 +1,6 @@
 <div class="modal fade" id="bundleIDO" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalBundleIDO"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalBundleIDO">Tambah Data</h5>
@@ -65,12 +65,13 @@
                                 <th>Bundle Pre Operasi</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
+                                <th class="col-1">Tidak Dilakukan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th>A</th>
-                                <th colspan="3">Pasien</th>
+                                <th colspan="4">Pasien</th>
                             </tr>
                             <tr>
                                 <th>1</th>
@@ -78,6 +79,8 @@
                                 <td class="text-center">{!! Form::radio('IDO04A01', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04A01', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A01', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -88,6 +91,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04A02', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A02', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
@@ -95,6 +100,8 @@
                                 <td class="text-center">{!! Form::radio('IDO04A03', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04A03', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A03', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -104,6 +111,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04A04', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A04', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>5</th>
@@ -111,6 +120,8 @@
                                 <td class="text-center">{!! Form::radio('IDO04A05', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04A05', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A05', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -120,6 +131,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04A06', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A06', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>7</th>
@@ -127,6 +140,8 @@
                                 <td class="text-center">{!! Form::radio('IDO04A07', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04A07', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A07', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -136,14 +151,16 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04A08', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04A08', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
 
                             <tr>
-                                <th colspan="4"></th>
+                                <th colspan="5"></th>
                             </tr>
                             <tr>
                                 <th>B</th>
-                                <th colspan="3">Tim Bedah</th>
+                                <th colspan="4">Tim Bedah</th>
                             </tr>
                             <tr>
                                 <th>1</th>
@@ -151,6 +168,8 @@
                                 <td class="text-center">{!! Form::radio('IDO04B01', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04B01', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04B01', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -160,6 +179,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04B02', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04B02', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
@@ -167,6 +188,8 @@
                                 <td class="text-center">{!! Form::radio('IDO04B03', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO04B03', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO04B03', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
@@ -179,12 +202,13 @@
                                 <th>Bundle Intra Operasi</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
+                                <th class="col-1">Tidak Dilakukan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th>A</th>
-                                <th colspan="3">Tim Bedah</th>
+                                <th colspan="4">Tim Bedah</th>
                             </tr>
                             <tr>
                                 <th>1</th>
@@ -195,6 +219,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO05A01', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05A01', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -202,6 +228,8 @@
                                 <td class="text-center">{!! Form::radio('IDO05A02', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO05A02', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05A02', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -211,6 +239,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO05A03', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05A03', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -219,13 +249,15 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO05A04', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05A04', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
-                                <th colspan="4"></th>
+                                <th colspan="5"></th>
                             </tr>
                             <tr>
                                 <th>B</th>
-                                <th colspan="3">Ventilasi & peralatan</th>
+                                <th colspan="4">Ventilasi & peralatan</th>
                             </tr>
                             <tr>
                                 <th>1</th>
@@ -233,6 +265,8 @@
                                 <td class="text-center">{!! Form::radio('IDO05B01', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO05B01', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05B01', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -242,6 +276,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO05B02', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05B02', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
@@ -250,6 +286,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO05B03', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05B03', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -257,6 +295,8 @@
                                 <td class="text-center">{!! Form::radio('IDO05B04', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO05B04', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO05B04', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
@@ -269,6 +309,7 @@
                                 <th>Bundle Post Operasi</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
+                                <th class="col-1">Tidak Dilakukan</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -279,6 +320,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO0601', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO0601', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -286,6 +329,8 @@
                                 <td class="text-center">{!! Form::radio('IDO0602', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO0602', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO0602', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -295,6 +340,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO0603', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO0603', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -302,6 +349,8 @@
                                 <td class="text-center">{!! Form::radio('IDO0604', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('IDO0604', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('IDO0604', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>

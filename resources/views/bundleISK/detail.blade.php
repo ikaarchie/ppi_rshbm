@@ -38,29 +38,33 @@
                             <tr>
                                 <th style="width:1%">No</th>
                                 <th>Bundle Pemasangan</th>
-                                <th style="width:5%">Status</th>
+                                <th style="width:10%">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th>1</th>
                                 <th>Kaji kebutuhan / ada indikasi</th>
-                                <td>{{ $isi->ISK0101 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->ISK0101 == 1) ? 'Ya' : (($isi->ISK0101 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Pemasangan oleh petugas yang terlatih</th>
-                                <td>{{ $isi->ISK0102 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->ISK0102 == 1) ? 'Ya' : (($isi->ISK0102 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Kebersihan tangan</th>
-                                <td>{{ $isi->ISK0103 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->ISK0103 == 1) ? 'Ya' : (($isi->ISK0103 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Tehnik steril</th>
-                                <td>{{ $isi->ISK0104 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->ISK0104 == 1) ? 'Ya' : (($isi->ISK0104 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -70,29 +74,33 @@
                             <tr>
                                 <th style="width:1%">No</th>
                                 <th>Bundle Maintenance</th>
-                                <th style="width:5%">Status</th>
+                                <th style="width:10%">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th>1</th>
                                 <th>Hand hygiene</th>
-                                <td>{{ $isi->ISK0201 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->ISK0201 == 1) ? 'Ya' : (($isi->ISK0201 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Perawatan cateter perineal setiap hari sesudah BAB</th>
-                                <td>{{ $isi->ISK0202 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->ISK0202 == 1) ? 'Ya' : (($isi->ISK0202 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Urine bag tidak dilantai</th>
-                                <td>{{ $isi->ISK0203 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->ISK0203 == 1) ? 'Ya' : (($isi->ISK0203 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Urine bag lebih rendah dari kandung kemih</th>
-                                <td>{{ $isi->ISK0204 == 1 ? 'Ya' : 'Tidak' }}</td>
+                                <td>{{ ($isi->ISK0204 == 1) ? 'Ya' : (($isi->ISK0204 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
                             </tr>
                         </tbody>
                     </table>

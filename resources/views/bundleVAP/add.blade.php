@@ -1,6 +1,6 @@
 <div class="modal fade" id="bundleVAP" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalBundleVAP"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalBundleVAP">Tambah Data</h5>
@@ -69,6 +69,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0101', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0101', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -76,6 +78,8 @@
                                 <td class="text-center">{!! Form::radio('VAP0102', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0102', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0102', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -85,6 +89,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0103', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0103', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -92,6 +98,8 @@
                                 <td class="text-center">{!! Form::radio('VAP0104', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0104', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0104', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
@@ -114,6 +122,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0201', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0201', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
@@ -121,6 +131,8 @@
                                 <td class="text-center">{!! Form::radio('VAP0202', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0202', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0202', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -130,6 +142,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0203', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0203', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
@@ -137,6 +151,8 @@
                                 <td class="text-center">{!! Form::radio('VAP0204', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0204', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0204', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -146,6 +162,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0205', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0205', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>6</th>
@@ -153,6 +171,8 @@
                                 <td class="text-center">{!! Form::radio('VAP0206', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0206', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0206', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
@@ -162,6 +182,8 @@
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0207', '0', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0207', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
                             </tr>
                             <tr>
                                 <th>8</th>
@@ -169,6 +191,8 @@
                                 <td class="text-center">{!! Form::radio('VAP0208', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0208', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0208', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
                         </tbody>
