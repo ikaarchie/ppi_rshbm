@@ -90,6 +90,36 @@ Route::post('/bundleVap/save', [BundleVAPController::class, 'save']);
 Route::patch('/bundleVap/update/{id}', [BundleVAPController::class, 'update'])->name('updateBundleVap');
 Route::get('/bundleVap/delete/{id}', [BundleVAPController::class, 'destroy'])->name('deleteBundleVap');
 
+Route::get('/rekapBundle', [BundleIADController::class, 'rekap'])->name('rekapBundle');
+Route::get('/rekapBundle/excel/', [BundleIADController::class, 'excel'])->name('excelBundle');
+Route::get('/rekapBundle/pdf/', [BundleIADController::class, 'pdf'])->name('pdfBundle');
+Route::post('/inputRekapBundle', [BundleIADController::class, 'inputRekap'])->name('inputRekapBundle');
+Route::patch('/updateRekapBundle/{id}', [BundleIADController::class, 'updateRekap'])->name('updateRekapBundle');
+
+Route::get('/rekapBundleIdo', [BundleIDOController::class, 'rekap'])->name('rekapBundleIdo');
+Route::get('/rekapBundleIdo/excel/', [BundleIDOController::class, 'excel'])->name('excelBundleIdo');
+Route::get('/rekapBundleIdo/pdf/', [BundleIDOController::class, 'pdf'])->name('pdfBundleIdo');
+Route::post('/inputRekapBundleIdo', [BundleIDOController::class, 'inputRekap'])->name('inputRekapBundleIdo');
+Route::patch('/updateRekapBundleIdo/{id}', [BundleIDOController::class, 'updateRekap'])->name('updateRekapBundleIdo');
+
+Route::get('/rekapBundleIsk', [BundleISKController::class, 'rekap'])->name('rekapBundleIsk');
+Route::get('/rekapBundleIsk/excel/', [BundleISKController::class, 'excel'])->name('excelBundleIsk');
+Route::get('/rekapBundleIsk/pdf/', [BundleISKController::class, 'pdf'])->name('pdfBundleIsk');
+Route::post('/inputRekapBundleIsk', [BundleISKController::class, 'inputRekap'])->name('inputRekapBundleIsk');
+Route::patch('/updateRekapBundleIsk/{id}', [BundleISKController::class, 'updateRekap'])->name('updateRekapBundleIsk');
+
+Route::get('/rekapBundlePlebitis', [BundlePlebitisController::class, 'rekap'])->name('rekapBundlePlebitis');
+Route::get('/rekapBundlePlebitis/excel/', [BundlePlebitisController::class, 'excel'])->name('excelBundlePlebitis');
+Route::get('/rekapBundlePlebitis/pdf/', [BundlePlebitisController::class, 'pdf'])->name('pdfBundlePlebitis');
+Route::post('/inputRekapBundlePlebitis', [BundlePlebitisController::class, 'inputRekap'])->name('inputRekapBundlePlebitis');
+Route::patch('/updateRekapBundlePlebitis/{id}', [BundlePlebitisController::class, 'updateRekap'])->name('updateRekapBundlePlebitis');
+
+Route::get('/rekapBundleVap', [BundleVAPController::class, 'rekap'])->name('rekapBundleVap');
+Route::get('/rekapBundleVap/excel/', [BundleVAPController::class, 'excel'])->name('excelBundleVap');
+Route::get('/rekapBundleVap/pdf/', [BundleVAPController::class, 'pdf'])->name('pdfBundleVap');
+Route::post('/inputRekapBundleVap', [BundleVAPController::class, 'inputRekap'])->name('inputRekapBundleVap');
+Route::patch('/updateRekapBundleVap/{id}', [BundleVAPController::class, 'updateRekap'])->name('updateRekapBundleVap');
+
 // Route::get('/login', [LoginController::class, 'index']);
 
 // Auth::routes();
