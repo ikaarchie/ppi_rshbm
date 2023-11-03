@@ -65,7 +65,7 @@
                                 {!! Form::label('sbl_kon_psn', 'Tidak', ['class' => 'form-check-label']) !!}
                                 {!! Form::radio('sbl_kon_psn', 'td', '', ['class' => 'form-check-input'], 'required')
                                 !!}
-                                {!! Form::label('sbl_kon_psn', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
+                                {!! Form::label('sbl_kon_psn', 'TDD', ['class' => 'form-check-label']) !!}
                             </div>
                         </div>
 
@@ -85,7 +85,7 @@
                                 {!! Form::radio('sbl_tin_aseptik', 'td', '', ['class' => 'form-check-input'],
                                 'required')
                                 !!}
-                                {!! Form::label('sbl_tin_aseptik', 'Tidak dilakukan', ['class' => 'form-check-label'])
+                                {!! Form::label('sbl_tin_aseptik', 'TDD', ['class' => 'form-check-label'])
                                 !!}
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                                 {!! Form::radio('stl_kon_cairan', 'td', '', ['class' => 'form-check-input'],
                                 'required')
                                 !!}
-                                {!! Form::label('stl_kon_cairan', 'Tidak dilakukan', ['class' => 'form-check-label'])
+                                {!! Form::label('stl_kon_cairan', 'TDD', ['class' => 'form-check-label'])
                                 !!}
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                                 {!! Form::label('stl_kon_psn', 'Tidak', ['class' => 'form-check-label']) !!}
                                 {!! Form::radio('stl_kon_psn', 'td', '', ['class' => 'form-check-input'], 'required')
                                 !!}
-                                {!! Form::label('stl_kon_psn', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
+                                {!! Form::label('stl_kon_psn', 'TDD', ['class' => 'form-check-label']) !!}
                             </div>
                         </div>
 
@@ -141,7 +141,7 @@
                                 {!! Form::label('stl_kon_ling_psn', 'Tidak', ['class' => 'form-check-label']) !!}
                                 {!! Form::radio('stl_kon_ling_psn', 'td', '', ['class' => 'form-check-input'],
                                 'required') !!}
-                                {!! Form::label('stl_kon_ling_psn', 'Tidak dilakukan', ['class' => 'form-check-label'])
+                                {!! Form::label('stl_kon_ling_psn', 'TDD', ['class' => 'form-check-label'])
                                 !!}
                             </div>
                         </div>
@@ -163,7 +163,7 @@
                                 {!! Form::radio('hr', '0', '', ['class' => 'form-check-input'], 'required') !!}
                                 {!! Form::label('hr', 'Tidak', ['class' => 'form-check-label']) !!}
                                 {!! Form::radio('hr', 'td', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('hr', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
+                                {!! Form::label('hr', 'TDD', ['class' => 'form-check-label']) !!}
                             </div>
                         </div>
 
@@ -177,7 +177,7 @@
                                 {!! Form::radio('hw', '0', '', ['class' => 'form-check-input'], 'required') !!}
                                 {!! Form::label('hw', 'Tidak', ['class' => 'form-check-label']) !!}
                                 {!! Form::radio('hw', 'td', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('hw', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
+                                {!! Form::label('hw', 'TDD', ['class' => 'form-check-label']) !!}
                             </div>
                         </div>
 
@@ -191,7 +191,7 @@
                                 {!! Form::radio('gagal', '0', '', ['class' => 'form-check-input'], 'required') !!}
                                 {!! Form::label('gagal', 'Tidak', ['class' => 'form-check-label']) !!}
                                 {!! Form::radio('gagal', 'td', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('gagal', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
+                                {!! Form::label('gagal', 'TDD', ['class' => 'form-check-label']) !!}
                             </div>
                         </div>
 
@@ -205,7 +205,7 @@
                                 {!! Form::radio('st', '0', '', ['class' => 'form-check-input'], 'required') !!}
                                 {!! Form::label('st', 'Tidak', ['class' => 'form-check-label']) !!}
                                 {!! Form::radio('st', 'td', '', ['class' => 'form-check-input'], 'required') !!}
-                                {!! Form::label('st', 'Tidak dilakukan', ['class' => 'form-check-label']) !!}
+                                {!! Form::label('st', 'TDD', ['class' => 'form-check-label']) !!}
                             </div>
                         </div>
                     </div>
