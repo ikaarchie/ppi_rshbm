@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApdController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\BundleIADController;
@@ -119,6 +120,18 @@ Route::get('/rekapBundleVap/excel/', [BundleVAPController::class, 'excel'])->nam
 Route::get('/rekapBundleVap/pdf/', [BundleVAPController::class, 'pdf'])->name('pdfBundleVap');
 Route::post('/inputRekapBundleVap', [BundleVAPController::class, 'inputRekap'])->name('inputRekapBundleVap');
 Route::patch('/updateRekapBundleVap/{id}', [BundleVAPController::class, 'updateRekap'])->name('updateRekapBundleVap');
+
+Route::get('/apd', [ApdController::class, 'index'])->name('indexAPD');
+Route::get('/apd', [ApdController::class, 'getData'])->name('getDataAPD');
+Route::post('/apd/save', [ApdController::class, 'save']);
+Route::patch('/apd/update/{id}', [ApdController::class, 'update'])->name('updateAPD');
+Route::get('/apd/delete/{id}', [ApdController::class, 'destroy'])->name('deleteAPD');
+
+Route::get('/rekapAPD', [ApdController::class, 'rekap'])->name('rekapAPD');
+Route::get('/rekapAPD/excel/', [ApdController::class, 'excel'])->name('excelAPD');
+Route::get('/rekapAPD/pdf/', [ApdController::class, 'pdf'])->name('pdfAPD');
+Route::post('/inputRekapAPD', [ApdController::class, 'inputRekap'])->name('inputRekapAPD');
+Route::patch('/updateRekapAPD/{id}', [ApdController::class, 'updateRekap'])->name('updateRekapAPD');
 
 // Route::get('/login', [LoginController::class, 'index']);
 

@@ -210,14 +210,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">
-                        <i class="fa-solid fa-xmark"></i> Batal</button>
-                    <button type="submit" class="btn btn-sm btn-success">
-                        <i class="fa-solid fa-check"></i> Simpan</button>
-                    {!! Form::close() !!}
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i> Batal</button>
+                <button type="submit" class="btn btn-sm btn-success">
+                    <i class="fa-solid fa-check"></i> Simpan</button>
+                {!! Form::close() !!}
             </div>
         </div>
     </div>
+</div>
