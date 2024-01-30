@@ -117,7 +117,7 @@
             </tbody>
         </table>
 
-        {{-- <div class="btn-toolbar justify-content-between">
+        <div class="btn-toolbar justify-content-between">
             <div>
                 Menampilkan
                 {{ $surveilans->firstItem() }} - {{ $surveilans->lastItem() }}
@@ -128,7 +128,7 @@
             <div>
                 {{ $surveilans->links() }}
             </div>
-        </div> --}}
+        </div>
     </div>
 </div>
 @include('surveilans.add')
