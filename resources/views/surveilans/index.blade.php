@@ -30,17 +30,18 @@
             </button>
         </div>
 
-        {{-- <div class="gap-1 d-md-flex justify-content-md-end mt-2">
-            <form action="{{ url('/surveilans') }}">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Cari nama pasien" name="search">
+        <div class="gap-1 d-md-flex justify-content-md-end mt-2">
+            <form method="GET" action="{{ url('/surveilans') }}">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cari MRN / nama pasien" name="cari"
+                        value="{{ $cari }}" style="outline: 0.5px solid; outline-color: #FFAB00;">
                     <button class="btn" style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;"
                         type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </form>
-        </div> --}}
+        </div>
 
-        <div class="gap-1 d-md-flex justify-content-md-end mt-2">
+        {{-- <div class="gap-1 d-md-flex justify-content-md-end mt-2">
             <div class="form-group w-10">
                 <div class="input-group">
                     <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
@@ -51,7 +52,7 @@
                     </span>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <div class="table-responsive mt-1 table-data tbl-fixed">
@@ -144,7 +145,7 @@
 @include('surveilans.add')
 
 {{-- fungsi search --}}
-<script>
+{{-- <script>
     function cari() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
@@ -164,7 +165,7 @@
             }       
         }
     }
-</script>
+</script> --}}
 
 {{-- fungsi sweet alert --}}
 <script>

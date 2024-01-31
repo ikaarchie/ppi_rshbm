@@ -18,12 +18,24 @@ class SurveilansController extends Controller
         return view('surveilans.index');
     }
 
-    public function getData()
+    public function getData(Request $request)
     {
         // dd(request('search'));
-        $surveilans = Surveilans::latest('id')->paginate(10);
+        $cari = $request->cari;
 
-        return view('surveilans.index')->with('surveilans', $surveilans);
+        // $surveilans = Surveilans::latest('id')->paginate(10);
+        if ($request->has('cari')) {
+            $surveilans = Surveilans::where('nama_pasien', 'LIKE', '%' . $cari . '%')
+                ->orWhere('mrn', 'LIKE', '%' . $cari . '%')
+                ->latest('id')
+                ->paginate(10);
+            $surveilans->withPath('surveilans');
+            $surveilans->appends($request->all());
+        } else {
+            $surveilans = Surveilans::latest('id')->paginate(10);
+        }
+
+        return view('surveilans.index', compact('surveilans', 'cari'));
     }
 
     public function save(Request $request)
