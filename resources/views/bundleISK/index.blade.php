@@ -25,7 +25,7 @@
     <div class="d-md-flex justify-content-between">
         <div class="gap-1 d-md-flex justify-content-md-start mt-2">
             <button type="button" data-bs-toggle="modal" data-bs-target="#bundleISK" class="btn"
-                style="background-color: #FFAB00;">
+                style="background-color: #00B0FF;">
                 <i class="fa-solid fa-plus"></i><b> Tambah Data</b>
             </button>
         </div>
@@ -33,10 +33,10 @@
         <div class="gap-1 d-md-flex justify-content-md-end mt-2">
             <div class="form-group w-10">
                 <div class="input-group">
-                    <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
+                    <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #00B0FF;"
                         id="myInput" onkeyup="cari()" placeholder="Cari Nama Pasien">
                     <span class="input-group-text"
-                        style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;">
+                        style="outline: 0.5px solid; outline-color: #00B0FF; background-color: #00B0FF;">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
                 </div>
@@ -46,7 +46,7 @@
 
     <div class="table-responsive mt-1 table-data tbl-fixed">
         <table class="table table-bordered border-dark align-middle w-100" id="myTable">
-            <thead class="sticky text-dark text-center align-middle">
+            <thead class="sticky-bundle text-dark text-center align-middle">
                 <tr>
                     <th style="width:1%">No</th>
                     <th style="width:10%">MRN</th>
@@ -57,7 +57,7 @@
                     <th style="width:15%">Aksi</th>
                 </tr>
             </thead>
-            <tbody style=" background-color: #FFECB3">
+            <tbody style=" background-color: #B3E5FC">
                 @php $no = 1; @endphp
                 @forelse($bundleISK as $key => $isi)
                 <tr>
@@ -173,4 +173,4 @@
 
 @endsection
 
-@extends('layouts.footer')
+@extends('layouts.footer-bundle')

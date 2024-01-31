@@ -4,6 +4,16 @@ body {
     background-color: #fff;
 }
 
+.header-waves-bundle {
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    background: -o-linear-gradient(30deg, rgba(48, 79, 254, 1) 0%, rgba(0, 229, 255, 1) 100%);
+    background: linear-gradient(60deg, rgba(48, 79, 254, 1) 0%, rgba(0, 229, 255, 1) 100%);
+    color: #fff;
+    z-index: 9;
+}
+
 .header-waves {
     /* position: fixed;
     top: 0px;
@@ -142,6 +152,20 @@ footer {
     bottom: 0px;
 }
 
+.footer-bundle {
+    height: 3vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #304ffe, #0083ff, #00a9ff, #00c9ff, #00e5ff);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    position: fixed;
+    bottom: 0px;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -173,6 +197,12 @@ footer {
 .tbl-fixed {
     height: 65vh;
     overflow-y: scroll;
+}
+
+.sticky-bundle {
+    position: sticky;
+    top: 0px;
+    background: #00B0FF;
 }
 
 .sticky {

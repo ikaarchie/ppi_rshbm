@@ -20,6 +20,7 @@ class SurveilansController extends Controller
 
     public function getData()
     {
+        // dd(request('search'));
         $surveilans = Surveilans::latest('id')->paginate(10);
 
         return view('surveilans.index')->with('surveilans', $surveilans);

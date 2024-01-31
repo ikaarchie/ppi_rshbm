@@ -30,6 +30,16 @@
             </button>
         </div>
 
+        {{-- <div class="gap-1 d-md-flex justify-content-md-end mt-2">
+            <form action="{{ url('/surveilans') }}">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Cari nama pasien" name="search">
+                    <button class="btn" style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;"
+                        type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div> --}}
+
         <div class="gap-1 d-md-flex justify-content-md-end mt-2">
             <div class="form-group w-10">
                 <div class="input-group">
