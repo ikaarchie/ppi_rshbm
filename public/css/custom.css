@@ -4,6 +4,16 @@ body {
     background-color: #fff;
 }
 
+.header-waves-surveilans {
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    background: -o-linear-gradient(15deg, rgba(255, 0, 102, 1) 0%, rgba(255, 51, 153, 1) 50%, rgba(255, 102, 204, 1) 100%);
+    background: linear-gradient(30deg, rgba(255, 0, 102, 1) 0%, rgba(255, 51, 153, 1) 50%, rgba(255, 102, 204, 1) 100%);
+    color: #fff;
+    z-index: 9;
+}
+
 .header-waves-bundle {
     position: sticky;
     top: 0px;
@@ -152,6 +162,20 @@ footer {
     bottom: 0px;
 }
 
+.footer-surveilans {
+    height: 3vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #ff0066, #ff0b70, #ff167a, #ff2083, #ff288d, #ff3295, #ff3a9e, #ff42a6, #ff4cb0, #ff55b9, #ff5ec3, #ff66cc);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    position: fixed;
+    bottom: 0px;
+}
+
 .footer-bundle {
     height: 3vh;
     width: 100%;
@@ -197,6 +221,12 @@ footer {
 .tbl-fixed {
     height: 65vh;
     overflow-y: scroll;
+}
+
+.sticky-surveilans {
+    position: sticky;
+    top: 0px;
+    background: #FF6699;
 }
 
 .sticky-bundle {

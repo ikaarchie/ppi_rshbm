@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="header-waves">
+<div class="header-waves-surveilans">
     <div class="container pt-3">
         <h1 class="text-center"><b>SURVEILANS</b></h1>
         <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
@@ -25,7 +25,7 @@
     <div class="d-md-flex justify-content-between">
         <div class="gap-1 d-md-flex justify-content-md-start mt-2">
             <button type="button" data-bs-toggle="modal" data-bs-target="#tambah" class="btn"
-                style="background-color: #FFAB00;">
+                style="background-color: #FF6699;">
                 <i class="fa-solid fa-plus"></i><b> Tambah Data</b>
             </button>
         </div>
@@ -34,8 +34,8 @@
             <form method="GET" action="{{ url('/surveilans') }}">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Cari MRN / nama pasien" name="cari"
-                        value="{{ $cari }}" style="outline: 0.5px solid; outline-color: #FFAB00;">
-                    <button class="btn" style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;"
+                        value="{{ $cari }}" style="outline: 0.5px solid; outline-color: #FF6699;">
+                    <button class="btn" style="outline: 0.5px solid; outline-color: #FF6699; background-color: #FF6699;"
                         type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </form>
@@ -57,7 +57,7 @@
 
     <div class="table-responsive mt-1 table-data tbl-fixed">
         <table class="table table-bordered border-dark align-middle w-100" id="myTable">
-            <thead class="sticky text-dark text-center align-middle">
+            <thead class="sticky-surveilans text-dark text-center align-middle">
                 <tr>
                     <th rowspan="2">No</th>
                     <th rowspan="2">MRN</th>
@@ -86,7 +86,7 @@
                     <th>IDO</th>
                 </tr>
             </thead>
-            <tbody style=" background-color: #FFECB3">
+            <tbody style=" background-color: #FCE4EC">
                 @php $no = 1; @endphp
                 @forelse($surveilans as $key => $isi)
                 <tr>
@@ -220,4 +220,4 @@
 
 @endsection
 
-@extends('layouts.footer')
+@extends('layouts.footer-surveilans')
