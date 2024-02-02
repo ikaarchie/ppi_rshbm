@@ -808,22 +808,22 @@
       'rgba(255, 171, 0, 0.2)'
     ],
     borderColor: [
-      'rgb(255, 171, 0)'
+      'rgb(255, 171, 0)' 
     ],
     borderWidth: 1
   };
 
   var barData1 = {
     labels: [
-      ['Sebelum', 'Kontak Pasien'],
-      ['Sebelum', 'Tindakan Aseptik'],
-      ['Setelah Kontak', 'Cairan Tubuh Pasien'],
-      ['Setelah', 'Kontak Pasien'],
-      ['Setelah Kontak', 'Lingkungan Pasien'],
-      // ['alas_kaki'],
-      // ['lps_apd'],
-      // ['tdk_gtg_masker'],
-      // ['ST'],
+      ['Penutup kepala'],
+      ['Masker'],
+      ['Kacamata google /', 'faceshield'],
+      ['Apron'],
+      ['Sarung tangan'],
+      ['Sandal / sepatu boot'],
+      ['Segera melepas APD', 'selesai melakukan'],
+      ['Tidak menggantung', 'masker di leher'],
+      ['Tidak menggunakan', 'sarung tangan sambil', 'menulis / menyentuh', 'lingkungan yang', 'tidak direkomendasikan'],
     ],
     datasets: [
       cssu1, 
@@ -1242,15 +1242,15 @@
 
   var barData0 = {
     labels: [
-      ['Sebelum', 'Kontak Pasien'],
-      ['Sebelum', 'Tindakan Aseptik'],
-      ['Setelah Kontak', 'Cairan Tubuh Pasien'],
-      ['Setelah', 'Kontak Pasien'],
-      ['Setelah Kontak', 'Lingkungan Pasien'],
-      // ['alas_kaki'],
-      // ['lps_apd'],
-      // ['tdk_gtg_masker'],
-      // ['ST'],
+    ['Penutup kepala'],
+    ['Masker'],
+    ['Kacamata google /', 'faceshield'],
+    ['Apron'],
+    ['Sarung tangan'],
+    ['Sandal / sepatu boot'],
+    ['Segera melepas APD', 'selesai melakukan'],
+    ['Tidak menggantung', 'masker di leher'],
+    ['Tidak menggunakan', 'sarung tangan sambil', 'menulis / menyentuh', 'lingkungan yang', 'tidak direkomendasikan'],
     ],
     datasets: [
       cssu0, 

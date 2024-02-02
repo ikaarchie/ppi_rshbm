@@ -1,6 +1,6 @@
 <table class="table">
     <tr>
-        <th colspan="12">Data Rekap Cuci Tangan</th>
+        <th colspan="12">Data Rekap APD</th>
     </tr>
     <tr>
         <td colspan="12">{{ $tanggal }}</td>
@@ -11,15 +11,16 @@
     <thead>
         <tr>
             <th></th>
-            <th>Sebelum kontak pasien</th>
-            <th>Sebelum tindakan aseptik</th>
-            <th>Setelah kontak cairan tubuh pasien</th>
-            <th>Setelah kontak pasien</th>
-            <th>Setelah kontak lingkungan pasien</th>
-            <th>HR</th>
-            <th>HW</th>
-            <th>Gagal</th>
-            <th>ST</th>
+            <th>Penutup kepala</th>
+            <th>Masker</th>
+            <th>Kacamata google / faceshield</th>
+            <th>Apron</th>
+            <th>Sarung tangan</th>
+            <th>Sandal / sepatu boot</th>
+            <th>Segera melepas APD selesai melakukan</th>
+            <th>Tidak menggantung masker di leher</th>
+            <th>Tidak menggunakan sarung tangan sambil menulis / menyentuh lingkungan yang
+                tidak direkomendasikan</th>
             <th>Jumlah</th>
             <th>Persentase</th>
         </tr>
@@ -27,15 +28,15 @@
     <tbody>
         <tr>
             <th>CSSU</th>
-            <td>{{ $cssu_sbl_kon_psn }}</td>
-            <td>{{ $cssu_sbl_tin_aseptik }}</td>
-            <td>{{ $cssu_stl_kon_cairan }}</td>
-            <td>{{ $cssu_stl_kon_psn }}</td>
-            <td>{{ $cssu_stl_kon_ling_psn }}</td>
-            <td>{{ $cssu_hr }}</td>
-            <td>{{ $cssu_hw }}</td>
-            <td>{{ $cssu_gagal }}</td>
-            <td>{{ $cssu_st }}</td>
+            <td>{{ $cssu_pntp_kpl }}</td>
+            <td>{{ $cssu_masker }}</td>
+            <td>{{ $cssu_pntp_wjh }}</td>
+            <td>{{ $cssu_apron }}</td>
+            <td>{{ $cssu_srg_tgn }}</td>
+            <td>{{ $cssu_alas_kaki }}</td>
+            <td>{{ $cssu_lps_apd }}</td>
+            <td>{{ $cssu_tdk_gtg_masker }}</td>
+            <td>{{ $cssu_tdk_guna_srg_tgn }}</td>
             <td>{{ $cssu_jumlah }}</td>
             <td>{{ ($cssu_jumlah != 0 && $denominator_cssu != 0) ? number_format(($cssu_jumlah / $denominator_cssu) *
                 100,
@@ -43,15 +44,15 @@
         </tr>
         <tr>
             <th>Dapur</th>
-            <td>{{ $dapur_sbl_kon_psn }}</td>
-            <td>{{ $dapur_sbl_tin_aseptik }}</td>
-            <td>{{ $dapur_stl_kon_cairan }}</td>
-            <td>{{ $dapur_stl_kon_psn }}</td>
-            <td>{{ $dapur_stl_kon_ling_psn }}</td>
-            <td>{{ $dapur_hr }}</td>
-            <td>{{ $dapur_hw }}</td>
-            <td>{{ $dapur_gagal }}</td>
-            <td>{{ $dapur_st }}</td>
+            <td>{{ $dapur_pntp_kpl }}</td>
+            <td>{{ $dapur_masker }}</td>
+            <td>{{ $dapur_pntp_wjh }}</td>
+            <td>{{ $dapur_apron }}</td>
+            <td>{{ $dapur_srg_tgn }}</td>
+            <td>{{ $dapur_alas_kaki }}</td>
+            <td>{{ $dapur_lps_apd }}</td>
+            <td>{{ $dapur_tdk_gtg_masker }}</td>
+            <td>{{ $dapur_tdk_guna_srg_tgn }}</td>
             <td>{{ $dapur_jumlah }}</td>
             <td>{{ ($dapur_jumlah != 0 && $denominator_dapur != 0) ? number_format(($dapur_jumlah / $denominator_dapur)
                 *
@@ -59,15 +60,15 @@
         </tr>
         <tr>
             <th>DPJP</th>
-            <td>{{ $dpjp_sbl_kon_psn }}</td>
-            <td>{{ $dpjp_sbl_tin_aseptik }}</td>
-            <td>{{ $dpjp_stl_kon_cairan }}</td>
-            <td>{{ $dpjp_stl_kon_psn }}</td>
-            <td>{{ $dpjp_stl_kon_ling_psn }}</td>
-            <td>{{ $dpjp_hr }}</td>
-            <td>{{ $dpjp_hw }}</td>
-            <td>{{ $dpjp_gagal }}</td>
-            <td>{{ $dpjp_st }}</td>
+            <td>{{ $dpjp_pntp_kpl }}</td>
+            <td>{{ $dpjp_masker }}</td>
+            <td>{{ $dpjp_pntp_wjh }}</td>
+            <td>{{ $dpjp_apron }}</td>
+            <td>{{ $dpjp_srg_tgn }}</td>
+            <td>{{ $dpjp_alas_kaki }}</td>
+            <td>{{ $dpjp_lps_apd }}</td>
+            <td>{{ $dpjp_tdk_gtg_masker }}</td>
+            <td>{{ $dpjp_tdk_guna_srg_tgn }}</td>
             <td>{{ $dpjp_jumlah }}</td>
             <td>{{ ($dpjp_jumlah != 0 && $denominator_dpjp != 0) ? number_format(($dpjp_jumlah / $denominator_dpjp) *
                 100,
@@ -75,30 +76,30 @@
         </tr>
         <tr>
             <th>Farmasi</th>
-            <td>{{ $farmasi_sbl_kon_psn }}</td>
-            <td>{{ $farmasi_sbl_tin_aseptik }}</td>
-            <td>{{ $farmasi_stl_kon_cairan }}</td>
-            <td>{{ $farmasi_stl_kon_psn }}</td>
-            <td>{{ $farmasi_stl_kon_ling_psn }}</td>
-            <td>{{ $farmasi_hr }}</td>
-            <td>{{ $farmasi_hw }}</td>
-            <td>{{ $farmasi_gagal }}</td>
-            <td>{{ $farmasi_st }}</td>
+            <td>{{ $farmasi_pntp_kpl }}</td>
+            <td>{{ $farmasi_masker }}</td>
+            <td>{{ $farmasi_pntp_wjh }}</td>
+            <td>{{ $farmasi_apron }}</td>
+            <td>{{ $farmasi_srg_tgn }}</td>
+            <td>{{ $farmasi_alas_kaki }}</td>
+            <td>{{ $farmasi_lps_apd }}</td>
+            <td>{{ $farmasi_tdk_gtg_masker }}</td>
+            <td>{{ $farmasi_tdk_guna_srg_tgn }}</td>
             <td>{{ $farmasi_jumlah }}</td>
             <td>{{ ($farmasi_jumlah != 0 && $denominator_farmasi != 0) ? number_format(($farmasi_jumlah /
                 $denominator_farmasi) * 100, 2) : 0 }} %</td>
         </tr>
         <tr>
             <th>IGD</th>
-            <td>{{ $igd_sbl_kon_psn }}</td>
-            <td>{{ $igd_sbl_tin_aseptik }}</td>
-            <td>{{ $igd_stl_kon_cairan }}</td>
-            <td>{{ $igd_stl_kon_psn }}</td>
-            <td>{{ $igd_stl_kon_ling_psn }}</td>
-            <td>{{ $igd_hr }}</td>
-            <td>{{ $igd_hw }}</td>
-            <td>{{ $igd_gagal }}</td>
-            <td>{{ $igd_st }}</td>
+            <td>{{ $igd_pntp_kpl }}</td>
+            <td>{{ $igd_masker }}</td>
+            <td>{{ $igd_pntp_wjh }}</td>
+            <td>{{ $igd_apron }}</td>
+            <td>{{ $igd_srg_tgn }}</td>
+            <td>{{ $igd_alas_kaki }}</td>
+            <td>{{ $igd_lps_apd }}</td>
+            <td>{{ $igd_tdk_gtg_masker }}</td>
+            <td>{{ $igd_tdk_guna_srg_tgn }}</td>
             <td>{{ $igd_jumlah }}</td>
             <td>{{ ($igd_jumlah != 0 && $denominator_igd != 0) ? number_format(($igd_jumlah / $denominator_igd) * 100,
                 2)
@@ -106,15 +107,15 @@
         </tr>
         <tr>
             <th>Intensif</th>
-            <td>{{ $int_sbl_kon_psn }}</td>
-            <td>{{ $int_sbl_tin_aseptik }}</td>
-            <td>{{ $int_stl_kon_cairan }}</td>
-            <td>{{ $int_stl_kon_psn }}</td>
-            <td>{{ $int_stl_kon_ling_psn }}</td>
-            <td>{{ $int_hr }}</td>
-            <td>{{ $int_hw }}</td>
-            <td>{{ $int_gagal }}</td>
-            <td>{{ $int_st }}</td>
+            <td>{{ $int_pntp_kpl }}</td>
+            <td>{{ $int_masker }}</td>
+            <td>{{ $int_pntp_wjh }}</td>
+            <td>{{ $int_apron }}</td>
+            <td>{{ $int_srg_tgn }}</td>
+            <td>{{ $int_alas_kaki }}</td>
+            <td>{{ $int_lps_apd }}</td>
+            <td>{{ $int_tdk_gtg_masker }}</td>
+            <td>{{ $int_tdk_guna_srg_tgn }}</td>
             <td>{{ $int_jumlah }}</td>
             <td>{{ ($int_jumlah != 0 && $denominator_int != 0) ? number_format(($int_jumlah / $denominator_int) * 100,
                 2)
@@ -122,15 +123,15 @@
         </tr>
         <tr>
             <th>KBBL</th>
-            <td>{{ $kbbl_sbl_kon_psn }}</td>
-            <td>{{ $kbbl_sbl_tin_aseptik }}</td>
-            <td>{{ $kbbl_stl_kon_cairan }}</td>
-            <td>{{ $kbbl_stl_kon_psn }}</td>
-            <td>{{ $kbbl_stl_kon_ling_psn }}</td>
-            <td>{{ $kbbl_hr }}</td>
-            <td>{{ $kbbl_hw }}</td>
-            <td>{{ $kbbl_gagal }}</td>
-            <td>{{ $kbbl_st }}</td>
+            <td>{{ $kbbl_pntp_kpl }}</td>
+            <td>{{ $kbbl_masker }}</td>
+            <td>{{ $kbbl_pntp_wjh }}</td>
+            <td>{{ $kbbl_apron }}</td>
+            <td>{{ $kbbl_srg_tgn }}</td>
+            <td>{{ $kbbl_alas_kaki }}</td>
+            <td>{{ $kbbl_lps_apd }}</td>
+            <td>{{ $kbbl_tdk_gtg_masker }}</td>
+            <td>{{ $kbbl_tdk_guna_srg_tgn }}</td>
             <td>{{ $kbbl_jumlah }}</td>
             <td>{{ ($kbbl_jumlah != 0 && $denominator_kbbl != 0) ? number_format(($kbbl_jumlah / $denominator_kbbl) *
                 100,
@@ -138,15 +139,15 @@
         </tr>
         <tr>
             <th>Laboratorium</th>
-            <td>{{ $lab_sbl_kon_psn }}</td>
-            <td>{{ $lab_sbl_tin_aseptik }}</td>
-            <td>{{ $lab_stl_kon_cairan }}</td>
-            <td>{{ $lab_stl_kon_psn }}</td>
-            <td>{{ $lab_stl_kon_ling_psn }}</td>
-            <td>{{ $lab_hr }}</td>
-            <td>{{ $lab_hw }}</td>
-            <td>{{ $lab_gagal }}</td>
-            <td>{{ $lab_st }}</td>
+            <td>{{ $lab_pntp_kpl }}</td>
+            <td>{{ $lab_masker }}</td>
+            <td>{{ $lab_pntp_wjh }}</td>
+            <td>{{ $lab_apron }}</td>
+            <td>{{ $lab_srg_tgn }}</td>
+            <td>{{ $lab_alas_kaki }}</td>
+            <td>{{ $lab_lps_apd }}</td>
+            <td>{{ $lab_tdk_gtg_masker }}</td>
+            <td>{{ $lab_tdk_guna_srg_tgn }}</td>
             <td>{{ $lab_jumlah }}</td>
             <td>{{ ($lab_jumlah != 0 && $denominator_lab != 0) ? number_format(($lab_jumlah / $denominator_lab) * 100,
                 2)
@@ -154,30 +155,30 @@
         </tr>
         <tr>
             <th>Laundry</th>
-            <td>{{ $laundry_sbl_kon_psn }}</td>
-            <td>{{ $laundry_sbl_tin_aseptik }}</td>
-            <td>{{ $laundry_stl_kon_cairan }}</td>
-            <td>{{ $laundry_stl_kon_psn }}</td>
-            <td>{{ $laundry_stl_kon_ling_psn }}</td>
-            <td>{{ $laundry_hr }}</td>
-            <td>{{ $laundry_hw }}</td>
-            <td>{{ $laundry_gagal }}</td>
-            <td>{{ $laundry_st }}</td>
+            <td>{{ $laundry_pntp_kpl }}</td>
+            <td>{{ $laundry_masker }}</td>
+            <td>{{ $laundry_pntp_wjh }}</td>
+            <td>{{ $laundry_apron }}</td>
+            <td>{{ $laundry_srg_tgn }}</td>
+            <td>{{ $laundry_alas_kaki }}</td>
+            <td>{{ $laundry_lps_apd }}</td>
+            <td>{{ $laundry_tdk_gtg_masker }}</td>
+            <td>{{ $laundry_tdk_guna_srg_tgn }}</td>
             <td>{{ $laundry_jumlah }}</td>
             <td>{{ ($laundry_jumlah != 0 && $denominator_laundry != 0) ? number_format(($laundry_jumlah /
                 $denominator_laundry) * 100, 2) : 0 }} %</td>
         </tr>
         <tr>
             <th>OK</th>
-            <td>{{ $ok_sbl_kon_psn }}</td>
-            <td>{{ $ok_sbl_tin_aseptik }}</td>
-            <td>{{ $ok_stl_kon_cairan }}</td>
-            <td>{{ $ok_stl_kon_psn }}</td>
-            <td>{{ $ok_stl_kon_ling_psn }}</td>
-            <td>{{ $ok_hr }}</td>
-            <td>{{ $ok_hw }}</td>
-            <td>{{ $ok_gagal }}</td>
-            <td>{{ $ok_st }}</td>
+            <td>{{ $ok_pntp_kpl }}</td>
+            <td>{{ $ok_masker }}</td>
+            <td>{{ $ok_pntp_wjh }}</td>
+            <td>{{ $ok_apron }}</td>
+            <td>{{ $ok_srg_tgn }}</td>
+            <td>{{ $ok_alas_kaki }}</td>
+            <td>{{ $ok_lps_apd }}</td>
+            <td>{{ $ok_tdk_gtg_masker }}</td>
+            <td>{{ $ok_tdk_guna_srg_tgn }}</td>
             <td>{{ $ok_jumlah }}</td>
             <td>{{ ($ok_jumlah != 0 && $denominator_ok != 0) ? number_format(($ok_jumlah / $denominator_ok) * 100, 2) :
                 0
@@ -185,15 +186,15 @@
         </tr>
         <tr>
             <th>Perawatan Eksekutif lt.2</th>
-            <td>{{ $lt2_sbl_kon_psn }}</td>
-            <td>{{ $lt2_sbl_tin_aseptik }}</td>
-            <td>{{ $lt2_stl_kon_cairan }}</td>
-            <td>{{ $lt2_stl_kon_psn }}</td>
-            <td>{{ $lt2_stl_kon_ling_psn }}</td>
-            <td>{{ $lt2_hr }}</td>
-            <td>{{ $lt2_hw }}</td>
-            <td>{{ $lt2_gagal }}</td>
-            <td>{{ $lt2_st }}</td>
+            <td>{{ $lt2_pntp_kpl }}</td>
+            <td>{{ $lt2_masker }}</td>
+            <td>{{ $lt2_pntp_wjh }}</td>
+            <td>{{ $lt2_apron }}</td>
+            <td>{{ $lt2_srg_tgn }}</td>
+            <td>{{ $lt2_alas_kaki }}</td>
+            <td>{{ $lt2_lps_apd }}</td>
+            <td>{{ $lt2_tdk_gtg_masker }}</td>
+            <td>{{ $lt2_tdk_guna_srg_tgn }}</td>
             <td>{{ $lt2_jumlah }}</td>
             <td>{{ ($lt2_jumlah != 0 && $denominator_lt2 != 0) ? number_format(($lt2_jumlah / $denominator_lt2) * 100,
                 2)
@@ -201,15 +202,15 @@
         </tr>
         <tr>
             <th>Perawatan Reguler lt.4</th>
-            <td>{{ $lt4_sbl_kon_psn }}</td>
-            <td>{{ $lt4_sbl_tin_aseptik }}</td>
-            <td>{{ $lt4_stl_kon_cairan }}</td>
-            <td>{{ $lt4_stl_kon_psn }}</td>
-            <td>{{ $lt4_stl_kon_ling_psn }}</td>
-            <td>{{ $lt4_hr }}</td>
-            <td>{{ $lt4_hw }}</td>
-            <td>{{ $lt4_gagal }}</td>
-            <td>{{ $lt4_st }}</td>
+            <td>{{ $lt4_pntp_kpl }}</td>
+            <td>{{ $lt4_masker }}</td>
+            <td>{{ $lt4_pntp_wjh }}</td>
+            <td>{{ $lt4_apron }}</td>
+            <td>{{ $lt4_srg_tgn }}</td>
+            <td>{{ $lt4_alas_kaki }}</td>
+            <td>{{ $lt4_lps_apd }}</td>
+            <td>{{ $lt4_tdk_gtg_masker }}</td>
+            <td>{{ $lt4_tdk_guna_srg_tgn }}</td>
             <td>{{ $lt4_jumlah }}</td>
             <td>{{ ($lt4_jumlah != 0 && $denominator_lt4 != 0) ? number_format(($lt4_jumlah / $denominator_lt4) * 100,
                 2)
@@ -217,15 +218,15 @@
         </tr>
         <tr>
             <th>Perawatan Reguler lt.5</th>
-            <td>{{ $lt5_sbl_kon_psn }}</td>
-            <td>{{ $lt5_sbl_tin_aseptik }}</td>
-            <td>{{ $lt5_stl_kon_cairan }}</td>
-            <td>{{ $lt5_stl_kon_psn }}</td>
-            <td>{{ $lt5_stl_kon_ling_psn }}</td>
-            <td>{{ $lt5_hr }}</td>
-            <td>{{ $lt5_hw }}</td>
-            <td>{{ $lt5_gagal }}</td>
-            <td>{{ $lt5_st }}</td>
+            <td>{{ $lt5_pntp_kpl }}</td>
+            <td>{{ $lt5_masker }}</td>
+            <td>{{ $lt5_pntp_wjh }}</td>
+            <td>{{ $lt5_apron }}</td>
+            <td>{{ $lt5_srg_tgn }}</td>
+            <td>{{ $lt5_alas_kaki }}</td>
+            <td>{{ $lt5_lps_apd }}</td>
+            <td>{{ $lt5_tdk_gtg_masker }}</td>
+            <td>{{ $lt5_tdk_guna_srg_tgn }}</td>
             <td>{{ $lt5_jumlah }}</td>
             <td>{{ ($lt5_jumlah != 0 && $denominator_lt5 != 0) ? number_format(($lt5_jumlah / $denominator_lt5) * 100,
                 2)
@@ -233,15 +234,15 @@
         </tr>
         <tr>
             <th>Poliklinik</th>
-            <td>{{ $poli_sbl_kon_psn }}</td>
-            <td>{{ $poli_sbl_tin_aseptik }}</td>
-            <td>{{ $poli_stl_kon_cairan }}</td>
-            <td>{{ $poli_stl_kon_psn }}</td>
-            <td>{{ $poli_stl_kon_ling_psn }}</td>
-            <td>{{ $poli_hr }}</td>
-            <td>{{ $poli_hw }}</td>
-            <td>{{ $poli_gagal }}</td>
-            <td>{{ $poli_st }}</td>
+            <td>{{ $poli_pntp_kpl }}</td>
+            <td>{{ $poli_masker }}</td>
+            <td>{{ $poli_pntp_wjh }}</td>
+            <td>{{ $poli_apron }}</td>
+            <td>{{ $poli_srg_tgn }}</td>
+            <td>{{ $poli_alas_kaki }}</td>
+            <td>{{ $poli_lps_apd }}</td>
+            <td>{{ $poli_tdk_gtg_masker }}</td>
+            <td>{{ $poli_tdk_guna_srg_tgn }}</td>
             <td>{{ $poli_jumlah }}</td>
             <td>{{ ($poli_jumlah != 0 && $denominator_poli != 0) ? number_format(($poli_jumlah / $denominator_poli) *
                 100,
@@ -249,15 +250,15 @@
         </tr>
         <tr>
             <th>Radiologi</th>
-            <td>{{ $rad_sbl_kon_psn }}</td>
-            <td>{{ $rad_sbl_tin_aseptik }}</td>
-            <td>{{ $rad_stl_kon_cairan }}</td>
-            <td>{{ $rad_stl_kon_psn }}</td>
-            <td>{{ $rad_stl_kon_ling_psn }}</td>
-            <td>{{ $rad_hr }}</td>
-            <td>{{ $rad_hw }}</td>
-            <td>{{ $rad_gagal }}</td>
-            <td>{{ $rad_st }}</td>
+            <td>{{ $rad_pntp_kpl }}</td>
+            <td>{{ $rad_masker }}</td>
+            <td>{{ $rad_pntp_wjh }}</td>
+            <td>{{ $rad_apron }}</td>
+            <td>{{ $rad_srg_tgn }}</td>
+            <td>{{ $rad_alas_kaki }}</td>
+            <td>{{ $rad_lps_apd }}</td>
+            <td>{{ $rad_tdk_gtg_masker }}</td>
+            <td>{{ $rad_tdk_guna_srg_tgn }}</td>
             <td>{{ $rad_jumlah }}</td>
             <td>{{ ($rad_jumlah != 0 && $denominator_rad != 0) ? number_format(($rad_jumlah / $denominator_rad) * 100,
                 2)
@@ -265,15 +266,15 @@
         </tr>
         <tr>
             <th>VK</th>
-            <td>{{ $vk_sbl_kon_psn }}</td>
-            <td>{{ $vk_sbl_tin_aseptik }}</td>
-            <td>{{ $vk_stl_kon_cairan }}</td>
-            <td>{{ $vk_stl_kon_psn }}</td>
-            <td>{{ $vk_stl_kon_ling_psn }}</td>
-            <td>{{ $vk_hr }}</td>
-            <td>{{ $vk_hw }}</td>
-            <td>{{ $vk_gagal }}</td>
-            <td>{{ $vk_st }}</td>
+            <td>{{ $vk_pntp_kpl }}</td>
+            <td>{{ $vk_masker }}</td>
+            <td>{{ $vk_pntp_wjh }}</td>
+            <td>{{ $vk_apron }}</td>
+            <td>{{ $vk_srg_tgn }}</td>
+            <td>{{ $vk_alas_kaki }}</td>
+            <td>{{ $vk_lps_apd }}</td>
+            <td>{{ $vk_tdk_gtg_masker }}</td>
+            <td>{{ $vk_tdk_guna_srg_tgn }}</td>
             <td>{{ $vk_jumlah }}</td>
             <td>{{ ($vk_jumlah != 0 && $denominator_vk != 0) ? number_format(($vk_jumlah / $denominator_vk) * 100, 2) :
                 0

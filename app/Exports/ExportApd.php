@@ -14,386 +14,386 @@ use PhpOffice\PhpSpreadsheet\Worksheet\PageSetup;
 class ExportApd implements FromView, ShouldAutoSize, WithEvents
 {
     public function __construct(
-        $cssu_sbl_kon_psn,
-        $cssu_sbl_tin_aseptik,
-        $cssu_stl_kon_cairan,
-        $cssu_stl_kon_psn,
-        $cssu_stl_kon_ling_psn,
-        $cssu_hr,
-        $cssu_hw,
-        $cssu_gagal,
-        $cssu_st,
+        $cssu_pntp_kpl,
+        $cssu_masker,
+        $cssu_pntp_wjh,
+        $cssu_apron,
+        $cssu_srg_tgn,
+        $cssu_alas_kaki,
+        $cssu_lps_apd,
+        $cssu_tdk_gtg_masker,
+        $cssu_tdk_guna_srg_tgn,
         $cssu_jumlah,
 
-        $no_cssu_sbl_kon_psn,
-        $no_cssu_sbl_tin_aseptik,
-        $no_cssu_stl_kon_cairan,
-        $no_cssu_stl_kon_psn,
-        $no_cssu_stl_kon_ling_psn,
-        $no_cssu_hr,
-        $no_cssu_hw,
-        $no_cssu_gagal,
-        $no_cssu_st,
+        $no_cssu_pntp_kpl,
+        $no_cssu_masker,
+        $no_cssu_pntp_wjh,
+        $no_cssu_apron,
+        $no_cssu_srg_tgn,
+        $no_cssu_alas_kaki,
+        $no_cssu_lps_apd,
+        $no_cssu_tdk_gtg_masker,
+        $no_cssu_tdk_guna_srg_tgn,
         $no_cssu_jumlah,
 
         $denominator_cssu,
 
-        $dapur_sbl_kon_psn,
-        $dapur_sbl_tin_aseptik,
-        $dapur_stl_kon_cairan,
-        $dapur_stl_kon_psn,
-        $dapur_stl_kon_ling_psn,
-        $dapur_hr,
-        $dapur_hw,
-        $dapur_gagal,
-        $dapur_st,
+        $dapur_pntp_kpl,
+        $dapur_masker,
+        $dapur_pntp_wjh,
+        $dapur_apron,
+        $dapur_srg_tgn,
+        $dapur_alas_kaki,
+        $dapur_lps_apd,
+        $dapur_tdk_gtg_masker,
+        $dapur_tdk_guna_srg_tgn,
         $dapur_jumlah,
 
-        $no_dapur_sbl_kon_psn,
-        $no_dapur_sbl_tin_aseptik,
-        $no_dapur_stl_kon_cairan,
-        $no_dapur_stl_kon_psn,
-        $no_dapur_stl_kon_ling_psn,
-        $no_dapur_hr,
-        $no_dapur_hw,
-        $no_dapur_gagal,
-        $no_dapur_st,
+        $no_dapur_pntp_kpl,
+        $no_dapur_masker,
+        $no_dapur_pntp_wjh,
+        $no_dapur_apron,
+        $no_dapur_srg_tgn,
+        $no_dapur_alas_kaki,
+        $no_dapur_lps_apd,
+        $no_dapur_tdk_gtg_masker,
+        $no_dapur_tdk_guna_srg_tgn,
         $no_dapur_jumlah,
 
         $denominator_dapur,
 
-        $dpjp_sbl_kon_psn,
-        $dpjp_sbl_tin_aseptik,
-        $dpjp_stl_kon_cairan,
-        $dpjp_stl_kon_psn,
-        $dpjp_stl_kon_ling_psn,
-        $dpjp_hr,
-        $dpjp_hw,
-        $dpjp_gagal,
-        $dpjp_st,
+        $dpjp_pntp_kpl,
+        $dpjp_masker,
+        $dpjp_pntp_wjh,
+        $dpjp_apron,
+        $dpjp_srg_tgn,
+        $dpjp_alas_kaki,
+        $dpjp_lps_apd,
+        $dpjp_tdk_gtg_masker,
+        $dpjp_tdk_guna_srg_tgn,
         $dpjp_jumlah,
 
-        $no_dpjp_sbl_kon_psn,
-        $no_dpjp_sbl_tin_aseptik,
-        $no_dpjp_stl_kon_cairan,
-        $no_dpjp_stl_kon_psn,
-        $no_dpjp_stl_kon_ling_psn,
-        $no_dpjp_hr,
-        $no_dpjp_hw,
-        $no_dpjp_gagal,
-        $no_dpjp_st,
+        $no_dpjp_pntp_kpl,
+        $no_dpjp_masker,
+        $no_dpjp_pntp_wjh,
+        $no_dpjp_apron,
+        $no_dpjp_srg_tgn,
+        $no_dpjp_alas_kaki,
+        $no_dpjp_lps_apd,
+        $no_dpjp_tdk_gtg_masker,
+        $no_dpjp_tdk_guna_srg_tgn,
         $no_dpjp_jumlah,
 
         $denominator_dpjp,
 
-        $farmasi_sbl_kon_psn,
-        $farmasi_sbl_tin_aseptik,
-        $farmasi_stl_kon_cairan,
-        $farmasi_stl_kon_psn,
-        $farmasi_stl_kon_ling_psn,
-        $farmasi_hr,
-        $farmasi_hw,
-        $farmasi_gagal,
-        $farmasi_st,
+        $farmasi_pntp_kpl,
+        $farmasi_masker,
+        $farmasi_pntp_wjh,
+        $farmasi_apron,
+        $farmasi_srg_tgn,
+        $farmasi_alas_kaki,
+        $farmasi_lps_apd,
+        $farmasi_tdk_gtg_masker,
+        $farmasi_tdk_guna_srg_tgn,
         $farmasi_jumlah,
 
-        $no_farmasi_sbl_kon_psn,
-        $no_farmasi_sbl_tin_aseptik,
-        $no_farmasi_stl_kon_cairan,
-        $no_farmasi_stl_kon_psn,
-        $no_farmasi_stl_kon_ling_psn,
-        $no_farmasi_hr,
-        $no_farmasi_hw,
-        $no_farmasi_gagal,
-        $no_farmasi_st,
+        $no_farmasi_pntp_kpl,
+        $no_farmasi_masker,
+        $no_farmasi_pntp_wjh,
+        $no_farmasi_apron,
+        $no_farmasi_srg_tgn,
+        $no_farmasi_alas_kaki,
+        $no_farmasi_lps_apd,
+        $no_farmasi_tdk_gtg_masker,
+        $no_farmasi_tdk_guna_srg_tgn,
         $no_farmasi_jumlah,
 
         $denominator_farmasi,
 
-        $igd_sbl_kon_psn,
-        $igd_sbl_tin_aseptik,
-        $igd_stl_kon_cairan,
-        $igd_stl_kon_psn,
-        $igd_stl_kon_ling_psn,
-        $igd_hr,
-        $igd_hw,
-        $igd_gagal,
-        $igd_st,
+        $igd_pntp_kpl,
+        $igd_masker,
+        $igd_pntp_wjh,
+        $igd_apron,
+        $igd_srg_tgn,
+        $igd_alas_kaki,
+        $igd_lps_apd,
+        $igd_tdk_gtg_masker,
+        $igd_tdk_guna_srg_tgn,
         $igd_jumlah,
 
-        $no_igd_sbl_kon_psn,
-        $no_igd_sbl_tin_aseptik,
-        $no_igd_stl_kon_cairan,
-        $no_igd_stl_kon_psn,
-        $no_igd_stl_kon_ling_psn,
-        $no_igd_hr,
-        $no_igd_hw,
-        $no_igd_gagal,
-        $no_igd_st,
+        $no_igd_pntp_kpl,
+        $no_igd_masker,
+        $no_igd_pntp_wjh,
+        $no_igd_apron,
+        $no_igd_srg_tgn,
+        $no_igd_alas_kaki,
+        $no_igd_lps_apd,
+        $no_igd_tdk_gtg_masker,
+        $no_igd_tdk_guna_srg_tgn,
         $no_igd_jumlah,
 
         $denominator_igd,
 
-        $int_sbl_kon_psn,
-        $int_sbl_tin_aseptik,
-        $int_stl_kon_cairan,
-        $int_stl_kon_psn,
-        $int_stl_kon_ling_psn,
-        $int_hr,
-        $int_hw,
-        $int_gagal,
-        $int_st,
+        $int_pntp_kpl,
+        $int_masker,
+        $int_pntp_wjh,
+        $int_apron,
+        $int_srg_tgn,
+        $int_alas_kaki,
+        $int_lps_apd,
+        $int_tdk_gtg_masker,
+        $int_tdk_guna_srg_tgn,
         $int_jumlah,
 
-        $no_int_sbl_kon_psn,
-        $no_int_sbl_tin_aseptik,
-        $no_int_stl_kon_cairan,
-        $no_int_stl_kon_psn,
-        $no_int_stl_kon_ling_psn,
-        $no_int_hr,
-        $no_int_hw,
-        $no_int_gagal,
-        $no_int_st,
+        $no_int_pntp_kpl,
+        $no_int_masker,
+        $no_int_pntp_wjh,
+        $no_int_apron,
+        $no_int_srg_tgn,
+        $no_int_alas_kaki,
+        $no_int_lps_apd,
+        $no_int_tdk_gtg_masker,
+        $no_int_tdk_guna_srg_tgn,
         $no_int_jumlah,
 
         $denominator_int,
 
-        $kbbl_sbl_kon_psn,
-        $kbbl_sbl_tin_aseptik,
-        $kbbl_stl_kon_cairan,
-        $kbbl_stl_kon_psn,
-        $kbbl_stl_kon_ling_psn,
-        $kbbl_hr,
-        $kbbl_hw,
-        $kbbl_gagal,
-        $kbbl_st,
+        $kbbl_pntp_kpl,
+        $kbbl_masker,
+        $kbbl_pntp_wjh,
+        $kbbl_apron,
+        $kbbl_srg_tgn,
+        $kbbl_alas_kaki,
+        $kbbl_lps_apd,
+        $kbbl_tdk_gtg_masker,
+        $kbbl_tdk_guna_srg_tgn,
         $kbbl_jumlah,
 
-        $no_kbbl_sbl_kon_psn,
-        $no_kbbl_sbl_tin_aseptik,
-        $no_kbbl_stl_kon_cairan,
-        $no_kbbl_stl_kon_psn,
-        $no_kbbl_stl_kon_ling_psn,
-        $no_kbbl_hr,
-        $no_kbbl_hw,
-        $no_kbbl_gagal,
-        $no_kbbl_st,
+        $no_kbbl_pntp_kpl,
+        $no_kbbl_masker,
+        $no_kbbl_pntp_wjh,
+        $no_kbbl_apron,
+        $no_kbbl_srg_tgn,
+        $no_kbbl_alas_kaki,
+        $no_kbbl_lps_apd,
+        $no_kbbl_tdk_gtg_masker,
+        $no_kbbl_tdk_guna_srg_tgn,
         $no_kbbl_jumlah,
 
         $denominator_kbbl,
 
-        $lab_sbl_kon_psn,
-        $lab_sbl_tin_aseptik,
-        $lab_stl_kon_cairan,
-        $lab_stl_kon_psn,
-        $lab_stl_kon_ling_psn,
-        $lab_hr,
-        $lab_hw,
-        $lab_gagal,
-        $lab_st,
+        $lab_pntp_kpl,
+        $lab_masker,
+        $lab_pntp_wjh,
+        $lab_apron,
+        $lab_srg_tgn,
+        $lab_alas_kaki,
+        $lab_lps_apd,
+        $lab_tdk_gtg_masker,
+        $lab_tdk_guna_srg_tgn,
         $lab_jumlah,
 
-        $no_lab_sbl_kon_psn,
-        $no_lab_sbl_tin_aseptik,
-        $no_lab_stl_kon_cairan,
-        $no_lab_stl_kon_psn,
-        $no_lab_stl_kon_ling_psn,
-        $no_lab_hr,
-        $no_lab_hw,
-        $no_lab_gagal,
-        $no_lab_st,
+        $no_lab_pntp_kpl,
+        $no_lab_masker,
+        $no_lab_pntp_wjh,
+        $no_lab_apron,
+        $no_lab_srg_tgn,
+        $no_lab_alas_kaki,
+        $no_lab_lps_apd,
+        $no_lab_tdk_gtg_masker,
+        $no_lab_tdk_guna_srg_tgn,
         $no_lab_jumlah,
 
         $denominator_lab,
 
-        $laundry_sbl_kon_psn,
-        $laundry_sbl_tin_aseptik,
-        $laundry_stl_kon_cairan,
-        $laundry_stl_kon_psn,
-        $laundry_stl_kon_ling_psn,
-        $laundry_hr,
-        $laundry_hw,
-        $laundry_gagal,
-        $laundry_st,
+        $laundry_pntp_kpl,
+        $laundry_masker,
+        $laundry_pntp_wjh,
+        $laundry_apron,
+        $laundry_srg_tgn,
+        $laundry_alas_kaki,
+        $laundry_lps_apd,
+        $laundry_tdk_gtg_masker,
+        $laundry_tdk_guna_srg_tgn,
         $laundry_jumlah,
 
-        $no_laundry_sbl_kon_psn,
-        $no_laundry_sbl_tin_aseptik,
-        $no_laundry_stl_kon_cairan,
-        $no_laundry_stl_kon_psn,
-        $no_laundry_stl_kon_ling_psn,
-        $no_laundry_hr,
-        $no_laundry_hw,
-        $no_laundry_gagal,
-        $no_laundry_st,
+        $no_laundry_pntp_kpl,
+        $no_laundry_masker,
+        $no_laundry_pntp_wjh,
+        $no_laundry_apron,
+        $no_laundry_srg_tgn,
+        $no_laundry_alas_kaki,
+        $no_laundry_lps_apd,
+        $no_laundry_tdk_gtg_masker,
+        $no_laundry_tdk_guna_srg_tgn,
         $no_laundry_jumlah,
 
         $denominator_laundry,
 
-        $ok_sbl_kon_psn,
-        $ok_sbl_tin_aseptik,
-        $ok_stl_kon_cairan,
-        $ok_stl_kon_psn,
-        $ok_stl_kon_ling_psn,
-        $ok_hr,
-        $ok_hw,
-        $ok_gagal,
-        $ok_st,
+        $ok_pntp_kpl,
+        $ok_masker,
+        $ok_pntp_wjh,
+        $ok_apron,
+        $ok_srg_tgn,
+        $ok_alas_kaki,
+        $ok_lps_apd,
+        $ok_tdk_gtg_masker,
+        $ok_tdk_guna_srg_tgn,
         $ok_jumlah,
 
-        $no_ok_sbl_kon_psn,
-        $no_ok_sbl_tin_aseptik,
-        $no_ok_stl_kon_cairan,
-        $no_ok_stl_kon_psn,
-        $no_ok_stl_kon_ling_psn,
-        $no_ok_hr,
-        $no_ok_hw,
-        $no_ok_gagal,
-        $no_ok_st,
+        $no_ok_pntp_kpl,
+        $no_ok_masker,
+        $no_ok_pntp_wjh,
+        $no_ok_apron,
+        $no_ok_srg_tgn,
+        $no_ok_alas_kaki,
+        $no_ok_lps_apd,
+        $no_ok_tdk_gtg_masker,
+        $no_ok_tdk_guna_srg_tgn,
         $no_ok_jumlah,
 
         $denominator_ok,
 
-        $lt2_sbl_kon_psn,
-        $lt2_sbl_tin_aseptik,
-        $lt2_stl_kon_cairan,
-        $lt2_stl_kon_psn,
-        $lt2_stl_kon_ling_psn,
-        $lt2_hr,
-        $lt2_hw,
-        $lt2_gagal,
-        $lt2_st,
+        $lt2_pntp_kpl,
+        $lt2_masker,
+        $lt2_pntp_wjh,
+        $lt2_apron,
+        $lt2_srg_tgn,
+        $lt2_alas_kaki,
+        $lt2_lps_apd,
+        $lt2_tdk_gtg_masker,
+        $lt2_tdk_guna_srg_tgn,
         $lt2_jumlah,
 
-        $no_lt2_sbl_kon_psn,
-        $no_lt2_sbl_tin_aseptik,
-        $no_lt2_stl_kon_cairan,
-        $no_lt2_stl_kon_psn,
-        $no_lt2_stl_kon_ling_psn,
-        $no_lt2_hr,
-        $no_lt2_hw,
-        $no_lt2_gagal,
-        $no_lt2_st,
+        $no_lt2_pntp_kpl,
+        $no_lt2_masker,
+        $no_lt2_pntp_wjh,
+        $no_lt2_apron,
+        $no_lt2_srg_tgn,
+        $no_lt2_alas_kaki,
+        $no_lt2_lps_apd,
+        $no_lt2_tdk_gtg_masker,
+        $no_lt2_tdk_guna_srg_tgn,
         $no_lt2_jumlah,
 
         $denominator_lt2,
 
-        $lt4_sbl_kon_psn,
-        $lt4_sbl_tin_aseptik,
-        $lt4_stl_kon_cairan,
-        $lt4_stl_kon_psn,
-        $lt4_stl_kon_ling_psn,
-        $lt4_hr,
-        $lt4_hw,
-        $lt4_gagal,
-        $lt4_st,
+        $lt4_pntp_kpl,
+        $lt4_masker,
+        $lt4_pntp_wjh,
+        $lt4_apron,
+        $lt4_srg_tgn,
+        $lt4_alas_kaki,
+        $lt4_lps_apd,
+        $lt4_tdk_gtg_masker,
+        $lt4_tdk_guna_srg_tgn,
         $lt4_jumlah,
 
-        $no_lt4_sbl_kon_psn,
-        $no_lt4_sbl_tin_aseptik,
-        $no_lt4_stl_kon_cairan,
-        $no_lt4_stl_kon_psn,
-        $no_lt4_stl_kon_ling_psn,
-        $no_lt4_hr,
-        $no_lt4_hw,
-        $no_lt4_gagal,
-        $no_lt4_st,
+        $no_lt4_pntp_kpl,
+        $no_lt4_masker,
+        $no_lt4_pntp_wjh,
+        $no_lt4_apron,
+        $no_lt4_srg_tgn,
+        $no_lt4_alas_kaki,
+        $no_lt4_lps_apd,
+        $no_lt4_tdk_gtg_masker,
+        $no_lt4_tdk_guna_srg_tgn,
         $no_lt4_jumlah,
 
         $denominator_lt4,
 
-        $lt5_sbl_kon_psn,
-        $lt5_sbl_tin_aseptik,
-        $lt5_stl_kon_cairan,
-        $lt5_stl_kon_psn,
-        $lt5_stl_kon_ling_psn,
-        $lt5_hr,
-        $lt5_hw,
-        $lt5_gagal,
-        $lt5_st,
+        $lt5_pntp_kpl,
+        $lt5_masker,
+        $lt5_pntp_wjh,
+        $lt5_apron,
+        $lt5_srg_tgn,
+        $lt5_alas_kaki,
+        $lt5_lps_apd,
+        $lt5_tdk_gtg_masker,
+        $lt5_tdk_guna_srg_tgn,
         $lt5_jumlah,
 
-        $no_lt5_sbl_kon_psn,
-        $no_lt5_sbl_tin_aseptik,
-        $no_lt5_stl_kon_cairan,
-        $no_lt5_stl_kon_psn,
-        $no_lt5_stl_kon_ling_psn,
-        $no_lt5_hr,
-        $no_lt5_hw,
-        $no_lt5_gagal,
-        $no_lt5_st,
+        $no_lt5_pntp_kpl,
+        $no_lt5_masker,
+        $no_lt5_pntp_wjh,
+        $no_lt5_apron,
+        $no_lt5_srg_tgn,
+        $no_lt5_alas_kaki,
+        $no_lt5_lps_apd,
+        $no_lt5_tdk_gtg_masker,
+        $no_lt5_tdk_guna_srg_tgn,
         $no_lt5_jumlah,
 
         $denominator_lt5,
 
-        $poli_sbl_kon_psn,
-        $poli_sbl_tin_aseptik,
-        $poli_stl_kon_cairan,
-        $poli_stl_kon_psn,
-        $poli_stl_kon_ling_psn,
-        $poli_hr,
-        $poli_hw,
-        $poli_gagal,
-        $poli_st,
+        $poli_pntp_kpl,
+        $poli_masker,
+        $poli_pntp_wjh,
+        $poli_apron,
+        $poli_srg_tgn,
+        $poli_alas_kaki,
+        $poli_lps_apd,
+        $poli_tdk_gtg_masker,
+        $poli_tdk_guna_srg_tgn,
         $poli_jumlah,
 
-        $no_poli_sbl_kon_psn,
-        $no_poli_sbl_tin_aseptik,
-        $no_poli_stl_kon_cairan,
-        $no_poli_stl_kon_psn,
-        $no_poli_stl_kon_ling_psn,
-        $no_poli_hr,
-        $no_poli_hw,
-        $no_poli_gagal,
-        $no_poli_st,
+        $no_poli_pntp_kpl,
+        $no_poli_masker,
+        $no_poli_pntp_wjh,
+        $no_poli_apron,
+        $no_poli_srg_tgn,
+        $no_poli_alas_kaki,
+        $no_poli_lps_apd,
+        $no_poli_tdk_gtg_masker,
+        $no_poli_tdk_guna_srg_tgn,
         $no_poli_jumlah,
 
         $denominator_poli,
 
-        $rad_sbl_kon_psn,
-        $rad_sbl_tin_aseptik,
-        $rad_stl_kon_cairan,
-        $rad_stl_kon_psn,
-        $rad_stl_kon_ling_psn,
-        $rad_hr,
-        $rad_hw,
-        $rad_gagal,
-        $rad_st,
+        $rad_pntp_kpl,
+        $rad_masker,
+        $rad_pntp_wjh,
+        $rad_apron,
+        $rad_srg_tgn,
+        $rad_alas_kaki,
+        $rad_lps_apd,
+        $rad_tdk_gtg_masker,
+        $rad_tdk_guna_srg_tgn,
         $rad_jumlah,
 
-        $no_rad_sbl_kon_psn,
-        $no_rad_sbl_tin_aseptik,
-        $no_rad_stl_kon_cairan,
-        $no_rad_stl_kon_psn,
-        $no_rad_stl_kon_ling_psn,
-        $no_rad_hr,
-        $no_rad_hw,
-        $no_rad_gagal,
-        $no_rad_st,
+        $no_rad_pntp_kpl,
+        $no_rad_masker,
+        $no_rad_pntp_wjh,
+        $no_rad_apron,
+        $no_rad_srg_tgn,
+        $no_rad_alas_kaki,
+        $no_rad_lps_apd,
+        $no_rad_tdk_gtg_masker,
+        $no_rad_tdk_guna_srg_tgn,
         $no_rad_jumlah,
 
         $denominator_rad,
 
-        $vk_sbl_kon_psn,
-        $vk_sbl_tin_aseptik,
-        $vk_stl_kon_cairan,
-        $vk_stl_kon_psn,
-        $vk_stl_kon_ling_psn,
-        $vk_hr,
-        $vk_hw,
-        $vk_gagal,
-        $vk_st,
+        $vk_pntp_kpl,
+        $vk_masker,
+        $vk_pntp_wjh,
+        $vk_apron,
+        $vk_srg_tgn,
+        $vk_alas_kaki,
+        $vk_lps_apd,
+        $vk_tdk_gtg_masker,
+        $vk_tdk_guna_srg_tgn,
         $vk_jumlah,
 
-        $no_vk_sbl_kon_psn,
-        $no_vk_sbl_tin_aseptik,
-        $no_vk_stl_kon_cairan,
-        $no_vk_stl_kon_psn,
-        $no_vk_stl_kon_ling_psn,
-        $no_vk_hr,
-        $no_vk_hw,
-        $no_vk_gagal,
-        $no_vk_st,
+        $no_vk_pntp_kpl,
+        $no_vk_masker,
+        $no_vk_pntp_wjh,
+        $no_vk_apron,
+        $no_vk_srg_tgn,
+        $no_vk_alas_kaki,
+        $no_vk_lps_apd,
+        $no_vk_tdk_gtg_masker,
+        $no_vk_tdk_guna_srg_tgn,
         $no_vk_jumlah,
 
         $denominator_vk,
@@ -402,386 +402,386 @@ class ExportApd implements FromView, ShouldAutoSize, WithEvents
         $rekap,
         $tanggal
     ) {
-        $this->cssu_sbl_kon_psn = $cssu_sbl_kon_psn;
-        $this->cssu_sbl_tin_aseptik = $cssu_sbl_tin_aseptik;
-        $this->cssu_stl_kon_cairan = $cssu_stl_kon_cairan;
-        $this->cssu_stl_kon_psn = $cssu_stl_kon_psn;
-        $this->cssu_stl_kon_ling_psn = $cssu_stl_kon_ling_psn;
-        $this->cssu_hr = $cssu_hr;
-        $this->cssu_hw = $cssu_hw;
-        $this->cssu_gagal = $cssu_gagal;
-        $this->cssu_st = $cssu_st;
+        $this->cssu_pntp_kpl = $cssu_pntp_kpl;
+        $this->cssu_masker = $cssu_masker;
+        $this->cssu_pntp_wjh = $cssu_pntp_wjh;
+        $this->cssu_apron = $cssu_apron;
+        $this->cssu_srg_tgn = $cssu_srg_tgn;
+        $this->cssu_alas_kaki = $cssu_alas_kaki;
+        $this->cssu_lps_apd = $cssu_lps_apd;
+        $this->cssu_tdk_gtg_masker = $cssu_tdk_gtg_masker;
+        $this->cssu_tdk_guna_srg_tgn = $cssu_tdk_guna_srg_tgn;
         $this->cssu_jumlah = $cssu_jumlah;
 
-        $this->no_cssu_sbl_kon_psn = $no_cssu_sbl_kon_psn;
-        $this->no_cssu_sbl_tin_aseptik = $no_cssu_sbl_tin_aseptik;
-        $this->no_cssu_stl_kon_cairan = $no_cssu_stl_kon_cairan;
-        $this->no_cssu_stl_kon_psn = $no_cssu_stl_kon_psn;
-        $this->no_cssu_stl_kon_ling_psn = $no_cssu_stl_kon_ling_psn;
-        $this->no_cssu_hr = $no_cssu_hr;
-        $this->no_cssu_hw = $no_cssu_hw;
-        $this->no_cssu_gagal = $no_cssu_gagal;
-        $this->no_cssu_st = $no_cssu_st;
+        $this->no_cssu_pntp_kpl = $no_cssu_pntp_kpl;
+        $this->no_cssu_masker = $no_cssu_masker;
+        $this->no_cssu_pntp_wjh = $no_cssu_pntp_wjh;
+        $this->no_cssu_apron = $no_cssu_apron;
+        $this->no_cssu_srg_tgn = $no_cssu_srg_tgn;
+        $this->no_cssu_alas_kaki = $no_cssu_alas_kaki;
+        $this->no_cssu_lps_apd = $no_cssu_lps_apd;
+        $this->no_cssu_tdk_gtg_masker = $no_cssu_tdk_gtg_masker;
+        $this->no_cssu_tdk_guna_srg_tgn = $no_cssu_tdk_guna_srg_tgn;
         $this->no_cssu_jumlah = $no_cssu_jumlah;
 
         $this->denominator_cssu = $denominator_cssu;
 
-        $this->dapur_sbl_kon_psn = $dapur_sbl_kon_psn;
-        $this->dapur_sbl_tin_aseptik = $dapur_sbl_tin_aseptik;
-        $this->dapur_stl_kon_cairan = $dapur_stl_kon_cairan;
-        $this->dapur_stl_kon_psn = $dapur_stl_kon_psn;
-        $this->dapur_stl_kon_ling_psn = $dapur_stl_kon_ling_psn;
-        $this->dapur_hr = $dapur_hr;
-        $this->dapur_hw = $dapur_hw;
-        $this->dapur_gagal = $dapur_gagal;
-        $this->dapur_st = $dapur_st;
+        $this->dapur_pntp_kpl = $dapur_pntp_kpl;
+        $this->dapur_masker = $dapur_masker;
+        $this->dapur_pntp_wjh = $dapur_pntp_wjh;
+        $this->dapur_apron = $dapur_apron;
+        $this->dapur_srg_tgn = $dapur_srg_tgn;
+        $this->dapur_alas_kaki = $dapur_alas_kaki;
+        $this->dapur_lps_apd = $dapur_lps_apd;
+        $this->dapur_tdk_gtg_masker = $dapur_tdk_gtg_masker;
+        $this->dapur_tdk_guna_srg_tgn = $dapur_tdk_guna_srg_tgn;
         $this->dapur_jumlah = $dapur_jumlah;
 
-        $this->no_dapur_sbl_kon_psn = $no_dapur_sbl_kon_psn;
-        $this->no_dapur_sbl_tin_aseptik = $no_dapur_sbl_tin_aseptik;
-        $this->no_dapur_stl_kon_cairan = $no_dapur_stl_kon_cairan;
-        $this->no_dapur_stl_kon_psn = $no_dapur_stl_kon_psn;
-        $this->no_dapur_stl_kon_ling_psn = $no_dapur_stl_kon_ling_psn;
-        $this->no_dapur_hr = $no_dapur_hr;
-        $this->no_dapur_hw = $no_dapur_hw;
-        $this->no_dapur_gagal = $no_dapur_gagal;
-        $this->no_dapur_st = $no_dapur_st;
+        $this->no_dapur_pntp_kpl = $no_dapur_pntp_kpl;
+        $this->no_dapur_masker = $no_dapur_masker;
+        $this->no_dapur_pntp_wjh = $no_dapur_pntp_wjh;
+        $this->no_dapur_apron = $no_dapur_apron;
+        $this->no_dapur_srg_tgn = $no_dapur_srg_tgn;
+        $this->no_dapur_alas_kaki = $no_dapur_alas_kaki;
+        $this->no_dapur_lps_apd = $no_dapur_lps_apd;
+        $this->no_dapur_tdk_gtg_masker = $no_dapur_tdk_gtg_masker;
+        $this->no_dapur_tdk_guna_srg_tgn = $no_dapur_tdk_guna_srg_tgn;
         $this->no_dapur_jumlah = $no_dapur_jumlah;
 
         $this->denominator_dapur = $denominator_dapur;
 
-        $this->dpjp_sbl_kon_psn = $dpjp_sbl_kon_psn;
-        $this->dpjp_sbl_tin_aseptik = $dpjp_sbl_tin_aseptik;
-        $this->dpjp_stl_kon_cairan = $dpjp_stl_kon_cairan;
-        $this->dpjp_stl_kon_psn = $dpjp_stl_kon_psn;
-        $this->dpjp_stl_kon_ling_psn = $dpjp_stl_kon_ling_psn;
-        $this->dpjp_hr = $dpjp_hr;
-        $this->dpjp_hw = $dpjp_hw;
-        $this->dpjp_gagal = $dpjp_gagal;
-        $this->dpjp_st = $dpjp_st;
+        $this->dpjp_pntp_kpl = $dpjp_pntp_kpl;
+        $this->dpjp_masker = $dpjp_masker;
+        $this->dpjp_pntp_wjh = $dpjp_pntp_wjh;
+        $this->dpjp_apron = $dpjp_apron;
+        $this->dpjp_srg_tgn = $dpjp_srg_tgn;
+        $this->dpjp_alas_kaki = $dpjp_alas_kaki;
+        $this->dpjp_lps_apd = $dpjp_lps_apd;
+        $this->dpjp_tdk_gtg_masker = $dpjp_tdk_gtg_masker;
+        $this->dpjp_tdk_guna_srg_tgn = $dpjp_tdk_guna_srg_tgn;
         $this->dpjp_jumlah = $dpjp_jumlah;
 
-        $this->no_dpjp_sbl_kon_psn = $no_dpjp_sbl_kon_psn;
-        $this->no_dpjp_sbl_tin_aseptik = $no_dpjp_sbl_tin_aseptik;
-        $this->no_dpjp_stl_kon_cairan = $no_dpjp_stl_kon_cairan;
-        $this->no_dpjp_stl_kon_psn = $no_dpjp_stl_kon_psn;
-        $this->no_dpjp_stl_kon_ling_psn = $no_dpjp_stl_kon_ling_psn;
-        $this->no_dpjp_hr = $no_dpjp_hr;
-        $this->no_dpjp_hw = $no_dpjp_hw;
-        $this->no_dpjp_gagal = $no_dpjp_gagal;
-        $this->no_dpjp_st = $no_dpjp_st;
+        $this->no_dpjp_pntp_kpl = $no_dpjp_pntp_kpl;
+        $this->no_dpjp_masker = $no_dpjp_masker;
+        $this->no_dpjp_pntp_wjh = $no_dpjp_pntp_wjh;
+        $this->no_dpjp_apron = $no_dpjp_apron;
+        $this->no_dpjp_srg_tgn = $no_dpjp_srg_tgn;
+        $this->no_dpjp_alas_kaki = $no_dpjp_alas_kaki;
+        $this->no_dpjp_lps_apd = $no_dpjp_lps_apd;
+        $this->no_dpjp_tdk_gtg_masker = $no_dpjp_tdk_gtg_masker;
+        $this->no_dpjp_tdk_guna_srg_tgn = $no_dpjp_tdk_guna_srg_tgn;
         $this->no_dpjp_jumlah = $no_dpjp_jumlah;
 
         $this->denominator_dpjp = $denominator_dpjp;
 
-        $this->farmasi_sbl_kon_psn = $farmasi_sbl_kon_psn;
-        $this->farmasi_sbl_tin_aseptik = $farmasi_sbl_tin_aseptik;
-        $this->farmasi_stl_kon_cairan = $farmasi_stl_kon_cairan;
-        $this->farmasi_stl_kon_psn = $farmasi_stl_kon_psn;
-        $this->farmasi_stl_kon_ling_psn = $farmasi_stl_kon_ling_psn;
-        $this->farmasi_hr = $farmasi_hr;
-        $this->farmasi_hw = $farmasi_hw;
-        $this->farmasi_gagal = $farmasi_gagal;
-        $this->farmasi_st = $farmasi_st;
+        $this->farmasi_pntp_kpl = $farmasi_pntp_kpl;
+        $this->farmasi_masker = $farmasi_masker;
+        $this->farmasi_pntp_wjh = $farmasi_pntp_wjh;
+        $this->farmasi_apron = $farmasi_apron;
+        $this->farmasi_srg_tgn = $farmasi_srg_tgn;
+        $this->farmasi_alas_kaki = $farmasi_alas_kaki;
+        $this->farmasi_lps_apd = $farmasi_lps_apd;
+        $this->farmasi_tdk_gtg_masker = $farmasi_tdk_gtg_masker;
+        $this->farmasi_tdk_guna_srg_tgn = $farmasi_tdk_guna_srg_tgn;
         $this->farmasi_jumlah = $farmasi_jumlah;
 
-        $this->no_farmasi_sbl_kon_psn = $no_farmasi_sbl_kon_psn;
-        $this->no_farmasi_sbl_tin_aseptik = $no_farmasi_sbl_tin_aseptik;
-        $this->no_farmasi_stl_kon_cairan = $no_farmasi_stl_kon_cairan;
-        $this->no_farmasi_stl_kon_psn = $no_farmasi_stl_kon_psn;
-        $this->no_farmasi_stl_kon_ling_psn = $no_farmasi_stl_kon_ling_psn;
-        $this->no_farmasi_hr = $no_farmasi_hr;
-        $this->no_farmasi_hw = $no_farmasi_hw;
-        $this->no_farmasi_gagal = $no_farmasi_gagal;
-        $this->no_farmasi_st = $no_farmasi_st;
+        $this->no_farmasi_pntp_kpl = $no_farmasi_pntp_kpl;
+        $this->no_farmasi_masker = $no_farmasi_masker;
+        $this->no_farmasi_pntp_wjh = $no_farmasi_pntp_wjh;
+        $this->no_farmasi_apron = $no_farmasi_apron;
+        $this->no_farmasi_srg_tgn = $no_farmasi_srg_tgn;
+        $this->no_farmasi_alas_kaki = $no_farmasi_alas_kaki;
+        $this->no_farmasi_lps_apd = $no_farmasi_lps_apd;
+        $this->no_farmasi_tdk_gtg_masker = $no_farmasi_tdk_gtg_masker;
+        $this->no_farmasi_tdk_guna_srg_tgn = $no_farmasi_tdk_guna_srg_tgn;
         $this->no_farmasi_jumlah = $no_farmasi_jumlah;
 
         $this->denominator_farmasi = $denominator_farmasi;
 
-        $this->igd_sbl_kon_psn = $igd_sbl_kon_psn;
-        $this->igd_sbl_tin_aseptik = $igd_sbl_tin_aseptik;
-        $this->igd_stl_kon_cairan = $igd_stl_kon_cairan;
-        $this->igd_stl_kon_psn = $igd_stl_kon_psn;
-        $this->igd_stl_kon_ling_psn = $igd_stl_kon_ling_psn;
-        $this->igd_hr = $igd_hr;
-        $this->igd_hw = $igd_hw;
-        $this->igd_gagal = $igd_gagal;
-        $this->igd_st = $igd_st;
+        $this->igd_pntp_kpl = $igd_pntp_kpl;
+        $this->igd_masker = $igd_masker;
+        $this->igd_pntp_wjh = $igd_pntp_wjh;
+        $this->igd_apron = $igd_apron;
+        $this->igd_srg_tgn = $igd_srg_tgn;
+        $this->igd_alas_kaki = $igd_alas_kaki;
+        $this->igd_lps_apd = $igd_lps_apd;
+        $this->igd_tdk_gtg_masker = $igd_tdk_gtg_masker;
+        $this->igd_tdk_guna_srg_tgn = $igd_tdk_guna_srg_tgn;
         $this->igd_jumlah = $igd_jumlah;
 
-        $this->no_igd_sbl_kon_psn = $no_igd_sbl_kon_psn;
-        $this->no_igd_sbl_tin_aseptik = $no_igd_sbl_tin_aseptik;
-        $this->no_igd_stl_kon_cairan = $no_igd_stl_kon_cairan;
-        $this->no_igd_stl_kon_psn = $no_igd_stl_kon_psn;
-        $this->no_igd_stl_kon_ling_psn = $no_igd_stl_kon_ling_psn;
-        $this->no_igd_hr = $no_igd_hr;
-        $this->no_igd_hw = $no_igd_hw;
-        $this->no_igd_gagal = $no_igd_gagal;
-        $this->no_igd_st = $no_igd_st;
+        $this->no_igd_pntp_kpl = $no_igd_pntp_kpl;
+        $this->no_igd_masker = $no_igd_masker;
+        $this->no_igd_pntp_wjh = $no_igd_pntp_wjh;
+        $this->no_igd_apron = $no_igd_apron;
+        $this->no_igd_srg_tgn = $no_igd_srg_tgn;
+        $this->no_igd_alas_kaki = $no_igd_alas_kaki;
+        $this->no_igd_lps_apd = $no_igd_lps_apd;
+        $this->no_igd_tdk_gtg_masker = $no_igd_tdk_gtg_masker;
+        $this->no_igd_tdk_guna_srg_tgn = $no_igd_tdk_guna_srg_tgn;
         $this->no_igd_jumlah = $no_igd_jumlah;
 
         $this->denominator_igd = $denominator_igd;
 
-        $this->int_sbl_kon_psn = $int_sbl_kon_psn;
-        $this->int_sbl_tin_aseptik = $int_sbl_tin_aseptik;
-        $this->int_stl_kon_cairan = $int_stl_kon_cairan;
-        $this->int_stl_kon_psn = $int_stl_kon_psn;
-        $this->int_stl_kon_ling_psn = $int_stl_kon_ling_psn;
-        $this->int_hr = $int_hr;
-        $this->int_hw = $int_hw;
-        $this->int_gagal = $int_gagal;
-        $this->int_st = $int_st;
+        $this->int_pntp_kpl = $int_pntp_kpl;
+        $this->int_masker = $int_masker;
+        $this->int_pntp_wjh = $int_pntp_wjh;
+        $this->int_apron = $int_apron;
+        $this->int_srg_tgn = $int_srg_tgn;
+        $this->int_alas_kaki = $int_alas_kaki;
+        $this->int_lps_apd = $int_lps_apd;
+        $this->int_tdk_gtg_masker = $int_tdk_gtg_masker;
+        $this->int_tdk_guna_srg_tgn = $int_tdk_guna_srg_tgn;
         $this->int_jumlah = $int_jumlah;
 
-        $this->no_int_sbl_kon_psn = $no_int_sbl_kon_psn;
-        $this->no_int_sbl_tin_aseptik = $no_int_sbl_tin_aseptik;
-        $this->no_int_stl_kon_cairan = $no_int_stl_kon_cairan;
-        $this->no_int_stl_kon_psn = $no_int_stl_kon_psn;
-        $this->no_int_stl_kon_ling_psn = $no_int_stl_kon_ling_psn;
-        $this->no_int_hr = $no_int_hr;
-        $this->no_int_hw = $no_int_hw;
-        $this->no_int_gagal = $no_int_gagal;
-        $this->no_int_st = $no_int_st;
+        $this->no_int_pntp_kpl = $no_int_pntp_kpl;
+        $this->no_int_masker = $no_int_masker;
+        $this->no_int_pntp_wjh = $no_int_pntp_wjh;
+        $this->no_int_apron = $no_int_apron;
+        $this->no_int_srg_tgn = $no_int_srg_tgn;
+        $this->no_int_alas_kaki = $no_int_alas_kaki;
+        $this->no_int_lps_apd = $no_int_lps_apd;
+        $this->no_int_tdk_gtg_masker = $no_int_tdk_gtg_masker;
+        $this->no_int_tdk_guna_srg_tgn = $no_int_tdk_guna_srg_tgn;
         $this->no_int_jumlah = $no_int_jumlah;
 
         $this->denominator_int = $denominator_int;
 
-        $this->kbbl_sbl_kon_psn = $kbbl_sbl_kon_psn;
-        $this->kbbl_sbl_tin_aseptik = $kbbl_sbl_tin_aseptik;
-        $this->kbbl_stl_kon_cairan = $kbbl_stl_kon_cairan;
-        $this->kbbl_stl_kon_psn = $kbbl_stl_kon_psn;
-        $this->kbbl_stl_kon_ling_psn = $kbbl_stl_kon_ling_psn;
-        $this->kbbl_hr = $kbbl_hr;
-        $this->kbbl_hw = $kbbl_hw;
-        $this->kbbl_gagal = $kbbl_gagal;
-        $this->kbbl_st = $kbbl_st;
+        $this->kbbl_pntp_kpl = $kbbl_pntp_kpl;
+        $this->kbbl_masker = $kbbl_masker;
+        $this->kbbl_pntp_wjh = $kbbl_pntp_wjh;
+        $this->kbbl_apron = $kbbl_apron;
+        $this->kbbl_srg_tgn = $kbbl_srg_tgn;
+        $this->kbbl_alas_kaki = $kbbl_alas_kaki;
+        $this->kbbl_lps_apd = $kbbl_lps_apd;
+        $this->kbbl_tdk_gtg_masker = $kbbl_tdk_gtg_masker;
+        $this->kbbl_tdk_guna_srg_tgn = $kbbl_tdk_guna_srg_tgn;
         $this->kbbl_jumlah = $kbbl_jumlah;
 
-        $this->no_kbbl_sbl_kon_psn = $no_kbbl_sbl_kon_psn;
-        $this->no_kbbl_sbl_tin_aseptik = $no_kbbl_sbl_tin_aseptik;
-        $this->no_kbbl_stl_kon_cairan = $no_kbbl_stl_kon_cairan;
-        $this->no_kbbl_stl_kon_psn = $no_kbbl_stl_kon_psn;
-        $this->no_kbbl_stl_kon_ling_psn = $no_kbbl_stl_kon_ling_psn;
-        $this->no_kbbl_hr = $no_kbbl_hr;
-        $this->no_kbbl_hw = $no_kbbl_hw;
-        $this->no_kbbl_gagal = $no_kbbl_gagal;
-        $this->no_kbbl_st = $no_kbbl_st;
+        $this->no_kbbl_pntp_kpl = $no_kbbl_pntp_kpl;
+        $this->no_kbbl_masker = $no_kbbl_masker;
+        $this->no_kbbl_pntp_wjh = $no_kbbl_pntp_wjh;
+        $this->no_kbbl_apron = $no_kbbl_apron;
+        $this->no_kbbl_srg_tgn = $no_kbbl_srg_tgn;
+        $this->no_kbbl_alas_kaki = $no_kbbl_alas_kaki;
+        $this->no_kbbl_lps_apd = $no_kbbl_lps_apd;
+        $this->no_kbbl_tdk_gtg_masker = $no_kbbl_tdk_gtg_masker;
+        $this->no_kbbl_tdk_guna_srg_tgn = $no_kbbl_tdk_guna_srg_tgn;
         $this->no_kbbl_jumlah = $no_kbbl_jumlah;
 
         $this->denominator_kbbl = $denominator_kbbl;
 
-        $this->lab_sbl_kon_psn = $lab_sbl_kon_psn;
-        $this->lab_sbl_tin_aseptik = $lab_sbl_tin_aseptik;
-        $this->lab_stl_kon_cairan = $lab_stl_kon_cairan;
-        $this->lab_stl_kon_psn = $lab_stl_kon_psn;
-        $this->lab_stl_kon_ling_psn = $lab_stl_kon_ling_psn;
-        $this->lab_hr = $lab_hr;
-        $this->lab_hw = $lab_hw;
-        $this->lab_gagal = $lab_gagal;
-        $this->lab_st = $lab_st;
+        $this->lab_pntp_kpl = $lab_pntp_kpl;
+        $this->lab_masker = $lab_masker;
+        $this->lab_pntp_wjh = $lab_pntp_wjh;
+        $this->lab_apron = $lab_apron;
+        $this->lab_srg_tgn = $lab_srg_tgn;
+        $this->lab_alas_kaki = $lab_alas_kaki;
+        $this->lab_lps_apd = $lab_lps_apd;
+        $this->lab_tdk_gtg_masker = $lab_tdk_gtg_masker;
+        $this->lab_tdk_guna_srg_tgn = $lab_tdk_guna_srg_tgn;
         $this->lab_jumlah = $lab_jumlah;
 
-        $this->no_lab_sbl_kon_psn = $no_lab_sbl_kon_psn;
-        $this->no_lab_sbl_tin_aseptik = $no_lab_sbl_tin_aseptik;
-        $this->no_lab_stl_kon_cairan = $no_lab_stl_kon_cairan;
-        $this->no_lab_stl_kon_psn = $no_lab_stl_kon_psn;
-        $this->no_lab_stl_kon_ling_psn = $no_lab_stl_kon_ling_psn;
-        $this->no_lab_hr = $no_lab_hr;
-        $this->no_lab_hw = $no_lab_hw;
-        $this->no_lab_gagal = $no_lab_gagal;
-        $this->no_lab_st = $no_lab_st;
+        $this->no_lab_pntp_kpl = $no_lab_pntp_kpl;
+        $this->no_lab_masker = $no_lab_masker;
+        $this->no_lab_pntp_wjh = $no_lab_pntp_wjh;
+        $this->no_lab_apron = $no_lab_apron;
+        $this->no_lab_srg_tgn = $no_lab_srg_tgn;
+        $this->no_lab_alas_kaki = $no_lab_alas_kaki;
+        $this->no_lab_lps_apd = $no_lab_lps_apd;
+        $this->no_lab_tdk_gtg_masker = $no_lab_tdk_gtg_masker;
+        $this->no_lab_tdk_guna_srg_tgn = $no_lab_tdk_guna_srg_tgn;
         $this->no_lab_jumlah = $no_lab_jumlah;
 
         $this->denominator_lab = $denominator_lab;
 
-        $this->laundry_sbl_kon_psn = $laundry_sbl_kon_psn;
-        $this->laundry_sbl_tin_aseptik = $laundry_sbl_tin_aseptik;
-        $this->laundry_stl_kon_cairan = $laundry_stl_kon_cairan;
-        $this->laundry_stl_kon_psn = $laundry_stl_kon_psn;
-        $this->laundry_stl_kon_ling_psn = $laundry_stl_kon_ling_psn;
-        $this->laundry_hr = $laundry_hr;
-        $this->laundry_hw = $laundry_hw;
-        $this->laundry_gagal = $laundry_gagal;
-        $this->laundry_st = $laundry_st;
+        $this->laundry_pntp_kpl = $laundry_pntp_kpl;
+        $this->laundry_masker = $laundry_masker;
+        $this->laundry_pntp_wjh = $laundry_pntp_wjh;
+        $this->laundry_apron = $laundry_apron;
+        $this->laundry_srg_tgn = $laundry_srg_tgn;
+        $this->laundry_alas_kaki = $laundry_alas_kaki;
+        $this->laundry_lps_apd = $laundry_lps_apd;
+        $this->laundry_tdk_gtg_masker = $laundry_tdk_gtg_masker;
+        $this->laundry_tdk_guna_srg_tgn = $laundry_tdk_guna_srg_tgn;
         $this->laundry_jumlah = $laundry_jumlah;
 
-        $this->no_laundry_sbl_kon_psn = $no_laundry_sbl_kon_psn;
-        $this->no_laundry_sbl_tin_aseptik = $no_laundry_sbl_tin_aseptik;
-        $this->no_laundry_stl_kon_cairan = $no_laundry_stl_kon_cairan;
-        $this->no_laundry_stl_kon_psn = $no_laundry_stl_kon_psn;
-        $this->no_laundry_stl_kon_ling_psn = $no_laundry_stl_kon_ling_psn;
-        $this->no_laundry_hr = $no_laundry_hr;
-        $this->no_laundry_hw = $no_laundry_hw;
-        $this->no_laundry_gagal = $no_laundry_gagal;
-        $this->no_laundry_st = $no_laundry_st;
+        $this->no_laundry_pntp_kpl = $no_laundry_pntp_kpl;
+        $this->no_laundry_masker = $no_laundry_masker;
+        $this->no_laundry_pntp_wjh = $no_laundry_pntp_wjh;
+        $this->no_laundry_apron = $no_laundry_apron;
+        $this->no_laundry_srg_tgn = $no_laundry_srg_tgn;
+        $this->no_laundry_alas_kaki = $no_laundry_alas_kaki;
+        $this->no_laundry_lps_apd = $no_laundry_lps_apd;
+        $this->no_laundry_tdk_gtg_masker = $no_laundry_tdk_gtg_masker;
+        $this->no_laundry_tdk_guna_srg_tgn = $no_laundry_tdk_guna_srg_tgn;
         $this->no_laundry_jumlah = $no_laundry_jumlah;
 
         $this->denominator_laundry = $denominator_laundry;
 
-        $this->ok_sbl_kon_psn = $ok_sbl_kon_psn;
-        $this->ok_sbl_tin_aseptik = $ok_sbl_tin_aseptik;
-        $this->ok_stl_kon_cairan = $ok_stl_kon_cairan;
-        $this->ok_stl_kon_psn = $ok_stl_kon_psn;
-        $this->ok_stl_kon_ling_psn = $ok_stl_kon_ling_psn;
-        $this->ok_hr = $ok_hr;
-        $this->ok_hw = $ok_hw;
-        $this->ok_gagal = $ok_gagal;
-        $this->ok_st = $ok_st;
+        $this->ok_pntp_kpl = $ok_pntp_kpl;
+        $this->ok_masker = $ok_masker;
+        $this->ok_pntp_wjh = $ok_pntp_wjh;
+        $this->ok_apron = $ok_apron;
+        $this->ok_srg_tgn = $ok_srg_tgn;
+        $this->ok_alas_kaki = $ok_alas_kaki;
+        $this->ok_lps_apd = $ok_lps_apd;
+        $this->ok_tdk_gtg_masker = $ok_tdk_gtg_masker;
+        $this->ok_tdk_guna_srg_tgn = $ok_tdk_guna_srg_tgn;
         $this->ok_jumlah = $ok_jumlah;
 
-        $this->no_ok_sbl_kon_psn = $no_ok_sbl_kon_psn;
-        $this->no_ok_sbl_tin_aseptik = $no_ok_sbl_tin_aseptik;
-        $this->no_ok_stl_kon_cairan = $no_ok_stl_kon_cairan;
-        $this->no_ok_stl_kon_psn = $no_ok_stl_kon_psn;
-        $this->no_ok_stl_kon_ling_psn = $no_ok_stl_kon_ling_psn;
-        $this->no_ok_hr = $no_ok_hr;
-        $this->no_ok_hw = $no_ok_hw;
-        $this->no_ok_gagal = $no_ok_gagal;
-        $this->no_ok_st = $no_ok_st;
+        $this->no_ok_pntp_kpl = $no_ok_pntp_kpl;
+        $this->no_ok_masker = $no_ok_masker;
+        $this->no_ok_pntp_wjh = $no_ok_pntp_wjh;
+        $this->no_ok_apron = $no_ok_apron;
+        $this->no_ok_srg_tgn = $no_ok_srg_tgn;
+        $this->no_ok_alas_kaki = $no_ok_alas_kaki;
+        $this->no_ok_lps_apd = $no_ok_lps_apd;
+        $this->no_ok_tdk_gtg_masker = $no_ok_tdk_gtg_masker;
+        $this->no_ok_tdk_guna_srg_tgn = $no_ok_tdk_guna_srg_tgn;
         $this->no_ok_jumlah = $no_ok_jumlah;
 
         $this->denominator_ok = $denominator_ok;
 
-        $this->lt2_sbl_kon_psn = $lt2_sbl_kon_psn;
-        $this->lt2_sbl_tin_aseptik = $lt2_sbl_tin_aseptik;
-        $this->lt2_stl_kon_cairan = $lt2_stl_kon_cairan;
-        $this->lt2_stl_kon_psn = $lt2_stl_kon_psn;
-        $this->lt2_stl_kon_ling_psn = $lt2_stl_kon_ling_psn;
-        $this->lt2_hr = $lt2_hr;
-        $this->lt2_hw = $lt2_hw;
-        $this->lt2_gagal = $lt2_gagal;
-        $this->lt2_st = $lt2_st;
+        $this->lt2_pntp_kpl = $lt2_pntp_kpl;
+        $this->lt2_masker = $lt2_masker;
+        $this->lt2_pntp_wjh = $lt2_pntp_wjh;
+        $this->lt2_apron = $lt2_apron;
+        $this->lt2_srg_tgn = $lt2_srg_tgn;
+        $this->lt2_alas_kaki = $lt2_alas_kaki;
+        $this->lt2_lps_apd = $lt2_lps_apd;
+        $this->lt2_tdk_gtg_masker = $lt2_tdk_gtg_masker;
+        $this->lt2_tdk_guna_srg_tgn = $lt2_tdk_guna_srg_tgn;
         $this->lt2_jumlah = $lt2_jumlah;
 
-        $this->no_lt2_sbl_kon_psn = $no_lt2_sbl_kon_psn;
-        $this->no_lt2_sbl_tin_aseptik = $no_lt2_sbl_tin_aseptik;
-        $this->no_lt2_stl_kon_cairan = $no_lt2_stl_kon_cairan;
-        $this->no_lt2_stl_kon_psn = $no_lt2_stl_kon_psn;
-        $this->no_lt2_stl_kon_ling_psn = $no_lt2_stl_kon_ling_psn;
-        $this->no_lt2_hr = $no_lt2_hr;
-        $this->no_lt2_hw = $no_lt2_hw;
-        $this->no_lt2_gagal = $no_lt2_gagal;
-        $this->no_lt2_st = $no_lt2_st;
+        $this->no_lt2_pntp_kpl = $no_lt2_pntp_kpl;
+        $this->no_lt2_masker = $no_lt2_masker;
+        $this->no_lt2_pntp_wjh = $no_lt2_pntp_wjh;
+        $this->no_lt2_apron = $no_lt2_apron;
+        $this->no_lt2_srg_tgn = $no_lt2_srg_tgn;
+        $this->no_lt2_alas_kaki = $no_lt2_alas_kaki;
+        $this->no_lt2_lps_apd = $no_lt2_lps_apd;
+        $this->no_lt2_tdk_gtg_masker = $no_lt2_tdk_gtg_masker;
+        $this->no_lt2_tdk_guna_srg_tgn = $no_lt2_tdk_guna_srg_tgn;
         $this->no_lt2_jumlah = $no_lt2_jumlah;
 
         $this->denominator_lt2 = $denominator_lt2;
 
-        $this->lt4_sbl_kon_psn = $lt4_sbl_kon_psn;
-        $this->lt4_sbl_tin_aseptik = $lt4_sbl_tin_aseptik;
-        $this->lt4_stl_kon_cairan = $lt4_stl_kon_cairan;
-        $this->lt4_stl_kon_psn = $lt4_stl_kon_psn;
-        $this->lt4_stl_kon_ling_psn = $lt4_stl_kon_ling_psn;
-        $this->lt4_hr = $lt4_hr;
-        $this->lt4_hw = $lt4_hw;
-        $this->lt4_gagal = $lt4_gagal;
-        $this->lt4_st = $lt4_st;
+        $this->lt4_pntp_kpl = $lt4_pntp_kpl;
+        $this->lt4_masker = $lt4_masker;
+        $this->lt4_pntp_wjh = $lt4_pntp_wjh;
+        $this->lt4_apron = $lt4_apron;
+        $this->lt4_srg_tgn = $lt4_srg_tgn;
+        $this->lt4_alas_kaki = $lt4_alas_kaki;
+        $this->lt4_lps_apd = $lt4_lps_apd;
+        $this->lt4_tdk_gtg_masker = $lt4_tdk_gtg_masker;
+        $this->lt4_tdk_guna_srg_tgn = $lt4_tdk_guna_srg_tgn;
         $this->lt4_jumlah = $lt4_jumlah;
 
-        $this->no_lt4_sbl_kon_psn = $no_lt4_sbl_kon_psn;
-        $this->no_lt4_sbl_tin_aseptik = $no_lt4_sbl_tin_aseptik;
-        $this->no_lt4_stl_kon_cairan = $no_lt4_stl_kon_cairan;
-        $this->no_lt4_stl_kon_psn = $no_lt4_stl_kon_psn;
-        $this->no_lt4_stl_kon_ling_psn = $no_lt4_stl_kon_ling_psn;
-        $this->no_lt4_hr = $no_lt4_hr;
-        $this->no_lt4_hw = $no_lt4_hw;
-        $this->no_lt4_gagal = $no_lt4_gagal;
-        $this->no_lt4_st = $no_lt4_st;
+        $this->no_lt4_pntp_kpl = $no_lt4_pntp_kpl;
+        $this->no_lt4_masker = $no_lt4_masker;
+        $this->no_lt4_pntp_wjh = $no_lt4_pntp_wjh;
+        $this->no_lt4_apron = $no_lt4_apron;
+        $this->no_lt4_srg_tgn = $no_lt4_srg_tgn;
+        $this->no_lt4_alas_kaki = $no_lt4_alas_kaki;
+        $this->no_lt4_lps_apd = $no_lt4_lps_apd;
+        $this->no_lt4_tdk_gtg_masker = $no_lt4_tdk_gtg_masker;
+        $this->no_lt4_tdk_guna_srg_tgn = $no_lt4_tdk_guna_srg_tgn;
         $this->no_lt4_jumlah = $no_lt4_jumlah;
 
         $this->denominator_lt4 = $denominator_lt4;
 
-        $this->lt5_sbl_kon_psn = $lt5_sbl_kon_psn;
-        $this->lt5_sbl_tin_aseptik = $lt5_sbl_tin_aseptik;
-        $this->lt5_stl_kon_cairan = $lt5_stl_kon_cairan;
-        $this->lt5_stl_kon_psn = $lt5_stl_kon_psn;
-        $this->lt5_stl_kon_ling_psn = $lt5_stl_kon_ling_psn;
-        $this->lt5_hr = $lt5_hr;
-        $this->lt5_hw = $lt5_hw;
-        $this->lt5_gagal = $lt5_gagal;
-        $this->lt5_st = $lt5_st;
+        $this->lt5_pntp_kpl = $lt5_pntp_kpl;
+        $this->lt5_masker = $lt5_masker;
+        $this->lt5_pntp_wjh = $lt5_pntp_wjh;
+        $this->lt5_apron = $lt5_apron;
+        $this->lt5_srg_tgn = $lt5_srg_tgn;
+        $this->lt5_alas_kaki = $lt5_alas_kaki;
+        $this->lt5_lps_apd = $lt5_lps_apd;
+        $this->lt5_tdk_gtg_masker = $lt5_tdk_gtg_masker;
+        $this->lt5_tdk_guna_srg_tgn = $lt5_tdk_guna_srg_tgn;
         $this->lt5_jumlah = $lt5_jumlah;
 
-        $this->no_lt5_sbl_kon_psn = $no_lt5_sbl_kon_psn;
-        $this->no_lt5_sbl_tin_aseptik = $no_lt5_sbl_tin_aseptik;
-        $this->no_lt5_stl_kon_cairan = $no_lt5_stl_kon_cairan;
-        $this->no_lt5_stl_kon_psn = $no_lt5_stl_kon_psn;
-        $this->no_lt5_stl_kon_ling_psn = $no_lt5_stl_kon_ling_psn;
-        $this->no_lt5_hr = $no_lt5_hr;
-        $this->no_lt5_hw = $no_lt5_hw;
-        $this->no_lt5_gagal = $no_lt5_gagal;
-        $this->no_lt5_st = $no_lt5_st;
+        $this->no_lt5_pntp_kpl = $no_lt5_pntp_kpl;
+        $this->no_lt5_masker = $no_lt5_masker;
+        $this->no_lt5_pntp_wjh = $no_lt5_pntp_wjh;
+        $this->no_lt5_apron = $no_lt5_apron;
+        $this->no_lt5_srg_tgn = $no_lt5_srg_tgn;
+        $this->no_lt5_alas_kaki = $no_lt5_alas_kaki;
+        $this->no_lt5_lps_apd = $no_lt5_lps_apd;
+        $this->no_lt5_tdk_gtg_masker = $no_lt5_tdk_gtg_masker;
+        $this->no_lt5_tdk_guna_srg_tgn = $no_lt5_tdk_guna_srg_tgn;
         $this->no_lt5_jumlah = $no_lt5_jumlah;
 
         $this->denominator_lt5 = $denominator_lt5;
 
-        $this->poli_sbl_kon_psn = $poli_sbl_kon_psn;
-        $this->poli_sbl_tin_aseptik = $poli_sbl_tin_aseptik;
-        $this->poli_stl_kon_cairan = $poli_stl_kon_cairan;
-        $this->poli_stl_kon_psn = $poli_stl_kon_psn;
-        $this->poli_stl_kon_ling_psn = $poli_stl_kon_ling_psn;
-        $this->poli_hr = $poli_hr;
-        $this->poli_hw = $poli_hw;
-        $this->poli_gagal = $poli_gagal;
-        $this->poli_st = $poli_st;
+        $this->poli_pntp_kpl = $poli_pntp_kpl;
+        $this->poli_masker = $poli_masker;
+        $this->poli_pntp_wjh = $poli_pntp_wjh;
+        $this->poli_apron = $poli_apron;
+        $this->poli_srg_tgn = $poli_srg_tgn;
+        $this->poli_alas_kaki = $poli_alas_kaki;
+        $this->poli_lps_apd = $poli_lps_apd;
+        $this->poli_tdk_gtg_masker = $poli_tdk_gtg_masker;
+        $this->poli_tdk_guna_srg_tgn = $poli_tdk_guna_srg_tgn;
         $this->poli_jumlah = $poli_jumlah;
 
-        $this->no_poli_sbl_kon_psn = $no_poli_sbl_kon_psn;
-        $this->no_poli_sbl_tin_aseptik = $no_poli_sbl_tin_aseptik;
-        $this->no_poli_stl_kon_cairan = $no_poli_stl_kon_cairan;
-        $this->no_poli_stl_kon_psn = $no_poli_stl_kon_psn;
-        $this->no_poli_stl_kon_ling_psn = $no_poli_stl_kon_ling_psn;
-        $this->no_poli_hr = $no_poli_hr;
-        $this->no_poli_hw = $no_poli_hw;
-        $this->no_poli_gagal = $no_poli_gagal;
-        $this->no_poli_st = $no_poli_st;
+        $this->no_poli_pntp_kpl = $no_poli_pntp_kpl;
+        $this->no_poli_masker = $no_poli_masker;
+        $this->no_poli_pntp_wjh = $no_poli_pntp_wjh;
+        $this->no_poli_apron = $no_poli_apron;
+        $this->no_poli_srg_tgn = $no_poli_srg_tgn;
+        $this->no_poli_alas_kaki = $no_poli_alas_kaki;
+        $this->no_poli_lps_apd = $no_poli_lps_apd;
+        $this->no_poli_tdk_gtg_masker = $no_poli_tdk_gtg_masker;
+        $this->no_poli_tdk_guna_srg_tgn = $no_poli_tdk_guna_srg_tgn;
         $this->no_poli_jumlah = $no_poli_jumlah;
 
         $this->denominator_poli = $denominator_poli;
 
-        $this->rad_sbl_kon_psn = $rad_sbl_kon_psn;
-        $this->rad_sbl_tin_aseptik = $rad_sbl_tin_aseptik;
-        $this->rad_stl_kon_cairan = $rad_stl_kon_cairan;
-        $this->rad_stl_kon_psn = $rad_stl_kon_psn;
-        $this->rad_stl_kon_ling_psn = $rad_stl_kon_ling_psn;
-        $this->rad_hr = $rad_hr;
-        $this->rad_hw = $rad_hw;
-        $this->rad_gagal = $rad_gagal;
-        $this->rad_st = $rad_st;
+        $this->rad_pntp_kpl = $rad_pntp_kpl;
+        $this->rad_masker = $rad_masker;
+        $this->rad_pntp_wjh = $rad_pntp_wjh;
+        $this->rad_apron = $rad_apron;
+        $this->rad_srg_tgn = $rad_srg_tgn;
+        $this->rad_alas_kaki = $rad_alas_kaki;
+        $this->rad_lps_apd = $rad_lps_apd;
+        $this->rad_tdk_gtg_masker = $rad_tdk_gtg_masker;
+        $this->rad_tdk_guna_srg_tgn = $rad_tdk_guna_srg_tgn;
         $this->rad_jumlah = $rad_jumlah;
 
-        $this->no_rad_sbl_kon_psn = $no_rad_sbl_kon_psn;
-        $this->no_rad_sbl_tin_aseptik = $no_rad_sbl_tin_aseptik;
-        $this->no_rad_stl_kon_cairan = $no_rad_stl_kon_cairan;
-        $this->no_rad_stl_kon_psn = $no_rad_stl_kon_psn;
-        $this->no_rad_stl_kon_ling_psn = $no_rad_stl_kon_ling_psn;
-        $this->no_rad_hr = $no_rad_hr;
-        $this->no_rad_hw = $no_rad_hw;
-        $this->no_rad_gagal = $no_rad_gagal;
-        $this->no_rad_st = $no_rad_st;
+        $this->no_rad_pntp_kpl = $no_rad_pntp_kpl;
+        $this->no_rad_masker = $no_rad_masker;
+        $this->no_rad_pntp_wjh = $no_rad_pntp_wjh;
+        $this->no_rad_apron = $no_rad_apron;
+        $this->no_rad_srg_tgn = $no_rad_srg_tgn;
+        $this->no_rad_alas_kaki = $no_rad_alas_kaki;
+        $this->no_rad_lps_apd = $no_rad_lps_apd;
+        $this->no_rad_tdk_gtg_masker = $no_rad_tdk_gtg_masker;
+        $this->no_rad_tdk_guna_srg_tgn = $no_rad_tdk_guna_srg_tgn;
         $this->no_rad_jumlah = $no_rad_jumlah;
 
         $this->denominator_rad = $denominator_rad;
 
-        $this->vk_sbl_kon_psn = $vk_sbl_kon_psn;
-        $this->vk_sbl_tin_aseptik = $vk_sbl_tin_aseptik;
-        $this->vk_stl_kon_cairan = $vk_stl_kon_cairan;
-        $this->vk_stl_kon_psn = $vk_stl_kon_psn;
-        $this->vk_stl_kon_ling_psn = $vk_stl_kon_ling_psn;
-        $this->vk_hr = $vk_hr;
-        $this->vk_hw = $vk_hw;
-        $this->vk_gagal = $vk_gagal;
-        $this->vk_st = $vk_st;
+        $this->vk_pntp_kpl = $vk_pntp_kpl;
+        $this->vk_masker = $vk_masker;
+        $this->vk_pntp_wjh = $vk_pntp_wjh;
+        $this->vk_apron = $vk_apron;
+        $this->vk_srg_tgn = $vk_srg_tgn;
+        $this->vk_alas_kaki = $vk_alas_kaki;
+        $this->vk_lps_apd = $vk_lps_apd;
+        $this->vk_tdk_gtg_masker = $vk_tdk_gtg_masker;
+        $this->vk_tdk_guna_srg_tgn = $vk_tdk_guna_srg_tgn;
         $this->vk_jumlah = $vk_jumlah;
 
-        $this->no_vk_sbl_kon_psn = $no_vk_sbl_kon_psn;
-        $this->no_vk_sbl_tin_aseptik = $no_vk_sbl_tin_aseptik;
-        $this->no_vk_stl_kon_cairan = $no_vk_stl_kon_cairan;
-        $this->no_vk_stl_kon_psn = $no_vk_stl_kon_psn;
-        $this->no_vk_stl_kon_ling_psn = $no_vk_stl_kon_ling_psn;
-        $this->no_vk_hr = $no_vk_hr;
-        $this->no_vk_hw = $no_vk_hw;
-        $this->no_vk_gagal = $no_vk_gagal;
-        $this->no_vk_st = $no_vk_st;
+        $this->no_vk_pntp_kpl = $no_vk_pntp_kpl;
+        $this->no_vk_masker = $no_vk_masker;
+        $this->no_vk_pntp_wjh = $no_vk_pntp_wjh;
+        $this->no_vk_apron = $no_vk_apron;
+        $this->no_vk_srg_tgn = $no_vk_srg_tgn;
+        $this->no_vk_alas_kaki = $no_vk_alas_kaki;
+        $this->no_vk_lps_apd = $no_vk_lps_apd;
+        $this->no_vk_tdk_gtg_masker = $no_vk_tdk_gtg_masker;
+        $this->no_vk_tdk_guna_srg_tgn = $no_vk_tdk_guna_srg_tgn;
         $this->no_vk_jumlah = $no_vk_jumlah;
 
         $this->denominator_vk = $denominator_vk;
@@ -793,391 +793,391 @@ class ExportApd implements FromView, ShouldAutoSize, WithEvents
 
     public function view(): View
     {
-        return view('rekapCuciTangan.excel', [
+        return view('rekapAPD.excel', [
             'tabel' => $this->tabel,
             'rekap' => $this->rekap,
             'tanggal' => $this->tanggal,
 
-            'cssu_sbl_kon_psn' => $this->cssu_sbl_kon_psn,
-            'cssu_sbl_tin_aseptik' => $this->cssu_sbl_tin_aseptik,
-            'cssu_stl_kon_cairan' => $this->cssu_stl_kon_cairan,
-            'cssu_stl_kon_psn' => $this->cssu_stl_kon_psn,
-            'cssu_stl_kon_ling_psn' => $this->cssu_stl_kon_ling_psn,
-            'cssu_hr' => $this->cssu_hr,
-            'cssu_hw' => $this->cssu_hw,
-            'cssu_gagal' => $this->cssu_gagal,
-            'cssu_st' => $this->cssu_st,
+            'cssu_pntp_kpl' => $this->cssu_pntp_kpl,
+            'cssu_masker' => $this->cssu_masker,
+            'cssu_pntp_wjh' => $this->cssu_pntp_wjh,
+            'cssu_apron' => $this->cssu_apron,
+            'cssu_srg_tgn' => $this->cssu_srg_tgn,
+            'cssu_alas_kaki' => $this->cssu_alas_kaki,
+            'cssu_lps_apd' => $this->cssu_lps_apd,
+            'cssu_tdk_gtg_masker' => $this->cssu_tdk_gtg_masker,
+            'cssu_tdk_guna_srg_tgn' => $this->cssu_tdk_guna_srg_tgn,
             'cssu_jumlah' => $this->cssu_jumlah,
 
-            'no_cssu_sbl_kon_psn' => $this->no_cssu_sbl_kon_psn,
-            'no_cssu_sbl_tin_aseptik' => $this->no_cssu_sbl_tin_aseptik,
-            'no_cssu_stl_kon_cairan' => $this->no_cssu_stl_kon_cairan,
-            'no_cssu_stl_kon_psn' => $this->no_cssu_stl_kon_psn,
-            'no_cssu_stl_kon_ling_psn' => $this->no_cssu_stl_kon_ling_psn,
-            'no_cssu_hr' => $this->no_cssu_hr,
-            'no_cssu_hw' => $this->no_cssu_hw,
-            'no_cssu_gagal' => $this->no_cssu_gagal,
-            'no_cssu_st' => $this->no_cssu_st,
+            'no_cssu_pntp_kpl' => $this->no_cssu_pntp_kpl,
+            'no_cssu_masker' => $this->no_cssu_masker,
+            'no_cssu_pntp_wjh' => $this->no_cssu_pntp_wjh,
+            'no_cssu_apron' => $this->no_cssu_apron,
+            'no_cssu_srg_tgn' => $this->no_cssu_srg_tgn,
+            'no_cssu_alas_kaki' => $this->no_cssu_alas_kaki,
+            'no_cssu_lps_apd' => $this->no_cssu_lps_apd,
+            'no_cssu_tdk_gtg_masker' => $this->no_cssu_tdk_gtg_masker,
+            'no_cssu_tdk_guna_srg_tgn' => $this->no_cssu_tdk_guna_srg_tgn,
             'no_cssu_jumlah' => $this->no_cssu_jumlah,
 
             'denominator_cssu' => $this->denominator_cssu,
 
-            'dapur_sbl_kon_psn' => $this->dapur_sbl_kon_psn,
-            'dapur_sbl_tin_aseptik' => $this->dapur_sbl_tin_aseptik,
-            'dapur_stl_kon_cairan' => $this->dapur_stl_kon_cairan,
-            'dapur_stl_kon_psn' => $this->dapur_stl_kon_psn,
-            'dapur_stl_kon_ling_psn' => $this->dapur_stl_kon_ling_psn,
-            'dapur_hr' => $this->dapur_hr,
-            'dapur_hw' => $this->dapur_hw,
-            'dapur_gagal' => $this->dapur_gagal,
-            'dapur_st' => $this->dapur_st,
+            'dapur_pntp_kpl' => $this->dapur_pntp_kpl,
+            'dapur_masker' => $this->dapur_masker,
+            'dapur_pntp_wjh' => $this->dapur_pntp_wjh,
+            'dapur_apron' => $this->dapur_apron,
+            'dapur_srg_tgn' => $this->dapur_srg_tgn,
+            'dapur_alas_kaki' => $this->dapur_alas_kaki,
+            'dapur_lps_apd' => $this->dapur_lps_apd,
+            'dapur_tdk_gtg_masker' => $this->dapur_tdk_gtg_masker,
+            'dapur_tdk_guna_srg_tgn' => $this->dapur_tdk_guna_srg_tgn,
             'dapur_jumlah' => $this->dapur_jumlah,
 
-            'no_dapur_sbl_kon_psn' => $this->no_dapur_sbl_kon_psn,
-            'no_dapur_sbl_tin_aseptik' => $this->no_dapur_sbl_tin_aseptik,
-            'no_dapur_stl_kon_cairan' => $this->no_dapur_stl_kon_cairan,
-            'no_dapur_stl_kon_psn' => $this->no_dapur_stl_kon_psn,
-            'no_dapur_stl_kon_ling_psn' => $this->no_dapur_stl_kon_ling_psn,
-            'no_dapur_hr' => $this->no_dapur_hr,
-            'no_dapur_hw' => $this->no_dapur_hw,
-            'no_dapur_gagal' => $this->no_dapur_gagal,
-            'no_dapur_st' => $this->no_dapur_st,
+            'no_dapur_pntp_kpl' => $this->no_dapur_pntp_kpl,
+            'no_dapur_masker' => $this->no_dapur_masker,
+            'no_dapur_pntp_wjh' => $this->no_dapur_pntp_wjh,
+            'no_dapur_apron' => $this->no_dapur_apron,
+            'no_dapur_srg_tgn' => $this->no_dapur_srg_tgn,
+            'no_dapur_alas_kaki' => $this->no_dapur_alas_kaki,
+            'no_dapur_lps_apd' => $this->no_dapur_lps_apd,
+            'no_dapur_tdk_gtg_masker' => $this->no_dapur_tdk_gtg_masker,
+            'no_dapur_tdk_guna_srg_tgn' => $this->no_dapur_tdk_guna_srg_tgn,
             'no_dapur_jumlah' => $this->no_dapur_jumlah,
 
             'denominator_dapur' => $this->denominator_dapur,
 
-            'dpjp_sbl_kon_psn' => $this->dpjp_sbl_kon_psn,
-            'dpjp_sbl_tin_aseptik' => $this->dpjp_sbl_tin_aseptik,
-            'dpjp_stl_kon_cairan' => $this->dpjp_stl_kon_cairan,
-            'dpjp_stl_kon_psn' => $this->dpjp_stl_kon_psn,
-            'dpjp_stl_kon_ling_psn' => $this->dpjp_stl_kon_ling_psn,
-            'dpjp_hr' => $this->dpjp_hr,
-            'dpjp_hw' => $this->dpjp_hw,
-            'dpjp_gagal' => $this->dpjp_gagal,
-            'dpjp_st' => $this->dpjp_st,
+            'dpjp_pntp_kpl' => $this->dpjp_pntp_kpl,
+            'dpjp_masker' => $this->dpjp_masker,
+            'dpjp_pntp_wjh' => $this->dpjp_pntp_wjh,
+            'dpjp_apron' => $this->dpjp_apron,
+            'dpjp_srg_tgn' => $this->dpjp_srg_tgn,
+            'dpjp_alas_kaki' => $this->dpjp_alas_kaki,
+            'dpjp_lps_apd' => $this->dpjp_lps_apd,
+            'dpjp_tdk_gtg_masker' => $this->dpjp_tdk_gtg_masker,
+            'dpjp_tdk_guna_srg_tgn' => $this->dpjp_tdk_guna_srg_tgn,
             'dpjp_jumlah' => $this->dpjp_jumlah,
 
-            'no_dpjp_sbl_kon_psn' => $this->no_dpjp_sbl_kon_psn,
-            'no_dpjp_sbl_tin_aseptik' => $this->no_dpjp_sbl_tin_aseptik,
-            'no_dpjp_stl_kon_cairan' => $this->no_dpjp_stl_kon_cairan,
-            'no_dpjp_stl_kon_psn' => $this->no_dpjp_stl_kon_psn,
-            'no_dpjp_stl_kon_ling_psn' => $this->no_dpjp_stl_kon_ling_psn,
-            'no_dpjp_hr' => $this->no_dpjp_hr,
-            'no_dpjp_hw' => $this->no_dpjp_hw,
-            'no_dpjp_gagal' => $this->no_dpjp_gagal,
-            'no_dpjp_st' => $this->no_dpjp_st,
+            'no_dpjp_pntp_kpl' => $this->no_dpjp_pntp_kpl,
+            'no_dpjp_masker' => $this->no_dpjp_masker,
+            'no_dpjp_pntp_wjh' => $this->no_dpjp_pntp_wjh,
+            'no_dpjp_apron' => $this->no_dpjp_apron,
+            'no_dpjp_srg_tgn' => $this->no_dpjp_srg_tgn,
+            'no_dpjp_alas_kaki' => $this->no_dpjp_alas_kaki,
+            'no_dpjp_lps_apd' => $this->no_dpjp_lps_apd,
+            'no_dpjp_tdk_gtg_masker' => $this->no_dpjp_tdk_gtg_masker,
+            'no_dpjp_tdk_guna_srg_tgn' => $this->no_dpjp_tdk_guna_srg_tgn,
             'no_dpjp_jumlah' => $this->no_dpjp_jumlah,
 
             'denominator_dpjp' => $this->denominator_dpjp,
 
-            'farmasi_sbl_kon_psn' => $this->farmasi_sbl_kon_psn,
-            'farmasi_sbl_tin_aseptik' => $this->farmasi_sbl_tin_aseptik,
-            'farmasi_stl_kon_cairan' => $this->farmasi_stl_kon_cairan,
-            'farmasi_stl_kon_psn' => $this->farmasi_stl_kon_psn,
-            'farmasi_stl_kon_ling_psn' => $this->farmasi_stl_kon_ling_psn,
-            'farmasi_hr' => $this->farmasi_hr,
-            'farmasi_hw' => $this->farmasi_hw,
-            'farmasi_gagal' => $this->farmasi_gagal,
-            'farmasi_st' => $this->farmasi_st,
+            'farmasi_pntp_kpl' => $this->farmasi_pntp_kpl,
+            'farmasi_masker' => $this->farmasi_masker,
+            'farmasi_pntp_wjh' => $this->farmasi_pntp_wjh,
+            'farmasi_apron' => $this->farmasi_apron,
+            'farmasi_srg_tgn' => $this->farmasi_srg_tgn,
+            'farmasi_alas_kaki' => $this->farmasi_alas_kaki,
+            'farmasi_lps_apd' => $this->farmasi_lps_apd,
+            'farmasi_tdk_gtg_masker' => $this->farmasi_tdk_gtg_masker,
+            'farmasi_tdk_guna_srg_tgn' => $this->farmasi_tdk_guna_srg_tgn,
             'farmasi_jumlah' => $this->farmasi_jumlah,
 
-            'no_farmasi_sbl_kon_psn' => $this->no_farmasi_sbl_kon_psn,
-            'no_farmasi_sbl_tin_aseptik' => $this->no_farmasi_sbl_tin_aseptik,
-            'no_farmasi_stl_kon_cairan' => $this->no_farmasi_stl_kon_cairan,
-            'no_farmasi_stl_kon_psn' => $this->no_farmasi_stl_kon_psn,
-            'no_farmasi_stl_kon_ling_psn' => $this->no_farmasi_stl_kon_ling_psn,
-            'no_farmasi_hr' => $this->no_farmasi_hr,
-            'no_farmasi_hw' => $this->no_farmasi_hw,
-            'no_farmasi_gagal' => $this->no_farmasi_gagal,
-            'no_farmasi_st' => $this->no_farmasi_st,
+            'no_farmasi_pntp_kpl' => $this->no_farmasi_pntp_kpl,
+            'no_farmasi_masker' => $this->no_farmasi_masker,
+            'no_farmasi_pntp_wjh' => $this->no_farmasi_pntp_wjh,
+            'no_farmasi_apron' => $this->no_farmasi_apron,
+            'no_farmasi_srg_tgn' => $this->no_farmasi_srg_tgn,
+            'no_farmasi_alas_kaki' => $this->no_farmasi_alas_kaki,
+            'no_farmasi_lps_apd' => $this->no_farmasi_lps_apd,
+            'no_farmasi_tdk_gtg_masker' => $this->no_farmasi_tdk_gtg_masker,
+            'no_farmasi_tdk_guna_srg_tgn' => $this->no_farmasi_tdk_guna_srg_tgn,
             'no_farmasi_jumlah' => $this->no_farmasi_jumlah,
 
             'denominator_farmasi' => $this->denominator_farmasi,
 
-            'igd_sbl_kon_psn' => $this->igd_sbl_kon_psn,
-            'igd_sbl_tin_aseptik' => $this->igd_sbl_tin_aseptik,
-            'igd_stl_kon_cairan' => $this->igd_stl_kon_cairan,
-            'igd_stl_kon_psn' => $this->igd_stl_kon_psn,
-            'igd_stl_kon_ling_psn' => $this->igd_stl_kon_ling_psn,
-            'igd_hr' => $this->igd_hr,
-            'igd_hw' => $this->igd_hw,
-            'igd_gagal' => $this->igd_gagal,
-            'igd_st' => $this->igd_st,
+            'igd_pntp_kpl' => $this->igd_pntp_kpl,
+            'igd_masker' => $this->igd_masker,
+            'igd_pntp_wjh' => $this->igd_pntp_wjh,
+            'igd_apron' => $this->igd_apron,
+            'igd_srg_tgn' => $this->igd_srg_tgn,
+            'igd_alas_kaki' => $this->igd_alas_kaki,
+            'igd_lps_apd' => $this->igd_lps_apd,
+            'igd_tdk_gtg_masker' => $this->igd_tdk_gtg_masker,
+            'igd_tdk_guna_srg_tgn' => $this->igd_tdk_guna_srg_tgn,
             'igd_jumlah' => $this->igd_jumlah,
 
-            'no_igd_sbl_kon_psn' => $this->no_igd_sbl_kon_psn,
-            'no_igd_sbl_tin_aseptik' => $this->no_igd_sbl_tin_aseptik,
-            'no_igd_stl_kon_cairan' => $this->no_igd_stl_kon_cairan,
-            'no_igd_stl_kon_psn' => $this->no_igd_stl_kon_psn,
-            'no_igd_stl_kon_ling_psn' => $this->no_igd_stl_kon_ling_psn,
-            'no_igd_hr' => $this->no_igd_hr,
-            'no_igd_hw' => $this->no_igd_hw,
-            'no_igd_gagal' => $this->no_igd_gagal,
-            'no_igd_st' => $this->no_igd_st,
+            'no_igd_pntp_kpl' => $this->no_igd_pntp_kpl,
+            'no_igd_masker' => $this->no_igd_masker,
+            'no_igd_pntp_wjh' => $this->no_igd_pntp_wjh,
+            'no_igd_apron' => $this->no_igd_apron,
+            'no_igd_srg_tgn' => $this->no_igd_srg_tgn,
+            'no_igd_alas_kaki' => $this->no_igd_alas_kaki,
+            'no_igd_lps_apd' => $this->no_igd_lps_apd,
+            'no_igd_tdk_gtg_masker' => $this->no_igd_tdk_gtg_masker,
+            'no_igd_tdk_guna_srg_tgn' => $this->no_igd_tdk_guna_srg_tgn,
             'no_igd_jumlah' => $this->no_igd_jumlah,
 
             'denominator_igd' => $this->denominator_igd,
 
-            'int_sbl_kon_psn' => $this->int_sbl_kon_psn,
-            'int_sbl_tin_aseptik' => $this->int_sbl_tin_aseptik,
-            'int_stl_kon_cairan' => $this->int_stl_kon_cairan,
-            'int_stl_kon_psn' => $this->int_stl_kon_psn,
-            'int_stl_kon_ling_psn' => $this->int_stl_kon_ling_psn,
-            'int_hr' => $this->int_hr,
-            'int_hw' => $this->int_hw,
-            'int_gagal' => $this->int_gagal,
-            'int_st' => $this->int_st,
+            'int_pntp_kpl' => $this->int_pntp_kpl,
+            'int_masker' => $this->int_masker,
+            'int_pntp_wjh' => $this->int_pntp_wjh,
+            'int_apron' => $this->int_apron,
+            'int_srg_tgn' => $this->int_srg_tgn,
+            'int_alas_kaki' => $this->int_alas_kaki,
+            'int_lps_apd' => $this->int_lps_apd,
+            'int_tdk_gtg_masker' => $this->int_tdk_gtg_masker,
+            'int_tdk_guna_srg_tgn' => $this->int_tdk_guna_srg_tgn,
             'int_jumlah' => $this->int_jumlah,
 
-            'no_int_sbl_kon_psn' => $this->no_int_sbl_kon_psn,
-            'no_int_sbl_tin_aseptik' => $this->no_int_sbl_tin_aseptik,
-            'no_int_stl_kon_cairan' => $this->no_int_stl_kon_cairan,
-            'no_int_stl_kon_psn' => $this->no_int_stl_kon_psn,
-            'no_int_stl_kon_ling_psn' => $this->no_int_stl_kon_ling_psn,
-            'no_int_hr' => $this->no_int_hr,
-            'no_int_hw' => $this->no_int_hw,
-            'no_int_gagal' => $this->no_int_gagal,
-            'no_int_st' => $this->no_int_st,
+            'no_int_pntp_kpl' => $this->no_int_pntp_kpl,
+            'no_int_masker' => $this->no_int_masker,
+            'no_int_pntp_wjh' => $this->no_int_pntp_wjh,
+            'no_int_apron' => $this->no_int_apron,
+            'no_int_srg_tgn' => $this->no_int_srg_tgn,
+            'no_int_alas_kaki' => $this->no_int_alas_kaki,
+            'no_int_lps_apd' => $this->no_int_lps_apd,
+            'no_int_tdk_gtg_masker' => $this->no_int_tdk_gtg_masker,
+            'no_int_tdk_guna_srg_tgn' => $this->no_int_tdk_guna_srg_tgn,
             'no_int_jumlah' => $this->no_int_jumlah,
 
             'denominator_int' => $this->denominator_int,
 
-            'kbbl_sbl_kon_psn' => $this->kbbl_sbl_kon_psn,
-            'kbbl_sbl_tin_aseptik' => $this->kbbl_sbl_tin_aseptik,
-            'kbbl_stl_kon_cairan' => $this->kbbl_stl_kon_cairan,
-            'kbbl_stl_kon_psn' => $this->kbbl_stl_kon_psn,
-            'kbbl_stl_kon_ling_psn' => $this->kbbl_stl_kon_ling_psn,
-            'kbbl_hr' => $this->kbbl_hr,
-            'kbbl_hw' => $this->kbbl_hw,
-            'kbbl_gagal' => $this->kbbl_gagal,
-            'kbbl_st' => $this->kbbl_st,
+            'kbbl_pntp_kpl' => $this->kbbl_pntp_kpl,
+            'kbbl_masker' => $this->kbbl_masker,
+            'kbbl_pntp_wjh' => $this->kbbl_pntp_wjh,
+            'kbbl_apron' => $this->kbbl_apron,
+            'kbbl_srg_tgn' => $this->kbbl_srg_tgn,
+            'kbbl_alas_kaki' => $this->kbbl_alas_kaki,
+            'kbbl_lps_apd' => $this->kbbl_lps_apd,
+            'kbbl_tdk_gtg_masker' => $this->kbbl_tdk_gtg_masker,
+            'kbbl_tdk_guna_srg_tgn' => $this->kbbl_tdk_guna_srg_tgn,
             'kbbl_jumlah' => $this->kbbl_jumlah,
 
-            'no_kbbl_sbl_kon_psn' => $this->no_kbbl_sbl_kon_psn,
-            'no_kbbl_sbl_tin_aseptik' => $this->no_kbbl_sbl_tin_aseptik,
-            'no_kbbl_stl_kon_cairan' => $this->no_kbbl_stl_kon_cairan,
-            'no_kbbl_stl_kon_psn' => $this->no_kbbl_stl_kon_psn,
-            'no_kbbl_stl_kon_ling_psn' => $this->no_kbbl_stl_kon_ling_psn,
-            'no_kbbl_hr' => $this->no_kbbl_hr,
-            'no_kbbl_hw' => $this->no_kbbl_hw,
-            'no_kbbl_gagal' => $this->no_kbbl_gagal,
-            'no_kbbl_st' => $this->no_kbbl_st,
+            'no_kbbl_pntp_kpl' => $this->no_kbbl_pntp_kpl,
+            'no_kbbl_masker' => $this->no_kbbl_masker,
+            'no_kbbl_pntp_wjh' => $this->no_kbbl_pntp_wjh,
+            'no_kbbl_apron' => $this->no_kbbl_apron,
+            'no_kbbl_srg_tgn' => $this->no_kbbl_srg_tgn,
+            'no_kbbl_alas_kaki' => $this->no_kbbl_alas_kaki,
+            'no_kbbl_lps_apd' => $this->no_kbbl_lps_apd,
+            'no_kbbl_tdk_gtg_masker' => $this->no_kbbl_tdk_gtg_masker,
+            'no_kbbl_tdk_guna_srg_tgn' => $this->no_kbbl_tdk_guna_srg_tgn,
             'no_kbbl_jumlah' => $this->no_kbbl_jumlah,
 
             'denominator_kbbl' => $this->denominator_kbbl,
 
-            'lab_sbl_kon_psn' => $this->lab_sbl_kon_psn,
-            'lab_sbl_tin_aseptik' => $this->lab_sbl_tin_aseptik,
-            'lab_stl_kon_cairan' => $this->lab_stl_kon_cairan,
-            'lab_stl_kon_psn' => $this->lab_stl_kon_psn,
-            'lab_stl_kon_ling_psn' => $this->lab_stl_kon_ling_psn,
-            'lab_hr' => $this->lab_hr,
-            'lab_hw' => $this->lab_hw,
-            'lab_gagal' => $this->lab_gagal,
-            'lab_st' => $this->lab_st,
+            'lab_pntp_kpl' => $this->lab_pntp_kpl,
+            'lab_masker' => $this->lab_masker,
+            'lab_pntp_wjh' => $this->lab_pntp_wjh,
+            'lab_apron' => $this->lab_apron,
+            'lab_srg_tgn' => $this->lab_srg_tgn,
+            'lab_alas_kaki' => $this->lab_alas_kaki,
+            'lab_lps_apd' => $this->lab_lps_apd,
+            'lab_tdk_gtg_masker' => $this->lab_tdk_gtg_masker,
+            'lab_tdk_guna_srg_tgn' => $this->lab_tdk_guna_srg_tgn,
             'lab_jumlah' => $this->lab_jumlah,
 
-            'no_lab_sbl_kon_psn' => $this->no_lab_sbl_kon_psn,
-            'no_lab_sbl_tin_aseptik' => $this->no_lab_sbl_tin_aseptik,
-            'no_lab_stl_kon_cairan' => $this->no_lab_stl_kon_cairan,
-            'no_lab_stl_kon_psn' => $this->no_lab_stl_kon_psn,
-            'no_lab_stl_kon_ling_psn' => $this->no_lab_stl_kon_ling_psn,
-            'no_lab_hr' => $this->no_lab_hr,
-            'no_lab_hw' => $this->no_lab_hw,
-            'no_lab_gagal' => $this->no_lab_gagal,
-            'no_lab_st' => $this->no_lab_st,
+            'no_lab_pntp_kpl' => $this->no_lab_pntp_kpl,
+            'no_lab_masker' => $this->no_lab_masker,
+            'no_lab_pntp_wjh' => $this->no_lab_pntp_wjh,
+            'no_lab_apron' => $this->no_lab_apron,
+            'no_lab_srg_tgn' => $this->no_lab_srg_tgn,
+            'no_lab_alas_kaki' => $this->no_lab_alas_kaki,
+            'no_lab_lps_apd' => $this->no_lab_lps_apd,
+            'no_lab_tdk_gtg_masker' => $this->no_lab_tdk_gtg_masker,
+            'no_lab_tdk_guna_srg_tgn' => $this->no_lab_tdk_guna_srg_tgn,
             'no_lab_jumlah' => $this->no_lab_jumlah,
 
             'denominator_lab' => $this->denominator_lab,
 
-            'laundry_sbl_kon_psn' => $this->laundry_sbl_kon_psn,
-            'laundry_sbl_tin_aseptik' => $this->laundry_sbl_tin_aseptik,
-            'laundry_stl_kon_cairan' => $this->laundry_stl_kon_cairan,
-            'laundry_stl_kon_psn' => $this->laundry_stl_kon_psn,
-            'laundry_stl_kon_ling_psn' => $this->laundry_stl_kon_ling_psn,
-            'laundry_hr' => $this->laundry_hr,
-            'laundry_hw' => $this->laundry_hw,
-            'laundry_gagal' => $this->laundry_gagal,
-            'laundry_st' => $this->laundry_st,
+            'laundry_pntp_kpl' => $this->laundry_pntp_kpl,
+            'laundry_masker' => $this->laundry_masker,
+            'laundry_pntp_wjh' => $this->laundry_pntp_wjh,
+            'laundry_apron' => $this->laundry_apron,
+            'laundry_srg_tgn' => $this->laundry_srg_tgn,
+            'laundry_alas_kaki' => $this->laundry_alas_kaki,
+            'laundry_lps_apd' => $this->laundry_lps_apd,
+            'laundry_tdk_gtg_masker' => $this->laundry_tdk_gtg_masker,
+            'laundry_tdk_guna_srg_tgn' => $this->laundry_tdk_guna_srg_tgn,
             'laundry_jumlah' => $this->laundry_jumlah,
 
-            'no_laundry_sbl_kon_psn' => $this->no_laundry_sbl_kon_psn,
-            'no_laundry_sbl_tin_aseptik' => $this->no_laundry_sbl_tin_aseptik,
-            'no_laundry_stl_kon_cairan' => $this->no_laundry_stl_kon_cairan,
-            'no_laundry_stl_kon_psn' => $this->no_laundry_stl_kon_psn,
-            'no_laundry_stl_kon_ling_psn' => $this->no_laundry_stl_kon_ling_psn,
-            'no_laundry_hr' => $this->no_laundry_hr,
-            'no_laundry_hw' => $this->no_laundry_hw,
-            'no_laundry_gagal' => $this->no_laundry_gagal,
-            'no_laundry_st' => $this->no_laundry_st,
+            'no_laundry_pntp_kpl' => $this->no_laundry_pntp_kpl,
+            'no_laundry_masker' => $this->no_laundry_masker,
+            'no_laundry_pntp_wjh' => $this->no_laundry_pntp_wjh,
+            'no_laundry_apron' => $this->no_laundry_apron,
+            'no_laundry_srg_tgn' => $this->no_laundry_srg_tgn,
+            'no_laundry_alas_kaki' => $this->no_laundry_alas_kaki,
+            'no_laundry_lps_apd' => $this->no_laundry_lps_apd,
+            'no_laundry_tdk_gtg_masker' => $this->no_laundry_tdk_gtg_masker,
+            'no_laundry_tdk_guna_srg_tgn' => $this->no_laundry_tdk_guna_srg_tgn,
             'no_laundry_jumlah' => $this->no_laundry_jumlah,
 
             'denominator_laundry' => $this->denominator_laundry,
 
-            'ok_sbl_kon_psn' => $this->ok_sbl_kon_psn,
-            'ok_sbl_tin_aseptik' => $this->ok_sbl_tin_aseptik,
-            'ok_stl_kon_cairan' => $this->ok_stl_kon_cairan,
-            'ok_stl_kon_psn' => $this->ok_stl_kon_psn,
-            'ok_stl_kon_ling_psn' => $this->ok_stl_kon_ling_psn,
-            'ok_hr' => $this->ok_hr,
-            'ok_hw' => $this->ok_hw,
-            'ok_gagal' => $this->ok_gagal,
-            'ok_st' => $this->ok_st,
+            'ok_pntp_kpl' => $this->ok_pntp_kpl,
+            'ok_masker' => $this->ok_masker,
+            'ok_pntp_wjh' => $this->ok_pntp_wjh,
+            'ok_apron' => $this->ok_apron,
+            'ok_srg_tgn' => $this->ok_srg_tgn,
+            'ok_alas_kaki' => $this->ok_alas_kaki,
+            'ok_lps_apd' => $this->ok_lps_apd,
+            'ok_tdk_gtg_masker' => $this->ok_tdk_gtg_masker,
+            'ok_tdk_guna_srg_tgn' => $this->ok_tdk_guna_srg_tgn,
             'ok_jumlah' => $this->ok_jumlah,
 
-            'no_ok_sbl_kon_psn' => $this->no_ok_sbl_kon_psn,
-            'no_ok_sbl_tin_aseptik' => $this->no_ok_sbl_tin_aseptik,
-            'no_ok_stl_kon_cairan' => $this->no_ok_stl_kon_cairan,
-            'no_ok_stl_kon_psn' => $this->no_ok_stl_kon_psn,
-            'no_ok_stl_kon_ling_psn' => $this->no_ok_stl_kon_ling_psn,
-            'no_ok_hr' => $this->no_ok_hr,
-            'no_ok_hw' => $this->no_ok_hw,
-            'no_ok_gagal' => $this->no_ok_gagal,
-            'no_ok_st' => $this->no_ok_st,
+            'no_ok_pntp_kpl' => $this->no_ok_pntp_kpl,
+            'no_ok_masker' => $this->no_ok_masker,
+            'no_ok_pntp_wjh' => $this->no_ok_pntp_wjh,
+            'no_ok_apron' => $this->no_ok_apron,
+            'no_ok_srg_tgn' => $this->no_ok_srg_tgn,
+            'no_ok_alas_kaki' => $this->no_ok_alas_kaki,
+            'no_ok_lps_apd' => $this->no_ok_lps_apd,
+            'no_ok_tdk_gtg_masker' => $this->no_ok_tdk_gtg_masker,
+            'no_ok_tdk_guna_srg_tgn' => $this->no_ok_tdk_guna_srg_tgn,
             'no_ok_jumlah' => $this->no_ok_jumlah,
 
             'denominator_ok' => $this->denominator_ok,
 
-            'lt2_sbl_kon_psn' => $this->lt2_sbl_kon_psn,
-            'lt2_sbl_tin_aseptik' => $this->lt2_sbl_tin_aseptik,
-            'lt2_stl_kon_cairan' => $this->lt2_stl_kon_cairan,
-            'lt2_stl_kon_psn' => $this->lt2_stl_kon_psn,
-            'lt2_stl_kon_ling_psn' => $this->lt2_stl_kon_ling_psn,
-            'lt2_hr' => $this->lt2_hr,
-            'lt2_hw' => $this->lt2_hw,
-            'lt2_gagal' => $this->lt2_gagal,
-            'lt2_st' => $this->lt2_st,
+            'lt2_pntp_kpl' => $this->lt2_pntp_kpl,
+            'lt2_masker' => $this->lt2_masker,
+            'lt2_pntp_wjh' => $this->lt2_pntp_wjh,
+            'lt2_apron' => $this->lt2_apron,
+            'lt2_srg_tgn' => $this->lt2_srg_tgn,
+            'lt2_alas_kaki' => $this->lt2_alas_kaki,
+            'lt2_lps_apd' => $this->lt2_lps_apd,
+            'lt2_tdk_gtg_masker' => $this->lt2_tdk_gtg_masker,
+            'lt2_tdk_guna_srg_tgn' => $this->lt2_tdk_guna_srg_tgn,
             'lt2_jumlah' => $this->lt2_jumlah,
 
-            'no_lt2_sbl_kon_psn' => $this->no_lt2_sbl_kon_psn,
-            'no_lt2_sbl_tin_aseptik' => $this->no_lt2_sbl_tin_aseptik,
-            'no_lt2_stl_kon_cairan' => $this->no_lt2_stl_kon_cairan,
-            'no_lt2_stl_kon_psn' => $this->no_lt2_stl_kon_psn,
-            'no_lt2_stl_kon_ling_psn' => $this->no_lt2_stl_kon_ling_psn,
-            'no_lt2_hr' => $this->no_lt2_hr,
-            'no_lt2_hw' => $this->no_lt2_hw,
-            'no_lt2_gagal' => $this->no_lt2_gagal,
-            'no_lt2_st' => $this->no_lt2_st,
+            'no_lt2_pntp_kpl' => $this->no_lt2_pntp_kpl,
+            'no_lt2_masker' => $this->no_lt2_masker,
+            'no_lt2_pntp_wjh' => $this->no_lt2_pntp_wjh,
+            'no_lt2_apron' => $this->no_lt2_apron,
+            'no_lt2_srg_tgn' => $this->no_lt2_srg_tgn,
+            'no_lt2_alas_kaki' => $this->no_lt2_alas_kaki,
+            'no_lt2_lps_apd' => $this->no_lt2_lps_apd,
+            'no_lt2_tdk_gtg_masker' => $this->no_lt2_tdk_gtg_masker,
+            'no_lt2_tdk_guna_srg_tgn' => $this->no_lt2_tdk_guna_srg_tgn,
             'no_lt2_jumlah' => $this->no_lt2_jumlah,
 
             'denominator_lt2' => $this->denominator_lt2,
 
-            'lt4_sbl_kon_psn' => $this->lt4_sbl_kon_psn,
-            'lt4_sbl_tin_aseptik' => $this->lt4_sbl_tin_aseptik,
-            'lt4_stl_kon_cairan' => $this->lt4_stl_kon_cairan,
-            'lt4_stl_kon_psn' => $this->lt4_stl_kon_psn,
-            'lt4_stl_kon_ling_psn' => $this->lt4_stl_kon_ling_psn,
-            'lt4_hr' => $this->lt4_hr,
-            'lt4_hw' => $this->lt4_hw,
-            'lt4_gagal' => $this->lt4_gagal,
-            'lt4_st' => $this->lt4_st,
+            'lt4_pntp_kpl' => $this->lt4_pntp_kpl,
+            'lt4_masker' => $this->lt4_masker,
+            'lt4_pntp_wjh' => $this->lt4_pntp_wjh,
+            'lt4_apron' => $this->lt4_apron,
+            'lt4_srg_tgn' => $this->lt4_srg_tgn,
+            'lt4_alas_kaki' => $this->lt4_alas_kaki,
+            'lt4_lps_apd' => $this->lt4_lps_apd,
+            'lt4_tdk_gtg_masker' => $this->lt4_tdk_gtg_masker,
+            'lt4_tdk_guna_srg_tgn' => $this->lt4_tdk_guna_srg_tgn,
             'lt4_jumlah' => $this->lt4_jumlah,
 
-            'no_lt4_sbl_kon_psn' => $this->no_lt4_sbl_kon_psn,
-            'no_lt4_sbl_tin_aseptik' => $this->no_lt4_sbl_tin_aseptik,
-            'no_lt4_stl_kon_cairan' => $this->no_lt4_stl_kon_cairan,
-            'no_lt4_stl_kon_psn' => $this->no_lt4_stl_kon_psn,
-            'no_lt4_stl_kon_ling_psn' => $this->no_lt4_stl_kon_ling_psn,
-            'no_lt4_hr' => $this->no_lt4_hr,
-            'no_lt4_hw' => $this->no_lt4_hw,
-            'no_lt4_gagal' => $this->no_lt4_gagal,
-            'no_lt4_st' => $this->no_lt4_st,
+            'no_lt4_pntp_kpl' => $this->no_lt4_pntp_kpl,
+            'no_lt4_masker' => $this->no_lt4_masker,
+            'no_lt4_pntp_wjh' => $this->no_lt4_pntp_wjh,
+            'no_lt4_apron' => $this->no_lt4_apron,
+            'no_lt4_srg_tgn' => $this->no_lt4_srg_tgn,
+            'no_lt4_alas_kaki' => $this->no_lt4_alas_kaki,
+            'no_lt4_lps_apd' => $this->no_lt4_lps_apd,
+            'no_lt4_tdk_gtg_masker' => $this->no_lt4_tdk_gtg_masker,
+            'no_lt4_tdk_guna_srg_tgn' => $this->no_lt4_tdk_guna_srg_tgn,
             'no_lt4_jumlah' => $this->no_lt4_jumlah,
 
             'denominator_lt4' => $this->denominator_lt4,
 
-            'lt5_sbl_kon_psn' => $this->lt5_sbl_kon_psn,
-            'lt5_sbl_tin_aseptik' => $this->lt5_sbl_tin_aseptik,
-            'lt5_stl_kon_cairan' => $this->lt5_stl_kon_cairan,
-            'lt5_stl_kon_psn' => $this->lt5_stl_kon_psn,
-            'lt5_stl_kon_ling_psn' => $this->lt5_stl_kon_ling_psn,
-            'lt5_hr' => $this->lt5_hr,
-            'lt5_hw' => $this->lt5_hw,
-            'lt5_gagal' => $this->lt5_gagal,
-            'lt5_st' => $this->lt5_st,
+            'lt5_pntp_kpl' => $this->lt5_pntp_kpl,
+            'lt5_masker' => $this->lt5_masker,
+            'lt5_pntp_wjh' => $this->lt5_pntp_wjh,
+            'lt5_apron' => $this->lt5_apron,
+            'lt5_srg_tgn' => $this->lt5_srg_tgn,
+            'lt5_alas_kaki' => $this->lt5_alas_kaki,
+            'lt5_lps_apd' => $this->lt5_lps_apd,
+            'lt5_tdk_gtg_masker' => $this->lt5_tdk_gtg_masker,
+            'lt5_tdk_guna_srg_tgn' => $this->lt5_tdk_guna_srg_tgn,
             'lt5_jumlah' => $this->lt5_jumlah,
 
-            'no_lt5_sbl_kon_psn' => $this->no_lt5_sbl_kon_psn,
-            'no_lt5_sbl_tin_aseptik' => $this->no_lt5_sbl_tin_aseptik,
-            'no_lt5_stl_kon_cairan' => $this->no_lt5_stl_kon_cairan,
-            'no_lt5_stl_kon_psn' => $this->no_lt5_stl_kon_psn,
-            'no_lt5_stl_kon_ling_psn' => $this->no_lt5_stl_kon_ling_psn,
-            'no_lt5_hr' => $this->no_lt5_hr,
-            'no_lt5_hw' => $this->no_lt5_hw,
-            'no_lt5_gagal' => $this->no_lt5_gagal,
-            'no_lt5_st' => $this->no_lt5_st,
+            'no_lt5_pntp_kpl' => $this->no_lt5_pntp_kpl,
+            'no_lt5_masker' => $this->no_lt5_masker,
+            'no_lt5_pntp_wjh' => $this->no_lt5_pntp_wjh,
+            'no_lt5_apron' => $this->no_lt5_apron,
+            'no_lt5_srg_tgn' => $this->no_lt5_srg_tgn,
+            'no_lt5_alas_kaki' => $this->no_lt5_alas_kaki,
+            'no_lt5_lps_apd' => $this->no_lt5_lps_apd,
+            'no_lt5_tdk_gtg_masker' => $this->no_lt5_tdk_gtg_masker,
+            'no_lt5_tdk_guna_srg_tgn' => $this->no_lt5_tdk_guna_srg_tgn,
             'no_lt5_jumlah' => $this->no_lt5_jumlah,
 
             'denominator_lt5' => $this->denominator_lt5,
 
-            'poli_sbl_kon_psn' => $this->poli_sbl_kon_psn,
-            'poli_sbl_tin_aseptik' => $this->poli_sbl_tin_aseptik,
-            'poli_stl_kon_cairan' => $this->poli_stl_kon_cairan,
-            'poli_stl_kon_psn' => $this->poli_stl_kon_psn,
-            'poli_stl_kon_ling_psn' => $this->poli_stl_kon_ling_psn,
-            'poli_hr' => $this->poli_hr,
-            'poli_hw' => $this->poli_hw,
-            'poli_gagal' => $this->poli_gagal,
-            'poli_st' => $this->poli_st,
+            'poli_pntp_kpl' => $this->poli_pntp_kpl,
+            'poli_masker' => $this->poli_masker,
+            'poli_pntp_wjh' => $this->poli_pntp_wjh,
+            'poli_apron' => $this->poli_apron,
+            'poli_srg_tgn' => $this->poli_srg_tgn,
+            'poli_alas_kaki' => $this->poli_alas_kaki,
+            'poli_lps_apd' => $this->poli_lps_apd,
+            'poli_tdk_gtg_masker' => $this->poli_tdk_gtg_masker,
+            'poli_tdk_guna_srg_tgn' => $this->poli_tdk_guna_srg_tgn,
             'poli_jumlah' => $this->poli_jumlah,
 
-            'no_poli_sbl_kon_psn' => $this->no_poli_sbl_kon_psn,
-            'no_poli_sbl_tin_aseptik' => $this->no_poli_sbl_tin_aseptik,
-            'no_poli_stl_kon_cairan' => $this->no_poli_stl_kon_cairan,
-            'no_poli_stl_kon_psn' => $this->no_poli_stl_kon_psn,
-            'no_poli_stl_kon_ling_psn' => $this->no_poli_stl_kon_ling_psn,
-            'no_poli_hr' => $this->no_poli_hr,
-            'no_poli_hw' => $this->no_poli_hw,
-            'no_poli_gagal' => $this->no_poli_gagal,
-            'no_poli_st' => $this->no_poli_st,
+            'no_poli_pntp_kpl' => $this->no_poli_pntp_kpl,
+            'no_poli_masker' => $this->no_poli_masker,
+            'no_poli_pntp_wjh' => $this->no_poli_pntp_wjh,
+            'no_poli_apron' => $this->no_poli_apron,
+            'no_poli_srg_tgn' => $this->no_poli_srg_tgn,
+            'no_poli_alas_kaki' => $this->no_poli_alas_kaki,
+            'no_poli_lps_apd' => $this->no_poli_lps_apd,
+            'no_poli_tdk_gtg_masker' => $this->no_poli_tdk_gtg_masker,
+            'no_poli_tdk_guna_srg_tgn' => $this->no_poli_tdk_guna_srg_tgn,
             'no_poli_jumlah' => $this->no_poli_jumlah,
 
             'denominator_poli' => $this->denominator_poli,
 
-            'rad_sbl_kon_psn' => $this->rad_sbl_kon_psn,
-            'rad_sbl_tin_aseptik' => $this->rad_sbl_tin_aseptik,
-            'rad_stl_kon_cairan' => $this->rad_stl_kon_cairan,
-            'rad_stl_kon_psn' => $this->rad_stl_kon_psn,
-            'rad_stl_kon_ling_psn' => $this->rad_stl_kon_ling_psn,
-            'rad_hr' => $this->rad_hr,
-            'rad_hw' => $this->rad_hw,
-            'rad_gagal' => $this->rad_gagal,
-            'rad_st' => $this->rad_st,
+            'rad_pntp_kpl' => $this->rad_pntp_kpl,
+            'rad_masker' => $this->rad_masker,
+            'rad_pntp_wjh' => $this->rad_pntp_wjh,
+            'rad_apron' => $this->rad_apron,
+            'rad_srg_tgn' => $this->rad_srg_tgn,
+            'rad_alas_kaki' => $this->rad_alas_kaki,
+            'rad_lps_apd' => $this->rad_lps_apd,
+            'rad_tdk_gtg_masker' => $this->rad_tdk_gtg_masker,
+            'rad_tdk_guna_srg_tgn' => $this->rad_tdk_guna_srg_tgn,
             'rad_jumlah' => $this->rad_jumlah,
 
-            'no_rad_sbl_kon_psn' => $this->no_rad_sbl_kon_psn,
-            'no_rad_sbl_tin_aseptik' => $this->no_rad_sbl_tin_aseptik,
-            'no_rad_stl_kon_cairan' => $this->no_rad_stl_kon_cairan,
-            'no_rad_stl_kon_psn' => $this->no_rad_stl_kon_psn,
-            'no_rad_stl_kon_ling_psn' => $this->no_rad_stl_kon_ling_psn,
-            'no_rad_hr' => $this->no_rad_hr,
-            'no_rad_hw' => $this->no_rad_hw,
-            'no_rad_gagal' => $this->no_rad_gagal,
-            'no_rad_st' => $this->no_rad_st,
+            'no_rad_pntp_kpl' => $this->no_rad_pntp_kpl,
+            'no_rad_masker' => $this->no_rad_masker,
+            'no_rad_pntp_wjh' => $this->no_rad_pntp_wjh,
+            'no_rad_apron' => $this->no_rad_apron,
+            'no_rad_srg_tgn' => $this->no_rad_srg_tgn,
+            'no_rad_alas_kaki' => $this->no_rad_alas_kaki,
+            'no_rad_lps_apd' => $this->no_rad_lps_apd,
+            'no_rad_tdk_gtg_masker' => $this->no_rad_tdk_gtg_masker,
+            'no_rad_tdk_guna_srg_tgn' => $this->no_rad_tdk_guna_srg_tgn,
             'no_rad_jumlah' => $this->no_rad_jumlah,
 
             'denominator_rad' => $this->denominator_rad,
 
-            'vk_sbl_kon_psn' => $this->vk_sbl_kon_psn,
-            'vk_sbl_tin_aseptik' => $this->vk_sbl_tin_aseptik,
-            'vk_stl_kon_cairan' => $this->vk_stl_kon_cairan,
-            'vk_stl_kon_psn' => $this->vk_stl_kon_psn,
-            'vk_stl_kon_ling_psn' => $this->vk_stl_kon_ling_psn,
-            'vk_hr' => $this->vk_hr,
-            'vk_hw' => $this->vk_hw,
-            'vk_gagal' => $this->vk_gagal,
-            'vk_st' => $this->vk_st,
+            'vk_pntp_kpl' => $this->vk_pntp_kpl,
+            'vk_masker' => $this->vk_masker,
+            'vk_pntp_wjh' => $this->vk_pntp_wjh,
+            'vk_apron' => $this->vk_apron,
+            'vk_srg_tgn' => $this->vk_srg_tgn,
+            'vk_alas_kaki' => $this->vk_alas_kaki,
+            'vk_lps_apd' => $this->vk_lps_apd,
+            'vk_tdk_gtg_masker' => $this->vk_tdk_gtg_masker,
+            'vk_tdk_guna_srg_tgn' => $this->vk_tdk_guna_srg_tgn,
             'vk_jumlah' => $this->vk_jumlah,
 
-            'no_vk_sbl_kon_psn' => $this->no_vk_sbl_kon_psn,
-            'no_vk_sbl_tin_aseptik' => $this->no_vk_sbl_tin_aseptik,
-            'no_vk_stl_kon_cairan' => $this->no_vk_stl_kon_cairan,
-            'no_vk_stl_kon_psn' => $this->no_vk_stl_kon_psn,
-            'no_vk_stl_kon_ling_psn' => $this->no_vk_stl_kon_ling_psn,
-            'no_vk_hr' => $this->no_vk_hr,
-            'no_vk_hw' => $this->no_vk_hw,
-            'no_vk_gagal' => $this->no_vk_gagal,
-            'no_vk_st' => $this->no_vk_st,
+            'no_vk_pntp_kpl' => $this->no_vk_pntp_kpl,
+            'no_vk_masker' => $this->no_vk_masker,
+            'no_vk_pntp_wjh' => $this->no_vk_pntp_wjh,
+            'no_vk_apron' => $this->no_vk_apron,
+            'no_vk_srg_tgn' => $this->no_vk_srg_tgn,
+            'no_vk_alas_kaki' => $this->no_vk_alas_kaki,
+            'no_vk_lps_apd' => $this->no_vk_lps_apd,
+            'no_vk_tdk_gtg_masker' => $this->no_vk_tdk_gtg_masker,
+            'no_vk_tdk_guna_srg_tgn' => $this->no_vk_tdk_guna_srg_tgn,
             'no_vk_jumlah' => $this->no_vk_jumlah,
 
             'denominator_vk' => $this->denominator_vk,
