@@ -25,7 +25,7 @@
     <div class="d-md-flex justify-content-between">
         <div class="gap-1 d-md-flex justify-content-md-start mt-2">
             <button type="button" data-bs-toggle="modal" data-bs-target="#cuciTangan" class="btn"
-                style="background-color: #FFAB00;">
+                style="background-color: #43ac2f;">
                 <i class="fa-solid fa-plus"></i><b> Tambah Data</b>
             </button>
         </div>
@@ -33,10 +33,10 @@
         <div class="gap-1 d-md-flex justify-content-md-end mt-2">
             <div class="form-group w-10">
                 <div class="input-group">
-                    <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
+                    <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #43ac2f;"
                         id="myInput" onkeyup="cari()" placeholder="Cari Nama">
                     <span class="input-group-text"
-                        style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;">
+                        style="outline: 0.5px solid; outline-color: #43ac2f; background-color: #43ac2f;">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
                 </div>
@@ -46,7 +46,7 @@
 
     <div class="table-responsive mt-1 table-data tbl-fixed">
         <table class="table table-bordered border-dark align-middle w-100" id="myTable">
-            <thead class="sticky text-dark text-center align-middle">
+            <thead class="sticky-cucitangan text-center align-middle">
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
@@ -64,7 +64,7 @@
                     <th style="width:8%">Aksi</th>
                 </tr>
             </thead>
-            <tbody style="background-color: #FFECB3">
+            <tbody style="background-color: #C8E6C9">
                 @php $no = 1; @endphp
                 @forelse($cuci_tangan as $key => $isi)
                 <tr>
@@ -189,4 +189,4 @@
 
 @endsection
 
-@extends('layouts.footer')
+@extends('layouts.footer-cucitangan')

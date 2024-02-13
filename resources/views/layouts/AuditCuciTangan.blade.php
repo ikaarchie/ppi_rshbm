@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="header-waves">
+<div class="header-waves-cucitangan">
     <div class="container pt-3">
         <h1 class="text-center"><b>AUDIT CUCI TANGAN</b></h1>
         <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
