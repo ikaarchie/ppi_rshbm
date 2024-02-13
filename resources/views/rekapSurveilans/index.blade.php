@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="header-waves">
+<div class="header-waves-surveilans">
   <div class="container pt-3">
     <h1 class="text-center"><b>REKAP SURVEILANS</b></h1>
     <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
@@ -26,12 +26,12 @@
     <div class="d-grid gap-1 d-sm-flex justify-content-sm-center align-self-center">
       <div class="col-sm-2 text-center">
         <input type="date" name="dari" id="dari" value="{{ request()->get('dari') ?? date('Y-m-d')}}"
-          class="form-control input-sm" style="border-color: #ff6d00" required />
+          class="form-control input-sm" style="border-color: #FF6699" required />
       </div>
       <h2 class="text-center">-</h2>
       <div class="col-sm-2 text-center">
         <input type="date" name="sampai" id="sampai" value="{{ request()->get('sampai') ?? date('Y-m-d')}}"
-          class="form-control input-sm" style="border-color: #ff6d00" required />
+          class="form-control input-sm" style="border-color: #FF6699" required />
       </div>
       <div class="col-sm-3 text-center">
         <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
@@ -52,7 +52,7 @@
 <div class="container-fluid align-item-center justify-content-center py-3 px-5">
   <div class="table-responsive">
     <table class="table table-bordered border-dark">
-      <thead class="sticky text-dark text-center align-middle">
+      <thead class="sticky-surveilans text-dark text-center align-middle">
         <tr>
           <th rowspan="2"></th>
           <th colspan="4">Pemasangan Alat</th>
@@ -82,7 +82,7 @@
           <th>Standar <br /> 2&percnt;</th>
         </tr>
       </thead>
-      <tbody style="background-color: #FFECB3">
+      <tbody style="background-color: #FCE4EC">
         <tr>
           <th>Intensif</th>
           <td>{{ $int_pa_ivl }}</td>
@@ -215,8 +215,8 @@
     </div>
 
     <div class="col-sm-3 align-self-stretch">
-      <div class="card" style="border-color: #FFAB00">
-        <div class="card-header text-center bg-warning" style="border-color: #FFAB00;">
+      <div class="card" style="border-color: #FF6699">
+        <div class="card-header text-center" style="background-color: #FF6699; border-color: #FF6699;">
           <b>Analisa</b>
         </div>
         <div class="card-body">
@@ -226,8 +226,8 @@
         </div>
       </div>
 
-      <div class="card mt-3" style="border-color: #FFAB00">
-        <div class="card-header text-center bg-warning" style="border-color: #FFAB00;"><b></b>
+      <div class="card mt-3" style="border-color: #FF6699">
+        <div class="card-header text-center" style="background-color: #FF6699; border-color: #FF6699;"><b></b>
           <b>Tindak Lanjut</b>
         </div>
         <div class="card-body">
@@ -260,7 +260,7 @@
 <div class="container-fluid align-item-center justify-content-center py-3">
   <div class="table-responsive table-data tbl-fixed">
     <table class="table table-bordered border-dark align-middle w-100">
-      <thead class="sticky text-dark text-center align-middle">
+      <thead class="sticky-surveilans text-dark text-center align-middle">
         <tr>
           <th rowspan="2">No</th>
           <th rowspan="2">MRN</th>
@@ -288,7 +288,7 @@
           <th>IDO</th>
         </tr>
       </thead>
-      <tbody style="background-color: #FFECB3">
+      <tbody style="background-color: #FCE4EC">
         @php $no = 1; @endphp
         @forelse($tabel as $key => $isi)
         <tr>
@@ -521,4 +521,4 @@
 </script>
 @endsection
 
-@extends('layouts.footer')
+@extends('layouts.footer-surveilans')
