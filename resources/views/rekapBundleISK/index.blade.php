@@ -2,309 +2,309 @@
 
 @section('bundleContent')
 {{-- <div class="header-waves">
-    <div class="container pt-3">
-        <h1 class="text-center"><b>REKAP BUNDLE PPI</b></h1>
-        <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
-    </div>
+  <div class="container pt-3">
+    <h1 class="text-center"><b>REKAP BUNDLE PPI</b></h1>
+    <h2 class="text-center">Rumah Sakit Hermina Banyumanik Semarang</h2>
+  </div>
 
-    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-            <use xlink:href="#gentle-wave" x="48" y="1" fill="rgba(255,255,255,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(255,255,255,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="#fff" />
-        </g>
-    </svg>
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+    preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+      <use xlink:href="#gentle-wave" x="48" y="1" fill="rgba(255,255,255,0.5)" />
+      <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(255,255,255,0.3)" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="#fff" />
+    </g>
+  </svg>
 </div> --}}
 
 <div class="container justify-content-center mt-1">
-    <form action="{{ route('rekapBundleIsk') }}" method="GET">
-        <div class="d-grid gap-1 d-sm-flex justify-content-sm-center align-self-center">
-            <div class="col-sm-2 text-center">
-                <input type="date" name="dari" id="dari" value="{{ request()->get('dari') ?? date('Y-m-d')}}"
-                    class="form-control input-sm" style="border-color: #ff6d00" required />
-            </div>
-            <h2 class="text-center">-</h2>
-            <div class="col-sm-2 text-center">
-                <input type="date" name="sampai" id="sampai" value="{{ request()->get('sampai') ?? date('Y-m-d')}}"
-                    class="form-control input-sm" style="border-color: #ff6d00" required />
-            </div>
-            <div class="col-sm-3 text-center">
-                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i>
-                    Search</button>
-                <button formaction="{{ route('excelBundleIsk') }}" class="btn btn-success" type="submit">
-                    <i class="fa-solid fa-table"></i> Excel</button>
-                <button formaction="{{ route('pdfBundleIsk') }}" class="btn btn-danger" type="submit">
-                    <i class="fa-solid fa-file-pdf"></i> PDF</button>
-            </div>
-        </div>
-        @if($errors->any())
-        <div class="alert alert-danger align-items-center text-center" role="alert">
-            <strong>{{$errors->first()}}</strong>
-        </div>
-        @endif
-    </form>
+  <form action="{{ route('rekapBundleIsk') }}" method="GET">
+    <div class="d-grid gap-1 d-sm-flex justify-content-sm-center align-self-center">
+      <div class="col-sm-2 text-center">
+        <input type="date" name="dari" id="dari" value="{{ request()->get('dari') ?? date('Y-m-d')}}"
+          class="form-control input-sm" style="border-color: #00B0FF" required />
+      </div>
+      <h2 class="text-center">-</h2>
+      <div class="col-sm-2 text-center">
+        <input type="date" name="sampai" id="sampai" value="{{ request()->get('sampai') ?? date('Y-m-d')}}"
+          class="form-control input-sm" style="border-color: #00B0FF" required />
+      </div>
+      <div class="col-sm-3 text-center">
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i>
+          Search</button>
+        <button formaction="{{ route('excelBundleIsk') }}" class="btn btn-success" type="submit">
+          <i class="fa-solid fa-table"></i> Excel</button>
+        <button formaction="{{ route('pdfBundleIsk') }}" class="btn btn-danger" type="submit">
+          <i class="fa-solid fa-file-pdf"></i> PDF</button>
+      </div>
+    </div>
+    @if($errors->any())
+    <div class="alert alert-danger align-items-center text-center" role="alert">
+      <strong>{{$errors->first()}}</strong>
+    </div>
+    @endif
+  </form>
 </div>
 {{-- {{ dd($rekap) }}; --}}
 <div class="container-fluid align-item-center justify-content-center py-3 px-5">
-    <div class="table-responsive">
-        <table class="table table-bordered border-dark align-middle w-100">
-            <thead class="sticky text-dark text-center align-middle">
-                <tr>
-                    <th></th>
-                    <th style="width:10%">IGD</th>
-                    <th style="width:10%">Intensif</th>
-                    <th style="width:10%">OK</th>
-                    <th style="width:10%">Perawatan Eksekutif lt.2</th>
-                    <th style="width:10%">Perawatan Reguler lt.4</th>
-                    <th style="width:10%">Perawatan Reguler lt.5</th>
-                    <th style="width:10%">VK</th>
-                </tr>
-            </thead>
-            <tbody style="background-color: #FFECB3">
-                <tr>
-                    <th class="text-center h4">Bundle Pemasangan</th>
-                    <th colspan="7"></th>
-                </tr>
-                <tr>
-                    <th>Kaji kebutuhan / ada indikasi</th>
-                    <td>{{ $igd_ISK0101 }}</td>
-                    <td>{{ $int_ISK0101 }}</td>
-                    <td>{{ $ok_ISK0101 }}</td>
-                    <td>{{ $lt2_ISK0101 }}</td>
-                    <td>{{ $lt4_ISK0101 }}</td>
-                    <td>{{ $lt5_ISK0101 }}</td>
-                    <td>{{ $vk_ISK0101 }}</td>
-                </tr>
-                <tr>
-                    <th>Pemasangan oleh petugas yang terlatih</th>
-                    <td>{{ $igd_ISK0102 }}</td>
-                    <td>{{ $int_ISK0102 }}</td>
-                    <td>{{ $ok_ISK0102 }}</td>
-                    <td>{{ $lt2_ISK0102 }}</td>
-                    <td>{{ $lt4_ISK0102 }}</td>
-                    <td>{{ $lt5_ISK0102 }}</td>
-                    <td>{{ $vk_ISK0102 }}</td>
-                </tr>
-                <tr>
-                    <th>Kebersihan tangan</th>
-                    <td>{{ $igd_ISK0103 }}</td>
-                    <td>{{ $int_ISK0103 }}</td>
-                    <td>{{ $ok_ISK0103 }}</td>
-                    <td>{{ $lt2_ISK0103 }}</td>
-                    <td>{{ $lt4_ISK0103 }}</td>
-                    <td>{{ $lt5_ISK0103 }}</td>
-                    <td>{{ $vk_ISK0103 }}</td>
-                </tr>
-                <tr>
-                    <th>Tehnik steril</th>
-                    <td>{{ $igd_ISK0104 }}</td>
-                    <td>{{ $int_ISK0104 }}</td>
-                    <td>{{ $ok_ISK0104 }}</td>
-                    <td>{{ $lt2_ISK0104 }}</td>
-                    <td>{{ $lt4_ISK0104 }}</td>
-                    <td>{{ $lt5_ISK0104 }}</td>
-                    <td>{{ $vk_ISK0104 }}</td>
-                </tr>
-                <tr>
-                    <th class="text-center h4">Bundle Maintenance</th>
-                    <th colspan="7"></th>
-                </tr>
-                <tr>
-                    <th>Hand hygiene</th>
-                    <td>{{ $igd_ISK0201 }}</td>
-                    <td>{{ $int_ISK0201 }}</td>
-                    <td>{{ $ok_ISK0201 }}</td>
-                    <td>{{ $lt2_ISK0201 }}</td>
-                    <td>{{ $lt4_ISK0201 }}</td>
-                    <td>{{ $lt5_ISK0201 }}</td>
-                    <td>{{ $vk_ISK0201 }}</td>
-                </tr>
-                <tr>
-                    <th>Perawatan cateter perineal setiap hari sesudah BAB</th>
-                    <td>{{ $igd_ISK0202 }}</td>
-                    <td>{{ $int_ISK0202 }}</td>
-                    <td>{{ $ok_ISK0202 }}</td>
-                    <td>{{ $lt2_ISK0202 }}</td>
-                    <td>{{ $lt4_ISK0202 }}</td>
-                    <td>{{ $lt5_ISK0202 }}</td>
-                    <td>{{ $vk_ISK0202 }}</td>
-                </tr>
-                <tr>
-                    <th>Urine bag tidak dilantai</th>
-                    <td>{{ $igd_ISK0203 }}</td>
-                    <td>{{ $int_ISK0203 }}</td>
-                    <td>{{ $ok_ISK0203 }}</td>
-                    <td>{{ $lt2_ISK0203 }}</td>
-                    <td>{{ $lt4_ISK0203 }}</td>
-                    <td>{{ $lt5_ISK0203 }}</td>
-                    <td>{{ $vk_ISK0203 }}</td>
-                </tr>
-                <tr>
-                    <th>Urine bag lebih rendah dari kandung kemih</th>
-                    <td>{{ $igd_ISK0204 }}</td>
-                    <td>{{ $int_ISK0204 }}</td>
-                    <td>{{ $ok_ISK0204 }}</td>
-                    <td>{{ $lt2_ISK0204 }}</td>
-                    <td>{{ $lt4_ISK0204 }}</td>
-                    <td>{{ $lt5_ISK0204 }}</td>
-                    <td>{{ $vk_ISK0204 }}</td>
-                </tr>
-                <tr>
-                    <td colspan="8"></td>
-                </tr>
-                <tr>
-                    <th>Jumlah</th>
-                    <td>{{ $igd_jumlah }}</td>
-                    <td>{{ $int_jumlah }}</td>
-                    <td>{{ $ok_jumlah }}</td>
-                    <td>{{ $lt2_jumlah }}</td>
-                    <td>{{ $lt4_jumlah }}</td>
-                    <td>{{ $lt5_jumlah }}</td>
-                    <td>{{ $vk_jumlah }}</td>
-                </tr>
-                <tr>
-                    <th>Persentase</th>
-                    <td>{{ ($igd_jumlah != 0 && $denominator_igd != 0) ? number_format(($igd_jumlah / $denominator_igd)
-                        *
-                        100, 2) : 0 }} %</td>
-                    <td>{{ ($int_jumlah != 0 && $denominator_int != 0) ? number_format(($int_jumlah / $denominator_int)
-                        *
-                        100, 2) : 0 }} %</td>
-                    <td>{{ ($ok_jumlah != 0 && $denominator_ok != 0) ? number_format(($ok_jumlah / $denominator_ok) *
-                        100, 2) : 0 }} %</td>
-                    <td>{{ ($lt2_jumlah != 0 && $denominator_lt2 != 0) ? number_format(($lt2_jumlah / $denominator_lt2)
-                        *
-                        100, 2) : 0 }} %</td>
-                    <td>{{ ($lt4_jumlah != 0 && $denominator_lt4 != 0) ? number_format(($lt4_jumlah / $denominator_lt4)
-                        *
-                        100, 2) : 0 }} %</td>
-                    <td>{{ ($lt5_jumlah != 0 && $denominator_lt5 != 0) ? number_format(($lt5_jumlah / $denominator_lt5)
-                        *
-                        100, 2) : 0 }} %</td>
-                    <td>{{ ($vk_jumlah != 0 && $denominator_vk != 0) ? number_format(($vk_jumlah / $denominator_vk) *
-                        100, 2) : 0 }} %</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="table-responsive">
+    <table class="table table-bordered border-dark align-middle w-100">
+      <thead class="sticky-bundle text-dark text-center align-middle">
+        <tr>
+          <th></th>
+          <th style="width:10%">IGD</th>
+          <th style="width:10%">Intensif</th>
+          <th style="width:10%">OK</th>
+          <th style="width:10%">Perawatan Eksekutif lt.2</th>
+          <th style="width:10%">Perawatan Reguler lt.4</th>
+          <th style="width:10%">Perawatan Reguler lt.5</th>
+          <th style="width:10%">VK</th>
+        </tr>
+      </thead>
+      <tbody style="background-color: #B3E5FC">
+        <tr>
+          <th class="text-center h4">Bundle Pemasangan</th>
+          <th colspan="7"></th>
+        </tr>
+        <tr>
+          <th>Kaji kebutuhan / ada indikasi</th>
+          <td>{{ $igd_ISK0101 }}</td>
+          <td>{{ $int_ISK0101 }}</td>
+          <td>{{ $ok_ISK0101 }}</td>
+          <td>{{ $lt2_ISK0101 }}</td>
+          <td>{{ $lt4_ISK0101 }}</td>
+          <td>{{ $lt5_ISK0101 }}</td>
+          <td>{{ $vk_ISK0101 }}</td>
+        </tr>
+        <tr>
+          <th>Pemasangan oleh petugas yang terlatih</th>
+          <td>{{ $igd_ISK0102 }}</td>
+          <td>{{ $int_ISK0102 }}</td>
+          <td>{{ $ok_ISK0102 }}</td>
+          <td>{{ $lt2_ISK0102 }}</td>
+          <td>{{ $lt4_ISK0102 }}</td>
+          <td>{{ $lt5_ISK0102 }}</td>
+          <td>{{ $vk_ISK0102 }}</td>
+        </tr>
+        <tr>
+          <th>Kebersihan tangan</th>
+          <td>{{ $igd_ISK0103 }}</td>
+          <td>{{ $int_ISK0103 }}</td>
+          <td>{{ $ok_ISK0103 }}</td>
+          <td>{{ $lt2_ISK0103 }}</td>
+          <td>{{ $lt4_ISK0103 }}</td>
+          <td>{{ $lt5_ISK0103 }}</td>
+          <td>{{ $vk_ISK0103 }}</td>
+        </tr>
+        <tr>
+          <th>Tehnik steril</th>
+          <td>{{ $igd_ISK0104 }}</td>
+          <td>{{ $int_ISK0104 }}</td>
+          <td>{{ $ok_ISK0104 }}</td>
+          <td>{{ $lt2_ISK0104 }}</td>
+          <td>{{ $lt4_ISK0104 }}</td>
+          <td>{{ $lt5_ISK0104 }}</td>
+          <td>{{ $vk_ISK0104 }}</td>
+        </tr>
+        <tr>
+          <th class="text-center h4">Bundle Maintenance</th>
+          <th colspan="7"></th>
+        </tr>
+        <tr>
+          <th>Hand hygiene</th>
+          <td>{{ $igd_ISK0201 }}</td>
+          <td>{{ $int_ISK0201 }}</td>
+          <td>{{ $ok_ISK0201 }}</td>
+          <td>{{ $lt2_ISK0201 }}</td>
+          <td>{{ $lt4_ISK0201 }}</td>
+          <td>{{ $lt5_ISK0201 }}</td>
+          <td>{{ $vk_ISK0201 }}</td>
+        </tr>
+        <tr>
+          <th>Perawatan cateter perineal setiap hari sesudah BAB</th>
+          <td>{{ $igd_ISK0202 }}</td>
+          <td>{{ $int_ISK0202 }}</td>
+          <td>{{ $ok_ISK0202 }}</td>
+          <td>{{ $lt2_ISK0202 }}</td>
+          <td>{{ $lt4_ISK0202 }}</td>
+          <td>{{ $lt5_ISK0202 }}</td>
+          <td>{{ $vk_ISK0202 }}</td>
+        </tr>
+        <tr>
+          <th>Urine bag tidak dilantai</th>
+          <td>{{ $igd_ISK0203 }}</td>
+          <td>{{ $int_ISK0203 }}</td>
+          <td>{{ $ok_ISK0203 }}</td>
+          <td>{{ $lt2_ISK0203 }}</td>
+          <td>{{ $lt4_ISK0203 }}</td>
+          <td>{{ $lt5_ISK0203 }}</td>
+          <td>{{ $vk_ISK0203 }}</td>
+        </tr>
+        <tr>
+          <th>Urine bag lebih rendah dari kandung kemih</th>
+          <td>{{ $igd_ISK0204 }}</td>
+          <td>{{ $int_ISK0204 }}</td>
+          <td>{{ $ok_ISK0204 }}</td>
+          <td>{{ $lt2_ISK0204 }}</td>
+          <td>{{ $lt4_ISK0204 }}</td>
+          <td>{{ $lt5_ISK0204 }}</td>
+          <td>{{ $vk_ISK0204 }}</td>
+        </tr>
+        <tr>
+          <td colspan="8"></td>
+        </tr>
+        <tr>
+          <th>Jumlah</th>
+          <td>{{ $igd_jumlah }}</td>
+          <td>{{ $int_jumlah }}</td>
+          <td>{{ $ok_jumlah }}</td>
+          <td>{{ $lt2_jumlah }}</td>
+          <td>{{ $lt4_jumlah }}</td>
+          <td>{{ $lt5_jumlah }}</td>
+          <td>{{ $vk_jumlah }}</td>
+        </tr>
+        <tr>
+          <th>Persentase</th>
+          <td>{{ ($igd_jumlah != 0 && $denominator_igd != 0) ? number_format(($igd_jumlah / $denominator_igd)
+            *
+            100, 2) : 0 }} %</td>
+          <td>{{ ($int_jumlah != 0 && $denominator_int != 0) ? number_format(($int_jumlah / $denominator_int)
+            *
+            100, 2) : 0 }} %</td>
+          <td>{{ ($ok_jumlah != 0 && $denominator_ok != 0) ? number_format(($ok_jumlah / $denominator_ok) *
+            100, 2) : 0 }} %</td>
+          <td>{{ ($lt2_jumlah != 0 && $denominator_lt2 != 0) ? number_format(($lt2_jumlah / $denominator_lt2)
+            *
+            100, 2) : 0 }} %</td>
+          <td>{{ ($lt4_jumlah != 0 && $denominator_lt4 != 0) ? number_format(($lt4_jumlah / $denominator_lt4)
+            *
+            100, 2) : 0 }} %</td>
+          <td>{{ ($lt5_jumlah != 0 && $denominator_lt5 != 0) ? number_format(($lt5_jumlah / $denominator_lt5)
+            *
+            100, 2) : 0 }} %</td>
+          <td>{{ ($vk_jumlah != 0 && $denominator_vk != 0) ? number_format(($vk_jumlah / $denominator_vk) *
+            100, 2) : 0 }} %</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <div class="container-fluid justify-content-center py-3">
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <section class="col-sm-9 align-self-stretch">
-            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center align-self-center">
-                <section class="col-sm text-start">
-                    <button class="btn btn-warning" onclick="grafikYA()">DATA YA</button>
-                    <button class="btn btn-warning" onclick="grafikTIDAK()">DATA TIDAK</button>
-                </section>
-            </div>
-            <section id="ya">
-                <canvas id="barYA"></canvas>
-            </section>
-            <section id="tidak" style="display: none">
-                <canvas id="barTIDAK"></canvas>
-            </section>
+  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <section class="col-sm-9 align-self-stretch">
+      <div class="d-grid gap-3 d-sm-flex justify-content-sm-center align-self-center">
+        <section class="col-sm text-start">
+          <button class="btn" style=" background-color: #00B0FF" onclick="grafikYA()"><b>DATA YA</b></button>
+          <button class="btn" style=" background-color: #00B0FF" onclick="grafikTIDAK()"><b>DATA TIDAK</b></button>
         </section>
+      </div>
+      <section id="ya">
+        <canvas id="barYA"></canvas>
+      </section>
+      <section id="tidak" style="display: none">
+        <canvas id="barTIDAK"></canvas>
+      </section>
+    </section>
 
-        <div class="col-sm-3 align-self-stretch">
-            <div class="card" style="border-color: #FFAB00">
-                <div class="card-header text-center bg-warning" style="border-color: #FFAB00;">
-                    <b>Analisa</b>
-                </div>
-                <div class="card-body">
-                    @foreach($rekap as $rekaps)
-                    {{ $rekaps->analisa }}
-                    @endforeach
-                </div>
-            </div>
-
-            <div class="card mt-3" style="border-color: #FFAB00">
-                <div class="card-header text-center bg-warning" style="border-color: #FFAB00;"><b></b>
-                    <b>Tindak Lanjut</b>
-                </div>
-                <div class="card-body">
-                    @foreach($rekap as $rekaps)
-                    {{ $rekaps->tindak_lanjut }}
-                    @endforeach
-                </div>
-            </div>
-
-            <div class="d-grid gap-1 d-sm-flex justify-content-sm-center mt-3">
-                <div class="col-sm-11 d-grid">
-                    @forelse($rekap as $rekaps)
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#editRekapBundleIsk{{ $rekaps->id }}"
-                        class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i>
-                        <b> Ubah Analisa dan Tindak Lanjut</b>
-                    </button>
-                    @include('rekapBundleISK.edit')
-                    @empty
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#tambahRekapBundleIsk"
-                        class="btn btn-sm btn-primary">
-                        <i class="fa-solid fa-plus"></i><b> Tambah Analisa dan Tindak Lanjut</b>
-                    </button>
-                    @include('rekapBundleISK.add')
-                    @endforelse
-                </div>
-            </div>
+    <div class="col-sm-3 align-self-stretch">
+      <div class="card" style="border-color: #00B0FF">
+        <div class="card-header text-center" style="background-color: #00B0FF;border-color: #00B0FF;">
+          <b>Analisa</b>
         </div>
+        <div class="card-body">
+          @foreach($rekap as $rekaps)
+          {{ $rekaps->analisa }}
+          @endforeach
+        </div>
+      </div>
+
+      <div class="card mt-3" style="border-color: #00B0FF">
+        <div class="card-header text-center" style="background-color: #00B0FF;border-color: #00B0FF;"><b></b>
+          <b>Tindak Lanjut</b>
+        </div>
+        <div class="card-body">
+          @foreach($rekap as $rekaps)
+          {{ $rekaps->tindak_lanjut }}
+          @endforeach
+        </div>
+      </div>
+
+      <div class="d-grid gap-1 d-sm-flex justify-content-sm-center mt-3">
+        <div class="col-sm-11 d-grid">
+          @forelse($rekap as $rekaps)
+          <button type="button" data-bs-toggle="modal" data-bs-target="#editRekapBundleIsk{{ $rekaps->id }}"
+            class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i>
+            <b> Ubah Analisa dan Tindak Lanjut</b>
+          </button>
+          @include('rekapBundleISK.edit')
+          @empty
+          <button type="button" data-bs-toggle="modal" data-bs-target="#tambahRekapBundleIsk"
+            class="btn btn-sm btn-primary">
+            <i class="fa-solid fa-plus"></i><b> Tambah Analisa dan Tindak Lanjut</b>
+          </button>
+          @include('rekapBundleISK.add')
+          @endforelse
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="container-fluid align-item-center justify-content-center py-3">
-    <div class="table-responsive table-data tbl-fixed">
-        <table class="table table-bordered border-dark align-middle w-100">
-            <thead class="sticky text-dark text-center align-middle">
-                <tr>
-                    <th style="width:1%">No</th>
-                    <th style="width:10%">MRN</th>
-                    <th>Nama Pasien</th>
-                    <th>Diagnosa</th>
-                    <th style="width:15%">Unit</th>
-                    <th style="width:5%">Tanggal</th>
-                    <th style="width:5%">Aksi</th>
-                </tr>
-            </thead>
-            <tbody style=" background-color: #FFECB3">
-                @php $no = 1; @endphp
-                @forelse($tabel as $key => $isi)
-                <tr>
-                    <td>{{ $tabel->firstItem() + $key }}</td>
-                    <td>{{ $isi->mrn }}</td>
-                    <td>{{ $isi->nama_pasien }}</td>
-                    <td>{{ $isi->diagnosa }}</td>
-                    <td>{{ $isi->unit }}</td>
-                    <td>{{ date("d/m/Y", strtotime($isi->tgl)) }}</td>
-                    <td>
-                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <a href="#detailBundleISK{{ $isi->id }}" data-bs-toggle="modal"
-                                class="btn btn-sm btn-primary"><i class="fa-regular fa-eye"></i> Detail</a>
-                            @include('bundleISK.detail')
-                        </div>
-                    </td>
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="7" class="text-center"><b>Tidak ada data</b></td>
-                </tr>
-                @endforelse
-            </tbody>
-        </table>
-
-        <div class="btn-toolbar justify-content-between">
-            <div>
-                {{ $tabel->links() }}
+  <div class="table-responsive table-data tbl-fixed">
+    <table class="table table-bordered border-dark align-middle w-100">
+      <thead class="sticky-bundle text-dark text-center align-middle">
+        <tr>
+          <th style="width:1%">No</th>
+          <th style="width:10%">MRN</th>
+          <th>Nama Pasien</th>
+          <th>Diagnosa</th>
+          <th style="width:15%">Unit</th>
+          <th style="width:5%">Tanggal</th>
+          <th style="width:5%">Aksi</th>
+        </tr>
+      </thead>
+      <tbody style=" background-color: #B3E5FC">
+        @php $no = 1; @endphp
+        @forelse($tabel as $key => $isi)
+        <tr>
+          <td>{{ $tabel->firstItem() + $key }}</td>
+          <td>{{ $isi->mrn }}</td>
+          <td>{{ $isi->nama_pasien }}</td>
+          <td>{{ $isi->diagnosa }}</td>
+          <td>{{ $isi->unit }}</td>
+          <td>{{ date("d/m/Y", strtotime($isi->tgl)) }}</td>
+          <td>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <a href="#detailBundleISK{{ $isi->id }}" data-bs-toggle="modal" class="btn btn-sm btn-primary"><i
+                  class="fa-regular fa-eye"></i> Detail</a>
+              @include('bundleISK.detail')
             </div>
-        </div>
+          </td>
+        </tr>
+        @empty
+        <tr>
+          <td colspan="7" class="text-center"><b>Tidak ada data</b></td>
+        </tr>
+        @endforelse
+      </tbody>
+    </table>
+
+    <div class="btn-toolbar justify-content-between">
+      <div>
+        {{ $tabel->links() }}
+      </div>
     </div>
+  </div>
 </div>
 
 <script>
-    function grafikYA() {
+  function grafikYA() {
   var div1 = document.getElementById("ya");
   var div2 = document.getElementById("tidak");
 
@@ -319,7 +319,7 @@
 </script>
 
 <script>
-    function grafikTIDAK() {
+  function grafikTIDAK() {
   var div1 = document.getElementById("ya");
   var div2 = document.getElementById("tidak");
 
@@ -334,7 +334,7 @@
 </script>
 
 <script>
-    var igd1 = {
+  var igd1 = {
     label: ['IGD'],
     data: [
         {{ $igd_ISK0101 }},
@@ -546,7 +546,7 @@
 </script>
 
 <script>
-    var igd0 = {
+  var igd0 = {
     label: ['IGD'],
     data: [
         {{ $no_igd_ISK0101 }},
@@ -758,7 +758,7 @@
 </script>
 
 <script>
-    $(document).ready(function() {
+  $(document).ready(function() {
         window.setTimeout(function() {
             $(".alert").fadeTo(500, 0).slideUp(500, function(){
                 $(this).remove();
@@ -768,4 +768,4 @@
 </script>
 @endsection
 
-@extends('layouts.footer')
+@extends('layouts.footer-bundle')

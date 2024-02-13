@@ -26,12 +26,12 @@
     <div class="d-grid gap-1 d-sm-flex justify-content-sm-center align-self-center">
       <div class="col-sm-2 text-center">
         <input type="date" name="dari" id="dari" value="{{ request()->get('dari') ?? date('Y-m-d')}}"
-          class="form-control input-sm" style="border-color: #ff6d00" required />
+          class="form-control input-sm" style="border-color: #00B0FF" required />
       </div>
       <h2 class="text-center">-</h2>
       <div class="col-sm-2 text-center">
         <input type="date" name="sampai" id="sampai" value="{{ request()->get('sampai') ?? date('Y-m-d')}}"
-          class="form-control input-sm" style="border-color: #ff6d00" required />
+          class="form-control input-sm" style="border-color: #00B0FF" required />
       </div>
       <div class="col-sm-3 text-center">
         <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i>
@@ -53,7 +53,7 @@
 <div class="container-fluid align-item-center justify-content-center py-3 px-5">
   <div class="table-responsive">
     <table class="table table-bordered border-dark align-middle w-100">
-      <thead class="sticky text-dark text-center align-middle">
+      <thead class="sticky-bundle text-dark text-center align-middle">
         <tr>
           <th colspan="2"></th>
           <th style="width:10%">IGD</th>
@@ -65,7 +65,7 @@
           <th style="width:10%">VK</th>
         </tr>
       </thead>
-      <tbody style="background-color: #FFECB3">
+      <tbody style="background-color: #B3E5FC">
         <tr>
           <th colspan="2" class="text-center h4">Bundle Pre Operasi</th>
           <th colspan="7"></th>
@@ -401,8 +401,8 @@
     <section class="col-sm-9 align-self-stretch">
       <div class="d-grid gap-3 d-sm-flex justify-content-sm-center align-self-center">
         <section class="col-sm text-start">
-          <button class="btn btn-warning" onclick="grafikYA()">DATA YA</button>
-          <button class="btn btn-warning" onclick="grafikTIDAK()">DATA TIDAK</button>
+          <button class="btn" style=" background-color: #00B0FF" onclick="grafikYA()"><b>DATA YA</b></button>
+          <button class="btn" style=" background-color: #00B0FF" onclick="grafikTIDAK()"><b>DATA TIDAK</b></button>
         </section>
       </div>
       <section id="ya">
@@ -414,8 +414,8 @@
     </section>
 
     <div class="col-sm-3 align-self-stretch">
-      <div class="card" style="border-color: #FFAB00">
-        <div class="card-header text-center bg-warning" style="border-color: #FFAB00;">
+      <div class="card" style="border-color: #00B0FF">
+        <div class="card-header text-center" style="background-color: #00B0FF;border-color: #00B0FF;">
           <b>Analisa</b>
         </div>
         <div class="card-body">
@@ -425,8 +425,8 @@
         </div>
       </div>
 
-      <div class="card mt-3" style="border-color: #FFAB00">
-        <div class="card-header text-center bg-warning" style="border-color: #FFAB00;"><b></b>
+      <div class="card mt-3" style="border-color: #00B0FF">
+        <div class="card-header text-center" style="background-color: #00B0FF;border-color: #00B0FF;"><b></b>
           <b>Tindak Lanjut</b>
         </div>
         <div class="card-body">
@@ -460,7 +460,7 @@
 <div class="container-fluid align-item-center justify-content-center py-3">
   <div class="table-responsive table-data tbl-fixed">
     <table class="table table-bordered border-dark align-middle w-100">
-      <thead class="sticky text-dark text-center align-middle">
+      <thead class="sticky-bundle text-dark text-center align-middle">
         <tr>
           <th style="width:1%">No</th>
           <th style="width:10%">MRN</th>
@@ -471,7 +471,7 @@
           <th style="width:5%">Aksi</th>
         </tr>
       </thead>
-      <tbody style=" background-color: #FFECB3">
+      <tbody style=" background-color: #B3E5FC">
         @php $no = 1; @endphp
         @forelse($tabel as $key => $isi)
         <tr>
@@ -1210,4 +1210,4 @@
 </script>
 @endsection
 
-@extends('layouts.footer')
+@extends('layouts.footer-bundle')
