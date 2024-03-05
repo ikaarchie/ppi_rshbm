@@ -25,7 +25,6 @@
                         'IGD' => 'IGD',
                         'Intensif' => 'Intensif',
                         'Kebersihan' => 'Kebersihan',
-                        'KBBL' => 'KBBL',
                         'Laboratorium' => 'Laboratorium',
                         'Laundry' => 'Laundry',
                         'OK' => 'OK',

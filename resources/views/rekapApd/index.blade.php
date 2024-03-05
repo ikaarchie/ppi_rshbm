@@ -171,7 +171,7 @@
           <td>{{ ($int_jumlah != 0 && $denominator_int != 0) ? number_format(($int_jumlah / $denominator_int) * 100, 2)
             : 0 }} %</td>
         </tr>
-        <tr>
+        {{-- <tr>
           <th>KBBL</th>
           <td>{{ $kbbl_pntp_kpl }}</td>
           <td>{{ $kbbl_masker }}</td>
@@ -185,7 +185,7 @@
           <td>{{ $kbbl_jumlah }}</td>
           <td>{{ ($kbbl_jumlah != 0 && $denominator_kbbl != 0) ? number_format(($kbbl_jumlah / $denominator_kbbl) * 100,
             2) : 0 }} %</td>
-        </tr>
+        </tr> --}}
         <tr>
           <th>Laboratorium</th>
           <td>{{ $lab_pntp_kpl }}</td>
@@ -593,27 +593,27 @@
     borderWidth: 1
   };
 
-  var kbbl1 = {
-    label: ['KBBL'],
-    data: [
-        {{ $kbbl_pntp_kpl }},
-        {{ $kbbl_masker }},
-        {{ $kbbl_pntp_wjh }},
-        {{ $kbbl_apron }},
-        {{ $kbbl_srg_tgn }},
-        {{ $kbbl_alas_kaki }},
-        {{ $kbbl_lps_apd }},
-        {{ $kbbl_tdk_gtg_masker }},
-        {{ $kbbl_tdk_guna_srg_tgn }},
-    ],
-    backgroundColor: [
-      'rgba(255, 234, 0, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 234, 0)'
-    ],
-    borderWidth: 1
-  };
+  // var kbbl1 = {
+  //   label: ['KBBL'],
+  //   data: [
+  //       {{ $kbbl_pntp_kpl }},
+  //       {{ $kbbl_masker }},
+  //       {{ $kbbl_pntp_wjh }},
+  //       {{ $kbbl_apron }},
+  //       {{ $kbbl_srg_tgn }},
+  //       {{ $kbbl_alas_kaki }},
+  //       {{ $kbbl_lps_apd }},
+  //       {{ $kbbl_tdk_gtg_masker }},
+  //       {{ $kbbl_tdk_guna_srg_tgn }},
+  //   ],
+  //   backgroundColor: [
+  //     'rgba(255, 234, 0, 0.2)'
+  //   ],
+  //   borderColor: [
+  //     'rgb(255, 234, 0)'
+  //   ],
+  //   borderWidth: 1
+  // };
 
   var lab1 = {
     label: ['Laboratorium'],
@@ -832,7 +832,7 @@
       farmasi1, 
       igd1,
       int1,
-      kbbl1,
+      // kbbl1,
       lab1,
       laundry1,
       ok1,
@@ -1020,27 +1020,27 @@
     borderWidth: 1
   };
 
-  var kbbl0 = {
-    label: ['KBBL'],
-    data: [
-        {{ $no_kbbl_pntp_kpl }},
-        {{ $no_kbbl_masker }},
-        {{ $no_kbbl_pntp_wjh }},
-        {{ $no_kbbl_apron }},
-        {{ $no_kbbl_srg_tgn }},
-        {{ $no_kbbl_alas_kaki }},
-        {{ $no_kbbl_lps_apd }},
-        {{ $no_kbbl_tdk_gtg_masker }},
-        {{ $no_kbbl_tdk_guna_srg_tgn }},
-    ],
-    backgroundColor: [
-      'rgba(255, 234, 0, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 234, 0)'
-    ],
-    borderWidth: 1
-  };
+  // var kbbl0 = {
+  //   label: ['KBBL'],
+  //   data: [
+  //       {{ $no_kbbl_pntp_kpl }},
+  //       {{ $no_kbbl_masker }},
+  //       {{ $no_kbbl_pntp_wjh }},
+  //       {{ $no_kbbl_apron }},
+  //       {{ $no_kbbl_srg_tgn }},
+  //       {{ $no_kbbl_alas_kaki }},
+  //       {{ $no_kbbl_lps_apd }},
+  //       {{ $no_kbbl_tdk_gtg_masker }},
+  //       {{ $no_kbbl_tdk_guna_srg_tgn }},
+  //   ],
+  //   backgroundColor: [
+  //     'rgba(255, 234, 0, 0.2)'
+  //   ],
+  //   borderColor: [
+  //     'rgb(255, 234, 0)'
+  //   ],
+  //   borderWidth: 1
+  // };
 
   var lab0 = {
     label: ['Laboratorium'],
@@ -1259,7 +1259,7 @@
       farmasi0, 
       igd0,
       int0,
-      kbbl0,
+      // kbbl0,
       lab0,
       laundry0,
       ok0,
