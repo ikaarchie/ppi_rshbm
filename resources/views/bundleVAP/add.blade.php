@@ -159,7 +159,7 @@
                             </tr>
                             <tr>
                                 <th>5</th>
-                                <th>Posisi kepala 33-45 derajat</th>
+                                <th>Posisi kepala 30-45 derajat</th>
                                 <td class="text-center">{!! Form::radio('VAP0205', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0205', '0', '', ['class' =>
@@ -179,7 +179,7 @@
                             </tr>
                             <tr>
                                 <th>7</th>
-                                <th>Penggantian selang suction 1x24 jam</th>
+                                <th>Penggantian selang suction tiap sekali pakai</th>
                                 <td class="text-center">{!! Form::radio('VAP0207', '1', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                                 <td class="text-center">{!! Form::radio('VAP0207', '0', '', ['class' =>

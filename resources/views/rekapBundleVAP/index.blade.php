@@ -155,7 +155,7 @@
           <td>{{ $vk_VAP0204 }}</td>
         </tr>
         <tr>
-          <th>Posisi kepala 33-45 derajat</th>
+          <th>Posisi kepala 30-45 derajat</th>
           <td>{{ $igd_VAP0205 }}</td>
           <td>{{ $int_VAP0205 }}</td>
           <td>{{ $ok_VAP0205 }}</td>
@@ -175,7 +175,7 @@
           <td>{{ $vk_VAP0206 }}</td>
         </tr>
         <tr>
-          <th>Penggantian selang suction 1x24 jam</th>
+          <th>Penggantian selang suction tiap sekali pakai</th>
           <td>{{ $igd_VAP0207 }}</td>
           <td>{{ $int_VAP0207 }}</td>
           <td>{{ $ok_VAP0207 }}</td>

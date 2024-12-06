@@ -105,7 +105,7 @@
                             </tr>
                             <tr>
                                 <th>5</th>
-                                <th>Posisi kepala 33-45 derajat</th>
+                                <th>Posisi kepala 30-45 derajat</th>
                                 <td>{{ ($isi->VAP0205 == 1) ? 'Ya' : (($isi->VAP0205 == 0) ? 'Tidak' : 'Tidak
                                     dilakukan') }}</td>
                             </tr>
@@ -117,7 +117,7 @@
                             </tr>
                             <tr>
                                 <th>7</th>
-                                <th>Penggantian selang suction 1x24 jam</th>
+                                <th>Penggantian selang suction tiap sekali pakai</th>
                                 <td>{{ ($isi->VAP0207 == 1) ? 'Ya' : (($isi->VAP0207 == 0) ? 'Tidak' : 'Tidak
                                     dilakukan') }}</td>
                             </tr>
