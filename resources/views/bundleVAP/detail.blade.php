@@ -93,8 +93,7 @@
                             <tr>
                                 <th>3</th>
                                 <th>Sikat gigi setiap 12 jam</th>
-                                <td>{{ $isi->VAP0203 == 1 ? 'Ya' : 'Tidak' }}</td>
-                                <td>{{ ($isi->IDO04A01 == 1) ? 'Ya' : (($isi->IDO04A01 == 0) ? 'Tidak' : 'Tidak
+                                <td>{{ ($isi->VAP0203 == 1) ? 'Ya' : (($isi->IDO04A01 == 0) ? 'Tidak' : 'Tidak
                                     dilakukan') }}</td>
                             </tr>
                             <tr>
@@ -125,6 +124,18 @@
                                 <th>8</th>
                                 <th>Penggantian cairan yang digunakan untuk suction pershif</th>
                                 <td>{{ ($isi->VAP0208 == 1) ? 'Ya' : (($isi->VAP0208 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <th>Peptic disease prophylaxis diberikan pada pasien dengan resiko tinggi</th>
+                                <td>{{ ($isi->VAP0209 == 1) ? 'Ya' : (($isi->VAP0209 == 0) ? 'Tidak' : 'Tidak
+                                    dilakukan') }}</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <th>Berikan Deep Vein Trombosis (DVT)</th>
+                                <td>{{ ($isi->VAP0210 == 1) ? 'Ya' : (($isi->VAP0210 == 0) ? 'Tidak' : 'Tidak
                                     dilakukan') }}</td>
                             </tr>
                         </tbody>

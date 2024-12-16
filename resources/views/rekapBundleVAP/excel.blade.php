@@ -150,6 +150,26 @@
             <td>{{ $vk_VAP0208 }}</td>
         </tr>
         <tr>
+            <th>Peptic disease prophylaxis diberikan pada pasien dengan resiko tinggi</th>
+            <td>{{ $igd_VAP0209 }}</td>
+            <td>{{ $int_VAP0209 }}</td>
+            <td>{{ $ok_VAP0209 }}</td>
+            <td>{{ $lt2_VAP0209 }}</td>
+            <td>{{ $lt4_VAP0209 }}</td>
+            <td>{{ $lt5_VAP0209 }}</td>
+            <td>{{ $vk_VAP0209 }}</td>
+        </tr>
+        <tr>
+            <th>Berikan Deep Vein Trombosis (DVT)</th>
+            <td>{{ $igd_VAP0210 }}</td>
+            <td>{{ $int_VAP0210 }}</td>
+            <td>{{ $ok_VAP0210 }}</td>
+            <td>{{ $lt2_VAP0210 }}</td>
+            <td>{{ $lt4_VAP0210 }}</td>
+            <td>{{ $lt5_VAP0210 }}</td>
+            <td>{{ $vk_VAP0210 }}</td>
+        </tr>
+        <tr>
             <td colspan="8"></td>
         </tr>
         <tr>

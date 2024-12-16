@@ -199,6 +199,26 @@
                                 <td class="text-center">{!! Form::radio('VAP0208', 'td', '', ['class' =>
                                     'form-check-input', 'required']) !!}</td>
                             </tr>
+                            <tr>
+                                <th>9</th>
+                                <th>Peptic disease prophylaxis diberikan pada pasien dengan resiko tinggi</th>
+                                <td class="text-center">{!! Form::radio('VAP0209', '1', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0209', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0209', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <th>Berikan Deep Vein Trombosis (DVT)</th>
+                                <td class="text-center">{!! Form::radio('VAP0210', '1', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0210', '0', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                                <td class="text-center">{!! Form::radio('VAP0210', 'td', '', ['class' =>
+                                    'form-check-input', 'required']) !!}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

@@ -28,6 +28,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $igd_VAP0206,
         $igd_VAP0207,
         $igd_VAP0208,
+        $igd_VAP0209,
+        $igd_VAP0210,
         $igd_jumlah,
 
         $no_igd_VAP0101,
@@ -42,6 +44,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $no_igd_VAP0206,
         $no_igd_VAP0207,
         $no_igd_VAP0208,
+        $no_igd_VAP0209,
+        $no_igd_VAP0210,
         $no_igd_jumlah,
 
         $denominator_igd,
@@ -58,6 +62,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $int_VAP0206,
         $int_VAP0207,
         $int_VAP0208,
+        $int_VAP0209,
+        $int_VAP0210,
         $int_jumlah,
 
         $no_int_VAP0101,
@@ -72,6 +78,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $no_int_VAP0206,
         $no_int_VAP0207,
         $no_int_VAP0208,
+        $no_int_VAP0209,
+        $no_int_VAP0210,
         $no_int_jumlah,
 
         $denominator_int,
@@ -88,6 +96,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $ok_VAP0206,
         $ok_VAP0207,
         $ok_VAP0208,
+        $ok_VAP0209,
+        $ok_VAP0210,
         $ok_jumlah,
 
         $no_ok_VAP0101,
@@ -102,6 +112,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $no_ok_VAP0206,
         $no_ok_VAP0207,
         $no_ok_VAP0208,
+        $no_ok_VAP0209,
+        $no_ok_VAP0210,
         $no_ok_jumlah,
 
         $denominator_ok,
@@ -118,6 +130,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $lt2_VAP0206,
         $lt2_VAP0207,
         $lt2_VAP0208,
+        $lt2_VAP0209,
+        $lt2_VAP0210,
         $lt2_jumlah,
 
         $no_lt2_VAP0101,
@@ -132,6 +146,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $no_lt2_VAP0206,
         $no_lt2_VAP0207,
         $no_lt2_VAP0208,
+        $no_lt2_VAP0209,
+        $no_lt2_VAP0210,
         $no_lt2_jumlah,
 
         $denominator_lt2,
@@ -148,6 +164,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $lt4_VAP0206,
         $lt4_VAP0207,
         $lt4_VAP0208,
+        $lt4_VAP0209,
+        $lt4_VAP0210,
         $lt4_jumlah,
 
         $no_lt4_VAP0101,
@@ -162,6 +180,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $no_lt4_VAP0206,
         $no_lt4_VAP0207,
         $no_lt4_VAP0208,
+        $no_lt4_VAP0209,
+        $no_lt4_VAP0210,
         $no_lt4_jumlah,
 
         $denominator_lt4,
@@ -178,6 +198,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $lt5_VAP0206,
         $lt5_VAP0207,
         $lt5_VAP0208,
+        $lt5_VAP0209,
+        $lt5_VAP0210,
         $lt5_jumlah,
 
         $no_lt5_VAP0101,
@@ -192,6 +214,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $no_lt5_VAP0206,
         $no_lt5_VAP0207,
         $no_lt5_VAP0208,
+        $no_lt5_VAP0209,
+        $no_lt5_VAP0210,
         $no_lt5_jumlah,
 
         $denominator_lt5,
@@ -208,6 +232,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $vk_VAP0206,
         $vk_VAP0207,
         $vk_VAP0208,
+        $vk_VAP0209,
+        $vk_VAP0210,
         $vk_jumlah,
 
         $no_vk_VAP0101,
@@ -222,6 +248,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $no_vk_VAP0206,
         $no_vk_VAP0207,
         $no_vk_VAP0208,
+        $no_vk_VAP0209,
+        $no_vk_VAP0210,
         $no_vk_jumlah,
 
         $denominator_vk,
@@ -242,6 +270,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->igd_VAP0206 = $igd_VAP0206;
         $this->igd_VAP0207 = $igd_VAP0207;
         $this->igd_VAP0208 = $igd_VAP0208;
+        $this->igd_VAP0209 = $igd_VAP0209;
+        $this->igd_VAP0210 = $igd_VAP0210;
         $this->igd_jumlah = $igd_jumlah;
 
         $this->no_igd_VAP0101 = $no_igd_VAP0101;
@@ -256,6 +286,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->no_igd_VAP0206 = $no_igd_VAP0206;
         $this->no_igd_VAP0207 = $no_igd_VAP0207;
         $this->no_igd_VAP0208 = $no_igd_VAP0208;
+        $this->no_igd_VAP0209 = $no_igd_VAP0209;
+        $this->no_igd_VAP0210 = $no_igd_VAP0210;
         $this->no_igd_jumlah = $no_igd_jumlah;
 
         $this->denominator_igd = $denominator_igd;
@@ -272,6 +304,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->int_VAP0206 = $int_VAP0206;
         $this->int_VAP0207 = $int_VAP0207;
         $this->int_VAP0208 = $int_VAP0208;
+        $this->int_VAP0209 = $int_VAP0209;
+        $this->int_VAP0210 = $int_VAP0210;
         $this->int_jumlah = $int_jumlah;
 
         $this->no_int_VAP0101 = $no_int_VAP0101;
@@ -286,6 +320,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->no_int_VAP0206 = $no_int_VAP0206;
         $this->no_int_VAP0207 = $no_int_VAP0207;
         $this->no_int_VAP0208 = $no_int_VAP0208;
+        $this->no_int_VAP0209 = $no_int_VAP0209;
+        $this->no_int_VAP0210 = $no_int_VAP0210;
         $this->no_int_jumlah = $no_int_jumlah;
 
         $this->denominator_int = $denominator_int;
@@ -302,6 +338,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->ok_VAP0206 = $ok_VAP0206;
         $this->ok_VAP0207 = $ok_VAP0207;
         $this->ok_VAP0208 = $ok_VAP0208;
+        $this->ok_VAP0209 = $ok_VAP0209;
+        $this->ok_VAP0210 = $ok_VAP0210;
         $this->ok_jumlah = $ok_jumlah;
 
         $this->no_ok_VAP0101 = $no_ok_VAP0101;
@@ -316,6 +354,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->no_ok_VAP0206 = $no_ok_VAP0206;
         $this->no_ok_VAP0207 = $no_ok_VAP0207;
         $this->no_ok_VAP0208 = $no_ok_VAP0208;
+        $this->no_ok_VAP0209 = $no_ok_VAP0209;
+        $this->no_ok_VAP0210 = $no_ok_VAP0210;
         $this->no_ok_jumlah = $no_ok_jumlah;
 
         $this->denominator_ok = $denominator_ok;
@@ -332,6 +372,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->lt2_VAP0206 = $lt2_VAP0206;
         $this->lt2_VAP0207 = $lt2_VAP0207;
         $this->lt2_VAP0208 = $lt2_VAP0208;
+        $this->lt2_VAP0209 = $lt2_VAP0209;
+        $this->lt2_VAP0210 = $lt2_VAP0210;
         $this->lt2_jumlah = $lt2_jumlah;
 
         $this->no_lt2_VAP0101 = $no_lt2_VAP0101;
@@ -346,6 +388,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->no_lt2_VAP0206 = $no_lt2_VAP0206;
         $this->no_lt2_VAP0207 = $no_lt2_VAP0207;
         $this->no_lt2_VAP0208 = $no_lt2_VAP0208;
+        $this->no_lt2_VAP0209 = $no_lt2_VAP0209;
+        $this->no_lt2_VAP0210 = $no_lt2_VAP0210;
         $this->no_lt2_jumlah = $no_lt2_jumlah;
 
         $this->denominator_lt2 = $denominator_lt2;
@@ -361,7 +405,9 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->lt4_VAP0205 = $lt4_VAP0205;
         $this->lt4_VAP0206 = $lt4_VAP0206;
         $this->lt4_VAP0207 = $lt4_VAP0207;
-        $this->lt4_VAP0208 = $lt4_VAP0204;
+        $this->lt4_VAP0208 = $lt4_VAP0208;
+        $this->lt4_VAP0209 = $lt4_VAP0209;
+        $this->lt4_VAP0210 = $lt4_VAP0210;
         $this->lt4_jumlah = $lt4_jumlah;
 
         $this->no_lt4_VAP0101 = $no_lt4_VAP0101;
@@ -376,6 +422,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->no_lt4_VAP0206 = $no_lt4_VAP0206;
         $this->no_lt4_VAP0207 = $no_lt4_VAP0207;
         $this->no_lt4_VAP0208 = $no_lt4_VAP0208;
+        $this->no_lt4_VAP0209 = $no_lt4_VAP0209;
+        $this->no_lt4_VAP0210 = $no_lt4_VAP0210;
         $this->no_lt4_jumlah = $no_lt4_jumlah;
 
         $this->denominator_lt4 = $denominator_lt4;
@@ -392,6 +440,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->lt5_VAP0206 = $lt5_VAP0206;
         $this->lt5_VAP0207 = $lt5_VAP0207;
         $this->lt5_VAP0208 = $lt5_VAP0208;
+        $this->lt5_VAP0209 = $lt5_VAP0209;
+        $this->lt5_VAP0210 = $lt5_VAP0210;
         $this->lt5_jumlah = $lt5_jumlah;
 
         $this->no_lt5_VAP0101 = $no_lt5_VAP0101;
@@ -406,6 +456,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->no_lt5_VAP0206 = $no_lt5_VAP0206;
         $this->no_lt5_VAP0207 = $no_lt5_VAP0207;
         $this->no_lt5_VAP0208 = $no_lt5_VAP0208;
+        $this->no_lt5_VAP0209 = $no_lt5_VAP0209;
+        $this->no_lt5_VAP0210 = $no_lt5_VAP0210;
         $this->no_lt5_jumlah = $no_lt5_jumlah;
 
         $this->denominator_lt5 = $denominator_lt5;
@@ -422,6 +474,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->vk_VAP0206 = $vk_VAP0206;
         $this->vk_VAP0207 = $vk_VAP0207;
         $this->vk_VAP0208 = $vk_VAP0208;
+        $this->vk_VAP0209 = $vk_VAP0209;
+        $this->vk_VAP0210 = $vk_VAP0210;
         $this->vk_jumlah = $vk_jumlah;
 
         $this->no_vk_VAP0101 = $no_vk_VAP0101;
@@ -436,6 +490,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
         $this->no_vk_VAP0206 = $no_vk_VAP0206;
         $this->no_vk_VAP0207 = $no_vk_VAP0207;
         $this->no_vk_VAP0208 = $no_vk_VAP0208;
+        $this->no_vk_VAP0209 = $no_vk_VAP0209;
+        $this->no_vk_VAP0210 = $no_vk_VAP0210;
         $this->no_vk_jumlah = $no_vk_jumlah;
 
         $this->denominator_vk = $denominator_vk;
@@ -464,6 +520,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'igd_VAP0206' => $this->igd_VAP0206,
             'igd_VAP0207' => $this->igd_VAP0207,
             'igd_VAP0208' => $this->igd_VAP0208,
+            'igd_VAP0209' => $this->igd_VAP0209,
+            'igd_VAP0210' => $this->igd_VAP0210,
             'igd_jumlah' => $this->igd_jumlah,
 
             'no_igd_VAP0101' => $this->no_igd_VAP0101,
@@ -478,6 +536,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'no_igd_VAP0206' => $this->no_igd_VAP0206,
             'no_igd_VAP0207' => $this->no_igd_VAP0207,
             'no_igd_VAP0208' => $this->no_igd_VAP0208,
+            'no_igd_VAP0209' => $this->no_igd_VAP0209,
+            'no_igd_VAP0210' => $this->no_igd_VAP0210,
             'no_igd_jumlah' => $this->no_igd_jumlah,
 
             'denominator_igd' => $this->denominator_igd,
@@ -494,6 +554,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'int_VAP0206' => $this->int_VAP0206,
             'int_VAP0207' => $this->int_VAP0207,
             'int_VAP0208' => $this->int_VAP0208,
+            'int_VAP0209' => $this->int_VAP0209,
+            'int_VAP0210' => $this->int_VAP0210,
             'int_jumlah' => $this->int_jumlah,
 
             'no_int_VAP0101' => $this->no_int_VAP0101,
@@ -508,6 +570,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'no_int_VAP0206' => $this->no_int_VAP0206,
             'no_int_VAP0207' => $this->no_int_VAP0207,
             'no_int_VAP0208' => $this->no_int_VAP0208,
+            'no_int_VAP0209' => $this->no_int_VAP0209,
+            'no_int_VAP0210' => $this->no_int_VAP0210,
             'no_int_jumlah' => $this->no_int_jumlah,
 
             'denominator_int' => $this->denominator_int,
@@ -524,6 +588,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'ok_VAP0206' => $this->ok_VAP0206,
             'ok_VAP0207' => $this->ok_VAP0207,
             'ok_VAP0208' => $this->ok_VAP0208,
+            'ok_VAP0209' => $this->ok_VAP0209,
+            'ok_VAP0210' => $this->ok_VAP0210,
             'ok_jumlah' => $this->ok_jumlah,
 
             'no_ok_VAP0101' => $this->no_ok_VAP0101,
@@ -538,6 +604,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'no_ok_VAP0206' => $this->no_ok_VAP0206,
             'no_ok_VAP0207' => $this->no_ok_VAP0207,
             'no_ok_VAP0208' => $this->no_ok_VAP0208,
+            'no_ok_VAP0209' => $this->no_ok_VAP0209,
+            'no_ok_VAP0210' => $this->no_ok_VAP0210,
             'no_ok_jumlah' => $this->no_ok_jumlah,
 
             'denominator_ok' => $this->denominator_ok,
@@ -554,6 +622,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'lt2_VAP0206' => $this->lt2_VAP0206,
             'lt2_VAP0207' => $this->lt2_VAP0207,
             'lt2_VAP0208' => $this->lt2_VAP0208,
+            'lt2_VAP0209' => $this->lt2_VAP0209,
+            'lt2_VAP0210' => $this->lt2_VAP0210,
             'lt2_jumlah' => $this->lt2_jumlah,
 
             'no_lt2_VAP0101' => $this->no_lt2_VAP0101,
@@ -568,6 +638,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'no_lt2_VAP0206' => $this->no_lt2_VAP0206,
             'no_lt2_VAP0207' => $this->no_lt2_VAP0207,
             'no_lt2_VAP0208' => $this->no_lt2_VAP0208,
+            'no_lt2_VAP0209' => $this->no_lt2_VAP0209,
+            'no_lt2_VAP0210' => $this->no_lt2_VAP0210,
             'no_lt2_jumlah' => $this->no_lt2_jumlah,
 
             'denominator_lt2' => $this->denominator_lt2,
@@ -584,6 +656,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'lt4_VAP0206' => $this->lt4_VAP0206,
             'lt4_VAP0207' => $this->lt4_VAP0207,
             'lt4_VAP0208' => $this->lt4_VAP0208,
+            'lt4_VAP0209' => $this->lt4_VAP0209,
+            'lt4_VAP0210' => $this->lt4_VAP0210,
             'lt4_jumlah' => $this->lt4_jumlah,
 
             'no_lt4_VAP0101' => $this->no_lt4_VAP0101,
@@ -598,6 +672,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'no_lt4_VAP0206' => $this->no_lt4_VAP0206,
             'no_lt4_VAP0207' => $this->no_lt4_VAP0207,
             'no_lt4_VAP0208' => $this->no_lt4_VAP0208,
+            'no_lt4_VAP0209' => $this->no_lt4_VAP0209,
+            'no_lt4_VAP0210' => $this->no_lt4_VAP0210,
             'no_lt4_jumlah' => $this->no_lt4_jumlah,
 
             'denominator_lt4' => $this->denominator_lt4,
@@ -614,6 +690,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'lt5_VAP0206' => $this->lt5_VAP0206,
             'lt5_VAP0207' => $this->lt5_VAP0207,
             'lt5_VAP0208' => $this->lt5_VAP0208,
+            'lt5_VAP0209' => $this->lt5_VAP0209,
+            'lt5_VAP0210' => $this->lt5_VAP0210,
             'lt5_jumlah' => $this->lt5_jumlah,
 
             'no_lt5_VAP0101' => $this->no_lt5_VAP0101,
@@ -628,6 +706,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'no_lt5_VAP0206' => $this->no_lt5_VAP0206,
             'no_lt5_VAP0207' => $this->no_lt5_VAP0207,
             'no_lt5_VAP0208' => $this->no_lt5_VAP0208,
+            'no_lt5_VAP0209' => $this->no_lt5_VAP0209,
+            'no_lt5_VAP0210' => $this->no_lt5_VAP0210,
             'no_lt5_jumlah' => $this->no_lt5_jumlah,
 
             'denominator_lt5' => $this->denominator_lt5,
@@ -644,6 +724,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'vk_VAP0206' => $this->vk_VAP0206,
             'vk_VAP0207' => $this->vk_VAP0207,
             'vk_VAP0208' => $this->vk_VAP0208,
+            'vk_VAP0209' => $this->vk_VAP0209,
+            'vk_VAP0210' => $this->vk_VAP0210,
             'vk_jumlah' => $this->vk_jumlah,
 
             'no_vk_VAP0101' => $this->no_vk_VAP0101,
@@ -658,6 +740,8 @@ class ExportBundleVAP implements FromView, ShouldAutoSize, WithEvents
             'no_vk_VAP0206' => $this->no_vk_VAP0206,
             'no_vk_VAP0207' => $this->no_vk_VAP0207,
             'no_vk_VAP0208' => $this->no_vk_VAP0208,
+            'no_vk_VAP0209' => $this->no_vk_VAP0209,
+            'no_vk_VAP0210' => $this->no_vk_VAP0210,
             'no_vk_jumlah' => $this->no_vk_jumlah,
 
             'denominator_vk' => $this->denominator_vk,

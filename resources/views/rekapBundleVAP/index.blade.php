@@ -195,6 +195,26 @@
           <td>{{ $vk_VAP0208 }}</td>
         </tr>
         <tr>
+          <th>Peptic disease prophylaxis diberikan pada pasien dengan resiko tinggi</th>
+          <td>{{ $igd_VAP0209 }}</td>
+          <td>{{ $int_VAP0209 }}</td>
+          <td>{{ $ok_VAP0209 }}</td>
+          <td>{{ $lt2_VAP0209 }}</td>
+          <td>{{ $lt4_VAP0209 }}</td>
+          <td>{{ $lt5_VAP0209 }}</td>
+          <td>{{ $vk_VAP0209 }}</td>
+        </tr>
+        <tr>
+          <th>Berikan Deep Vein Trombosis (DVT)</th>
+          <td>{{ $igd_VAP0210 }}</td>
+          <td>{{ $int_VAP0210 }}</td>
+          <td>{{ $ok_VAP0210 }}</td>
+          <td>{{ $lt2_VAP0210 }}</td>
+          <td>{{ $lt4_VAP0210 }}</td>
+          <td>{{ $lt5_VAP0210 }}</td>
+          <td>{{ $vk_VAP0210 }}</td>
+        </tr>
+        <tr>
           <td colspan="8"></td>
         </tr>
         <tr>
@@ -389,6 +409,8 @@
         {{ $igd_VAP0206 }},
         {{ $igd_VAP0207 }},
         {{ $igd_VAP0208 }},
+        {{ $igd_VAP0209 }},
+        {{ $igd_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(213, 0, 0, 0.2)'
@@ -414,6 +436,8 @@
         {{ $int_VAP0206 }},
         {{ $int_VAP0207 }},
         {{ $int_VAP0208 }},
+        {{ $int_VAP0209 }},
+        {{ $int_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(24, 255, 255, 0.2)'
@@ -439,6 +463,8 @@
         {{ $ok_VAP0206 }},
         {{ $ok_VAP0207 }},
         {{ $ok_VAP0208 }},
+        {{ $ok_VAP0209 }},
+        {{ $ok_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(0, 200, 83, 0.2)'
@@ -464,6 +490,8 @@
         {{ $lt2_VAP0206 }},
         {{ $lt2_VAP0207 }},
         {{ $lt2_VAP0208 }},
+        {{ $lt2_VAP0209 }},
+        {{ $lt2_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(224, 64, 251, 0.2)'
@@ -489,6 +517,8 @@
         {{ $lt4_VAP0206 }},
         {{ $lt4_VAP0207 }},
         {{ $lt4_VAP0208 }},
+        {{ $lt4_VAP0209 }},
+        {{ $lt4_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(255, 109, 0, 0.2)'
@@ -514,6 +544,8 @@
         {{ $lt5_VAP0206 }},
         {{ $lt5_VAP0207 }},
         {{ $lt5_VAP0208 }},
+        {{ $lt5_VAP0209 }},
+        {{ $lt5_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(41, 98, 255, 0.2)'
@@ -539,6 +571,8 @@
         {{ $vk_VAP0206 }},
         {{ $vk_VAP0207 }},
         {{ $vk_VAP0208 }},
+        {{ $vk_VAP0209 }},
+        {{ $vk_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(255, 234, 0, 0.2)'
@@ -559,10 +593,12 @@
         ['Oral hygiene','4-6x sehari','atau jika perlu'],
         ['Sikat gigi','setiap 12 jam'],
         ['Pengkajian','sedasi ekstubasi'],
-        ['Posisi kepala','33-45 derajat'],
+        ['Posisi kepala','30-45 derajat'],
         ['Manajemen','sekresi / suction'],
-        ['Penggantian','selang suction','1x24 jam'],
+        ['Penggantian','selang suction','tiap sekali pakai'],
         ['Penggantian','cairan yang','digunakan untuk','suction pershif'],
+        ['Peptic disease','prophylaxis diberikan','pada pasien dengan','resiko tinggi'],
+        ['Berikan','Deep Vein Trombosis (DVT)'],
     ],
     datasets: [
       igd1,
@@ -633,6 +669,8 @@
         {{ $no_igd_VAP0206 }},
         {{ $no_igd_VAP0207 }},
         {{ $no_igd_VAP0208 }},
+        {{ $no_igd_VAP0209 }},
+        {{ $no_igd_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(213, 0, 0, 0.2)'
@@ -658,6 +696,8 @@
         {{ $no_int_VAP0206 }},
         {{ $no_int_VAP0207 }},
         {{ $no_int_VAP0208 }},
+        {{ $no_int_VAP0209 }},
+        {{ $no_int_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(24, 255, 255, 0.2)'
@@ -683,6 +723,8 @@
         {{ $no_ok_VAP0206 }},
         {{ $no_ok_VAP0207 }},
         {{ $no_ok_VAP0208 }},
+        {{ $no_ok_VAP0209 }},
+        {{ $no_ok_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(0, 200, 83, 0.2)'
@@ -708,6 +750,8 @@
         {{ $no_lt2_VAP0206 }},
         {{ $no_lt2_VAP0207 }},
         {{ $no_lt2_VAP0208 }},
+        {{ $no_lt2_VAP0209 }},
+        {{ $no_lt2_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(224, 64, 251, 0.2)'
@@ -733,6 +777,8 @@
         {{ $no_lt4_VAP0206 }},
         {{ $no_lt4_VAP0207 }},
         {{ $no_lt4_VAP0208 }},
+        {{ $no_lt4_VAP0209 }},
+        {{ $no_lt4_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(255, 109, 0, 0.2)'
@@ -758,6 +804,8 @@
         {{ $no_lt5_VAP0206 }},
         {{ $no_lt5_VAP0207 }},
         {{ $no_lt5_VAP0208 }},
+        {{ $no_lt5_VAP0209 }},
+        {{ $no_lt5_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(41, 98, 255, 0.2)'
@@ -783,6 +831,8 @@
         {{ $no_vk_VAP0206 }},
         {{ $no_vk_VAP0207 }},
         {{ $no_vk_VAP0208 }},
+        {{ $no_vk_VAP0209 }},
+        {{ $no_vk_VAP0210 }},
     ],
     backgroundColor: [
       'rgba(255, 234, 0, 0.2)'
@@ -807,6 +857,8 @@
         ['Manajemen','sekresi / suction'],
         ['Penggantian','selang suction','1x24 jam'],
         ['Penggantian','cairan yang','digunakan untuk','suction pershif'],
+        ['Peptic disease','prophylaxis diberikan','pada pasien dengan','resiko tinggi'],
+        ['Berikan','Deep Vein Trombosis (DVT)'],
     ],
     datasets: [
       igd0,
