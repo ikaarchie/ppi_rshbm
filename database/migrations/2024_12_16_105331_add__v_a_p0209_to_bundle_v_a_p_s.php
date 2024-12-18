@@ -14,8 +14,8 @@ class AddVAP0209ToBundleVAPS extends Migration
     public function up()
     {
         Schema::table('bundle_v_a_p_s', function (Blueprint $table) {
-            $table->string('VAP0209');
-            $table->string('VAP0210');
+            $table->string('VAP0209')->default('td');
+            $table->string('VAP0210')->default('td');
         });
     }
 
