@@ -171,6 +171,21 @@
             : 0 }} %</td>
         </tr>
         <tr>
+          <th>Kebersihan</th>
+          <td>{{ $kebersihan_sbl_kon_psn }}</td>
+          <td>{{ $kebersihan_sbl_tin_aseptik }}</td>
+          <td>{{ $kebersihan_stl_kon_cairan }}</td>
+          <td>{{ $kebersihan_stl_kon_psn }}</td>
+          <td>{{ $kebersihan_stl_kon_ling_psn }}</td>
+          <td>{{ $kebersihan_hr }}</td>
+          <td>{{ $kebersihan_hw }}</td>
+          <td>{{ $kebersihan_gagal }}</td>
+          <td>{{ $kebersihan_st }}</td>
+          <td>{{ $kebersihan_jumlah }}</td>
+          <td>{{ ($kebersihan_jumlah != 0 && $denominator_kebersihan != 0) ? number_format(($kebersihan_jumlah /
+            $denominator_kebersihan) * 100, 2) : 0 }} %</td>
+        </tr>
+        <tr>
           <th>KBBL</th>
           <td>{{ $kbbl_sbl_kon_psn }}</td>
           <td>{{ $kbbl_sbl_tin_aseptik }}</td>
@@ -608,6 +623,28 @@
     borderWidth: 1
   };
 
+  var kebersihan1 = {
+    label: ['Kebersihan'],
+    data: [
+        {{ $kebersihan_sbl_kon_psn }},
+        {{ $kebersihan_sbl_tin_aseptik }},
+        {{ $kebersihan_stl_kon_cairan }},
+        {{ $kebersihan_stl_kon_psn }},
+        {{ $kebersihan_stl_kon_ling_psn }},
+        // {{ $kebersihan_hr }},
+        // {{ $kebersihan_hw }},
+        // {{ $kebersihan_gagal }},
+        // {{ $kebersihan_st }},
+    ],
+    backgroundColor: [
+      'rgba(255, 234, 0, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 234, 0)'
+    ],
+    borderWidth: 1
+  };
+
   var kbbl1 = {
     label: ['KBBL'],
     data: [
@@ -847,6 +884,7 @@
       farmasi1, 
       igd1,
       int1,
+      kebersihan1,
       kbbl1,
       lab1,
       laundry1,
@@ -1031,6 +1069,28 @@
     ],
     borderColor: [
       'rgb(41, 121, 255)'
+    ],
+    borderWidth: 1
+  };
+
+  var kebersihan0 = {
+    label: ['Kebersihan'],
+    data: [
+        {{ $no_kebersihan_sbl_kon_psn }},
+        {{ $no_kebersihan_sbl_tin_aseptik }},
+        {{ $no_kebersihan_stl_kon_cairan }},
+        {{ $no_kebersihan_stl_kon_psn }},
+        {{ $no_kebersihan_stl_kon_ling_psn }},
+        // {{ $no_kebersihan_hr }},
+        // {{ $no_kebersihan_hw }},
+        // {{ $no_kebersihan_gagal }},
+        // {{ $no_kebersihan_st }},
+    ],
+    backgroundColor: [
+      'rgba(255, 234, 0, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 234, 0)'
     ],
     borderWidth: 1
   };
@@ -1274,6 +1334,7 @@
       farmasi0, 
       igd0,
       int0,
+      kebersihan0,
       kbbl0,
       lab0,
       laundry0,

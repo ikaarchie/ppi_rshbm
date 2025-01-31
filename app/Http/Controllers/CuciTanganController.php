@@ -142,6 +142,11 @@ class CuciTanganController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
+            $kebersihan = CuciTangan::where('unit', 'Kebersihan')
+                ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
+                ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
+                ->latest('id')
+                ->get();
             $kbbl = CuciTangan::where('unit', 'KBBL')
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
@@ -336,6 +341,30 @@ class CuciTanganController extends Controller
             $no_int_jumlah = $no_int_sbl_kon_psn + $no_int_sbl_tin_aseptik + $no_int_stl_kon_cairan + $no_int_stl_kon_psn + $no_int_stl_kon_ling_psn;
 
             $denominator_int = $int_jumlah + $no_int_jumlah;
+
+            $kebersihan_sbl_kon_psn = $kebersihan->where('sbl_kon_psn', '1')->count();
+            $kebersihan_sbl_tin_aseptik = $kebersihan->where('sbl_tin_aseptik', '1')->count();
+            $kebersihan_stl_kon_cairan = $kebersihan->where('stl_kon_cairan', '1')->count();
+            $kebersihan_stl_kon_psn = $kebersihan->where('stl_kon_psn', '1')->count();
+            $kebersihan_stl_kon_ling_psn = $kebersihan->where('stl_kon_ling_psn', '1')->count();
+            $kebersihan_hr = $kebersihan->where('hr', '1')->count();
+            $kebersihan_hw = $kebersihan->where('hw', '1')->count();
+            $kebersihan_gagal = $kebersihan->where('gagal', '1')->count();
+            $kebersihan_st = $kebersihan->where('st', '1')->count();
+            $kebersihan_jumlah = $kebersihan_sbl_kon_psn + $kebersihan_sbl_tin_aseptik + $kebersihan_stl_kon_cairan + $kebersihan_stl_kon_psn + $kebersihan_stl_kon_ling_psn + $kebersihan_hr + $kebersihan_hw + $kebersihan_gagal + $kebersihan_st;
+
+            $no_kebersihan_sbl_kon_psn = $kebersihan->where('sbl_kon_psn', '0')->count();
+            $no_kebersihan_sbl_tin_aseptik = $kebersihan->where('sbl_tin_aseptik', '0')->count();
+            $no_kebersihan_stl_kon_cairan = $kebersihan->where('stl_kon_cairan', '0')->count();
+            $no_kebersihan_stl_kon_psn = $kebersihan->where('stl_kon_psn', '0')->count();
+            $no_kebersihan_stl_kon_ling_psn = $kebersihan->where('stl_kon_ling_psn', '0')->count();
+            $no_kebersihan_hr = $kebersihan->where('hr', '0')->count();
+            $no_kebersihan_hw = $kebersihan->where('hw', '0')->count();
+            $no_kebersihan_gagal = $kebersihan->where('gagal', '0')->count();
+            $no_kebersihan_st = $kebersihan->where('st', '0')->count();
+            $no_kebersihan_jumlah = $no_kebersihan_sbl_kon_psn + $no_kebersihan_sbl_tin_aseptik + $no_kebersihan_stl_kon_cairan + $no_kebersihan_stl_kon_psn + $no_kebersihan_stl_kon_ling_psn + $no_kebersihan_hr + $no_kebersihan_hw + $no_kebersihan_gagal + $no_kebersihan_st;
+
+            $denominator_kebersihan = $kebersihan_jumlah + $no_kebersihan_jumlah;
 
             $kbbl_sbl_kon_psn = $kbbl->where('sbl_kon_psn', '1')->count();
             $kbbl_sbl_tin_aseptik = $kbbl->where('sbl_tin_aseptik', '1')->count();
@@ -728,6 +757,30 @@ class CuciTanganController extends Controller
 
                 'denominator_int',
 
+                'kebersihan_sbl_kon_psn',
+                'kebersihan_sbl_tin_aseptik',
+                'kebersihan_stl_kon_cairan',
+                'kebersihan_stl_kon_psn',
+                'kebersihan_stl_kon_ling_psn',
+                'kebersihan_hr',
+                'kebersihan_hw',
+                'kebersihan_gagal',
+                'kebersihan_st',
+                'kebersihan_jumlah',
+
+                'no_kebersihan_sbl_kon_psn',
+                'no_kebersihan_sbl_tin_aseptik',
+                'no_kebersihan_stl_kon_cairan',
+                'no_kebersihan_stl_kon_psn',
+                'no_kebersihan_stl_kon_ling_psn',
+                'no_kebersihan_hr',
+                'no_kebersihan_hw',
+                'no_kebersihan_gagal',
+                'no_kebersihan_st',
+                'no_kebersihan_jumlah',
+
+                'denominator_kebersihan',
+
                 'kbbl_sbl_kon_psn',
                 'kbbl_sbl_tin_aseptik',
                 'kbbl_stl_kon_cairan',
@@ -1027,6 +1080,11 @@ class CuciTanganController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
+            $kebersihan = CuciTangan::where('unit', 'Kebersihan')
+                ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
+                ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
+                ->latest('id')
+                ->get();
             $kbbl = CuciTangan::where('unit', 'KBBL')
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
@@ -1221,6 +1279,30 @@ class CuciTanganController extends Controller
             $no_int_jumlah = $no_int_sbl_kon_psn + $no_int_sbl_tin_aseptik + $no_int_stl_kon_cairan + $no_int_stl_kon_psn + $no_int_stl_kon_ling_psn;
 
             $denominator_int = $int_jumlah + $no_int_jumlah;
+
+            $kebersihan_sbl_kon_psn = $kebersihan->where('sbl_kon_psn', '1')->count();
+            $kebersihan_sbl_tin_aseptik = $kebersihan->where('sbl_tin_aseptik', '1')->count();
+            $kebersihan_stl_kon_cairan = $kebersihan->where('stl_kon_cairan', '1')->count();
+            $kebersihan_stl_kon_psn = $kebersihan->where('stl_kon_psn', '1')->count();
+            $kebersihan_stl_kon_ling_psn = $kebersihan->where('stl_kon_ling_psn', '1')->count();
+            $kebersihan_hr = $kebersihan->where('hr', '1')->count();
+            $kebersihan_hw = $kebersihan->where('hw', '1')->count();
+            $kebersihan_gagal = $kebersihan->where('gagal', '1')->count();
+            $kebersihan_st = $kebersihan->where('st', '1')->count();
+            $kebersihan_jumlah = $kebersihan_sbl_kon_psn + $kebersihan_sbl_tin_aseptik + $kebersihan_stl_kon_cairan + $kebersihan_stl_kon_psn + $kebersihan_stl_kon_ling_psn;
+
+            $no_kebersihan_sbl_kon_psn = $kebersihan->where('sbl_kon_psn', '0')->count();
+            $no_kebersihan_sbl_tin_aseptik = $kebersihan->where('sbl_tin_aseptik', '0')->count();
+            $no_kebersihan_stl_kon_cairan = $kebersihan->where('stl_kon_cairan', '0')->count();
+            $no_kebersihan_stl_kon_psn = $kebersihan->where('stl_kon_psn', '0')->count();
+            $no_kebersihan_stl_kon_ling_psn = $kebersihan->where('stl_kon_ling_psn', '0')->count();
+            $no_kebersihan_hr = $kebersihan->where('hr', '0')->count();
+            $no_kebersihan_hw = $kebersihan->where('hw', '0')->count();
+            $no_kebersihan_gagal = $kebersihan->where('gagal', '0')->count();
+            $no_kebersihan_st = $kebersihan->where('st', '0')->count();
+            $no_kebersihan_jumlah = $no_kebersihan_sbl_kon_psn + $no_kebersihan_sbl_tin_aseptik + $no_kebersihan_stl_kon_cairan + $no_kebersihan_stl_kon_psn + $no_kebersihan_stl_kon_ling_psn;
+
+            $denominator_kebersihan = $kebersihan_jumlah + $no_kebersihan_jumlah;
 
             $kbbl_sbl_kon_psn = $kbbl->where('sbl_kon_psn', '1')->count();
             $kbbl_sbl_tin_aseptik = $kbbl->where('sbl_tin_aseptik', '1')->count();
@@ -1609,6 +1691,30 @@ class CuciTanganController extends Controller
 
                 $denominator_int,
 
+                $kebersihan_sbl_kon_psn,
+                $kebersihan_sbl_tin_aseptik,
+                $kebersihan_stl_kon_cairan,
+                $kebersihan_stl_kon_psn,
+                $kebersihan_stl_kon_ling_psn,
+                $kebersihan_hr,
+                $kebersihan_hw,
+                $kebersihan_gagal,
+                $kebersihan_st,
+                $kebersihan_jumlah,
+
+                $no_kebersihan_sbl_kon_psn,
+                $no_kebersihan_sbl_tin_aseptik,
+                $no_kebersihan_stl_kon_cairan,
+                $no_kebersihan_stl_kon_psn,
+                $no_kebersihan_stl_kon_ling_psn,
+                $no_kebersihan_hr,
+                $no_kebersihan_hw,
+                $no_kebersihan_gagal,
+                $no_kebersihan_st,
+                $no_kebersihan_jumlah,
+
+                $denominator_kebersihan,
+
                 $kbbl_sbl_kon_psn,
                 $kbbl_sbl_tin_aseptik,
                 $kbbl_stl_kon_cairan,
@@ -1933,6 +2039,11 @@ class CuciTanganController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
+            $kebersihan = CuciTangan::where('unit', 'Kebersihan')
+                ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
+                ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
+                ->latest('id')
+                ->get();
             $kbbl = CuciTangan::where('unit', 'KBBL')
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
@@ -2127,6 +2238,30 @@ class CuciTanganController extends Controller
             $no_int_jumlah = $no_int_sbl_kon_psn + $no_int_sbl_tin_aseptik + $no_int_stl_kon_cairan + $no_int_stl_kon_psn + $no_int_stl_kon_ling_psn + $no_int_hr + $no_int_hw + $no_int_gagal + $no_int_st;
 
             $denominator_int = $int_jumlah + $no_int_jumlah;
+
+            $kebersihan_sbl_kon_psn = $kebersihan->where('sbl_kon_psn', '1')->count();
+            $kebersihan_sbl_tin_aseptik = $kebersihan->where('sbl_tin_aseptik', '1')->count();
+            $kebersihan_stl_kon_cairan = $kebersihan->where('stl_kon_cairan', '1')->count();
+            $kebersihan_stl_kon_psn = $kebersihan->where('stl_kon_psn', '1')->count();
+            $kebersihan_stl_kon_ling_psn = $kebersihan->where('stl_kon_ling_psn', '1')->count();
+            $kebersihan_hr = $kebersihan->where('hr', '1')->count();
+            $kebersihan_hw = $kebersihan->where('hw', '1')->count();
+            $kebersihan_gagal = $kebersihan->where('gagal', '1')->count();
+            $kebersihan_st = $kebersihan->where('st', '1')->count();
+            $kebersihan_jumlah = $kebersihan_sbl_kon_psn + $kebersihan_sbl_tin_aseptik + $kebersihan_stl_kon_cairan + $kebersihan_stl_kon_psn + $kebersihan_stl_kon_ling_psn + $kebersihan_hr + $kebersihan_hw + $kebersihan_gagal + $kebersihan_st;
+
+            $no_kebersihan_sbl_kon_psn = $kebersihan->where('sbl_kon_psn', '0')->count();
+            $no_kebersihan_sbl_tin_aseptik = $kebersihan->where('sbl_tin_aseptik', '0')->count();
+            $no_kebersihan_stl_kon_cairan = $kebersihan->where('stl_kon_cairan', '0')->count();
+            $no_kebersihan_stl_kon_psn = $kebersihan->where('stl_kon_psn', '0')->count();
+            $no_kebersihan_stl_kon_ling_psn = $kebersihan->where('stl_kon_ling_psn', '0')->count();
+            $no_kebersihan_hr = $kebersihan->where('hr', '0')->count();
+            $no_kebersihan_hw = $kebersihan->where('hw', '0')->count();
+            $no_kebersihan_gagal = $kebersihan->where('gagal', '0')->count();
+            $no_kebersihan_st = $kebersihan->where('st', '0')->count();
+            $no_kebersihan_jumlah = $no_kebersihan_sbl_kon_psn + $no_kebersihan_sbl_tin_aseptik + $no_kebersihan_stl_kon_cairan + $no_kebersihan_stl_kon_psn + $no_kebersihan_stl_kon_ling_psn + $no_kebersihan_hr + $no_kebersihan_hw + $no_kebersihan_gagal + $no_kebersihan_st;
+
+            $denominator_kebersihan = $kebersihan_jumlah + $no_kebersihan_jumlah;
 
             $kbbl_sbl_kon_psn = $kbbl->where('sbl_kon_psn', '1')->count();
             $kbbl_sbl_tin_aseptik = $kbbl->where('sbl_tin_aseptik', '1')->count();
@@ -2514,6 +2649,30 @@ class CuciTanganController extends Controller
                 $no_int_jumlah,
 
                 $denominator_int,
+
+                $kebersihan_sbl_kon_psn,
+                $kebersihan_sbl_tin_aseptik,
+                $kebersihan_stl_kon_cairan,
+                $kebersihan_stl_kon_psn,
+                $kebersihan_stl_kon_ling_psn,
+                $kebersihan_hr,
+                $kebersihan_hw,
+                $kebersihan_gagal,
+                $kebersihan_st,
+                $kebersihan_jumlah,
+
+                $no_kebersihan_sbl_kon_psn,
+                $no_kebersihan_sbl_tin_aseptik,
+                $no_kebersihan_stl_kon_cairan,
+                $no_kebersihan_stl_kon_psn,
+                $no_kebersihan_stl_kon_ling_psn,
+                $no_kebersihan_hr,
+                $no_kebersihan_hw,
+                $no_kebersihan_gagal,
+                $no_kebersihan_st,
+                $no_kebersihan_jumlah,
+
+                $denominator_kebersihan,
 
                 $kbbl_sbl_kon_psn,
                 $kbbl_sbl_tin_aseptik,
