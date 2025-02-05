@@ -351,7 +351,7 @@ class CuciTanganController extends Controller
             $kebersihan_hw = $kebersihan->where('hw', '1')->count();
             $kebersihan_gagal = $kebersihan->where('gagal', '1')->count();
             $kebersihan_st = $kebersihan->where('st', '1')->count();
-            $kebersihan_jumlah = $kebersihan_sbl_kon_psn + $kebersihan_sbl_tin_aseptik + $kebersihan_stl_kon_cairan + $kebersihan_stl_kon_psn + $kebersihan_stl_kon_ling_psn + $kebersihan_hr + $kebersihan_hw + $kebersihan_gagal + $kebersihan_st;
+            $kebersihan_jumlah = $kebersihan_sbl_kon_psn + $kebersihan_sbl_tin_aseptik + $kebersihan_stl_kon_cairan + $kebersihan_stl_kon_psn + $kebersihan_stl_kon_ling_psn;
 
             $no_kebersihan_sbl_kon_psn = $kebersihan->where('sbl_kon_psn', '0')->count();
             $no_kebersihan_sbl_tin_aseptik = $kebersihan->where('sbl_tin_aseptik', '0')->count();
@@ -362,7 +362,7 @@ class CuciTanganController extends Controller
             $no_kebersihan_hw = $kebersihan->where('hw', '0')->count();
             $no_kebersihan_gagal = $kebersihan->where('gagal', '0')->count();
             $no_kebersihan_st = $kebersihan->where('st', '0')->count();
-            $no_kebersihan_jumlah = $no_kebersihan_sbl_kon_psn + $no_kebersihan_sbl_tin_aseptik + $no_kebersihan_stl_kon_cairan + $no_kebersihan_stl_kon_psn + $no_kebersihan_stl_kon_ling_psn + $no_kebersihan_hr + $no_kebersihan_hw + $no_kebersihan_gagal + $no_kebersihan_st;
+            $no_kebersihan_jumlah = $no_kebersihan_sbl_kon_psn + $no_kebersihan_sbl_tin_aseptik + $no_kebersihan_stl_kon_cairan + $no_kebersihan_stl_kon_psn + $no_kebersihan_stl_kon_ling_psn;
 
             $denominator_kebersihan = $kebersihan_jumlah + $no_kebersihan_jumlah;
 
@@ -605,6 +605,78 @@ class CuciTanganController extends Controller
             $no_vk_jumlah = $no_vk_sbl_kon_psn + $no_vk_sbl_tin_aseptik + $no_vk_stl_kon_cairan + $no_vk_stl_kon_psn + $no_vk_stl_kon_ling_psn;
 
             $denominator_vk = $vk_jumlah + $no_vk_jumlah;
+
+            $jangmed_sbl_kon_psn = $cssu_sbl_kon_psn + $farmasi_sbl_kon_psn + $lab_sbl_kon_psn + $rad_sbl_kon_psn;
+            $jangmed_sbl_tin_aseptik = $cssu_sbl_tin_aseptik + $farmasi_sbl_tin_aseptik + $lab_sbl_tin_aseptik + $rad_sbl_tin_aseptik;
+            $jangmed_stl_kon_cairan = $cssu_stl_kon_cairan + $farmasi_stl_kon_cairan + $lab_stl_kon_cairan + $rad_stl_kon_cairan;
+            $jangmed_stl_kon_psn = $cssu_stl_kon_psn + $farmasi_stl_kon_psn + $lab_stl_kon_psn + $rad_stl_kon_psn;
+            $jangmed_stl_kon_ling_psn = $cssu_stl_kon_ling_psn + $farmasi_stl_kon_ling_psn + $lab_stl_kon_ling_psn + $rad_stl_kon_ling_psn;
+            $jangmed_hr = $cssu_hr + $farmasi_hr + $lab_hr + $rad_hr;
+            $jangmed_hw = $cssu_hw + $farmasi_hw + $lab_hw + $rad_hw;
+            $jangmed_gagal = $cssu_gagal + $farmasi_gagal + $lab_gagal + $rad_gagal;
+            $jangmed_st = $cssu_st + $farmasi_st + $lab_st + $rad_st;
+            $jangmed_jumlah = $jangmed_sbl_kon_psn + $jangmed_sbl_tin_aseptik + $jangmed_stl_kon_cairan + $jangmed_stl_kon_psn + $jangmed_stl_kon_ling_psn;
+
+            $no_jangmed_sbl_kon_psn = $no_cssu_sbl_kon_psn + $no_farmasi_sbl_kon_psn + $no_lab_sbl_kon_psn + $no_rad_sbl_kon_psn;
+            $no_jangmed_sbl_tin_aseptik = $no_cssu_sbl_tin_aseptik + $no_farmasi_sbl_tin_aseptik + $no_lab_sbl_tin_aseptik + $no_rad_sbl_tin_aseptik;
+            $no_jangmed_stl_kon_cairan = $no_cssu_stl_kon_cairan + $no_farmasi_stl_kon_cairan + $no_lab_stl_kon_cairan + $no_rad_stl_kon_cairan;
+            $no_jangmed_stl_kon_psn = $no_cssu_stl_kon_psn + $no_farmasi_stl_kon_psn + $no_lab_stl_kon_psn + $no_rad_stl_kon_psn;
+            $no_jangmed_stl_kon_ling_psn = $no_cssu_stl_kon_ling_psn + $no_farmasi_stl_kon_ling_psn + $no_lab_stl_kon_ling_psn + $no_rad_stl_kon_ling_psn;
+            $no_jangmed_hr = $no_cssu_hr + $no_farmasi_hr + $no_lab_hr + $no_rad_hr;
+            $no_jangmed_hw = $no_cssu_hw + $no_farmasi_hw + $no_lab_hw + $no_rad_hw;
+            $no_jangmed_gagal = $no_cssu_gagal + $no_farmasi_gagal + $no_lab_gagal + $no_rad_gagal;
+            $no_jangmed_st = $no_cssu_st + $no_farmasi_st + $no_lab_st + $no_rad_st;
+            $no_jangmed_jumlah = $no_jangmed_sbl_kon_psn + $no_jangmed_sbl_tin_aseptik + $no_jangmed_stl_kon_cairan + $no_jangmed_stl_kon_psn + $no_jangmed_stl_kon_ling_psn;
+
+            $denominator_jangmed = $jangmed_jumlah + $no_jangmed_jumlah;
+
+            $jangum_sbl_kon_psn = $dapur_sbl_kon_psn + $kebersihan_sbl_kon_psn + $laundry_sbl_kon_psn;
+            $jangum_sbl_tin_aseptik = $dapur_sbl_tin_aseptik + $kebersihan_sbl_tin_aseptik + $laundry_sbl_tin_aseptik;
+            $jangum_stl_kon_cairan = $dapur_stl_kon_cairan + $kebersihan_stl_kon_cairan + $laundry_stl_kon_cairan;
+            $jangum_stl_kon_psn = $dapur_stl_kon_psn + $kebersihan_stl_kon_psn + $laundry_stl_kon_psn;
+            $jangum_stl_kon_ling_psn = $dapur_stl_kon_ling_psn + $kebersihan_stl_kon_ling_psn + $laundry_stl_kon_ling_psn;
+            $jangum_hr = $dapur_hr + $kebersihan_hr + $laundry_hr;
+            $jangum_hw = $dapur_hw + $kebersihan_hw + $laundry_hw;
+            $jangum_gagal = $dapur_gagal + $kebersihan_gagal + $laundry_gagal;
+            $jangum_st = $dapur_st + $kebersihan_st + $laundry_st;
+            $jangum_jumlah = $jangum_sbl_kon_psn + $jangum_sbl_tin_aseptik + $jangum_stl_kon_cairan + $jangum_stl_kon_psn + $jangum_stl_kon_ling_psn;
+
+            $no_jangum_sbl_kon_psn = $no_dapur_sbl_kon_psn + $no_kebersihan_sbl_kon_psn + $no_laundry_sbl_kon_psn;
+            $no_jangum_sbl_tin_aseptik = $no_dapur_sbl_tin_aseptik + $no_kebersihan_sbl_tin_aseptik + $no_laundry_sbl_tin_aseptik;
+            $no_jangum_stl_kon_cairan = $no_dapur_stl_kon_cairan + $no_kebersihan_stl_kon_cairan + $no_laundry_stl_kon_cairan;
+            $no_jangum_stl_kon_psn = $no_dapur_stl_kon_psn + $no_kebersihan_stl_kon_psn + $no_laundry_stl_kon_psn;
+            $no_jangum_stl_kon_ling_psn = $no_dapur_stl_kon_ling_psn + $no_kebersihan_stl_kon_ling_psn + $no_laundry_stl_kon_ling_psn;
+            $no_jangum_hr = $no_dapur_hr + $no_kebersihan_hr + $no_laundry_hr;
+            $no_jangum_hw = $no_dapur_hw + $no_kebersihan_hw + $no_laundry_hw;
+            $no_jangum_gagal = $no_dapur_gagal + $no_kebersihan_gagal + $no_laundry_gagal;
+            $no_jangum_st = $no_dapur_st + $no_kebersihan_st + $no_laundry_st;
+            $no_jangum_jumlah = $no_jangum_sbl_kon_psn + $no_jangum_sbl_tin_aseptik + $no_jangum_stl_kon_cairan + $no_jangum_stl_kon_psn + $no_jangum_stl_kon_ling_psn;
+
+            $denominator_jangum = $jangum_jumlah + $no_jangum_jumlah;
+
+            $keperawatan_sbl_kon_psn = $igd_sbl_kon_psn + $int_sbl_kon_psn + $kbbl_sbl_kon_psn + $ok_sbl_kon_psn + $lt2_sbl_kon_psn + $lt4_sbl_kon_psn + $lt5_sbl_kon_psn + $poli_sbl_kon_psn + $vk_sbl_kon_psn;
+            $keperawatan_sbl_tin_aseptik = $igd_sbl_tin_aseptik + $int_sbl_tin_aseptik + $kbbl_sbl_tin_aseptik + $ok_sbl_tin_aseptik + $lt2_sbl_tin_aseptik + $lt4_sbl_tin_aseptik + $lt5_sbl_tin_aseptik + $poli_sbl_tin_aseptik + $vk_sbl_tin_aseptik;
+            $keperawatan_stl_kon_cairan = $igd_stl_kon_cairan + $int_stl_kon_cairan + $kbbl_stl_kon_cairan + $ok_stl_kon_cairan + $lt2_stl_kon_cairan + $lt4_stl_kon_cairan + $lt5_stl_kon_cairan + $poli_stl_kon_cairan + $vk_stl_kon_cairan;
+            $keperawatan_stl_kon_psn = $igd_stl_kon_psn + $int_stl_kon_psn + $kbbl_stl_kon_psn + $ok_stl_kon_psn + $lt2_stl_kon_psn + $lt4_stl_kon_psn + $lt5_stl_kon_psn + $poli_stl_kon_psn + $vk_stl_kon_psn;
+            $keperawatan_stl_kon_ling_psn = $igd_stl_kon_ling_psn + $int_stl_kon_ling_psn + $kbbl_stl_kon_ling_psn + $ok_stl_kon_ling_psn + $lt2_stl_kon_ling_psn + $lt4_stl_kon_ling_psn + $lt5_stl_kon_ling_psn + $poli_stl_kon_ling_psn + $vk_stl_kon_ling_psn;
+            $keperawatan_hr = $igd_hr + $int_hr + $kbbl_hr + $ok_hr + $lt2_hr + $lt4_hr + $lt5_hr + $poli_hr + $vk_hr;
+            $keperawatan_hw = $igd_hw + $int_hw + $kbbl_hw + $ok_hw + $lt2_hw + $lt4_hw + $lt5_hw + $poli_hw + $vk_hw;
+            $keperawatan_gagal = $igd_gagal + $int_gagal + $kbbl_gagal + $ok_gagal + $lt2_gagal + $lt4_gagal + $lt5_gagal + $poli_gagal + $vk_gagal;
+            $keperawatan_st = $igd_st + $int_st + $kbbl_st + $ok_st + $lt2_st + $lt4_st + $lt5_st + $poli_st + $vk_st;
+            $keperawatan_jumlah = $keperawatan_sbl_kon_psn + $keperawatan_sbl_tin_aseptik + $keperawatan_stl_kon_cairan + $keperawatan_stl_kon_psn + $keperawatan_stl_kon_ling_psn;
+
+            $no_keperawatan_sbl_kon_psn = $no_igd_sbl_kon_psn + $no_int_sbl_kon_psn + $no_kbbl_sbl_kon_psn + $no_ok_sbl_kon_psn + $no_lt2_sbl_kon_psn + $no_lt4_sbl_kon_psn + $no_lt5_sbl_kon_psn + $no_poli_sbl_kon_psn + $no_vk_sbl_kon_psn;
+            $no_keperawatan_sbl_tin_aseptik = $no_igd_sbl_tin_aseptik + $no_int_sbl_tin_aseptik + $no_kbbl_sbl_tin_aseptik + $no_ok_sbl_tin_aseptik + $no_lt2_sbl_tin_aseptik + $no_lt4_sbl_tin_aseptik + $no_lt5_sbl_tin_aseptik + $no_poli_sbl_tin_aseptik + $no_vk_sbl_tin_aseptik;
+            $no_keperawatan_stl_kon_cairan = $no_igd_stl_kon_cairan + $no_int_stl_kon_cairan + $no_kbbl_stl_kon_cairan + $no_ok_stl_kon_cairan + $no_lt2_stl_kon_cairan + $no_lt4_stl_kon_cairan + $no_lt5_stl_kon_cairan + $no_poli_stl_kon_cairan + $no_vk_stl_kon_cairan;
+            $no_keperawatan_stl_kon_psn = $no_igd_stl_kon_psn + $no_int_stl_kon_psn + $no_kbbl_stl_kon_psn + $no_ok_stl_kon_psn + $no_lt2_stl_kon_psn + $no_lt4_stl_kon_psn + $no_lt5_stl_kon_psn + $no_poli_stl_kon_psn + $no_vk_stl_kon_psn;
+            $no_keperawatan_stl_kon_ling_psn = $no_igd_stl_kon_ling_psn + $no_int_stl_kon_ling_psn + $no_kbbl_stl_kon_ling_psn + $no_ok_stl_kon_ling_psn + $no_lt2_stl_kon_ling_psn + $no_lt4_stl_kon_ling_psn + $no_lt5_stl_kon_ling_psn + $no_poli_stl_kon_ling_psn + $no_vk_stl_kon_ling_psn;
+            $no_keperawatan_hr = $no_igd_hr + $no_int_hr + $no_kbbl_hr + $no_ok_hr + $no_lt2_hr + $no_lt4_hr + $no_lt5_hr + $no_poli_hr + $no_vk_hr;
+            $no_keperawatan_hw = $no_igd_hw + $no_int_hw + $no_kbbl_hw + $no_ok_hw + $no_lt2_hw + $no_lt4_hw + $no_lt5_hw + $no_poli_hw + $no_vk_hw;
+            $no_keperawatan_gagal = $no_igd_gagal + $no_int_gagal + $no_kbbl_gagal + $no_ok_gagal + $no_lt2_gagal + $no_lt4_gagal + $no_lt5_gagal + $no_poli_gagal + $no_vk_gagal;
+            $no_keperawatan_st = $no_igd_st + $no_int_st + $no_kbbl_st + $no_ok_st + $no_lt2_st + $no_lt4_st + $no_lt5_st + $no_poli_st + $no_vk_st;
+            $no_keperawatan_jumlah = $no_keperawatan_sbl_kon_psn + $no_keperawatan_sbl_tin_aseptik + $no_keperawatan_stl_kon_cairan + $no_keperawatan_stl_kon_psn + $no_keperawatan_stl_kon_ling_psn;
+
+            $denominator_keperawatan = $keperawatan_jumlah + $no_keperawatan_jumlah;
 
             return view('rekapCuciTangan.index', compact(
                 'range_tgl',
@@ -1020,6 +1092,78 @@ class CuciTanganController extends Controller
                 'no_vk_jumlah',
 
                 'denominator_vk',
+
+                'jangmed_sbl_kon_psn',
+                'jangmed_sbl_tin_aseptik',
+                'jangmed_stl_kon_cairan',
+                'jangmed_stl_kon_psn',
+                'jangmed_stl_kon_ling_psn',
+                'jangmed_hr',
+                'jangmed_hw',
+                'jangmed_gagal',
+                'jangmed_st',
+                'jangmed_jumlah',
+
+                'no_jangmed_sbl_kon_psn',
+                'no_jangmed_sbl_tin_aseptik',
+                'no_jangmed_stl_kon_cairan',
+                'no_jangmed_stl_kon_psn',
+                'no_jangmed_stl_kon_ling_psn',
+                'no_jangmed_hr',
+                'no_jangmed_hw',
+                'no_jangmed_gagal',
+                'no_jangmed_st',
+                'no_jangmed_jumlah',
+
+                'denominator_jangmed',
+
+                'jangum_sbl_kon_psn',
+                'jangum_sbl_tin_aseptik',
+                'jangum_stl_kon_cairan',
+                'jangum_stl_kon_psn',
+                'jangum_stl_kon_ling_psn',
+                'jangum_hr',
+                'jangum_hw',
+                'jangum_gagal',
+                'jangum_st',
+                'jangum_jumlah',
+
+                'no_jangum_sbl_kon_psn',
+                'no_jangum_sbl_tin_aseptik',
+                'no_jangum_stl_kon_cairan',
+                'no_jangum_stl_kon_psn',
+                'no_jangum_stl_kon_ling_psn',
+                'no_jangum_hr',
+                'no_jangum_hw',
+                'no_jangum_gagal',
+                'no_jangum_st',
+                'no_jangum_jumlah',
+
+                'denominator_jangum',
+
+                'keperawatan_sbl_kon_psn',
+                'keperawatan_sbl_tin_aseptik',
+                'keperawatan_stl_kon_cairan',
+                'keperawatan_stl_kon_psn',
+                'keperawatan_stl_kon_ling_psn',
+                'keperawatan_hr',
+                'keperawatan_hw',
+                'keperawatan_gagal',
+                'keperawatan_st',
+                'keperawatan_jumlah',
+
+                'no_keperawatan_sbl_kon_psn',
+                'no_keperawatan_sbl_tin_aseptik',
+                'no_keperawatan_stl_kon_cairan',
+                'no_keperawatan_stl_kon_psn',
+                'no_keperawatan_stl_kon_ling_psn',
+                'no_keperawatan_hr',
+                'no_keperawatan_hw',
+                'no_keperawatan_gagal',
+                'no_keperawatan_st',
+                'no_keperawatan_jumlah',
+
+                'denominator_keperawatan',
             ));
         } else {
             return Redirect::back()->withErrors(['msg' => 'Tanggal tidak boleh Lebih kecil dari sebelumnya']);

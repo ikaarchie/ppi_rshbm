@@ -60,26 +60,34 @@
 {{-- {{ number_format(($dpjp_jumlah / $denominator_dpjp) * 100, 2) }}; --}}
 {{-- {{ ($dpjp_jumlah != 0 && $denominator_dpjp != 0) ? number_format(($dpjp_jumlah / $denominator_dpjp) * 100, 2) : 0
 }}; --}}
+
 <div class="container-fluid align-item-center justify-content-center py-3 px-5">
-  <div class="table-responsive">
-    <table class="table table-bordered border-dark">
+  <div class="table-responsive table-data tbl-fixed">
+    <table class="table table-bordered border-dark align-middle">
       <thead class="sticky-cucitangan text-dark text-center align-middle">
         <tr>
           <th></th>
-          <th>Sebelum kontak pasien</th>
-          <th>Sebelum tindakan aseptik</th>
-          <th>Setelah kontak cairan tubuh pasien</th>
-          <th>Setelah kontak pasien</th>
-          <th>Setelah kontak lingkungan pasien</th>
+          <th>Sebelum kontak</br>pasien</th>
+          <th>Sebelum tindakan</br>aseptik</th>
+          <th>Setelah kontak</br>cairan tubuh pasien</th>
+          <th>Setelah kontak</br>pasien</th>
+          <th>Setelah kontak</br>lingkungan pasien</th>
           <th>HR</th>
           <th>HW</th>
           <th>Gagal</th>
           <th>ST</th>
           <th>Jumlah</th>
+          <th>N</th>
+          <th>D</th>
           <th>Persentase</th>
         </tr>
       </thead>
       <tbody style="background-color: #C8E6C9">
+        <tr>
+          <th colspan="14">
+            <h4><strong>Data per unit</strong></h4>
+          </th>
+        </tr>
         <tr>
           <th>CSSU</th>
           <td>{{ $cssu_sbl_kon_psn }}</td>
@@ -92,6 +100,8 @@
           <td>{{ $cssu_gagal }}</td>
           <td>{{ $cssu_st }}</td>
           <td>{{ $cssu_jumlah }}</td>
+          <td>{{ $cssu_jumlah }}</td>
+          <td>{{ $denominator_cssu }}</td>
           <td>{{ ($cssu_jumlah != 0 && $denominator_cssu != 0) ? number_format(($cssu_jumlah / $denominator_cssu) * 100,
             2) : 0 }} %</td>
         </tr>
@@ -107,6 +117,8 @@
           <td>{{ $dapur_gagal }}</td>
           <td>{{ $dapur_st }}</td>
           <td>{{ $dapur_jumlah }}</td>
+          <td>{{ $dapur_jumlah }}</td>
+          <td>{{ $denominator_dapur }}</td>
           <td>{{ ($dapur_jumlah != 0 && $denominator_dapur != 0) ? number_format(($dapur_jumlah / $denominator_dapur) *
             100, 2) : 0 }} %</td>
         </tr>
@@ -122,6 +134,8 @@
           <td>{{ $dpjp_gagal }}</td>
           <td>{{ $dpjp_st }}</td>
           <td>{{ $dpjp_jumlah }}</td>
+          <td>{{ $dpjp_jumlah }}</td>
+          <td>{{ $denominator_dpjp }}</td>
           <td>{{ ($dpjp_jumlah != 0 && $denominator_dpjp != 0) ? number_format(($dpjp_jumlah / $denominator_dpjp) * 100,
             2) : 0 }} %</td>
         </tr>
@@ -137,6 +151,8 @@
           <td>{{ $farmasi_gagal }}</td>
           <td>{{ $farmasi_st }}</td>
           <td>{{ $farmasi_jumlah }}</td>
+          <td>{{ $farmasi_jumlah }}</td>
+          <td>{{ $denominator_farmasi }}</td>
           <td>{{ ($farmasi_jumlah != 0 && $denominator_farmasi != 0) ? number_format(($farmasi_jumlah /
             $denominator_farmasi) * 100, 2) : 0 }} %</td>
         </tr>
@@ -152,6 +168,8 @@
           <td>{{ $igd_gagal }}</td>
           <td>{{ $igd_st }}</td>
           <td>{{ $igd_jumlah }}</td>
+          <td>{{ $igd_jumlah }}</td>
+          <td>{{ $denominator_igd }}</td>
           <td>{{ ($igd_jumlah != 0 && $denominator_igd != 0) ? number_format(($igd_jumlah / $denominator_igd) * 100, 2)
             : 0 }} %</td>
         </tr>
@@ -167,6 +185,8 @@
           <td>{{ $int_gagal }}</td>
           <td>{{ $int_st }}</td>
           <td>{{ $int_jumlah }}</td>
+          <td>{{ $int_jumlah }}</td>
+          <td>{{ $denominator_int }}</td>
           <td>{{ ($int_jumlah != 0 && $denominator_int != 0) ? number_format(($int_jumlah / $denominator_int) * 100, 2)
             : 0 }} %</td>
         </tr>
@@ -182,6 +202,8 @@
           <td>{{ $kebersihan_gagal }}</td>
           <td>{{ $kebersihan_st }}</td>
           <td>{{ $kebersihan_jumlah }}</td>
+          <td>{{ $kebersihan_jumlah }}</td>
+          <td>{{ $denominator_kebersihan }}</td>
           <td>{{ ($kebersihan_jumlah != 0 && $denominator_kebersihan != 0) ? number_format(($kebersihan_jumlah /
             $denominator_kebersihan) * 100, 2) : 0 }} %</td>
         </tr>
@@ -197,6 +219,8 @@
           <td>{{ $kbbl_gagal }}</td>
           <td>{{ $kbbl_st }}</td>
           <td>{{ $kbbl_jumlah }}</td>
+          <td>{{ $kbbl_jumlah }}</td>
+          <td>{{ $denominator_kbbl }}</td>
           <td>{{ ($kbbl_jumlah != 0 && $denominator_kbbl != 0) ? number_format(($kbbl_jumlah / $denominator_kbbl) * 100,
             2) : 0 }} %</td>
         </tr>
@@ -212,6 +236,8 @@
           <td>{{ $lab_gagal }}</td>
           <td>{{ $lab_st }}</td>
           <td>{{ $lab_jumlah }}</td>
+          <td>{{ $lab_jumlah }}</td>
+          <td>{{ $denominator_lab }}</td>
           <td>{{ ($lab_jumlah != 0 && $denominator_lab != 0) ? number_format(($lab_jumlah / $denominator_lab) * 100, 2)
             : 0 }} %</td>
         </tr>
@@ -227,6 +253,8 @@
           <td>{{ $laundry_gagal }}</td>
           <td>{{ $laundry_st }}</td>
           <td>{{ $laundry_jumlah }}</td>
+          <td>{{ $laundry_jumlah }}</td>
+          <td>{{ $denominator_laundry }}</td>
           <td>{{ ($laundry_jumlah != 0 && $denominator_laundry != 0) ? number_format(($laundry_jumlah /
             $denominator_laundry) * 100, 2) : 0 }} %</td>
         </tr>
@@ -242,6 +270,8 @@
           <td>{{ $ok_gagal }}</td>
           <td>{{ $ok_st }}</td>
           <td>{{ $ok_jumlah }}</td>
+          <td>{{ $ok_jumlah }}</td>
+          <td>{{ $denominator_ok }}</td>
           <td>{{ ($ok_jumlah != 0 && $denominator_ok != 0) ? number_format(($ok_jumlah / $denominator_ok) * 100, 2) : 0
             }} %</td>
         </tr>
@@ -257,6 +287,8 @@
           <td>{{ $lt2_gagal }}</td>
           <td>{{ $lt2_st }}</td>
           <td>{{ $lt2_jumlah }}</td>
+          <td>{{ $lt2_jumlah }}</td>
+          <td>{{ $denominator_lt2 }}</td>
           <td>{{ ($lt2_jumlah != 0 && $denominator_lt2 != 0) ? number_format(($lt2_jumlah / $denominator_lt2) * 100, 2)
             : 0 }} %</td>
         </tr>
@@ -272,6 +304,8 @@
           <td>{{ $lt4_gagal }}</td>
           <td>{{ $lt4_st }}</td>
           <td>{{ $lt4_jumlah }}</td>
+          <td>{{ $lt4_jumlah }}</td>
+          <td>{{ $denominator_lt4 }}</td>
           <td>{{ ($lt4_jumlah != 0 && $denominator_lt4 != 0) ? number_format(($lt4_jumlah / $denominator_lt4) * 100, 2)
             : 0 }} %</td>
         </tr>
@@ -287,6 +321,8 @@
           <td>{{ $lt5_gagal }}</td>
           <td>{{ $lt5_st }}</td>
           <td>{{ $lt5_jumlah }}</td>
+          <td>{{ $lt5_jumlah }}</td>
+          <td>{{ $denominator_lt5 }}</td>
           <td>{{ ($lt5_jumlah != 0 && $denominator_lt5 != 0) ? number_format(($lt5_jumlah / $denominator_lt5) * 100, 2)
             : 0 }} %</td>
         </tr>
@@ -302,6 +338,8 @@
           <td>{{ $poli_gagal }}</td>
           <td>{{ $poli_st }}</td>
           <td>{{ $poli_jumlah }}</td>
+          <td>{{ $poli_jumlah }}</td>
+          <td>{{ $denominator_poli }}</td>
           <td>{{ ($poli_jumlah != 0 && $denominator_poli != 0) ? number_format(($poli_jumlah / $denominator_poli) * 100,
             2) : 0 }} %</td>
         </tr>
@@ -317,6 +355,8 @@
           <td>{{ $rad_gagal }}</td>
           <td>{{ $rad_st }}</td>
           <td>{{ $rad_jumlah }}</td>
+          <td>{{ $rad_jumlah }}</td>
+          <td>{{ $denominator_rad }}</td>
           <td>{{ ($rad_jumlah != 0 && $denominator_rad != 0) ? number_format(($rad_jumlah / $denominator_rad) * 100, 2)
             : 0 }} %</td>
         </tr>
@@ -332,7 +372,68 @@
           <td>{{ $vk_gagal }}</td>
           <td>{{ $vk_st }}</td>
           <td>{{ $vk_jumlah }}</td>
+          <td>{{ $vk_jumlah }}</td>
+          <td>{{ $denominator_vk }}</td>
           <td>{{ ($vk_jumlah != 0 && $denominator_vk != 0) ? number_format(($vk_jumlah / $denominator_vk) * 100, 2) : 0
+            }} %</td>
+        </tr>
+        <tr>
+          <th colspan="14">
+            <h4><strong>Data per grup</strong></h4>
+          </th>
+        </tr>
+        <tr>
+          <th>Jangmed</th>
+          <td>{{ $jangmed_sbl_kon_psn }}</td>
+          <td>{{ $jangmed_sbl_tin_aseptik }}</td>
+          <td>{{ $jangmed_stl_kon_cairan }}</td>
+          <td>{{ $jangmed_stl_kon_psn }}</td>
+          <td>{{ $jangmed_stl_kon_ling_psn }}</td>
+          <td>{{ $jangmed_hr }}</td>
+          <td>{{ $jangmed_hw }}</td>
+          <td>{{ $jangmed_gagal }}</td>
+          <td>{{ $jangmed_st }}</td>
+          <td>{{ $jangmed_jumlah }}</td>
+          <td>{{ $jangmed_jumlah }}</td>
+          <td>{{ $denominator_jangmed }}</td>
+          <td>{{ ($jangmed_jumlah != 0 && $denominator_jangmed != 0) ? number_format(($jangmed_jumlah /
+            $denominator_jangmed) * 100, 2) : 0
+            }} %</td>
+        </tr>
+        <tr>
+          <th>Jangum</th>
+          <td>{{ $jangum_sbl_kon_psn }}</td>
+          <td>{{ $jangum_sbl_tin_aseptik }}</td>
+          <td>{{ $jangum_stl_kon_cairan }}</td>
+          <td>{{ $jangum_stl_kon_psn }}</td>
+          <td>{{ $jangum_stl_kon_ling_psn }}</td>
+          <td>{{ $jangum_hr }}</td>
+          <td>{{ $jangum_hw }}</td>
+          <td>{{ $jangum_gagal }}</td>
+          <td>{{ $jangum_st }}</td>
+          <td>{{ $jangum_jumlah }}</td>
+          <td>{{ $jangum_jumlah }}</td>
+          <td>{{ $denominator_jangum }}</td>
+          <td>{{ ($jangum_jumlah != 0 && $denominator_jangum != 0) ? number_format(($jangum_jumlah /
+            $denominator_jangum) * 100, 2) : 0
+            }} %</td>
+        </tr>
+        <tr>
+          <th>Keperawatan</th>
+          <td>{{ $keperawatan_sbl_kon_psn }}</td>
+          <td>{{ $keperawatan_sbl_tin_aseptik }}</td>
+          <td>{{ $keperawatan_stl_kon_cairan }}</td>
+          <td>{{ $keperawatan_stl_kon_psn }}</td>
+          <td>{{ $keperawatan_stl_kon_ling_psn }}</td>
+          <td>{{ $keperawatan_hr }}</td>
+          <td>{{ $keperawatan_hw }}</td>
+          <td>{{ $keperawatan_gagal }}</td>
+          <td>{{ $keperawatan_st }}</td>
+          <td>{{ $keperawatan_jumlah }}</td>
+          <td>{{ $keperawatan_jumlah }}</td>
+          <td>{{ $denominator_keperawatan }}</td>
+          <td>{{ ($keperawatan_jumlah != 0 && $denominator_keperawatan != 0) ? number_format(($keperawatan_jumlah /
+            $denominator_keperawatan) * 100, 2) : 0
             }} %</td>
         </tr>
       </tbody>
