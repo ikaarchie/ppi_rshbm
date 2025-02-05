@@ -61,25 +61,25 @@
 {{-- {{ ($dpjp_jumlah != 0 && $denominator_dpjp != 0) ? number_format(($dpjp_jumlah / $denominator_dpjp) * 100, 2) : 0
 }}; --}}
 
-<div class="container-fluid align-item-center justify-content-center py-3 px-5">
+<div class="container-fluid align-item-center justify-content-center mt-1 mb-3 px-5">
   <div class="table-responsive table-data tbl-fixed">
     <table class="table table-bordered border-dark align-middle">
       <thead class="sticky-cucitangan text-dark text-center align-middle">
         <tr>
           <th></th>
-          <th>Sebelum kontak</br>pasien</th>
-          <th>Sebelum tindakan</br>aseptik</th>
-          <th>Setelah kontak</br>cairan tubuh pasien</th>
-          <th>Setelah kontak</br>pasien</th>
-          <th>Setelah kontak</br>lingkungan pasien</th>
-          <th>HR</th>
-          <th>HW</th>
-          <th>Gagal</th>
-          <th>ST</th>
-          <th>Jumlah</th>
-          <th>N</th>
-          <th>D</th>
-          <th>Persentase</th>
+          <th width="9%">Sebelum kontak</br>pasien</th>
+          <th width="9%">Sebelum tindakan</br>aseptik</th>
+          <th width="9%">Setelah kontak</br>cairan tubuh pasien</th>
+          <th width="9%">Setelah kontak</br>pasien</th>
+          <th width="9%">Setelah kontak</br>lingkungan pasien</th>
+          <th width="5%">HR</th>
+          <th width="5%">HW</th>
+          <th width="5%">Gagal</th>
+          <th width="5%">ST</th>
+          <th width="5%">Jumlah</th>
+          <th width="5%">N</th>
+          <th width="5%">D</th>
+          <th width="5%">Persentase</th>
         </tr>
       </thead>
       <tbody style="background-color: #C8E6C9">
