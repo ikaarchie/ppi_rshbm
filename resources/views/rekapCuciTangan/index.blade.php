@@ -436,6 +436,88 @@
             $denominator_keperawatan) * 100, 2) : 0
             }} %</td>
         </tr>
+        <tr>
+          <th colspan="14">
+            <h4><strong>Data per moment</strong></h4>
+          </th>
+        <tr>
+          <th>Semua unit</th>
+          <td>{{ $all_sbl_kon_psn }}</td>
+          <td>{{ $all_sbl_tin_aseptik }}</td>
+          <td>{{ $all_stl_kon_cairan }}</td>
+          <td>{{ $all_stl_kon_psn }}</td>
+          <td>{{ $all_stl_kon_ling_psn }}</td>
+          <td>{{ $all_hr }}</td>
+          <td>{{ $all_hw }}</td>
+          <td>{{ $all_gagal }}</td>
+          <td>{{ $all_st }}</td>
+          <td>{{ $all_jumlah }}</td>
+          <td>{{ $all_jumlah }}</td>
+          <td>{{ $denominator_all }}</td>
+          <td>{{ ($all_jumlah != 0 && $denominator_all != 0) ? number_format(($all_jumlah /
+            $denominator_all) * 100, 2) : 0
+            }} %</td>
+        </tr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container-fluid align-item-center justify-content-center mt-1 mb-3 px-5">
+  <div class="table-responsive table-data">
+    <table class="table table-bordered border-dark align-middle">
+      <thead class="sticky-cucitangan text-dark text-center align-middle">
+        <tr>
+          <th></th>
+          <th width="10%">Numerator</th>
+          <th width="10%">Denominator</th>
+          <th width="10%">Persentase</th>
+        </tr>
+      </thead>
+      <tbody style="background-color: #C8E6C9">
+        <tr>
+          <th>Sebelum kontak pasien</th>
+          <td>{{ $all_sbl_kon_psn }}</td>
+          <td>{{ $denominator_sbl_kon_psn }}</td>
+          <td>{{ ($all_sbl_kon_psn != 0 && $denominator_sbl_kon_psn != 0) ? number_format(($all_sbl_kon_psn /
+            $denominator_sbl_kon_psn) * 100,
+            2) : 0 }} %</td>
+        </tr>
+        <tr>
+          <th>Sebelum tindakan aseptik</th>
+          <td>{{ $all_sbl_tin_aseptik }}</td>
+          <td>{{ $denominator_sbl_tin_aseptik }}</td>
+          <td>{{ ($all_sbl_tin_aseptik != 0 && $denominator_sbl_tin_aseptik != 0) ? number_format(($all_sbl_tin_aseptik
+            /
+            $denominator_sbl_tin_aseptik) * 100,
+            2) : 0 }} %</td>
+        </tr>
+        <tr>
+          <th>Setelah kontak cairan tubuh pasien</th>
+          <td>{{ $all_stl_kon_cairan }}</td>
+          <td>{{ $denominator_stl_kon_cairan }}</td>
+          <td>{{ ($all_stl_kon_cairan != 0 && $denominator_stl_kon_cairan != 0) ? number_format(($all_stl_kon_cairan /
+            $denominator_stl_kon_cairan) * 100,
+            2) : 0 }} %</td>
+        </tr>
+        <tr>
+          <th>Setelah kontak pasien</th>
+          <td>{{ $all_stl_kon_psn }}</td>
+          <td>{{ $denominator_stl_kon_psn }}</td>
+          <td>{{ ($all_stl_kon_psn != 0 && $denominator_stl_kon_psn != 0) ? number_format(($all_stl_kon_psn /
+            $denominator_stl_kon_psn) * 100,
+            2) : 0 }} %</td>
+        </tr>
+        <tr>
+          <th>Setelah kontak lingkungan pasien</th>
+          <td>{{ $all_stl_kon_ling_psn }}</td>
+          <td>{{ $denominator_stl_kon_ling_psn }}</td>
+          <td>{{ ($all_stl_kon_ling_psn != 0 && $denominator_stl_kon_ling_psn != 0) ?
+            number_format(($all_stl_kon_ling_psn /
+            $denominator_stl_kon_ling_psn) * 100,
+            2) : 0 }} %</td>
+        </tr>
       </tbody>
     </table>
   </div>
