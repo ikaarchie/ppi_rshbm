@@ -19,7 +19,7 @@ class CuciTanganController extends Controller
 
     public function getData()
     {
-        $cuci_tangan = CuciTangan::latest('id')->paginate(1000);
+        $cuci_tangan = CuciTangan::latest('id')->paginate(10);
 
         return view('cuciTangan.index')->with('cuci_tangan', $cuci_tangan);
     }

@@ -113,6 +113,13 @@
 
         <div class="btn-toolbar justify-content-between">
             <div>
+                Menampilkan
+                {{ $apd->firstItem() }} - {{ $apd->lastItem() }}
+                dari
+                {{ $apd->total() }}
+                data
+            </div>
+            <div>
                 {{ $apd->links() }}
             </div>
         </div>

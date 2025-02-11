@@ -15,7 +15,7 @@ class FeedbackController extends Controller
 
     public function getData()
     {
-        $feedback = Feedback::latest('id')->paginate(1000);
+        $feedback = Feedback::latest('id')->paginate(10);
 
         // return view('feedbackPPI.index')->with('feedback', $feedback);
         return view('feedbackPPI.index', compact('feedback'));

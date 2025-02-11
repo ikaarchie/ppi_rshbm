@@ -19,7 +19,7 @@ class BundlePlebitisController extends Controller
 
     public function getData()
     {
-        $bundlePlebitis = BundlePlebitis::latest('id')->paginate(1000);
+        $bundlePlebitis = BundlePlebitis::latest('id')->paginate(10);
 
         return view('bundlePlebitis.index')->with('bundlePlebitis', $bundlePlebitis);
     }

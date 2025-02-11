@@ -90,6 +90,13 @@
 
         <div class="btn-toolbar justify-content-between">
             <div>
+                Menampilkan
+                {{ $bundleVAP->firstItem() }} - {{ $bundleVAP->lastItem() }}
+                dari
+                {{ $bundleVAP->total() }}
+                data
+            </div>
+            <div>
                 {{ $bundleVAP->links() }}
             </div>
         </div>

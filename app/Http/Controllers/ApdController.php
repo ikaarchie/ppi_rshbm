@@ -19,7 +19,7 @@ class ApdController extends Controller
 
     public function getData()
     {
-        $apd = Apd::latest('id')->paginate(1000);
+        $apd = Apd::latest('id')->paginate(10);
 
         return view('apd.index')->with('apd', $apd);
     }

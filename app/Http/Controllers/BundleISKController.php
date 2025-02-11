@@ -19,7 +19,7 @@ class BundleISKController extends Controller
 
     public function getData()
     {
-        $bundleISK = BundleISK::latest('id')->paginate(1000);
+        $bundleISK = BundleISK::latest('id')->paginate(10);
 
         return view('bundleISK.index')->with('bundleISK', $bundleISK);
     }

@@ -19,7 +19,7 @@ class BundleVAPController extends Controller
 
     public function getData()
     {
-        $bundleVAP = BundleVAP::latest('id')->paginate(1000);
+        $bundleVAP = BundleVAP::latest('id')->paginate(10);
 
         return view('bundleVAP.index')->with('bundleVAP', $bundleVAP);
     }

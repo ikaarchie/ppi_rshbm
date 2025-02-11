@@ -19,7 +19,7 @@ class BundleIDOController extends Controller
 
     public function getData()
     {
-        $bundleIDO = BundleIDO::latest('id')->paginate(1000);
+        $bundleIDO = BundleIDO::latest('id')->paginate(10);
 
         return view('bundleIDO.index')->with('bundleIDO', $bundleIDO);
     }

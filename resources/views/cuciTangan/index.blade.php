@@ -106,6 +106,13 @@
 
         <div class="btn-toolbar justify-content-between">
             <div>
+                Menampilkan
+                {{ $cuci_tangan->firstItem() }} - {{ $cuci_tangan->lastItem() }}
+                dari
+                {{ $cuci_tangan->total() }}
+                data
+            </div>
+            <div>
                 {{ $cuci_tangan->links() }}
             </div>
         </div>

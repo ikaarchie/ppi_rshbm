@@ -19,7 +19,7 @@ class BundleIADController extends Controller
 
     public function getData()
     {
-        $bundleIAD = BundleIAD::latest('id')->paginate(1000);
+        $bundleIAD = BundleIAD::latest('id')->paginate(10);
 
         return view('bundleIAD.index')->with('bundleIAD', $bundleIAD);
     }

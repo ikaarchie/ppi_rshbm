@@ -92,6 +92,13 @@
 
         <div class="btn-toolbar justify-content-between">
             <div>
+                Menampilkan
+                {{ $bundleIDO->firstItem() }} - {{ $bundleIDO->lastItem() }}
+                dari
+                {{ $bundleIDO->total() }}
+                data
+            </div>
+            <div>
                 {{ $bundleIDO->links() }}
             </div>
         </div>

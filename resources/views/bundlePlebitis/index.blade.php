@@ -90,6 +90,13 @@
 
         <div class="btn-toolbar justify-content-between">
             <div>
+                Menampilkan
+                {{ $bundlePlebitis->firstItem() }} - {{ $bundlePlebitis->lastItem() }}
+                dari
+                {{ $bundlePlebitis->total() }}
+                data
+            </div>
+            <div>
                 {{ $bundlePlebitis->links() }}
             </div>
         </div>

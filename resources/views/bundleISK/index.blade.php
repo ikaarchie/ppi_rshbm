@@ -90,6 +90,13 @@
 
         <div class="btn-toolbar justify-content-between">
             <div>
+                Menampilkan
+                {{ $bundleISK->firstItem() }} - {{ $bundleISK->lastItem() }}
+                dari
+                {{ $bundleISK->total() }}
+                data
+            </div>
+            <div>
                 {{ $bundleISK->links() }}
             </div>
         </div>

@@ -90,6 +90,13 @@
 
         <div class="btn-toolbar justify-content-between">
             <div>
+                Menampilkan
+                {{ $bundleIAD->firstItem() }} - {{ $bundleIAD->lastItem() }}
+                dari
+                {{ $bundleIAD->total() }}
+                data
+            </div>
+            <div>
                 {{ $bundleIAD->links() }}
             </div>
         </div>
