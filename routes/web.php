@@ -13,6 +13,7 @@ use App\Http\Controllers\CuciTanganController;
 use App\Http\Controllers\SurveilansController;
 use App\Http\Controllers\MstKodeBundleController;
 use App\Http\Controllers\BundlePlebitisController;
+use App\Http\Controllers\PenggunaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -147,3 +148,13 @@ Route::patch('/updateRekapAPD/{id}', [ApdController::class, 'updateRekap'])->nam
 // Route::get('/', function () {
 //     return redirect('login');
 // });
+
+
+Route::get('/register', function () {
+    return view('register-form');
+});
+
+Route::post('/register', [PenggunaController::class, 'store'])->name('register.store');
+
+Route::get('/data/{penggunaId}', [PenggunaController::class, 'showDataForm'])->name('data.form');
+Route::post('/data/{penggunaId}', [PenggunaController::class, 'storeData'])->name('data.store');

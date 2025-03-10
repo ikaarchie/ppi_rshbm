@@ -135,6 +135,26 @@ class SurveilansController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
+            $icu = Surveilans::where('unit', 'ICU')
+                ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
+                ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
+                ->latest('id')
+                ->get();
+            $picu = Surveilans::where('unit', 'PICU')
+                ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
+                ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
+                ->latest('id')
+                ->get();
+            $nicu = Surveilans::where('unit', 'NICU')
+                ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
+                ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
+                ->latest('id')
+                ->get();
+            $hcu = Surveilans::where('unit', 'HCU')
+                ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
+                ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
+                ->latest('id')
+                ->get();
             $lt2 = Surveilans::where('unit', 'Perawatan Eksekutif lt.2')
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
@@ -169,6 +189,62 @@ class SurveilansController extends Controller
             $int_hais_ido = $int->sum('hais_ido');
             $int_terpajan = $int->sum('terpajan');
             $int_tirah_baring = $int->sum('tirah_baring');
+
+            $icu_pa_ivl = $icu->sum('pa_ivl');
+            $icu_pa_dc = $icu->sum('pa_dc');
+            $icu_pa_vent = $icu->sum('pa_vent');
+            $icu_pa_iad = $icu->sum('pa_iad');
+            $icu_hais_plebitis = $icu->sum('hais_plebitis');
+            $icu_hais_isk = $icu->sum('hais_isk');
+            $icu_hais_vap = $icu->sum('hais_vap');
+            $icu_hais_iad = $icu->sum('hais_iad');
+            $icu_hais_deku = $icu->sum('hais_deku');
+            $icu_hais_hap = $icu->sum('hais_hap');
+            $icu_hais_ido = $icu->sum('hais_ido');
+            $icu_terpajan = $icu->sum('terpajan');
+            $icu_tirah_baring = $icu->sum('tirah_baring');
+
+            $picu_pa_ivl = $picu->sum('pa_ivl');
+            $picu_pa_dc = $picu->sum('pa_dc');
+            $picu_pa_vent = $picu->sum('pa_vent');
+            $picu_pa_iad = $picu->sum('pa_iad');
+            $picu_hais_plebitis = $picu->sum('hais_plebitis');
+            $picu_hais_isk = $picu->sum('hais_isk');
+            $picu_hais_vap = $picu->sum('hais_vap');
+            $picu_hais_iad = $picu->sum('hais_iad');
+            $picu_hais_deku = $picu->sum('hais_deku');
+            $picu_hais_hap = $picu->sum('hais_hap');
+            $picu_hais_ido = $picu->sum('hais_ido');
+            $picu_terpajan = $picu->sum('terpajan');
+            $picu_tirah_baring = $picu->sum('tirah_baring');
+
+            $nicu_pa_ivl = $nicu->sum('pa_ivl');
+            $nicu_pa_dc = $nicu->sum('pa_dc');
+            $nicu_pa_vent = $nicu->sum('pa_vent');
+            $nicu_pa_iad = $nicu->sum('pa_iad');
+            $nicu_hais_plebitis = $nicu->sum('hais_plebitis');
+            $nicu_hais_isk = $nicu->sum('hais_isk');
+            $nicu_hais_vap = $nicu->sum('hais_vap');
+            $nicu_hais_iad = $nicu->sum('hais_iad');
+            $nicu_hais_deku = $nicu->sum('hais_deku');
+            $nicu_hais_hap = $nicu->sum('hais_hap');
+            $nicu_hais_ido = $nicu->sum('hais_ido');
+            $nicu_terpajan = $nicu->sum('terpajan');
+            $nicu_tirah_baring = $nicu->sum('tirah_baring');
+
+            $hcu_pa_ivl = $hcu->sum('pa_ivl');
+            $hcu_pa_dc = $hcu->sum('pa_dc');
+            $hcu_pa_vent = $hcu->sum('pa_vent');
+            $hcu_pa_iad = $hcu->sum('pa_iad');
+            $hcu_hais_plebitis = $hcu->sum('hais_plebitis');
+            $hcu_hais_isk = $hcu->sum('hais_isk');
+            $hcu_hais_vap = $hcu->sum('hais_vap');
+            $hcu_hais_iad = $hcu->sum('hais_iad');
+            $hcu_hais_deku = $hcu->sum('hais_deku');
+            $hcu_hais_hap = $hcu->sum('hais_hap');
+            $hcu_hais_ido = $hcu->sum('hais_ido');
+            $hcu_terpajan = $hcu->sum('terpajan');
+            $hcu_tirah_baring = $hcu->sum('tirah_baring');
 
             $lt2_pa_ivl = $lt2->sum('pa_ivl');
             $lt2_pa_dc = $lt2->sum('pa_dc');
@@ -245,6 +321,62 @@ class SurveilansController extends Controller
                 'int_hais_ido',
                 'int_terpajan',
                 'int_tirah_baring',
+
+                'icu_pa_ivl',
+                'icu_pa_dc',
+                'icu_pa_vent',
+                'icu_pa_iad',
+                'icu_hais_plebitis',
+                'icu_hais_isk',
+                'icu_hais_vap',
+                'icu_hais_iad',
+                'icu_hais_deku',
+                'icu_hais_hap',
+                'icu_hais_ido',
+                'icu_terpajan',
+                'icu_tirah_baring',
+
+                'picu_pa_ivl',
+                'picu_pa_dc',
+                'picu_pa_vent',
+                'picu_pa_iad',
+                'picu_hais_plebitis',
+                'picu_hais_isk',
+                'picu_hais_vap',
+                'picu_hais_iad',
+                'picu_hais_deku',
+                'picu_hais_hap',
+                'picu_hais_ido',
+                'picu_terpajan',
+                'picu_tirah_baring',
+
+                'nicu_pa_ivl',
+                'nicu_pa_dc',
+                'nicu_pa_vent',
+                'nicu_pa_iad',
+                'nicu_hais_plebitis',
+                'nicu_hais_isk',
+                'nicu_hais_vap',
+                'nicu_hais_iad',
+                'nicu_hais_deku',
+                'nicu_hais_hap',
+                'nicu_hais_ido',
+                'nicu_terpajan',
+                'nicu_tirah_baring',
+
+                'hcu_pa_ivl',
+                'hcu_pa_dc',
+                'hcu_pa_vent',
+                'hcu_pa_iad',
+                'hcu_hais_plebitis',
+                'hcu_hais_isk',
+                'hcu_hais_vap',
+                'hcu_hais_iad',
+                'hcu_hais_deku',
+                'hcu_hais_hap',
+                'hcu_hais_ido',
+                'hcu_terpajan',
+                'hcu_tirah_baring',
 
                 'lt2_pa_ivl',
                 'lt2_pa_dc',

@@ -46,7 +46,10 @@
                     <div class="col-sm-6 mb-3 form-floating">
                         {{-- {!! Form::label('unit', 'Unit') !!} --}}
                         {!! Form::select('unit', [
-                        'Intensif' => 'Intensif',
+                        'ICU' => 'ICU',
+                        'PICU' => 'PICU',
+                        'NICU' => 'NICU',
+                        'HCU' => 'HCU',
                         'Perawatan Eksekutif lt.2' => 'Perawatan Eksekutif lt.2',
                         'Perawatan Reguler lt.4' => 'Perawatan Reguler lt.4',
                         'Perawatan Reguler lt.5' => 'Perawatan Reguler lt.5',

@@ -83,7 +83,7 @@
         </tr>
       </thead>
       <tbody style="background-color: #FCE4EC">
-        <tr>
+        {{-- <tr>
           <th>Intensif</th>
           <td>{{ $int_pa_ivl }}</td>
           <td>{{ $int_pa_dc }}</td>
@@ -105,6 +105,102 @@
           <td>{{ $int_hais_ido }}</td>
           <td></td>
           <td>{{ $int_terpajan }}</td>
+          <td></td>
+        </tr> --}}
+        <tr>
+          <th>ICU</th>
+          <td>{{ $icu_pa_ivl }}</td>
+          <td>{{ $icu_pa_dc }}</td>
+          <td>{{ $icu_pa_vent }}</td>
+          <td>{{ $icu_pa_iad }}</td>
+          <td>{{ $icu_tirah_baring }}</td>
+          <td>{{ $icu_hais_plebitis }}</td>
+          <td></td>
+          <td>{{ $icu_hais_isk }}</td>
+          <td></td>
+          <td>{{ $icu_hais_vap }}</td>
+          <td></td>
+          <td>{{ $icu_hais_iad }}</td>
+          <td></td>
+          <td>{{ $icu_hais_deku }}</td>
+          <td></td>
+          <td>{{ $icu_hais_hap }}</td>
+          <td></td>
+          <td>{{ $icu_hais_ido }}</td>
+          <td></td>
+          <td>{{ $icu_terpajan }}</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>PICU</th>
+          <td>{{ $picu_pa_ivl }}</td>
+          <td>{{ $picu_pa_dc }}</td>
+          <td>{{ $picu_pa_vent }}</td>
+          <td>{{ $picu_pa_iad }}</td>
+          <td>{{ $picu_tirah_baring }}</td>
+          <td>{{ $picu_hais_plebitis }}</td>
+          <td></td>
+          <td>{{ $picu_hais_isk }}</td>
+          <td></td>
+          <td>{{ $picu_hais_vap }}</td>
+          <td></td>
+          <td>{{ $picu_hais_iad }}</td>
+          <td></td>
+          <td>{{ $picu_hais_deku }}</td>
+          <td></td>
+          <td>{{ $picu_hais_hap }}</td>
+          <td></td>
+          <td>{{ $picu_hais_ido }}</td>
+          <td></td>
+          <td>{{ $picu_terpajan }}</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>NICU</th>
+          <td>{{ $nicu_pa_ivl }}</td>
+          <td>{{ $nicu_pa_dc }}</td>
+          <td>{{ $nicu_pa_vent }}</td>
+          <td>{{ $nicu_pa_iad }}</td>
+          <td>{{ $nicu_tirah_baring }}</td>
+          <td>{{ $nicu_hais_plebitis }}</td>
+          <td></td>
+          <td>{{ $nicu_hais_isk }}</td>
+          <td></td>
+          <td>{{ $nicu_hais_vap }}</td>
+          <td></td>
+          <td>{{ $nicu_hais_iad }}</td>
+          <td></td>
+          <td>{{ $nicu_hais_deku }}</td>
+          <td></td>
+          <td>{{ $nicu_hais_hap }}</td>
+          <td></td>
+          <td>{{ $nicu_hais_ido }}</td>
+          <td></td>
+          <td>{{ $nicu_terpajan }}</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>HCU</th>
+          <td>{{ $hcu_pa_ivl }}</td>
+          <td>{{ $hcu_pa_dc }}</td>
+          <td>{{ $hcu_pa_vent }}</td>
+          <td>{{ $hcu_pa_iad }}</td>
+          <td>{{ $hcu_tirah_baring }}</td>
+          <td>{{ $hcu_hais_plebitis }}</td>
+          <td></td>
+          <td>{{ $hcu_hais_isk }}</td>
+          <td></td>
+          <td>{{ $hcu_hais_vap }}</td>
+          <td></td>
+          <td>{{ $hcu_hais_iad }}</td>
+          <td></td>
+          <td>{{ $hcu_hais_deku }}</td>
+          <td></td>
+          <td>{{ $hcu_hais_hap }}</td>
+          <td></td>
+          <td>{{ $hcu_hais_ido }}</td>
+          <td></td>
+          <td>{{ $hcu_terpajan }}</td>
           <td></td>
         </tr>
         <tr>
@@ -332,21 +428,21 @@
 
 <script>
   var dataPertama = {
-    label: ['Intensif'],
+    label: ['ICU'],
     data: [
-        {{ $int_pa_ivl }},
-        {{ $int_pa_dc }},
-        {{ $int_pa_vent }},
-        {{ $int_pa_iad }},
-        {{ $int_tirah_baring }},
-        {{ $int_hais_plebitis }},
-        {{ $int_hais_isk }},
-        {{ $int_hais_vap }},
-        {{ $int_hais_iad }},
-        {{ $int_hais_deku }},
-        {{ $int_hais_hap }},
-        {{ $int_hais_ido }},
-        {{ $int_terpajan }},
+        {{ $icu_pa_ivl }},
+        {{ $icu_pa_dc }},
+        {{ $icu_pa_vent }},
+        {{ $icu_pa_iad }},
+        {{ $icu_tirah_baring }},
+        {{ $icu_hais_plebitis }},
+        {{ $icu_hais_isk }},
+        {{ $icu_hais_vap }},
+        {{ $icu_hais_iad }},
+        {{ $icu_hais_deku }},
+        {{ $icu_hais_hap }},
+        {{ $icu_hais_ido }},
+        {{ $icu_terpajan }},
     ],
     backgroundColor: [
       'rgba(255, 61, 0, 0.2)'
@@ -358,6 +454,84 @@
   };
 
   var dataKedua = {
+    label: ['PICU'],
+    data: [
+        {{ $picu_pa_ivl }},
+        {{ $picu_pa_dc }},
+        {{ $picu_pa_vent }},
+        {{ $picu_pa_iad }},
+        {{ $picu_tirah_baring }},
+        {{ $picu_hais_plebitis }},
+        {{ $picu_hais_isk }},
+        {{ $picu_hais_vap }},
+        {{ $picu_hais_iad }},
+        {{ $picu_hais_deku }},
+        {{ $picu_hais_hap }},
+        {{ $picu_hais_ido }},
+        {{ $picu_terpajan }},
+    ],
+    backgroundColor: [
+      'rgba(198, 255, 0, 0.2)'
+    ],
+    borderColor: [
+      'rgb(198, 255, 0)'
+    ],
+    borderWidth: 1
+  };
+
+  var dataKetiga = {
+    label: ['NICU'],
+    data: [
+        {{ $nicu_pa_ivl }},
+        {{ $nicu_pa_dc }},
+        {{ $nicu_pa_vent }},
+        {{ $nicu_pa_iad }},
+        {{ $nicu_tirah_baring }},
+        {{ $nicu_hais_plebitis }},
+        {{ $nicu_hais_isk }},
+        {{ $nicu_hais_vap }},
+        {{ $nicu_hais_iad }},
+        {{ $nicu_hais_deku }},
+        {{ $nicu_hais_hap }},
+        {{ $nicu_hais_ido }},
+        {{ $nicu_terpajan }},
+    ],
+    backgroundColor: [
+      'rgba(255, 128, 171, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 128, 171)'
+    ],
+    borderWidth: 1
+  };
+
+  var dataKeempat = {
+    label: ['HCU'],
+    data: [
+        {{ $hcu_pa_ivl }},
+        {{ $hcu_pa_dc }},
+        {{ $hcu_pa_vent }},
+        {{ $hcu_pa_iad }},
+        {{ $hcu_tirah_baring }},
+        {{ $hcu_hais_plebitis }},
+        {{ $hcu_hais_isk }},
+        {{ $hcu_hais_vap }},
+        {{ $hcu_hais_iad }},
+        {{ $hcu_hais_deku }},
+        {{ $hcu_hais_hap }},
+        {{ $hcu_hais_ido }},
+        {{ $hcu_terpajan }},
+    ],
+    backgroundColor: [
+      'rgba(62, 39, 35, 0.2)'
+    ],
+    borderColor: [
+      'rgb(62, 39, 35)'
+    ],
+    borderWidth: 1
+  };
+
+  var dataKelima = {
     label: ['Perawatan Eksekutif lt.2'],
     data: [
         {{ $lt2_pa_ivl }},
@@ -383,7 +557,7 @@
     borderWidth: 1
   };
 
-  var dataKetiga = {
+  var dataKeenam = {
     label: ['Perawatan Reguler lt.4'],
     data: [
         {{ $lt4_pa_ivl }},
@@ -409,7 +583,7 @@
     borderWidth: 1
   };
 
-  var dataKeempat = {
+  var dataKetujuh = {
     label: ['Perawatan Reguler lt.5'],
     data: [
         {{ $lt5_pa_ivl }},
@@ -435,7 +609,7 @@
     borderWidth: 1
   };
 
-  var dataKelima = {
+  var dataKedelapan = {
     label: ['VK'],
     data: [
         {{ $vk_pa_ivl }},
@@ -477,7 +651,7 @@
       ['HAIs', 'IDO'],
       ['Karyawan', 'Tertusuk Jarum'],
     ],
-    datasets: [dataPertama, dataKedua, dataKetiga, dataKeempat, dataKelima]
+    datasets: [dataPertama, dataKedua, dataKetiga, dataKeempat, dataKelima, dataKeenam, dataKetujuh, dataKedelapan]
   };
 
   var config = {
