@@ -135,7 +135,7 @@ class SurveilansController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $icu = Surveilans::where('unit', 'ICU')
+            $icu = Surveilans::whereIn('unit', ['ICU', 'Intensif'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
