@@ -72,20 +72,22 @@
                     <td>{{ $isi->nama }}</td>
                     <td>{{ $isi->unit }}</td>
                     <td>{{ date("d/m/Y", strtotime($isi->tgl_input)) }}</td>
-                    <td>{{ ($isi->sbl_kon_psn == 1) ? 'Ya' : (($isi->sbl_kon_psn == 0) ? 'Tidak' : 'Tidak dilakukan') }}
+                    <td>{{ ($isi->sbl_kon_psn == 1) ? 'Ya' : (($isi->sbl_kon_psn == 0) ? 'Tidak' : 'Tidak kesempatan')
+                        }}
                     </td>
                     <td>{{ ($isi->sbl_tin_aseptik == 1) ? 'Ya' : (($isi->sbl_tin_aseptik == 0) ? 'Tidak' : 'Tidak
-                        dilakukan') }}</td>
+                        kesempatan') }}</td>
                     <td>{{ ($isi->stl_kon_cairan == 1) ? 'Ya' : (($isi->stl_kon_cairan == 0) ? 'Tidak' : 'Tidak
-                        dilakukan') }}</td>
-                    <td>{{ ($isi->stl_kon_psn == 1) ? 'Ya' : (($isi->stl_kon_psn == 0) ? 'Tidak' : 'Tidak dilakukan') }}
+                        kesempatan') }}</td>
+                    <td>{{ ($isi->stl_kon_psn == 1) ? 'Ya' : (($isi->stl_kon_psn == 0) ? 'Tidak' : 'Tidak kesempatan')
+                        }}
                     </td>
                     <td>{{ ($isi->stl_kon_ling_psn == 1) ? 'Ya' : (($isi->stl_kon_ling_psn == 0) ? 'Tidak' : 'Tidak
-                        dilakukan') }}</td>
-                    <td>{{ ($isi->hr == 1) ? 'Ya' : (($isi->hr == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
-                    <td>{{ ($isi->hw == 1) ? 'Ya' : (($isi->hw == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
-                    <td>{{ ($isi->gagal == 1) ? 'Ya' : (($isi->gagal == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
-                    <td>{{ ($isi->st == 1) ? 'Ya' : (($isi->st == 0) ? 'Tidak' : 'Tidak dilakukan') }}</td>
+                        kesempatan') }}</td>
+                    <td>{{ ($isi->hr == 1) ? 'Ya' : (($isi->hr == 0) ? 'Tidak' : 'Tidak kesempatan') }}</td>
+                    <td>{{ ($isi->hw == 1) ? 'Ya' : (($isi->hw == 0) ? 'Tidak' : 'Tidak kesempatan') }}</td>
+                    <td>{{ ($isi->gagal == 1) ? 'Ya' : (($isi->gagal == 0) ? 'Tidak' : 'Tidak kesempatan') }}</td>
+                    <td>{{ ($isi->st == 1) ? 'Ya' : (($isi->st == 0) ? 'Tidak' : 'Tidak kesempatan') }}</td>
                     <td>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             <a href="#editCuciTangan{{ $isi->id }}" data-bs-toggle="modal"
