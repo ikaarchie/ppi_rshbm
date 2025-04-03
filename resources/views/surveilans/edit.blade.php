@@ -91,9 +91,9 @@
                             </div>
                             <div class="col-sm-3 form-floating">
                                 {!! Form::number('pa_iad', $isi->pa_iad, ['style' => 'height: auto', 'class' =>
-                                'form-control', 'id' => 'pa_iad', 'placeholder' => 'IAD', 'step'=>'any', 'required'])
+                                'form-control', 'id' => 'pa_iad', 'placeholder' => 'CVC', 'step'=>'any', 'required'])
                                 !!}
-                                {!! Form::label('pa_iad', 'IAD') !!}
+                                {!! Form::label('pa_iad', 'CVC') !!}
                             </div>
                         </div>
                     </div>

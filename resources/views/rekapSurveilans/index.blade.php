@@ -65,7 +65,7 @@
           <th>IVL</th>
           <th>DC</th>
           <th>Vent</th>
-          <th>IAD</th>
+          <th>CVC</th>
           <th>Plebitis</th>
           <th>Standar <br /> 1&permil;</th>
           <th>ISK</th>
@@ -374,7 +374,7 @@
           <th>IVL</th>
           <th>DC</th>
           <th>Vent</th>
-          <th>IAD</th>
+          <th>CVC</th>
           <th>Plebitis</th>
           <th>ISK</th>
           <th>VAP</th>
@@ -640,7 +640,7 @@
       ['Pemasangan Alat', 'IVL'],
       ['Pemasangan Alat', 'DC'],
       ['Pemasangan Alat', 'Vent'],
-      ['Pemasangan Alat', 'IAD'],
+      ['Pemasangan Alat', 'CVC'],
       ['Pasien', 'Tirah Baring'],
       ['HAIs', 'Plebitis'],
       ['HAIs', 'ISK'],
