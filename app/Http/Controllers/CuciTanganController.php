@@ -167,7 +167,7 @@ class CuciTanganController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = CuciTangan::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = CuciTangan::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -1308,7 +1308,7 @@ class CuciTanganController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = CuciTangan::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = CuciTangan::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -2267,7 +2267,7 @@ class CuciTanganController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = CuciTangan::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = CuciTangan::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')

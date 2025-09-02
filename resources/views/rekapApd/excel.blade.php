@@ -185,7 +185,7 @@
                 }} %</td>
         </tr>
         <tr>
-            <th>Perawatan Eksekutif lt.2</th>
+            <th>Perawatan Padma</th>
             <td>{{ $lt2_pntp_kpl }}</td>
             <td>{{ $lt2_masker }}</td>
             <td>{{ $lt2_pntp_wjh }}</td>

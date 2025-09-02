@@ -59,7 +59,7 @@
           <th style="width:10%">IGD</th>
           <th style="width:10%">Intensif</th>
           <th style="width:10%">OK</th>
-          <th style="width:10%">Perawatan Eksekutif lt.2</th>
+          <th style="width:10%">Perawatan Padma</th>
           <th style="width:10%">Perawatan Reguler lt.4</th>
           <th style="width:10%">Perawatan Reguler lt.5</th>
           <th style="width:10%">VK</th>
@@ -398,7 +398,7 @@
   };
 
   var lt21 = {
-    label: ['Perawatan Eksekutif lt.2'],
+    label: ['Perawatan Padma'],
     data: [
         {{ $lt2_IAD0301 }},
         {{ $lt2_IAD0302 }},
@@ -610,7 +610,7 @@
   };
 
   var lt20 = {
-    label: ['Perawatan Eksekutif lt.2'],
+    label: ['Perawatan Padma'],
     data: [
         {{ $no_lt2_IAD0301 }},
         {{ $no_lt2_IAD0302 }},

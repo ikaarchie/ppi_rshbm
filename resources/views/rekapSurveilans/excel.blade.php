@@ -48,7 +48,7 @@
             <td>{{ $int_terpajan }}</td>
         </tr>
         <tr>
-            <th>Perawatan Eksekutif lt.2</th>
+            <th>Perawatan Padma</th>
             <td>{{ $lt2_pa_ivl }}</td>
             <td>{{ $lt2_pa_dc }}</td>
             <td>{{ $lt2_pa_vent }}</td>

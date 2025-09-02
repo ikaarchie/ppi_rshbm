@@ -204,7 +204,7 @@
           <td></td>
         </tr>
         <tr>
-          <th>Perawatan Eksekutif lt.2</th>
+          <th>Perawatan Padma</th>
           <td>{{ $lt2_pa_ivl }}</td>
           <td>{{ $lt2_pa_dc }}</td>
           <td>{{ $lt2_pa_vent }}</td>
@@ -532,7 +532,7 @@
   };
 
   var dataKelima = {
-    label: ['Perawatan Eksekutif lt.2'],
+    label: ['Perawatan Padma'],
     data: [
         {{ $lt2_pa_ivl }},
         {{ $lt2_pa_dc }},

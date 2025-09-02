@@ -162,7 +162,7 @@ class ApdController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = Apd::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = Apd::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -1047,7 +1047,7 @@ class ApdController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = Apd::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = Apd::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -1953,7 +1953,7 @@ class ApdController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = Apd::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = Apd::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')

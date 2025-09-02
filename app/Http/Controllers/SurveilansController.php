@@ -155,7 +155,7 @@ class SurveilansController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = Surveilans::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = Surveilans::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -459,7 +459,7 @@ class SurveilansController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = Surveilans::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = Surveilans::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -673,7 +673,7 @@ class SurveilansController extends Controller
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = Surveilans::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = Surveilans::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl_input', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl_input', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')

@@ -276,7 +276,7 @@
             }} %</td>
         </tr>
         <tr>
-          <th>Perawatan Eksekutif lt.2</th>
+          <th>Perawatan Padma</th>
           <td>{{ $lt2_sbl_kon_psn }}</td>
           <td>{{ $lt2_sbl_tin_aseptik }}</td>
           <td>{{ $lt2_stl_kon_cairan }}</td>
@@ -917,7 +917,7 @@
   };
 
   var lt21 = {
-    label: ['Perawatan Eksekutif lt.2'],
+    label: ['Perawatan Padma'],
     data: [
         {{ $lt2_sbl_kon_psn }},
         {{ $lt2_sbl_tin_aseptik }},
@@ -1367,7 +1367,7 @@
   };
 
   var lt20 = {
-    label: ['Perawatan Eksekutif lt.2'],
+    label: ['Perawatan Padma'],
     data: [
         {{ $no_lt2_sbl_kon_psn }},
         {{ $no_lt2_sbl_tin_aseptik }},

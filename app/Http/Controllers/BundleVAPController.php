@@ -134,7 +134,7 @@ class BundleVAPController extends Controller
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = BundleVAP::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = BundleVAP::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -682,7 +682,7 @@ class BundleVAPController extends Controller
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = BundleVAP::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = BundleVAP::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -1230,7 +1230,7 @@ class BundleVAPController extends Controller
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = BundleVAP::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = BundleVAP::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')

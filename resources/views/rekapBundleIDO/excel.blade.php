@@ -14,7 +14,7 @@
             <th>IGD</th>
             <th>Intensif</th>
             <th>OK</th>
-            <th>Perawatan Eksekutif lt.2</th>
+            <th>Perawatan Padma</th>
             <th>Perawatan Reguler lt.4</th>
             <th>Perawatan Reguler lt.5</th>
             <th>VK</th>

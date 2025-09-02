@@ -128,7 +128,7 @@ class BundleISKController extends Controller
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = BundleISK::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = BundleISK::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -508,7 +508,7 @@ class BundleISKController extends Controller
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = BundleISK::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = BundleISK::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
@@ -888,7 +888,7 @@ class BundleISKController extends Controller
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')
                 ->get();
-            $lt2 = BundleISK::where('unit', 'Perawatan Eksekutif lt.2')
+            $lt2 = BundleISK::whereIn('unit', ['Perawatan Eksekutif lt.2', 'Perawatan Padma'])
                 ->whereDate('tgl', '>=', $request->input('dari') ?? $tgl_skg)
                 ->whereDate('tgl', '<=', $request->input('sampai') ?? $tgl_skg)
                 ->latest('id')

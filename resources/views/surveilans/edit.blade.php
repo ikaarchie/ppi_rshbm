@@ -50,7 +50,7 @@
                         'PICU' => 'PICU',
                         'NICU' => 'NICU',
                         'HCU' => 'HCU',
-                        'Perawatan Eksekutif lt.2' => 'Perawatan Eksekutif lt.2',
+                        'Perawatan Padma' => 'Perawatan Padma',
                         'Perawatan Reguler lt.4' => 'Perawatan Reguler lt.4',
                         'Perawatan Reguler lt.5' => 'Perawatan Reguler lt.5',
                         'VK' => 'VK'
