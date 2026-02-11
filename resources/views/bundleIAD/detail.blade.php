@@ -45,26 +45,22 @@
                             <tr>
                                 <th>1</th>
                                 <th>Hand hygiene</th>
-                                <td>{{ ($isi->IAD0301 == 1) ? 'Ya' : (($isi->IAD0301 == 0) ? 'Tidak' : 'Tidak
-                                    dilakukan') }}</td>
+                                <td>{{ ($isi->IAD0301 == 1) ? 'Ya' : (($isi->IAD0301 == 0) ? 'Tidak' : 'TDD') }}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Seleksi area</th>
-                                <td>{{ ($isi->IAD0302 == 1) ? 'Ya' : (($isi->IAD0302 == 0) ? 'Tidak' : 'Tidak
-                                    dilakukan') }}</td>
+                                <td>{{ ($isi->IAD0302 == 1) ? 'Ya' : (($isi->IAD0302 == 0) ? 'Tidak' : 'TDD') }}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Antiseptik alkohol based / chlorhexidine</th>
-                                <td>{{ ($isi->IAD0303 == 1) ? 'Ya' : (($isi->IAD0303 == 0) ? 'Tidak' : 'Tidak
-                                    dilakukan') }}</td>
+                                <td>{{ ($isi->IAD0303 == 1) ? 'Ya' : (($isi->IAD0303 == 0) ? 'Tidak' : 'TDD') }}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Maksimal pemakaian APD</th>
-                                <td>{{ ($isi->IAD0304 == 1) ? 'Ya' : (($isi->IAD0304 == 0) ? 'Tidak' : 'Tidak
-                                    dilakukan') }}</td>
+                                <td>{{ ($isi->IAD0304 == 1) ? 'Ya' : (($isi->IAD0304 == 0) ? 'Tidak' : 'TDD') }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -81,26 +77,22 @@
                             <tr>
                                 <th>1</th>
                                 <th>Hand hygiene</th>
-                                <td>{{ ($isi->IAD0201 == 1) ? 'Ya' : (($isi->IAD0201 == 0) ? 'Tidak' : 'Tidak
-                                    dilakukan') }}</td>
+                                <td>{{ ($isi->IAD0201 == 1) ? 'Ya' : (($isi->IAD0201 == 0) ? 'Tidak' : 'TDD') }}</td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Disinfeksi CVC dengan alkohol 70%</th>
-                                <td>{{ ($isi->IAD0202 == 1) ? 'Ya' : (($isi->IAD0202 == 0) ? 'Tidak' : 'Tidak
-                                    dilakukan') }}</td>
+                                <td>{{ ($isi->IAD0202 == 1) ? 'Ya' : (($isi->IAD0202 == 0) ? 'Tidak' : 'TDD') }}</td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Ganti dressing jika kotor</th>
-                                <td>{{ ($isi->IAD0203 == 1) ? 'Ya' : (($isi->IAD0203 == 0) ? 'Tidak' : 'Tidak
-                                    dilakukan') }}</td>
+                                <td>{{ ($isi->IAD0203 == 1) ? 'Ya' : (($isi->IAD0203 == 0) ? 'Tidak' : 'TDD') }}</td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Lepas infus jika tidak perlu</th>
-                                <td>{{ ($isi->IAD0204 == 1) ? 'Ya' : (($isi->IAD0204 == 0) ? 'Tidak' : 'Tidak
-                                    dilakukan') }}</td>
+                                <td>{{ ($isi->IAD0204 == 1) ? 'Ya' : (($isi->IAD0204 == 0) ? 'Tidak' : 'TDD') }}</td>
                             </tr>
                         </tbody>
                     </table>

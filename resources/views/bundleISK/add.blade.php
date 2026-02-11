@@ -59,7 +59,7 @@
                                 <th>Bundle Pemasangan</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
-                                <th class="col-1">Tidak Dilakukan</th>
+                                <th class="col-1">TDD</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -113,7 +113,7 @@
                                 <th>Bundle Maintenance</th>
                                 <th class="col-1">Ya</th>
                                 <th class="col-1">Tidak</th>
-                                <th class="col-1">Tidak Dilakukan</th>
+                                <th class="col-1">TDD</th>
                             </tr>
                         </thead>
                         <tbody>
